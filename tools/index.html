@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="chn">
+<head>
+	<meta charset="UTF-8">
+	<title>常用工具</title>
+	<meta name="viewport" content="width=device-width,target-densitydpi=high-dpi,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+	<div>
+		<section>
+			<h1>github</h1>
+			<div>
+				<div class="dis">
+					<p>
+						在命令行使用git：<br/>
+						在工作区目录下输入命令<br/>
+					</p>
+				</div>
+				<div class="use">
+					<ul>
+						<li>
+							<h2>查询历史版本</h2>
+							<p>git reflog</p>
+						</li>
+						<li>
+							<h2>退回历史版本</h2>
+							<p>git reset --hard 确认的ID</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<section>
+			<h1>browersync</h1>
+			<div>
+				<div class="dis">
+					<p>Browsersync能让浏览器实时、快速响应您的文件更改（html、js、css、sass、less等）并自动刷新页面。更重要的是 Browsersync可以同时在PC、平板、手机等设备下进项调试。您可以想象一下：“假设您的桌子上有pc、ipad、iphone、android等设备，同时打开了您需要调试的页面，当您使用browsersync后，您的任何一次代码保存，以上的设备都会同时显示您的改动”。无论您是前端还是后端工程师，使用它将提高您30%的工作效率。<br/>有了它，您不用在多个浏览器、多个设备间来回切换，频繁的刷新页面。更神奇的是您在一个浏览器中滚动页面、点击等行为也会同步到其他浏览器和设备中，这一切还可以通过可视化界面来控制。<br/>官网：<a href="https://browsersync.io/" target="_blank">https://browsersync.io/</a><br/>中文网站：<a href="http://www.browsersync.cn/" target="_blank">http://www.browsersync.cn/</a></p>
+				</div>
+				<div class="use">
+					<ul>
+						<li>
+							<h2>安装命令</h2>
+							<p>npm install -g browser-sync</p>
+						</li>
+
+						<li>
+							<h2>启动命令</h2>
+							<ul>
+								<li>
+									<h3>静态网站</h3>
+									<p>部分文件：browser-sync start --server --files "css/*.css"</p>
+									<p>所有文件：browser-sync start --server --files "**"</p>
+								</li>
+								<li>
+									<h3>动态网站</h3>
+									<p>如果您已经有其他本地服务器环境PHP或类似的，您需要使用代理模式。 BrowserSync将通过代理URL(localhost:3000)来查看您的网站。// 主机名可以是ip或域名</p>
+									<p>browser-sync start --proxy "hyundai.koo7.com" "css/*.css"</p>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					
+				</div>
+			</div>
+		</section>
+	</div>
+	
+</body>
+</html>
