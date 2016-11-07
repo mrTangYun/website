@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>太平盛世</title>
+<script>document.cookie='resolution='+Math.max(screen.width,screen.height)+'; path=/';</script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" >
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+<link href="js/video-js/video-js.css" rel="stylesheet"> 
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/media-queries.css" rel="stylesheet" type="text/css">
+
+<link href="css/fixed-positioning.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery.js"></script> 
+<script src="js/jquery.touchSwipe.min.js"></script>
+<!--
+<script src="js/jquery.mobile-1.4.0.min.js"></script>
+<script src="js/jquery.mousewheel.js"></script>
+-->
+<script src="js/video-js/video.js"></script>
+<!--
+<script src="http://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+<script src="js/infobox.js"></script>
+-->
+<script type="text/javascript" src="js/skrollr.js"></script>
+<script type="text/javascript" src="js/skrollr.menu.js"></script>
+<script type="text/javascript">
+	
+		var aCity = {
+			info:[{
+				title : "亚洲",
+				city :[{
+					title : "北京",
+					lat : 39.9040300000,
+					lng : 116.4075260000
+				},{
+					title : "上海",
+					lat : 31.2304160000,
+					lng : 121.4737010000
+				},{
+					title : "韩国",
+					lat : 35.9077570000,
+					lng : 127.7669220000
+				},{
+					title : "新疆",
+					lat : 43.8255920000,
+					lng : 87.6168480000
+				},{
+					title : "新加坡",
+					lat : 1.3520830000,
+					lng : 103.8198360000
+				},{
+					title : "泰国",
+					lat : 15.8700320000,
+					lng : 100.9925410000
+				},{
+					title : "马来西亚",
+					lat : 4.2104840000,
+					lng : 101.9757660000
+				}]},{
+				title : "澳洲",
+				city :[{
+					title : "澳大利亚",
+					lat : -25.274398,
+					lng : 133.77513599999997
+				}]},{
+				title : "欧洲",
+				city :[{
+					title : "意大利",
+					lat : 41.8719400000,
+					lng : 12.5673800000
+				},{
+					title : "法国",
+					lat : 46.227638,
+					lng : 2.213749000000007
+				},{
+					title : "英国",
+					lat : 55.3780510000,
+					lng : -3.4359730000
+				},{
+					title : "西班牙",
+					lat : 40.4636670000,
+					lng : -3.7492200000
+				}]}]
+		};
+
+	var JsonDirectorsWork = [
+			{'title':'China - Huangshan',
+			'director':'钟孟宏',
+			'videothumb':'images/snapshot20140108120849.jpg',
+			'thumb':'images/works/24.jpg',
+			'mp4':'video/China - Huangshan (The Yellow Mountain), 2011.mp4',
+			'webm':'video/China - Huangshan (The Yellow Mountain), 2011.webm'},
+			{'title':'China - Huangshan2',
+			'director':'钟孟宏',
+			'videothumb':'images/snapshot20140108120849.jpg',
+			'thumb':'images/works/24.jpg',
+			'mp4':'video/China - Huangshan (The Yellow Mountain), 2011.mp4',
+			'webm':'video/China - Huangshan (The Yellow Mountain), 2011.webm'},
+			{'title':'China - Huangshan3',
+			'director':'钟孟宏',
+			'videothumb':'images/snapshot20140108120849.jpg',
+			'thumb':'images/works/24.jpg',
+			'mp4':'video/China - Huangshan (The Yellow Mountain), 2011.mp4',
+			'webm':'video/China - Huangshan (The Yellow Mountain), 2011.webm'},
+			{'title':'China - Huangshan4',
+			'director':'江稚伦',
+			'videothumb':'images/snapshot20140108120849.jpg',
+			'thumb':'images/works/24.jpg',
+			'mp4':'video/China - Huangshan (The Yellow Mountain), 2011.mp4',
+			'webm':'video/China - Huangshan (The Yellow Mountain), 2011.webm'},
+			{'title':'China - Huangshan5',
+			'director':'钟孟宏',
+			'videothumb':'images/snapshot20140108120849.jpg',
+			'thumb':'images/works/24.jpg',
+			'mp4':'video/China - Huangshan (The Yellow Mountain), 2011.mp4',
+			'webm':'video/China - Huangshan (The Yellow Mountain), 2011.webm'},
+			{'title':'China - Huangshan6',
+			'director':'江稚伦',
+			'videothumb':'images/snapshot20140108120849.jpg',
+			'thumb':'images/works/24.jpg',
+			'mp4':'video/China - Huangshan (The Yellow Mountain), 2011.mp4',
+			'webm':'video/China - Huangshan (The Yellow Mountain), 2011.webm'},
+			{'title':'China - Huangshan7',
+			'director':'钟孟宏',
+			'videothumb':'images/snapshot20140108120849.jpg',
+			'thumb':'images/works/24.jpg',
+			'mp4':'video/China - Huangshan (The Yellow Mountain), 2011.mp4',
+			'webm':'video/China - Huangshan (The Yellow Mountain), 2011.webm'},
+			{'title':'China - Huangshan8',
+			'director':'彭建森',
+			'videothumb':'images/snapshot20140108120849.jpg',
+			'thumb':'images/works/24.jpg',
+			'mp4':'video/China - Huangshan (The Yellow Mountain), 2011.mp4',
+			'webm':'video/China - Huangshan (The Yellow Mountain), 2011.webm'},
+		];
+</script>
+<script src="js/init.js"></script>
+<!--[if lt IE 9]>    
+    <script src="js/css3-mediaqueries.js"></script> 
+<![endif]-->  
+</head>
+<body>
+    <div id="loader"><img src="images/loadding.png" width="105" height="13200" /></div>
+    <div id="aside" style="display:none">
+    	<div class="menu">
+    		<div id="curTop"></div>
+	    	<a class="left-icon" id="logo" href=""></a>
+	    	<a class="left-icon" id="aWorks" href="#Works" title="作品列表" data-menu-top="0">作品列表</a>
+	    	<a class="left-icon" id="aDirector" href="#Director" title="导演阵容" data-menu-top="500">导演阵容</a>
+	    	<a class="left-icon" id="aTeam" href="#Team" title="服务团队" data-menu-top="900">服务团队</a>
+	    	<a class="left-icon" id="aLocationhistory" href="#Locationhistory" title="我们的足迹" data-menu-top="2000">我们的足迹</a>
+	    	<a class="left-icon" id="aAwardhistory" href="#Award" title="获奖记录" data-menu-top="2500">获奖记录</a>
+	    	<a class="left-icon" id="aPartner" href="#Partner" title="合作伙伴" data-menu-top="3480">合作伙伴</a>
+	    	<a class="left-icon" id="aJoinUs" href="#JoinUs" title="关于我们" data-menu-top="4100">关于我们</a>
+	    	<a class="left-icon" id="aContactUs" href="#ContactUs" title="联系我们" data-menu-top="8000">联系我们</a>
+    	</div>
+    	<div class="bottom-icon">
+	    	<a class="left-icon" id="icon-flash" href=""></a>
+	    	<a class="left-icon" id="icon-lan" href=""></a>
+	    	<a class="left-icon" id="icon-user" href=""></a>
+	    	<a class="left-icon" id="icon-share" href=""></a>
+	    	<a class="left-icon" id="icon-link" href=""></a>
+    	</div>
+    </div>
+
+    <div class="rightMain" id="rightMain" data-0="top:0%;"  data-end="top:0%;" style="display:none">
+    	<!--作品列表-->
+		<div id="worksPage" data-0="top:0%;display:block;" data-700="top:-100%;display:none; ">
+			<div class="mianBox" data-width="0">
+				<div class="bigItem">
+				</div>
+				<div class="item">
+					<div class="box"></div>
+					<div class="box"></div>
+				</div>
+				<div class="item">
+					<div class="box"></div>
+					<div class="box"></div>
+				</div>
+				<div class="item">
+					<div class="box"></div>
+					<div class="box"></div>
+				</div>
+				<div class="item">
+					<div class="box"></div>
+					<div class="box"></div>
+				</div>
+				<div class="item">
+					<div class="box"></div>
+					<div class="box"></div>
+				</div>
+				<div class="clearfloat"></div>
+			</div>
+			<ul id="HomePageData" style="display:none;">
+				<li data-title="JX TVC" data-videothumb="images/snapshot20140108120849.jpg" data-desc="30sec" data-video="" data-thumb="images/works/07.jpg" data-video-mp4="video/The Aurora (Northern Lights).mp4" data-video-webm="video/The Aurora (Northern Lights).webm" data-pianming="infiniti jx" data-director="钟孟宏" data-kehu="infiniti" data-dailishang="阳狮" data-cityThumb="images/04.jpg" data-hightlight-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-hightlight-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-hightlight-thumb="images/snapshot20140106101957.jpg" data-city="北京" data-trade="汽车类" data-category="" data-bigThumb="images/01-home.jpg" data-download-normal="data-download-normal" data-download-hight="download-hight">
+					<div class="hightlightGallery">
+						<div class="item"><img src="images/works/01s.jpg" width="100%"></div>
+						<div class="item"><img src="images/works/02s.jpg" width="100%"></div>
+						<div class="item"><img src="images/works/03s.jpg" width="100%"></div>
+					</div>
+					<div class="hightlightGalleryText">
+						花絮说明花絮说明花絮说明花絮说明花絮说明花絮说明花絮说明花絮说明花絮说明花絮说明花絮说明花絮说明
+					</div>
+				</li>
+				<li data-title="Northern Lights" data-videothumb="images/snapshot20140108120849.jpg" data-desc="" data-video="" data-thumb="images/works/01.jpg" data-video-mp4="video/The Aurora (Northern Lights).mp4" data-video-webm="video/The Aurora (Northern Lights).webm" data-pianming="" data-director="董世杰" data-kehu="奥迪" data-dailishang="阳狮" data-cityThumb="images/04.jpg" data-hightlight-mp4="" data-hightlight-webm="" data-hightlight-thumb="images/snapshot20140106101957.jpg" data-city="天津" data-trade="汽车类,电商类" data-category=""  data-download-normal="" data-download-hight=""></li>
+				<li data-title="How It Feels" data-videothumb="images/snapshot20140108120849.jpg" data-desc="through Glass" data-video="" data-thumb="images/works/02.jpg" data-video-mp4="video/How It Feels [through Glass].mp4" data-video-webm="video/How It Feels [through Glass].webm" data-pianming="" data-director="钟孟宏" data-kehu="奥迪" data-dailishang="阳狮" data-cityThumb="images/04.jpg" data-hightlight-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-hightlight-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-hightlight-thumb="images/snapshot20140106101957.jpg" data-city="新加坡" data-trade="汽车类" data-category="" data-download-normal="" data-download-hight=""></li>
+				<li data-title="奥迪RS514" data-videothumb="images/snapshot20140108120849.jpg" data-desc="" data-video="" data-thumb="images/works/03.jpg" data-video-mp4="video/landing.mp4" data-video-webm="video/landing.webm" data-pianming="" data-director="董世杰" data-kehu="奥迪" data-dailishang="阳狮" data-cityThumb="images/04.jpg" data-hightlight-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-hightlight-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-hightlight-thumb="images/snapshot20140106101957.jpg" data-city="云南" data-trade="汽车类" data-category="" data-download-normal="" data-download-hight=""></li>
+				<li data-title="China - Huangshan" data-videothumb="images/snapshot20140108120849.jpg" data-desc="The Yellow Mountain" data-video="" data-thumb="images/works/04.jpg" data-video-mp4="video/China - Huangshan (The Yellow Mountain), 2011.mp4" data-video-webm="video/China - Huangshan (The Yellow Mountain), 2011.webm" data-pianming="" data-director="邝盛" data-kehu="奥迪" data-dailishang="阳狮" data-cityThumb="images/04.jpg" data-hightlight-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-hightlight-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-hightlight-thumb="images/snapshot20140106101957.jpg" data-city="新疆" data-trade="汽车类" data-category="" data-download-normal="" data-download-hight=""></li>
+				<li data-title="The Craziest Downhill Bike Course EVER" data-videothumb="images/snapshot20140108120849.jpg" data-desc="Lion Tiger" data-video="" data-thumb="images/works/05.jpg" data-video-mp4="video/Lion Tiger - The Craziest Downhill Bike Course EVER.mp4" data-video-webm="video/Lion Tiger - The Craziest Downhill Bike Course EVER.webm" data-pianming="" data-director="钟孟宏" data-kehu="奥迪" data-dailishang="阳狮" data-cityThumb="images/04.jpg" data-hightlight-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-hightlight-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-hightlight-thumb="images/snapshot20140106101957.jpg" data-city="云南"></li>
+				<li data-title="云彩" data-videothumb="images/snapshot20140108120849.jpg" data-desc="" data-video="" data-thumb="images/works/06.jpg" data-video-mp4="video/14473200.mp4" data-video-webm="video/14473200.webm" data-pianming="" data-director="钟孟宏D" data-kehu="奥迪" data-dailishang="阳狮" data-cityThumb="images/04.jpg" data-hightlight-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-hightlight-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-hightlight-thumb="images/snapshot20140106101957.jpg" data-city="新疆" data-trade="汽车类" ></li>
+				<li data-title="日落" data-videothumb="images/snapshot20140108120849.jpg" data-desc="" data-video="" data-thumb="images/works/07.jpg" data-video-mp4="video/16402100.mp4" data-video-webm="video/16402100.webm" data-pianming="" data-director="钟孟宏" data-kehu="奥迪" data-dailishang="阳狮" data-cityThumb="images/04.jpg" data-hightlight-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-hightlight-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-hightlight-thumb="images/snapshot20140106101957.jpg" data-city="泰国" data-trade="汽车类"></li>
+				<li data-title="Sparks Fly" data-videothumb="images/snapshot20140108120849.jpg" data-desc="Taylor Swift" data-video="" data-thumb="images/works/08.jpg" data-video-mp4="video/Taylor Swift - Sparks Fly.mp4" data-video-webm="video/Taylor Swift - Sparks Fly.webm" data-pianming="Sparks Fly" data-director="Taylor Swift" data-kehu="Taylor Swift" data-dailishang="阳狮" data-cityThumb="images/04.jpg" data-hightlight-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-hightlight-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-hightlight-thumb="images/snapshot20140106101957.jpg" data-city="马来西亚" data-trade="汽车类"></li>
+				<li data-title="JX TVC" data-videothumb="images/snapshot20140108120849.jpg" data-desc="30sec" data-video="" data-thumb="images/works/09.jpg" data-video-mp4="video/JX_TVC_30sec.mp4" data-video-webm="video/JX_TVC_30sec.webm" data-pianming="infiniti jx" data-director="邝盛" data-kehu="infiniti" data-dailishang="阳狮" data-cityThumb="images/04.jpg" data-hightlight-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-hightlight-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-hightlight-thumb="images/snapshot20140106101957.jpg" data-city="泰国" data-trade="汽车类"></li>
+				<li data-title="Northern Lights" data-videothumb="images/snapshot20140108120849.jpg" data-desc="" data-video="" data-thumb="images/works/10.jpg" data-video-mp4="video/The Aurora (Northern Lights).mp4" data-video-webm="video/The Aurora (Northern Lights).webm" data-pianming="" data-director="钟孟宏" data-kehu="奥迪" data-dailishang="阳狮" data-cityThumb="images/04.jpg" data-hightlight-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-hightlight-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-hightlight-thumb="images/snapshot20140106101957.jpg" data-city="北京" data-trade="汽车类"></li>
+				<li data-title="How It Feels" data-videothumb="images/snapshot20140108120849.jpg" data-desc="through Glass" data-video="" data-thumb="images/works/11.jpg" data-video-mp4="video/How It Feels [through Glass].mp4" data-video-webm="video/How It Feels [through Glass].webm" data-pianming="" data-director="钟孟宏" data-kehu="奥迪" data-dailishang="阳狮" data-cityThumb="images/04.jpg" data-hightlight-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-hightlight-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-hightlight-thumb="images/snapshot20140106101957.jpg" data-city="天津" data-trade="汽车类"></li>
+				<li data-title="奥迪RS514" data-videothumb="images/snapshot20140108120849.jpg" data-desc="" data-video="" data-thumb="images/works/12.jpg" data-video-mp4="video/landing.mp4" data-video-webm="video/landing.webm" data-pianming="" data-director="钟孟宏" data-kehu="奥迪" data-dailishang="阳狮" data-cityThumb="images/04.jpg" data-hightlight-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-hightlight-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-hightlight-thumb="images/snapshot20140106101957.jpg" data-city="马来西亚" data-trade="汽车类"></li>
+				<li data-title="China - Huangshan" data-videothumb="images/snapshot20140108120849.jpg" data-desc="The Yellow Mountain" data-video="" data-thumb="images/works/13.jpg" data-video-mp4="video/China - Huangshan (The Yellow Mountain), 2011.mp4" data-video-webm="video/China - Huangshan (The Yellow Mountain), 2011.webm" data-pianming="" data-director="董世杰" data-kehu="奥迪" data-dailishang="阳狮" data-cityThumb="images/04.jpg" data-hightlight-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-hightlight-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-hightlight-thumb="images/snapshot20140106101957.jpg" data-city="澳洲" data-trade="汽车类"></li>
+				<li data-title="The Craziest Downhill Bike Course EVER" data-videothumb="images/snapshot20140108120849.jpg" data-desc="test" data-video="" data-thumb="images/works/14.jpg" data-video-mp4="video/Lion Tiger - The Craziest Downhill Bike Course EVER.mp4" data-video-webm="video/Lion Tiger - The Craziest Downhill Bike Course EVER.webm" data-pianming="" data-director="钟孟宏" data-kehu="奥迪" data-dailishang="阳狮" data-cityThumb="images/04.jpg" data-hightlight-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-hightlight-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-hightlight-thumb="images/snapshot20140106101957.jpg" data-city="欧洲"></li>
+				<li data-title="云彩" data-videothumb="images/snapshot20140108120849.jpg" data-desc="" data-video="" data-thumb="images/works/15.jpg" data-video-mp4="video/14473200.mp4" data-video-webm="video/14473200.webm" data-pianming="" data-director="钟孟宏" data-kehu="奥迪" data-dailishang="阳狮" data-cityThumb="images/04.jpg" data-hightlight-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-hightlight-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-hightlight-thumb="images/snapshot20140106101957.jpg" data-city="泰国"></li>
+				<li data-title="日落" data-videothumb="images/snapshot20140108120849.jpg" data-desc="" data-video="" data-thumb="images/works/16.jpg" data-video-mp4="video/16402100.mp4" data-video-webm="video/16402100.webm" data-pianming="" data-director="钟孟宏" data-kehu="奥迪" data-dailishang="阳狮" data-cityThumb="images/04.jpg" data-hightlight-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-hightlight-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-hightlight-thumb="images/snapshot20140106101957.jpg" data-city="新加坡"></li>
+				<li data-title="Sparks Fly" data-videothumb="images/snapshot20140108120849.jpg" data-desc="Taylor Swift" data-video="" data-thumb="images/works/17.jpg" data-video-mp4="video/Taylor Swift - Sparks Fly.mp4" data-video-webm="video/Taylor Swift - Sparks Fly.webm" data-pianming="Sparks Fly" data-director="Taylor Swift" data-kehu="Taylor Swift" data-dailishang="阳狮" data-cityThumb="images/04.jpg" data-hightlight-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-hightlight-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-hightlight-thumb="images/snapshot20140106101957.jpg" data-city="北京"></li>
+				<li data-title="日落" data-videothumb="images/snapshot20140108120849.jpg" data-desc="" data-video="" data-thumb="images/works/18.jpg" data-video-mp4="video/16402100.mp4" data-video-webm="video/16402100.webm" data-pianming="" data-director="钟孟宏" data-kehu="奥迪" data-dailishang="阳狮" data-cityThumb="images/04.jpg" data-hightlight-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-hightlight-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-hightlight-thumb="images/snapshot20140106101957.jpg" data-city="北京"></li>
+				<li data-title="Sparks Fly" data-videothumb="images/snapshot20140108120849.jpg" data-desc="Taylor Swift" data-video="" data-thumb="images/works/19.jpg" data-video-mp4="video/Taylor Swift - Sparks Fly.mp4" data-video-webm="video/Taylor Swift - Sparks Fly.webm" data-pianming="Sparks Fly" data-director="Taylor Swift" data-kehu="Taylor Swift" data-dailishang="阳狮" data-cityThumb="images/04.jpg" data-hightlight-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-hightlight-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-hightlight-thumb="images/snapshot20140106101957.jpg" data-city="天津"></li>
+				<li data-title="JX TVC" data-videothumb="images/snapshot20140108120849.jpg" data-desc="30sec" data-video="" data-thumb="images/works/20.jpg" data-video-mp4="video/JX_TVC_30sec.mp4" data-video-webm="video/JX_TVC_30sec.webm" data-pianming="infiniti jx" data-director="钟孟宏" data-kehu="infiniti" data-dailishang="阳狮" data-cityThumb="images/04.jpg" data-hightlight-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-hightlight-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-hightlight-thumb="images/snapshot20140106101957.jpg" data-city="欧洲"></li>
+				<li data-title="Northern Lights" data-videothumb="images/snapshot20140108120849.jpg" data-desc="" data-video="" data-thumb="images/works/21.jpg" data-video-mp4="video/The Aurora (Northern Lights).mp4" data-video-webm="video/The Aurora (Northern Lights).webm" data-pianming="" data-director="钟孟宏" data-kehu="奥迪" data-dailishang="阳狮" data-cityThumb="images/04.jpg" data-hightlight-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-hightlight-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-hightlight-thumb="images/snapshot20140106101957.jpg" data-city="云南"></li>
+				<li data-title="How It Feels" data-videothumb="images/snapshot20140108120849.jpg" data-desc="through Glass" data-video="" data-thumb="images/works/22.jpg" data-video-mp4="video/How It Feels [through Glass].mp4" data-video-webm="video/How It Feels [through Glass].webm" data-pianming="" data-director="钟孟宏" data-kehu="奥迪" data-dailishang="阳狮" data-cityThumb="images/04.jpg" data-hightlight-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-hightlight-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-hightlight-thumb="images/snapshot20140106101957.jpg" data-city="泰国"></li>
+				<li data-title="奥迪RS514" data-videothumb="images/snapshot20140108120849.jpg" data-desc="" data-video="" data-thumb="images/works/23.jpg" data-video-mp4="video/landing.mp4" data-video-webm="video/landing.webm" data-pianming="" data-director="钟孟宏" data-kehu="奥迪" data-dailishang="阳狮" data-cityThumb="images/04.jpg" data-hightlight-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-hightlight-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-hightlight-thumb="images/snapshot20140106101957.jpg" data-city="马来西亚"></li>
+				<li data-title="China - Huangshan" data-videothumb="images/snapshot20140108120849.jpg" data-desc="The Yellow Mountain" data-video="" data-thumb="images/works/24.jpg" data-video-mp4="video/China - Huangshan (The Yellow Mountain), 2011.mp4" data-video-webm="video/China - Huangshan (The Yellow Mountain), 2011.webm" data-pianming="" data-director="钟孟宏" data-kehu="奥迪" data-dailishang="阳狮" data-cityThumb="images/04.jpg" data-hightlight-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-hightlight-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-hightlight-thumb="images/snapshot20140106101957.jpg" data-city="北京"></li>
+				<li data-title="The Craziest Downhill Bike Course EVER" data-videothumb="images/snapshot20140108120849.jpg" data-desc="test" data-video="" data-thumb="images/works/25.jpg" data-video-mp4="video/Lion Tiger - The Craziest Downhill Bike Course EVER.mp4" data-video-webm="video/Lion Tiger - The Craziest Downhill Bike Course EVER.webm" data-pianming="" data-director="钟孟宏" data-kehu="奥迪" data-dailishang="阳狮" data-cityThumb="images/04.jpg" data-hightlight-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-hightlight-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-hightlight-thumb="images/snapshot20140106101957.jpg" data-city="法国"></li>
+				<li data-title="云彩" data-videothumb="images/snapshot20140108120849.jpg" data-desc="" data-video="" data-thumb="images/works/26.jpg" data-video-mp4="video/14473200.mp4" data-video-webm="video/14473200.webm" data-pianming="" data-director="钟孟宏" data-kehu="奥迪" data-dailishang="阳狮" data-cityThumb="images/04.jpg" data-hightlight-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-hightlight-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-hightlight-thumb="images/snapshot20140106101957.jpg" data-city="澳大利亚"></li>
+				<li data-title="日落" data-videothumb="images/snapshot20140108120849.jpg" data-desc="" data-video="" data-thumb="images/works/27.jpg" data-video-mp4="video/16402100.mp4" data-video-webm="video/16402100.webm" data-pianming="" data-director="钟孟宏" data-kehu="奥迪" data-dailishang="阳狮" data-cityThumb="images/04.jpg" data-hightlight-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-hightlight-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-hightlight-thumb="images/snapshot20140106101957.jpg" data-city="法国"></li>
+			</ul>
+			<div class="floatCreategory">
+				<div class="level-1">
+					<span data-show-all="true">最新</span>
+				</div>
+				<div class="level-1">
+					<span>行业</span>
+					<div class="arrow-area"></div>
+					<div class="arrow"></div>
+					<ul class="level-2">
+						<li>汽车类</li>
+						<li>电商类</li>
+						<li>地产类</li>
+						<li>汽车类</li>
+						<li>医药类</li>
+						<li>媒体通讯类</li>
+						<li>日用品类</li>
+					</ul>
+				</div>
+				<div class="level-1">
+					<span>门类</span>
+					<div class="arrow-area"></div>
+					<div class="arrow"></div>
+					<ul class="level-2">
+						<li>网络视频</li>
+						<li>TVC</li>
+						<li>专题片</li>
+						<li>互动视频</li>
+						<li>CG</li>
+					</ul>
+				</div>
+				<div class="level-1">
+					<span class="search" data-action="search">搜索</span>
+					<div class="arrow-area"></div>
+					<div class="arrow"></div>
+					<div class="level-2-search">
+						<form id="worksForm">
+							<input class="inputText" type="" name="q" placeholder="搜索">
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="pagenavi"></div>
+			<div class="pagenavi-search"></div>
+			<div id="popWorkWindow">
+				<div class="video">
+					<video width="100%" height="100%" id="popWorkWindowVideo" controls  class="video-js vjs-default-skin"  data-setup="{}">
+					</video>
+				</div>
+				<div class="aboveVideo"></div>
+				<div class="infoBox2">
+					<!--<h3>名称</h3>-->
+					<!--<span class="des">说明</span>-->
+				</div>
+				<div class="infoBox">
+					<h3>名称</h3>
+					<span class="des">说明</span>
+					<table cellspacing="0" cellpadding="0" border="0" width="100%" class="table">
+						<tr>
+							<td width="50%">篇名：<span class="pianming"></span></td>
+							<td width="50%">导演：<span class="daoyan"></span></td>
+						</tr>
+						<tr>
+							<td>客户：<span class="kehu"></span></td>
+							<td>代理商：<span class="dailishang"></span></td>
+						</tr>
+					</table>
+					<div class="changeBtn">
+						<a class="item">精彩剧照</a>
+						<a class="item">幕后花絮</a>
+						<a class="btn-download" href="">视频下载</a>
+						<div class="clearfloat"></div>
+					</div>
+					<div class="changeTabBox">
+						<div class="gallery">
+							<div class="container-hidden">
+								<div class="popimg">
+									<div class="img"></div>
+									<div class="actionArea">
+										<div class="leftArrow"></div>
+										<div class="txt-info"></div>
+										<div class="rightArrow"></div>
+										<div class="clearfloat"></div>
+									</div>
+								</div>
+								<div class="list">
+								</div>
+								<div class="clearfloat"></div>
+							</div>
+						</div>
+						<div class="flower">
+							<video id="flowerPlayer" width="100%" class="video-js vjs-default-skin"  controls>
+							</video>
+							<div class="flowerText">
+								
+							</div>
+						</div>
+					</div>
+					<div class="leftArrrow"></div>
+				</div>
+				<div class='close'>关闭</div>
+			</div>
+		</div>
+		<!--导演阵容-->
+		<div id="directorPage" data-0="top:100%;" data-500="top:0%;" data-900="top:-100%;" >
+			<div class="mianBox">
+				<div class="item">
+					<div class="box"></div>
+					<div class="box"></div>
+					<div class="box"></div>
+					<div class="box"></div>
+					<div class="box"></div>
+					<div class="box"></div>
+					<div class="clearfloat"></div>
+				</div>
+				<div class="item">
+					<div class="box"></div>
+					<div class="box"></div>
+					<div class="box"></div>
+					<div class="box"></div>
+					<div class="box"></div>
+					<div class="box"></div>
+					<div class="clearfloat"></div>
+				</div>
+				<div class="item">
+					<div class="box"></div>
+					<div class="box"></div>
+					<div class="box"></div>
+					<div class="box"></div>
+					<div class="box"></div>
+					<div class="box"></div>
+					<div class="clearfloat"></div>
+				</div>
+				<div class="clearfloat"></div>
+			</div>
+			<ul id="DirectorPageData" style="display:none;">
+				<li data-name="董世杰" data-hasthum="1" data-thumb="images/d/01.jpg" data-trade="汽车类" data-area="大中华">1965年台湾生<br/>1987年台湾志上广告公司广告创意<br/>1991年台湾好点子影视公司制片经理<br/>1993年广告美术设计（自由者）<br/>1995年台湾葛纳蓝美术指导<br/>1996年上海葛纳蓝广告总监<br/>1998年广告导演（自由者）<br/>2005年中国百大影响力导演（第19位）
+				</li>
+				<li data-name="江稚伦" data-hasthum="1"  data-thumb="images/d/02.jpg" data-trade="汽车类" data-area="大中华">1965年台湾生<br/>1987年台湾志上广告公司广告创意<br/>1991年台湾好点子影视公司制片经理<br/>1993年广告美术设计（自由者）<br/>1995年台湾葛纳蓝美术指导<br/>1996年上海葛纳蓝广告总监<br/>1998年广告导演（自由者）<br/>2005年中国百大影响力导演（第19位）1</li>
+				<li data-name="邝盛" data-hasthum="0" data-trade="汽车类" data-area="大中华">1965年台湾生<br/>1987年台湾志上广告公司广告创意<br/>1991年台湾好点子影视公司制片经理<br/>1993年广告美术设计（自由者）<br/>1995年台湾葛纳蓝美术指导<br/>1996年上海葛纳蓝广告总监<br/>1998年广告导演（自由者）<br/>2005年中国百大影响力导演（第19位）2</li>
+				<li data-name="卢彦伦" data-hasthum="1" data-thumb="images/d/04.jpg" data-trade="汽车类" data-area="大中华">1965年台湾生<br/>1987年台湾志上广告公司广告创意<br/>1991年台湾好点子影视公司制片经理<br/>1993年广告美术设计（自由者）<br/>1995年台湾葛纳蓝美术指导<br/>1996年上海葛纳蓝广告总监<br/>1998年广告导演（自由者）<br/>2005年中国百大影响力导演（第19位）3</li>
+				<li data-name="邝盛" data-hasthum="1" data-thumb="images/d/03.jpg" data-trade="汽车类" data-area="大中华">1965年台湾生<br/>1987年台湾志上广告公司广告创意<br/>1991年台湾好点子影视公司制片经理<br/>1993年广告美术设计（自由者）<br/>1995年台湾葛纳蓝美术指导<br/>1996年上海葛纳蓝广告总监<br/>1998年广告导演（自由者）<br/>2005年中国百大影响力导演（第19位）3</li>
+				<li data-name="彭建森" data-hasthum="1"  data-thumb="images/d/05.jpg" data-trade="汽车类" data-area="大中华">1965年台湾生<br/>1987年台湾志上广告公司广告创意<br/>1991年台湾好点子影视公司制片经理<br/>1993年广告美术设计（自由者）<br/>1995年台湾葛纳蓝美术指导<br/>1996年上海葛纳蓝广告总监<br/>1998年广告导演（自由者）<br/>2005年中国百大影响力导演（第19位）4</li>
+				<li data-name="钟孟宏" data-hasthum="0" data-trade="汽车类">1965年台湾生<br/>1987年台湾志上广告公司广告创意<br/>1991年台湾好点子影视公司制片经理<br/>1993年广告美术设计（自由者）<br/>1995年台湾葛纳蓝美术指导<br/>1996年上海葛纳蓝广告总监<br/>1998年广告导演（自由者）<br/>2005年中国百大影响力导演（第19位）6</li>
+				<li data-name="饶太平" data-hasthum="1" data-thumb="images/d/06.jpg" data-trade="汽车类" data-area="大中华">1965年台湾生<br/>1987年台湾志上广告公司广告创意<br/>1991年台湾好点子影视公司制片经理<br/>1993年广告美术设计（自由者）<br/>1995年台湾葛纳蓝美术指导<br/>1996年上海葛纳蓝广告总监<br/>1998年广告导演（自由者）<br/>2005年中国百大影响力导演（第19位）
+				</li>
+				<li data-name="卢彦伦" data-hasthum="1" data-thumb="images/d/04.jpg" data-trade="汽车类" data-area="大中华">1965年台湾生<br/>1987年台湾志上广告公司广告创意<br/>1991年台湾好点子影视公司制片经理<br/>1993年广告美术设计（自由者）<br/>1995年台湾葛纳蓝美术指导<br/>1996年上海葛纳蓝广告总监<br/>1998年广告导演（自由者）<br/>2005年中国百大影响力导演（第19位）3</li>
+				<li data-name="卢彦伦" data-hasthum="1" data-thumb="images/d/04.jpg" data-trade="汽车类" data-area="大中华">1965年台湾生<br/>1987年台湾志上广告公司广告创意<br/>1991年台湾好点子影视公司制片经理<br/>1993年广告美术设计（自由者）<br/>1995年台湾葛纳蓝美术指导<br/>1996年上海葛纳蓝广告总监<br/>1998年广告导演（自由者）<br/>2005年中国百大影响力导演（第19位）3</li>
+			</ul>
+			<div class="floatCreategory">
+				<div class="level-1">
+					<span data-show-all="true">全部</span>
+				</div>
+				<div class="level-1">
+					<span>行业</span>
+					<div class="arrow-area"></div>
+					<div class="arrow"></div>
+					<ul class="level-2">
+						<li>汽车类</li>
+						<li>食品类</li>
+						<li data-other="true">其它类</li>
+					</ul>
+				</div>
+				<div class="level-1">
+					<span>地区</span>
+					<div class="arrow-area"></div>
+					<div class="arrow"></div>
+					<ul class="level-2">
+						<li>日韩</li>
+						<li>东南亚</li>
+						<li>大中华</li>
+						<li>欧美</li>
+					</ul>
+				</div>
+				<div class="level-1">
+					<span class="search" data-action="search">搜索</span>
+					<div class="arrow-area"></div>
+					<div class="arrow"></div>
+					<div class="level-2-search">
+						<form id="directorForm">
+							<input class="inputText" type="" name="q" placeholder="搜索">
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="pagenavi"></div>
+			<div class="pagenavi-search"></div>
+			<div class="popShowItem">
+				<div class="container hasBigImg hides">
+					<div class="left BigImg">
+						<img src="images/d1.jpg" width="100%">
+					</div>
+					<div class="right allInfo">
+						<div class="padding-container">
+							<div>
+								<h3 class="name"></h3>
+								<div class="clearfloat"></div>
+							</div>
+							<div class="changeInfo">
+								<a id="ShowWorks" >作品欣赏</a>
+								<a id="ShowResume" >个人简介</a>
+								<div class="clearfloat justSmall"></div>
+								<a class="btn-downWork" href="">作品下载</a>
+								<div class="clearfloat"></div>
+							</div>
+							<div class="InfoArea">
+								<div id="worksByDirectorList">
+									<div class="widthContaniner">
+										<div class="worksByDirectorListPlayDiv">
+											<video width="100%" id="worksByDirectorListPlayer" controls  class="video-js vjs-default-skin"  data-setup="{}">
+											</video>
+										</div>
+										<ul class="list">
+											<!--
+											<li>
+												<img src="images/workbyDirector.jpg" width="100%">
+												<div class="play">
+													<table cellspacing="0" cellpadding="0" border="0" width="100%" height="100%" class="justName">
+														<tr>
+															<td valign="middle" style="padding-left:5%;">作品欣赏</td>
+														</tr>
+													</table>
+												</div>
+											</li>
+											-->
+											<div class="clearfloat"></div>
+										</ul>
+										<div class="clearfloat"></div>
+									</div>
+								</div>
+								<div id="Resume">
+								</div>
+								<div class="clearfloat"></div>
+							</div>
+						</div>
+						<a class="close"></a>
+					</div>
+					<div class="clearfloat"></div>
+				</div>
+			</div>
+		</div>
+
+		<div id="teamPage" data-500="top:100%;" data-800="top:0%;" data-1000="top:0%;"  data-2500="top:-100%;">
+			<div class="mianBox">
+				<div class="item">
+					<div class="box"></div>
+					<div class="box"></div>
+					<div class="box"></div>
+					<div class="box"></div>
+					<div class="box"></div>
+				</div>
+				<div class="item">
+					<div class="box"></div>
+					<div class="box"></div>
+					<div class="box"></div>
+					<div class="box"></div>
+					<div class="box"></div>
+				</div>
+				<div class="clearfloat"></div>
+			</div>
+			<ul id="TeamPageData" style="display:none;">
+				<li data-name="Ben1" data-position="法国监制" data-address="北京、上海" data-thumb-url="images/team/01.jpg" data-city="北京,上海">
+					<div class="resumeText">
+						<p>毕业于北京电影学院美术系，早年在电影《杂嘴子》《苍蝇》里任美术指导。</p><p>后投身于影视广告制作，执导广告影片十年有余，并入选中国广告导演30强。</p><p>1999年成立太平盛世影视广告有限公司，多次参与国际电影、广告的拍摄工作，拍摄足迹遍布亚洲，远涉欧洲、大洋洲，曾获多项国内外广告大赛殊荣。</p><p>多年来，其不辞辛苦的带领着一批又一批年轻人走在智做梦想的奋斗之路上。</p>
+					</div>
+					<div class="EvaluateMyself">
+						毕业于北京电影学院美术系，早年在电影《杂嘴子》《苍蝇》里任美术指导。后投身于影视广告制作，执导广告影片十年有余，并入选中国广告导演30强。
+					</div>
+				</li>
+				<li data-name="石鹰毅" data-position="监制" data-address="北京、上海" data-thumb-url="images/team/02.jpg" data-city="北京,上海">
+					<div class="resumeText">
+						<p>毕业于北京电影学院美术系，早年在电影《杂嘴子》《苍蝇》里任美术指导。</p><p>后投身于影视广告制作，执导广告影片十年有余，并入选中国广告导演30强。</p><p>1999年成立太平盛世影视广告有限公司，多次参与国际电影、广告的拍摄工作，拍摄足迹遍布亚洲，远涉欧洲、大洋洲，曾获多项国内外广告大赛殊荣。</p><p>多年来，其不辞辛苦的带领着一批又一批年轻人走在智做梦想的奋斗之路上。</p>
+					</div>
+					<div class="EvaluateMyself">
+						毕业于北京电影学院美术系，早年在电影《杂嘴子》《苍蝇》里任美术指导。后投身于影视广告制作，执导广告影片十年有余，并入选中国广告导演30强。
+					</div>
+				</li>
+				<li data-name="张欢" data-position="监制" data-address="北京、上海" data-thumb-url="images/team/03.jpg" data-city="北京">
+					<div class="resumeText">
+						<p>毕业于北京电影学院美术系，早年在电影《杂嘴子》《苍蝇》里任美术指导。</p><p>后投身于影视广告制作，执导广告影片十年有余，并入选中国广告导演30强。</p><p>1999年成立太平盛世影视广告有限公司，多次参与国际电影、广告的拍摄工作，拍摄足迹遍布亚洲，远涉欧洲、大洋洲，曾获多项国内外广告大赛殊荣。</p><p>多年来，其不辞辛苦的带领着一批又一批年轻人走在智做梦想的奋斗之路上。</p>
+					</div>
+					<div class="EvaluateMyself">
+						毕业于北京电影学院美术系，早年在电影《杂嘴子》《苍蝇》里任美术指导。后投身于影视广告制作，执导广告影片十年有余，并入选中国广告导演30强。
+					</div>
+				</li>
+				<li data-name="廖雍君" data-position="" data-address="北京、上海" data-thumb-url="images/team/04.jpg" data-city="北京">
+					<div class="resumeText">
+						<p>毕业于北京电影学院美术系，早年在电影《杂嘴子》《苍蝇》里任美术指导。</p><p>后投身于影视广告制作，执导广告影片十年有余，并入选中国广告导演30强。</p><p>1999年成立太平盛世影视广告有限公司，多次参与国际电影、广告的拍摄工作，拍摄足迹遍布亚洲，远涉欧洲、大洋洲，曾获多项国内外广告大赛殊荣。</p><p>多年来，其不辞辛苦的带领着一批又一批年轻人走在智做梦想的奋斗之路上。</p>
+					</div>
+					<div class="EvaluateMyself">
+						毕业于北京电影学院美术系，早年在电影《杂嘴子》《苍蝇》里任美术指导。后投身于影视广告制作，执导广告影片十年有余，并入选中国广告导演30强。
+					</div>
+				</li>
+				<li data-name="林冠铨" data-position="台湾监制" data-address="北京、上海" data-thumb-url="images/team/05.jpg" data-city="上海">
+					<div class="resumeText">
+						<p>毕业于北京电影学院美术系，早年在电影《杂嘴子》《苍蝇》里任美术指导。</p><p>后投身于影视广告制作，执导广告影片十年有余，并入选中国广告导演30强。</p><p>1999年成立太平盛世影视广告有限公司，多次参与国际电影、广告的拍摄工作，拍摄足迹遍布亚洲，远涉欧洲、大洋洲，曾获多项国内外广告大赛殊荣。</p><p>多年来，其不辞辛苦的带领着一批又一批年轻人走在智做梦想的奋斗之路上。</p>
+					</div>
+					<div class="EvaluateMyself">
+						毕业于北京电影学院美术系，早年在电影《杂嘴子》《苍蝇》里任美术指导。后投身于影视广告制作，执导广告影片十年有余，并入选中国广告导演30强。
+					</div>
+				</li>
+				<li data-name="朱文忠" data-position="台湾监制" data-address="北京、上海" data-thumb-url="images/team/06.jpg">
+					<div class="resumeText">
+						<p>毕业于北京电影学院美术系，早年在电影《杂嘴子》《苍蝇》里任美术指导。</p><p>后投身于影视广告制作，执导广告影片十年有余，并入选中国广告导演30强。</p><p>1999年成立太平盛世影视广告有限公司，多次参与国际电影、广告的拍摄工作，拍摄足迹遍布亚洲，远涉欧洲、大洋洲，曾获多项国内外广告大赛殊荣。</p><p>多年来，其不辞辛苦的带领着一批又一批年轻人走在智做梦想的奋斗之路上。</p>
+					</div>
+					<div class="EvaluateMyself">
+						毕业于北京电影学院美术系，早年在电影《杂嘴子》《苍蝇》里任美术指导。后投身于影视广告制作，执导广告影片十年有余，并入选中国广告导演30强。
+					</div>
+				</li>
+				<li data-name="Ben" data-position="法国监制" data-address="北京、上海" data-thumb-url="images/team/01.jpg">
+					<div class="resumeText">
+						<p>毕业于北京电影学院美术系，早年在电影《杂嘴子》《苍蝇》里任美术指导。</p><p>后投身于影视广告制作，执导广告影片十年有余，并入选中国广告导演30强。</p><p>1999年成立太平盛世影视广告有限公司，多次参与国际电影、广告的拍摄工作，拍摄足迹遍布亚洲，远涉欧洲、大洋洲，曾获多项国内外广告大赛殊荣。</p><p>多年来，其不辞辛苦的带领着一批又一批年轻人走在智做梦想的奋斗之路上。</p>
+					</div>
+					<div class="EvaluateMyself">
+						毕业于北京电影学院美术系，早年在电影《杂嘴子》《苍蝇》里任美术指导。后投身于影视广告制作，执导广告影片十年有余，并入选中国广告导演30强。
+					</div>
+				</li>
+				<li data-name="石鹰毅" data-position="监制" data-address="北京、上海" data-thumb-url="images/team/02.jpg">
+					<div class="resumeText">
+						<p>毕业于北京电影学院美术系，早年在电影《杂嘴子》《苍蝇》里任美术指导。</p><p>后投身于影视广告制作，执导广告影片十年有余，并入选中国广告导演30强。</p><p>1999年成立太平盛世影视广告有限公司，多次参与国际电影、广告的拍摄工作，拍摄足迹遍布亚洲，远涉欧洲、大洋洲，曾获多项国内外广告大赛殊荣。</p><p>多年来，其不辞辛苦的带领着一批又一批年轻人走在智做梦想的奋斗之路上。</p>
+					</div>
+					<div class="EvaluateMyself">
+						毕业于北京电影学院美术系，早年在电影《杂嘴子》《苍蝇》里任美术指导。后投身于影视广告制作，执导广告影片十年有余，并入选中国广告导演30强。
+					</div>
+				</li>
+				<li data-name="张欢" data-position="监制" data-address="北京、上海" data-thumb-url="images/team/03.jpg">
+					<div class="resumeText">
+						<p>毕业于北京电影学院美术系，早年在电影《杂嘴子》《苍蝇》里任美术指导。</p><p>后投身于影视广告制作，执导广告影片十年有余，并入选中国广告导演30强。</p><p>1999年成立太平盛世影视广告有限公司，多次参与国际电影、广告的拍摄工作，拍摄足迹遍布亚洲，远涉欧洲、大洋洲，曾获多项国内外广告大赛殊荣。</p><p>多年来，其不辞辛苦的带领着一批又一批年轻人走在智做梦想的奋斗之路上。</p>
+					</div>
+					<div class="EvaluateMyself">
+						毕业于北京电影学院美术系，早年在电影《杂嘴子》《苍蝇》里任美术指导。后投身于影视广告制作，执导广告影片十年有余，并入选中国广告导演30强。
+					</div>
+				</li>
+				<li data-name="廖雍君" data-position="" data-address="北京、上海" data-thumb-url="images/team/04.jpg">
+					<div class="resumeText">
+						<p>毕业于北京电影学院美术系，早年在电影《杂嘴子》《苍蝇》里任美术指导。</p><p>后投身于影视广告制作，执导广告影片十年有余，并入选中国广告导演30强。</p><p>1999年成立太平盛世影视广告有限公司，多次参与国际电影、广告的拍摄工作，拍摄足迹遍布亚洲，远涉欧洲、大洋洲，曾获多项国内外广告大赛殊荣。</p><p>多年来，其不辞辛苦的带领着一批又一批年轻人走在智做梦想的奋斗之路上。</p>
+					</div>
+					<div class="EvaluateMyself">
+						毕业于北京电影学院美术系，早年在电影《杂嘴子》《苍蝇》里任美术指导。后投身于影视广告制作，执导广告影片十年有余，并入选中国广告导演30强。
+					</div>
+				</li>
+				<li data-name="林冠铨" data-position="台湾监制" data-address="北京、上海" data-thumb-url="images/team/05.jpg">
+					<div class="resumeText">
+						<p>毕业于北京电影学院美术系，早年在电影《杂嘴子》《苍蝇》里任美术指导。</p><p>后投身于影视广告制作，执导广告影片十年有余，并入选中国广告导演30强。</p><p>1999年成立太平盛世影视广告有限公司，多次参与国际电影、广告的拍摄工作，拍摄足迹遍布亚洲，远涉欧洲、大洋洲，曾获多项国内外广告大赛殊荣。</p><p>多年来，其不辞辛苦的带领着一批又一批年轻人走在智做梦想的奋斗之路上。</p>
+					</div>
+					<div class="EvaluateMyself">
+						毕业于北京电影学院美术系，早年在电影《杂嘴子》《苍蝇》里任美术指导。后投身于影视广告制作，执导广告影片十年有余，并入选中国广告导演30强。
+					</div>
+				</li>
+				<li data-name="朱文忠" data-position="台湾监制" data-address="北京、上海" data-thumb-url="images/team/06.jpg">
+					<div class="resumeText">
+						<p>毕业于北京电影学院美术系，早年在电影《杂嘴子》《苍蝇》里任美术指导。</p><p>后投身于影视广告制作，执导广告影片十年有余，并入选中国广告导演30强。</p><p>1999年成立太平盛世影视广告有限公司，多次参与国际电影、广告的拍摄工作，拍摄足迹遍布亚洲，远涉欧洲、大洋洲，曾获多项国内外广告大赛殊荣。</p><p>多年来，其不辞辛苦的带领着一批又一批年轻人走在智做梦想的奋斗之路上。</p>
+					</div>
+					<div class="EvaluateMyself">
+						毕业于北京电影学院美术系，早年在电影《杂嘴子》《苍蝇》里任美术指导。后投身于影视广告制作，执导广告影片十年有余，并入选中国广告导演30强。
+					</div>
+				</li>
+				<li data-name="Ben" data-position="法国监制" data-address="北京、上海" data-thumb-url="images/team/01.jpg" data-city="北京">
+					<div class="resumeText">
+						<p>毕业于北京电影学院美术系，早年在电影《杂嘴子》《苍蝇》里任美术指导。</p><p>后投身于影视广告制作，执导广告影片十年有余，并入选中国广告导演30强。</p><p>1999年成立太平盛世影视广告有限公司，多次参与国际电影、广告的拍摄工作，拍摄足迹遍布亚洲，远涉欧洲、大洋洲，曾获多项国内外广告大赛殊荣。</p><p>多年来，其不辞辛苦的带领着一批又一批年轻人走在智做梦想的奋斗之路上。</p>
+					</div>
+					<div class="EvaluateMyself">
+						毕业于北京电影学院美术系，早年在电影《杂嘴子》《苍蝇》里任美术指导。后投身于影视广告制作，执导广告影片十年有余，并入选中国广告导演30强。
+					</div>
+				</li>
+				<li data-name="石鹰毅" data-position="监制" data-address="北京、上海" data-thumb-url="images/team/02.jpg" data-city="上海3">
+					<div class="resumeText">
+						<p>毕业于北京电影学院美术系，早年在电影《杂嘴子》《苍蝇》里任美术指导。</p><p>后投身于影视广告制作，执导广告影片十年有余，并入选中国广告导演30强。</p><p>1999年成立太平盛世影视广告有限公司，多次参与国际电影、广告的拍摄工作，拍摄足迹遍布亚洲，远涉欧洲、大洋洲，曾获多项国内外广告大赛殊荣。</p><p>多年来，其不辞辛苦的带领着一批又一批年轻人走在智做梦想的奋斗之路上。</p>
+					</div>
+					<div class="EvaluateMyself">
+						毕业于北京电影学院美术系，早年在电影《杂嘴子》《苍蝇》里任美术指导。后投身于影视广告制作，执导广告影片十年有余，并入选中国广告导演30强。
+					</div>
+				</li>
+				<li data-name="张欢" data-position="监制" data-address="北京、上海" data-thumb-url="images/team/03.jpg" data-city="北京">
+					<div class="resumeText">
+						<p>毕业于北京电影学院美术系，早年在电影《杂嘴子》《苍蝇》里任美术指导。</p><p>后投身于影视广告制作，执导广告影片十年有余，并入选中国广告导演30强。</p><p>1999年成立太平盛世影视广告有限公司，多次参与国际电影、广告的拍摄工作，拍摄足迹遍布亚洲，远涉欧洲、大洋洲，曾获多项国内外广告大赛殊荣。</p><p>多年来，其不辞辛苦的带领着一批又一批年轻人走在智做梦想的奋斗之路上。</p>
+					</div>
+					<div class="EvaluateMyself">
+						毕业于北京电影学院美术系，早年在电影《杂嘴子》《苍蝇》里任美术指导。后投身于影视广告制作，执导广告影片十年有余，并入选中国广告导演30强。
+					</div>
+				</li>
+				<li data-name="廖雍君" data-position="" data-address="北京、上海" data-thumb-url="images/team/04.jpg" data-city="北京">
+					<div class="resumeText">
+						<p>毕业于北京电影学院美术系，早年在电影《杂嘴子》《苍蝇》里任美术指导。</p><p>后投身于影视广告制作，执导广告影片十年有余，并入选中国广告导演30强。</p><p>1999年成立太平盛世影视广告有限公司，多次参与国际电影、广告的拍摄工作，拍摄足迹遍布亚洲，远涉欧洲、大洋洲，曾获多项国内外广告大赛殊荣。</p><p>多年来，其不辞辛苦的带领着一批又一批年轻人走在智做梦想的奋斗之路上。</p>
+					</div>
+					<div class="EvaluateMyself">
+						毕业于北京电影学院美术系，早年在电影《杂嘴子》《苍蝇》里任美术指导。后投身于影视广告制作，执导广告影片十年有余，并入选中国广告导演30强。
+					</div>
+				</li>
+				<li data-name="林冠铨" data-position="台湾监制" data-address="北京、上海" data-thumb-url="images/team/05.jpg" data-city="上海">
+					<div class="resumeText">
+						<p>毕业于北京电影学院美术系，早年在电影《杂嘴子》《苍蝇》里任美术指导。</p><p>后投身于影视广告制作，执导广告影片十年有余，并入选中国广告导演30强。</p><p>1999年成立太平盛世影视广告有限公司，多次参与国际电影、广告的拍摄工作，拍摄足迹遍布亚洲，远涉欧洲、大洋洲，曾获多项国内外广告大赛殊荣。</p><p>多年来，其不辞辛苦的带领着一批又一批年轻人走在智做梦想的奋斗之路上。</p>
+					</div>
+					<div class="EvaluateMyself">
+						毕业于北京电影学院美术系，早年在电影《杂嘴子》《苍蝇》里任美术指导。后投身于影视广告制作，执导广告影片十年有余，并入选中国广告导演30强。
+					</div>
+				</li>
+				<li data-name="朱文忠" data-position="台湾监制" data-address="北京、上海" data-thumb-url="images/team/06.jpg">
+					<div class="resumeText">
+						<p>毕业于北京电影学院美术系，早年在电影《杂嘴子》《苍蝇》里任美术指导。</p><p>后投身于影视广告制作，执导广告影片十年有余，并入选中国广告导演30强。</p><p>1999年成立太平盛世影视广告有限公司，多次参与国际电影、广告的拍摄工作，拍摄足迹遍布亚洲，远涉欧洲、大洋洲，曾获多项国内外广告大赛殊荣。</p><p>多年来，其不辞辛苦的带领着一批又一批年轻人走在智做梦想的奋斗之路上。</p>
+					</div>
+					<div class="EvaluateMyself">
+						毕业于北京电影学院美术系，早年在电影《杂嘴子》《苍蝇》里任美术指导。后投身于影视广告制作，执导广告影片十年有余，并入选中国广告导演30强。
+					</div>
+				</li>
+				<li data-name="Ben" data-position="法国监制" data-address="北京、上海" data-thumb-url="images/team/01.jpg">
+					<div class="resumeText">
+						<p>毕业于北京电影学院美术系，早年在电影《杂嘴子》《苍蝇》里任美术指导。</p><p>后投身于影视广告制作，执导广告影片十年有余，并入选中国广告导演30强。</p><p>1999年成立太平盛世影视广告有限公司，多次参与国际电影、广告的拍摄工作，拍摄足迹遍布亚洲，远涉欧洲、大洋洲，曾获多项国内外广告大赛殊荣。</p><p>多年来，其不辞辛苦的带领着一批又一批年轻人走在智做梦想的奋斗之路上。</p>
+					</div>
+					<div class="EvaluateMyself">
+						毕业于北京电影学院美术系，早年在电影《杂嘴子》《苍蝇》里任美术指导。后投身于影视广告制作，执导广告影片十年有余，并入选中国广告导演30强。
+					</div>
+				</li>
+				<li data-name="石鹰毅" data-position="监制" data-address="北京、上海" data-thumb-url="images/team/02.jpg">
+					<div class="resumeText">
+						<p>毕业于北京电影学院美术系，早年在电影《杂嘴子》《苍蝇》里任美术指导。</p><p>后投身于影视广告制作，执导广告影片十年有余，并入选中国广告导演30强。</p><p>1999年成立太平盛世影视广告有限公司，多次参与国际电影、广告的拍摄工作，拍摄足迹遍布亚洲，远涉欧洲、大洋洲，曾获多项国内外广告大赛殊荣。</p><p>多年来，其不辞辛苦的带领着一批又一批年轻人走在智做梦想的奋斗之路上。</p>
+					</div>
+					<div class="EvaluateMyself">
+						毕业于北京电影学院美术系，早年在电影《杂嘴子》《苍蝇》里任美术指导。后投身于影视广告制作，执导广告影片十年有余，并入选中国广告导演30强。
+					</div>
+				</li>
+			</ul>
+			<div class="floatCreategory">
+				<div class="level-1">
+					<span data-show-all="true">全部</span>
+				</div>
+				<div class="level-1">
+					<span>北京</span>
+				</div>
+				<div class="level-1">
+					<span>上海</span>
+				</div>
+			</div>
+			<div class="pagenavi"></div>
+			<div class="pagenavi-search"></div>
+			<div class="popShowItem">
+				<div class="container hide">
+					<div class="bigImg">
+					</div>
+					<div class="info">
+						<div class="content">
+							
+						</div>
+					</div>
+					<div class='close'>关闭</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="mapPage" data-1000="top:100%;" data-2000="top:0%;" data-2100="top:0%;" data-2700="top:-100%; ">
+			<div id="map-canvas"></div>
+			<div class="chooseArea">
+				选择地域：
+				<a class="item" data-index="0" data-zoom="4" data-lat="30.572269" data-lng="104.06654100000003">亚洲</a>
+				<a class="item" data-index="1" data-zoom="4" data-lat="-25.363882" data-lng="131.044922">大洋洲</a>
+				<a class="item" data-index="2" data-zoom="5" data-lat="49.5822260446217" data-lng="12.392578125">欧洲</a>
+			</div>
+			<div id="popMapWindow">
+				<div class="container">
+					<div class="title"></div>
+					<div class="video">
+						<video width="100%" height="100%" id="popMapWindowVideo" controls  class="video-js vjs-default-skin"  data-setup="{}">
+						</video>
+						<div class="btn-openInfo"></div>
+						<div class="infoBox">
+							<table cellspacing="0" cellpadding="0" border="0" width="60%" class="table">
+								<tr>
+									<td width="50%">篇名：<span class="pianming"></span></td>
+									<td width="50%">导演：<span class="daoyan"></span></td>
+								</tr>
+								<tr>
+									<td>客户：<span class="kehu"></span></td>
+									<td>代理商：<span class="dailishang"></span></td>
+								</tr>
+							</table>
+							<div class="changeBtn">
+								<a class="btn-item">精彩剧照</a>
+								<a class="btn-item">幕后花絮</a>
+								<div class="clearfloat"></div>
+							</div>
+							<div class="changeTabBox">
+								<div class="gallery">
+									<div class="container-hidden">
+										<div class="list">
+											<div class="item"><img src="images/works/01s.jpg" width="100%"></div>
+											<div class="item"><img src="images/works/02s.jpg" width="100%"></div>
+											<div class="item"><img src="images/works/03s.jpg" width="100%"></div>
+											<div class="item"><img src="images/works/04s.jpg" width="100%"></div>
+											<div class="item"><img src="images/works/05s.jpg" width="100%"></div>
+											<div class="clearfloat"></div>
+										</div>
+										<div class="popimg">
+											<div class="img"><img src="images/works/01s.jpg" width="100%"></div>
+											<div class="actionArea">
+												<div class="leftArrow"></div>
+												<div class="txt-info"></div>
+												<div class="rightArrow"></div>
+												<div class="clearfloat"></div>
+											</div>
+											<div class="close"></div>
+										</div>
+										<div class="clearfloat"></div>
+									</div>
+								</div>
+								<div class="flower">
+									<video id="flowerPlayer-map" width="100%" class="video-js vjs-default-skin"  controls>
+									</video>
+								</div>
+							</div>
+							<div class="leftArrrow"></div>
+						</div>
+					</div>
+					<div class="close">关闭</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="honorPage-bg" data-2100="top:100%; " data-2500="top:0%;" data-2700="top:0%;" data-3500="top:-100%;;">
+			<img src="images/bg-honor.jpg" width="100%" height="100%">
+		</div>
+
+		<div id="honorPage" data-2400="top:100%; display:block; " data-2500="top:0%;" data-2700="top:0%; display:block;" data-3500="top:-100%; display:none;">
+			<div class="mianBox-Outer">
+				<div class="mianBox">
+					<div class="item">
+						<div class="box"></div>
+						<div class="box"></div>
+						<div class="box"></div>
+						<div class="box"></div>
+						<div class="box"></div>
+					</div>
+					<div class="item">
+						<div class="box"></div>
+						<div class="box"></div>
+						<div class="box"></div>
+						<div class="box"></div>
+						<div class="box"></div>
+					</div>
+					<div class="item">
+						<div class="box"></div>
+						<div class="box"></div>
+						<div class="box"></div>
+						<div class="box"></div>
+						<div class="box"></div>
+					</div>
+					<div class="clearfloat"></div>
+					<div id="popHonerWindow">
+						<div class="leftBigImg"></div>
+						<div class="rightContent">
+
+							<table cellspacing="0" cellpadding="0" border="0" width="100%" height="100%">
+								<tr>
+									<td  valign="middle">
+							<div class="info-1"></div>
+							<div class="info-2"></div>
+							<div class="title"></div>
+							<video width="100%" id="worksByHonerPlayer" controls  class="video-js vjs-default-skin"  data-setup="{}"></video>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<div class="close">关闭</div>
+						<div class="clearfloat"></div>
+					</div>
+					<div class="pagenavi"></div>
+				</div>
+			</div>
+			<ul id="honorPageData" style="display:none;">
+				<li data-title="北汽福田-移山篇" data-party="第十届中国广告节" data-level="银奖" data-director="董世杰" data-thumb="images/honor/05.jpg" data-video-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-video-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-img-small="images/honor/s-0.png" data-img-big="images/honor/b-0.png">1绘画与美术一直是本身的强项，从小到大为学校也为自己争取很多的奖项.</li>
+				<li data-title="北汽福田-移山篇" data-party="第十届中国广告节" data-level="银奖" data-director="董世杰" data-thumb="images/honor/05.jpg" data-video-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-video-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-img-small="images/honor/s-1.png" data-img-big="images/honor/b-0.png">2绘画与美术一直是本身的强项，从小到大为学校也为自己争取很多的奖项.</li>
+				<li data-title="北汽福田-移山篇" data-party="第十届中国广告节" data-level="银奖" data-director="董世杰" data-thumb="images/honor/05.jpg" data-video-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-video-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-img-small="images/honor/s-2.png" data-img-big="images/honor/b-0.png">3绘画与美术一直是本身的强项，从小到大为学校也为自己争取很多的奖项.</li>
+				<li data-title="北汽福田-移山篇" data-party="第十届中国广告节" data-level="银奖" data-director="董世杰" data-thumb="images/honor/05.jpg" data-video-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-video-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-img-small="images/honor/s-1.png" data-img-big="images/honor/b-0.png">绘画与美术一直是本身的强项，从小到大为学校也为自己争取很多的奖项.</li>
+				<li data-title="北汽福田-移山篇" data-party="第十届中国广告节" data-level="银奖" data-director="董世杰" data-thumb="images/honor/05.jpg" data-video-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-video-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-img-small="images/honor/s-0.png" data-img-big="images/honor/b-0.png">绘画与美术一直是本身的强项，从小到大为学校也为自己争取很多的奖项.</li>
+				<li data-title="北汽福田-移山篇" data-party="第十届中国广告节" data-level="银奖" data-director="董世杰" data-thumb="images/honor/05.jpg" data-video-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-video-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-img-small="images/honor/s-2.png" data-img-big="images/honor/b-0.png">绘画与美术一直是本身的强项，从小到大为学校也为自己争取很多的奖项.</li>
+				<li data-title="北汽福田-移山篇" data-party="第十届中国广告节" data-level="银奖" data-director="董世杰" data-thumb="images/honor/05.jpg" data-video-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-video-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-img-small="images/honor/s-1.png" data-img-big="images/honor/b-0.png">绘画与美术一直是本身的强项，从小到大为学校也为自己争取很多的奖项.</li>
+				<li data-title="北汽福田-移山篇" data-party="第十届中国广告节" data-level="银奖" data-director="董世杰" data-thumb="images/honor/05.jpg" data-video-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-video-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-img-small="images/honor/s-0.png" data-img-big="images/honor/b-0.png">绘画与美术一直是本身的强项，从小到大为学校也为自己争取很多的奖项.</li>
+				<li data-title="北汽福田-移山篇" data-party="第十届中国广告节" data-level="银奖" data-director="董世杰" data-thumb="images/honor/05.jpg" data-video-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-video-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-img-small="images/honor/s-0.png" data-img-big="images/honor/b-0.png">绘画与美术一直是本身的强项，从小到大为学校也为自己争取很多的奖项.</li>
+				<li data-title="北汽福田-移山篇" data-party="第十届中国广告节" data-level="银奖" data-director="董世杰" data-thumb="images/honor/05.jpg" data-video-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-video-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-img-small="images/honor/s-1.png" data-img-big="images/honor/b-0.png">绘画与美术一直是本身的强项，从小到大为学校也为自己争取很多的奖项.</li>
+				<li data-title="北汽福田-移山篇" data-party="第十届中国广告节" data-level="银奖" data-director="董世杰" data-thumb="images/honor/05.jpg" data-video-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-video-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-img-small="images/honor/s-0.png" data-img-big="images/honor/b-0.png">绘画与美术一直是本身的强项，从小到大为学校也为自己争取很多的奖项.</li>
+				<li data-title="北汽福田-移山篇" data-party="第十届中国广告节" data-level="银奖" data-director="董世杰" data-thumb="images/honor/05.jpg" data-video-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-video-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-img-small="images/honor/s-1.png" data-img-big="images/honor/b-0.png">绘画与美术一直是本身的强项，从小到大为学校也为自己争取很多的奖项.</li>
+				<li data-title="北汽福田-移山篇" data-party="第十届中国广告节" data-level="银奖" data-director="董世杰" data-thumb="images/honor/05.jpg" data-video-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-video-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-img-small="images/honor/s-0.png" data-img-big="images/honor/b-0.png">绘画与美术一直是本身的强项，从小到大为学校也为自己争取很多的奖项.</li>
+				<li data-title="北汽福田-移山篇" data-party="第十届中国广告节" data-level="银奖" data-director="董世杰" data-thumb="images/honor/05.jpg" data-video-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-video-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-img-small="images/honor/s-1.png" data-img-big="images/honor/b-0.png">绘画与美术一直是本身的强项，从小到大为学校也为自己争取很多的奖项.</li>
+				<li data-title="北汽福田-移山篇" data-party="第十届中国广告节" data-level="银奖" data-director="董世杰" data-thumb="images/honor/05.jpg" data-video-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-video-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-img-small="images/honor/s-0.png" data-img-big="images/honor/b-0.png">绘画与美术一直是本身的强项，从小到大为学校也为自己争取很多的奖项.</li>
+				<li data-title="北汽福田-移山篇" data-party="第十届中国广告节" data-level="银奖" data-director="董世杰" data-thumb="images/honor/05.jpg" data-video-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-video-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-img-small="images/honor/s-1.png" data-img-big="images/honor/b-0.png">绘画与美术一直是本身的强项，从小到大为学校也为自己争取很多的奖项.</li>
+				<li data-title="北汽福田-移山篇" data-party="第十届中国广告节" data-level="银奖" data-director="董世杰" data-thumb="images/honor/05.jpg" data-video-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-video-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-img-small="images/honor/s-1.png" data-img-big="images/honor/b-0.png">绘画与美术一直是本身的强项，从小到大为学校也为自己争取很多的奖项.</li>
+				<li data-title="北汽福田-移山篇" data-party="第十届中国广告节" data-level="银奖" data-director="董世杰" data-thumb="images/honor/05.jpg" data-video-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-video-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-img-small="images/honor/s-0.png" data-img-big="images/honor/b-0.png">绘画与美术一直是本身的强项，从小到大为学校也为自己争取很多的奖项.</li>
+				<li data-title="北汽福田-移山篇" data-party="第十届中国广告节" data-level="银奖" data-director="董世杰" data-thumb="images/honor/05.jpg" data-video-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-video-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-img-small="images/honor/s-0.png" data-img-big="images/honor/b-0.png">绘画与美术一直是本身的强项，从小到大为学校也为自己争取很多的奖项.</li>
+				<li data-title="北汽福田-移山篇" data-party="第十届中国广告节" data-level="银奖" data-director="董世杰" data-thumb="images/honor/05.jpg" data-video-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-video-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-img-small="images/honor/s-0.png" data-img-big="images/honor/b-0.png">绘画与美术一直是本身的强项，从小到大为学校也为自己争取很多的奖项.</li>
+				<li data-title="北汽福田-移山篇" data-party="第十届中国广告节" data-level="银奖" data-director="董世杰" data-thumb="images/honor/05.jpg" data-video-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-video-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-img-small="images/honor/s-1.png" data-img-big="images/honor/b-0.png">绘画与美术一直是本身的强项，从小到大为学校也为自己争取很多的奖项.</li>
+				<li data-title="北汽福田-移山篇" data-party="第十届中国广告节" data-level="银奖" data-director="董世杰" data-thumb="images/honor/05.jpg" data-video-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-video-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-img-small="images/honor/s-1.png" data-img-big="images/honor/b-0.png">绘画与美术一直是本身的强项，从小到大为学校也为自己争取很多的奖项.</li>
+				<li data-title="北汽福田-移山篇" data-party="第十届中国广告节" data-level="银奖" data-director="董世杰" data-thumb="images/honor/05.jpg" data-video-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-video-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-img-small="images/honor/s-2.png" data-img-big="images/honor/b-0.png">绘画与美术一直是本身的强项，从小到大为学校也为自己争取很多的奖项.</li>
+				<li data-title="北汽福田-移山篇" data-party="第十届中国广告节" data-level="银奖" data-director="董世杰" data-thumb="images/honor/05.jpg" data-video-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-video-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-img-small="images/honor/s-0.png" data-img-big="images/honor/b-0.png">绘画与美术一直是本身的强项，从小到大为学校也为自己争取很多的奖项.</li>
+				<li data-title="北汽福田-移山篇" data-party="第十届中国广告节" data-level="银奖" data-director="董世杰" data-thumb="images/honor/05.jpg" data-video-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-video-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-img-small="images/honor/s-1.png" data-img-big="images/honor/b-0.png">绘画与美术一直是本身的强项，从小到大为学校也为自己争取很多的奖项.</li>
+				<li data-title="北汽福田-移山篇" data-party="第十届中国广告节" data-level="银奖" data-director="董世杰" data-thumb="images/honor/05.jpg" data-video-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-video-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-img-small="images/honor/s-0.png" data-img-big="images/honor/b-0.png">绘画与美术一直是本身的强项，从小到大为学校也为自己争取很多的奖项.</li>
+				<li data-title="北汽福田-移山篇" data-party="第十届中国广告节" data-level="银奖" data-director="董世杰" data-thumb="images/honor/05.jpg" data-video-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-video-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-img-small="images/honor/s-1.png" data-img-big="images/honor/b-0.png">绘画与美术一直是本身的强项，从小到大为学校也为自己争取很多的奖项.</li>
+				<li data-title="北汽福田-移山篇" data-party="第十届中国广告节" data-level="银奖" data-director="董世杰" data-thumb="images/honor/05.jpg" data-video-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-video-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-img-small="images/honor/s-0.png" data-img-big="images/honor/b-0.png">绘画与美术一直是本身的强项，从小到大为学校也为自己争取很多的奖项.</li>
+				<li data-title="北汽福田-移山篇" data-party="第十届中国广告节" data-level="银奖" data-director="董世杰" data-thumb="images/honor/05.jpg" data-video-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-video-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-img-small="images/honor/s-0.png" data-img-big="images/honor/b-0.png">绘画与美术一直是本身的强项，从小到大为学校也为自己争取很多的奖项.</li>
+				<li data-title="北汽福田-移山篇" data-party="第十届中国广告节" data-level="银奖" data-director="董世杰" data-thumb="images/honor/05.jpg" data-video-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-video-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-img-small="images/honor/s-2.png" data-img-big="images/honor/b-0.png">绘画与美术一直是本身的强项，从小到大为学校也为自己争取很多的奖项.</li>
+				<li data-title="北汽福田-移山篇" data-party="第十届中国广告节" data-level="银奖" data-director="董世杰" data-thumb="images/honor/05.jpg" data-video-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-video-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-img-small="images/honor/s-0.png" data-img-big="images/honor/b-0.png">绘画与美术一直是本身的强项，从小到大为学校也为自己争取很多的奖项.</li>
+				<li data-title="北汽福田-移山篇" data-party="第十届中国广告节" data-level="银奖" data-director="董世杰" data-thumb="images/honor/05.jpg" data-video-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-video-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-img-small="images/honor/s-0.png" data-img-big="images/honor/b-0.png">绘画与美术一直是本身的强项，从小到大为学校也为自己争取很多的奖项.</li>
+				<li data-title="北汽福田-移山篇" data-party="第十届中国广告节" data-level="银奖" data-director="董世杰" data-thumb="images/honor/05.jpg" data-video-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-video-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-img-small="images/honor/s-0.png" data-img-big="images/honor/b-0.png">绘画与美术一直是本身的强项，从小到大为学校也为自己争取很多的奖项.</li>
+				<li data-title="北汽福田-移山篇" data-party="第十届中国广告节" data-level="银奖" data-director="董世杰" data-thumb="images/honor/05.jpg" data-video-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-video-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-img-small="images/honor/s-2.png" data-img-big="images/honor/b-1.png">绘画与美术一直是本身的强项，从小到大为学校也为自己争取很多的奖项.</li>
+				<li data-title="北汽福田-移山篇" data-party="第十届中国广告节" data-level="银奖" data-director="董世杰" data-thumb="images/honor/05.jpg" data-video-mp4="video/She's Alive Beautiful Finite Hurting Worth Dying for.mp4" data-video-webm="video/She's Alive Beautiful Finite Hurting Worth Dying for.webm" data-img-small="images/honor/s-0.png" data-img-big="images/honor/b-0.png">绘画与美术一直是本身的强项，从小到大为学校也为自己争取很多的奖项.</li>
+			</ul>
+		</div>
+
+		<div id="logoWallPage-bg" data-0="display:none;top:100%;" data-2700="display:block;top:100%; " data-3200="top:0%;" data-3700="top:0%;" data-4200="top:-100%;">
+			<img src="images/bg-logowall.jpg" width="100%" height="100%" >
+		</div>
+		<div id="logoWallPage" data-0="display:none;top:100%;" data-3000="display:block; top:100%;" data-3500="top:0%;" data-3700="top:0%;" data-4200="display:none;top:-100%;">
+			<div id="logoWall-Client" >
+				<div class="mianBox">
+					<div class="item">
+						<div class="category-name">
+							<table cellspacing="0" cellpadding="0" border="0" width="100%" height="100%">
+								<tr>
+									<td  valign="middle">
+										合作客户
+									</td>
+								</tr>
+							</table>
+						</div>
+						<div class="box"></div>
+						<div class="box"></div>
+						<div class="clearfloat"></div>
+					</div>
+					<div class="item">
+						<div class="box"></div>
+						<div class="box"></div>
+						<div class="box"></div>
+						<div class="clearfloat"></div>
+					</div>
+					<div class="item">
+						<div class="box"></div>
+						<div class="box"></div>
+						<div class="box"></div>
+						<div class="clearfloat"></div>
+					</div>
+					<div class="item">
+						<div class="box"></div>
+						<div class="box"></div>
+						<div class="box"></div>
+						<div class="clearfloat"></div>
+					</div>
+					<div class="item">
+						<div class="box"></div>
+						<div class="box"></div>
+						<div class="box"></div>
+						<div class="clearfloat"></div>
+					</div>
+				</div>
+				<ul id="ClientData" class="data" style="display:none;">
+					<li data-img="images/logowall/0.png"></li>
+					<li data-img="images/logowall/1.png"></li>
+					<li data-img="images/logowall/2.png"></li>
+					<li data-img="images/logowall/3.png"></li>
+					<li data-img="images/logowall/4.png"></li>
+					<li data-img="images/logowall/0.png"></li>
+					<li data-img="images/logowall/1.png"></li>
+					<li data-img="images/logowall/2.png"></li>
+					<li data-img="images/logowall/3.png"></li>
+					<li data-img="images/logowall/4.png"></li>
+					<li data-img="images/logowall/0.png"></li>
+					<li data-img="images/logowall/1.png"></li>
+					<li data-img="images/logowall/2.png"></li>
+					<li data-img="images/logowall/3.png"></li>
+					<li data-img="images/logowall/4.png"></li>
+					<li data-img="images/logowall/0.png"></li>
+					<li data-img="images/logowall/1.png"></li>
+					<li data-img="images/logowall/2.png"></li>
+					<li data-img="images/logowall/3.png"></li>
+					<li data-img="images/logowall/4.png"></li>
+					<li data-img="images/logowall/0.png"></li>
+					<li data-img="images/logowall/1.png"></li>
+					<li data-img="images/logowall/2.png"></li>
+					<li data-img="images/logowall/3.png"></li>
+					<li data-img="images/logowall/4.png"></li>
+				</ul>
+				<div class="pagenavi"></div>
+			</div>
+			<div id="logoWall-Agents">
+				<div class="mianBox">
+					<div class="item">
+						<div class="category-name">
+							<table cellspacing="0" cellpadding="0" border="0" width="100%" height="100%">
+								<tr>
+									<td  valign="middle">
+										合作代理商
+									</td>
+								</tr>
+							</table>
+						</div>
+						<div class="box"></div>
+						<div class="box"></div>
+						<div class="clearfloat"></div>
+					</div>
+					<div class="item">
+						<div class="box"></div>
+						<div class="box"></div>
+						<div class="box"></div>
+						<div class="clearfloat"></div>
+					</div>
+					<div class="item">
+						<div class="box"></div>
+						<div class="box"></div>
+						<div class="box"></div>
+						<div class="clearfloat"></div>
+					</div>
+					<div class="item">
+						<div class="box"></div>
+						<div class="box"></div>
+						<div class="box"></div>
+						<div class="clearfloat"></div>
+					</div>
+					<div class="item">
+						<div class="box"></div>
+						<div class="box"></div>
+						<div class="box"></div>
+						<div class="clearfloat"></div>
+					</div>
+				</div>
+				<ul id="AgentsData" class="data" style="display:none;">
+					<li data-img="images/logowall/0.png"></li>
+					<li data-img="images/logowall/1.png"></li>
+					<li data-img="images/logowall/2.png"></li>
+					<li data-img="images/logowall/3.png"></li>
+					<li data-img="images/logowall/4.png"></li>
+					<li data-img="images/logowall/0.png"></li>
+					<li data-img="images/logowall/1.png"></li>
+					<li data-img="images/logowall/2.png"></li>
+					<li data-img="images/logowall/3.png"></li>
+					<li data-img="images/logowall/4.png"></li>
+					<li data-img="images/logowall/0.png"></li>
+					<li data-img="images/logowall/1.png"></li>
+					<li data-img="images/logowall/2.png"></li>
+					<li data-img="images/logowall/3.png"></li>
+					<li data-img="images/logowall/4.png"></li>
+					<li data-img="images/logowall/0.png"></li>
+					<li data-img="images/logowall/1.png"></li>
+					<li data-img="images/logowall/2.png"></li>
+					<li data-img="images/logowall/3.png"></li>
+				</ul>
+				<div class="pagenavi"></div>
+			</div>
+		</div>
+
+		<div id="joinusPage-bg" data-0="display:none;" data-3700="display:block;top:100%; " data-4000="top:0%;" data-5300="left:0%;top:0%;" data-5800="top:-100%;">
+			<img src="images/bg-joinus.jpg" width="100%" height="100%">
+		</div>
+		<div id="joinusPage-gray"  data-0="display:none;" data-3700="display:block;top:100%; " data-4000="top:0% " data-5300="top:0% " data-5800="top:-100%;">
+			<table cellspacing="0" cellpadding="0" border="0" width="100%" height="100%">
+				<tr>
+					<td valign="middle">
+						<a class="upArrow" id="About_Us" href="#About_Us"  data-menu-top="4100">关于我们</a>
+						<a class="downArrow" id="Join_Us" href="#Join_Us"  data-menu-top="5000">加入我们</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div id="joinusPage" data-0="display:none;" data-3700="display:block;top:100%;" data-4100=" top:0%" data-4200="top:0%"  data-4800=" top:-150%" >
+			<table cellspacing="0" cellpadding="0" border="0" width="100%" height="100%">
+				<tr>
+					<td valign="middle">
+						<h4>太平盛世影视广告有限公司</h4>
+						<h5>专业（北京规模最大的）TVC创意制作供应商</h5>
+						<div class="content">
+							<p>1999年北京太平盛世成立，从几个人的规模发展到目前拥有北京和上海两个办公室及几十名专业工作人员的国际化影视广告制片公司；迄今为止拍摄了几百支不同风格和表现形式的TVC作品，其中很多作品为客户创造了不菲的传播价值；也屡获国内、国际的诸多广告奖项。</p>
+							<p>在TVC创意制作领域我们不断进取；用全球化视野整合全世界，优秀的TVC创意制作资源，来满足客户的更高要求。</p>
+							<p>目前我们已和国内外一百多位优秀的TVC导演建立了紧密的合作关系。<br>同时具备国际先进的TVC制作的管理经验和流程。</p>
+							<p>我们建立了丰富的演员、场景、道具的资料库让执行更为高效准确。<br>我们不断的努力就是要让客户的作品更精彩，更安全，更高效。<br>我们深信服务和执行的过程也是一件追求完美的作品。</p>
+							<p>主要服务：TVC、Viral Video、电影协拍、MV、微电影</p>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div id="joinusPage2" data-0="display:none;" data-4500="display:block;top:100%; " data-5000="top:0% " data-5800="top:-150%;" >
+			<table cellspacing="0" cellpadding="0" border="0" width="100%" height="100%">
+				<tr>
+					<td valign="middle">
+						<h3>加入我们</h3>
+						<p class="des">我们在北京、上海拥有8位监制，14个制作组群，荣获50多个奖项，60多位员工，800多条TVC执行经验，1300多个导演资源，1450多个场景资料，5000多个演员档案，50，000条广告素材，10000000......个梦想</p>
+						<div class="Alliance-box">
+							<h4>我们的联盟</h4>
+							<div class="mianBox">
+								<div class="box even"></div>
+								<div class="box"></div>
+								<div class="box even"></div>
+								<div class="box"></div>
+								<div class="clearfloat"></div>
+							</div>
+							<ul id="data-Alliance" style="display:none">
+								<li data-img="images/Alliance/0.png"></li>
+								<li data-img="images/Alliance/1.png"></li>
+								<li data-img="images/Alliance/2.png"></li>
+								<li data-img="images/Alliance/3.png"></li>
+								<li data-img="images/Alliance/3.png"></li>
+								<li data-img="images/Alliance/2.png"></li>
+								<li data-img="images/Alliance/1.png"></li>
+								<li data-img="images/Alliance/0.png"></li>
+							</ul>
+							<div class="pagenavi"></div>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div id="contactPage-bg" data-0="display:none;" data-5300="display:block;top:100%; " data-5500="top:0%;left:0%" >
+			<img src="images/bg-contact.jpg" width="100%" height="100%">
+		</div>
+		<div id="contactPage" data-5300="top:100%; " data-5500="top:0%; " data-end="top:0%;">
+			<table cellspacing="0" cellpadding="0" border="0" width="100%" height="100%">
+				<tr>
+					<td valign="middle">
+						<h3>联系我们</h3>
+						<div class="changeTab">
+							<div class="btn">北京</div>
+							<div class="btn">上海</div>
+							<div class="clearfloat"></div>
+						</div>
+						<div id="contactMapCanvas">
+							
+						</div>
+						<div class="address">
+							<p>中国北京朝阳区八里庄西里住邦2000三号楼2A05室<br/>电   话：010-51650003<br/>传   真：010-51650003-8001<br/>Email:  mail@tpss.cc<br/>Site:  www.tpss.cc</p>
+						</div>
+						<div class="address">
+							<p>中国上海市静安区西康路928号创展大厦11层1113室<br/>电   话：021-33530510<br/>传   真：021-33530516<br/>Email:  mail@tpss.cc</p>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div id="popMember" data-0="left:0%"  data-end="left:0%">
+			<div class="container">
+				<div class="btnTab">
+					<div class="item">会员登录</div>
+					<div class="item">会员注册</div>
+					<div class="item">忘记密码</div>
+					<div class="clearfloat"></div>
+				</div>
+				<div class="TabBox">
+					<div class="box login">
+						<div class="formArea">
+							<form>
+								<div class="inputCell" data-role="fieldcontain">
+									<label  class="name" for="login-name">用户名：</label>
+									<div class="input"><input name="" class="inputText" placeholder="请输入用户名" id="login-name"></div>
+									<div class="clearfloat"></div>
+								</div>
+								<div class="inputCell" data-role="fieldcontain">
+									<label  class="name" for="login-pwd">密&nbsp;&nbsp;&nbsp;码：</label>
+									<div class="input"><input name="" type="password" class="inputText" placeholder="请输入密码" id="login-pwd"></div>
+									<div class="clearfloat"></div>
+								</div>
+								<div>
+									<div class="input reb">
+									<label for="persist_box">下次自动登录</label>
+									<input id="persist_box" type="checkbox" name="persistent" value="1" tabindex="3" class="uiInputLabelInput uiInputLabelCheckbox"></div>
+									<div class="input link to-findPwd">忘记密码</div>
+									<div class="regError">
+										<!--用户名或密码错误-->
+									</div>
+									<div class="clearfloat"></div>
+								</div>
+								<div>
+									<div class="name2"><input type="submit" value="登&nbsp;&nbsp;录" class="btn" data-inline="true" data-role="none"></div>
+									<div class="clearfloat"></div>
+								</div>
+							</form>
+						</div>
+						<div class="snsArea">
+							
+						</div>
+						<div class="clearfloat"></div>
+					</div>
+					<div class="box reg">
+						<div class="formArea">
+							<form>
+								<div class="inputCell-2">
+									<div class="inputCell">
+										<label  class="name" for="reg-name">用&nbsp;&nbsp;户&nbsp;&nbsp;名：</label>
+										<div class="input"><input name="" class="inputText" placeholder="请输入用户名" id="reg-name"></div>
+										<div class="clearfloat"></div>
+									</div>
+									<div class="info">
+										4-16位英文、数字、下划线或减号，注册后不可修改
+									</div>
+									<div class="clearfloat"></div>
+								</div>
+								<div class="inputCell-2">
+									<div class="inputCell">
+										<label  class="name" for="reg-pwd">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：</label>
+										<div class="input"><input name="" type="password" class="inputText" placeholder="请输入密码" id="reg-pwd"></div>
+										<div class="clearfloat"></div>
+									</div>
+									<div class="info">
+										由6-16位字符组成
+									</div>
+									<div class="clearfloat"></div>
+								</div>
+								<div class="inputCell-2">
+									<div class="inputCell">
+										<label  class="name" for="reg-repwd">确认密码 ：</label>
+										<div class="input"><input name="" type="password" class="inputText" placeholder="请输入密码" id="reg-repwd"></div>
+										<div class="clearfloat"></div>
+									</div>
+									<div class="info">
+									<!--<div class="info Error">
+										两次密码输入不一致-->
+									</div>
+									<div class="clearfloat"></div>
+								</div>
+								<div>
+									<div class="name2"><input type="submit" value="注&nbsp;&nbsp;册" class="btn" data-role="none" ></div>
+									<div class="clearfloat"></div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="box findPWD">
+						<div class="formArea">
+							<form>
+								<div class="desc">请留下您的联系方式，我们会尽快和您取得联系。</div>
+								<div class="inputCell">
+									<label  class="name" for="fwd-mobile">联系电话：</label>
+									<div class="input"><input name="fwd-mobile" class="inputText" placeholder="请输入联系电话" id="fwd-mobile"></div>
+									<div class="clearfloat"></div>
+								</div>
+								<div class="submit">
+									<div class="name2"><input type="submit" value="提&nbsp;&nbsp;交" class="btn"  data-inline="true" data-role="none"></div>
+									<div class="clearfloat"></div>
+								</div>
+								<div class="clearfloat"></div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="close"></div>
+			</div>
+		</div>
+
+		<div id="popDownload" data-0="left:0%"  data-end="left:0%">
+			<div class="container">
+				<div class="title">视频下载:</div>
+				<div class="downloadSinger">
+					<div class="info">
+						
+					</div>
+					<div class="btn-downLoadArea">
+						<div class="outer-btn outer-btn-0">
+							<a class="btn btn-0" href="" target="_blank">
+								<table cellspacing="0" cellpadding="0" border="0" width="100%" height="100%">
+									<tr>
+										<td  valign="middle">
+											标清<!--<br/><span>6M</span>-->
+										</td>
+									</tr>
+								</table>
+							</a>
+						</div>
+						<div class="outer-btn outer-btn-1">
+							<a class="btn btn-1" href="" target="_blank">
+								<table cellspacing="0" cellpadding="0" border="0" width="100%" height="100%">
+									<tr>
+										<td  valign="middle">
+											高清<!--<br/><span>12M</span>-->
+										</td>
+									</tr>
+								</table>
+							</a>
+						</div>
+						<div class="clearfloat"></div>
+					</div>
+				</div>
+				<div class="downloadM">
+					<div class="list"></div>
+					<div class="btnArea">
+						<div class="btn btn-chooseAll">全选</div>
+						<a class="btn" href="">下载</a>
+						<div class="clearfloat"></div>
+					</div>
+					<div style="display:none" class="hideInput"></div>
+				</div>
+				<div class="close"></div>
+			</div>
+		</div>
+    </div>
+    
+
+		<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style_32x32" style="display:none">
+		<a class="jiathis_button_qzone"></a>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_fb"></a>
+		<a class="jiathis_counter_style"></a>
+	</div>
+	<script type="text/javascript" >
+	var jiathis_config={
+		data_track_clickback:true,
+		sm:"tsina,qzone,weixin,renren",
+		summary:"",
+		shortUrl:false,
+		hideMore:false
+	}
+	</script>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1895651" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+    <div id="menuAlert" data-0="font-size:13px;" data-end="font-size:13px;">
+    	<div class="arrow"></div>
+    	<div class="text"></div>
+    </div>
+    <div id="menuAlert2" data-0="font-size:13px;" data-end="font-size:13px;">
+    	<div class="arrow"></div>
+    	<div class="text">
+    		<a href="" id="shareSina"></a>
+    		<a href="" id="shareFb"></a>
+    		<a href="" id="shareQq"></a>
+    	</div>
+    </div>
+
+    <div id="menuAlert3" data-0="font-size:13px;" data-end="font-size:13px;">
+    	<div class="arrow"></div>
+    	<div class="container">
+    		<h6>友情链接</h6>
+    		<div class="mian">
+    			<div class="item">
+    				<div class="box">
+    					<div class="item0">
+    						<a href=""><img src="images/link-0.png"></a>
+    					</div>
+    				</div>
+    				<div class="box last">
+    					<div class="item0">
+    						<a href=""><img src="images/link-1.png"></a>
+    					</div>
+    				</div>
+    				<div class="clearfloat"></div>
+    			</div>
+    			<div class="item last">
+    				<div class="box">
+    					<div class="item0">
+    						<a href=""><img src="images/link-2.png"></a>
+    					</div>
+    				</div>
+    				<div class="box last">
+    					<div class="item0">
+    						<a href=""><img src="images/link-3.png"></a>
+    					</div>
+    				</div>
+    				<div class="clearfloat"></div>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+
+	<div id="pop-window">
+	</div>
+
+	<div id="loaderImgBox" style="display:none;">
+		
+	</div>
+
+</body>
+</html>

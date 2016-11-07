@@ -1,0 +1,290 @@
+html,body{
+	margin: 0;
+	padding: 0;
+	position: relative;
+	color: #fff;
+	background-color: #000;
+	font-family: "微软雅黑";
+}
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+.clearfloat{
+	clear: both;
+}
+img{border:0;}
+#right-s1-notitext .btn-close, #s1-nav a{
+	background: url(../images/sprite.png);
+	display: block;
+	text-indent: -999999px;
+	background-repeat: no-repeat;
+}
+#s1-nav{
+	text-align: center;
+	margin: 0 auto;
+	width: 100%;
+}
+#s1-nav a{
+	width: 114px;
+	height: 114px;
+	display: inline-block;
+	background-position: -3px -1738px;
+}
+#s1-nav a:hover{
+	background-position: -3px -1548px;
+}
+#s1-nav a span{
+	display: block;
+	width: 114px;
+	height: 114px;
+	background: url(../images/sprite.png);
+	background-repeat: no-repeat;
+}
+#s1-nav #nav-mycenter span{
+	background-position: -170px -121px;
+}
+#s1-nav #nav-brand span{
+	background-position: -2px -273px;
+}
+#s1-nav #nav-game span{
+	background-position: -170px -426px;
+}
+#s1-nav #nav-family span{
+	background-position: -174px -582px;
+}
+#s1-nav #nav-message span{
+	background-position: -173px -739px;
+}
+#s1-nav #nav-diary span{
+	background-position: -171px -889px;
+}
+#s1-nav #nav-shop span{
+	background-position: -171px -1041px;
+}
+/*场景1*/
+#scene-1-bg,#scene-2-bg{
+	width: 100%;
+}
+#topTool{width: 100%;
+	top: 4.75%;
+}
+#logo{
+	min-width: 50px;
+	max-width: 89px;
+	width: 6.1805555%;
+	margin-left: 12.0833333%;
+	float: left;
+}
+#topTool .rightTools{
+	float: right;
+	margin-right: 12.0833333%;
+	min-width: 220px;
+	width: 20%;
+
+}
+#topTool  a{
+	color: #fff;
+	font-size: 1em;
+	font-weight: bolder;
+	text-indent: 0;
+	padding: 0 1% 0 ;
+	text-decoration: none;
+	float: right;
+	height: 54px;
+	line-height: 54px;
+
+}
+#topTool .container{
+	margin-right: 12.0833333%;
+}
+
+#topTool #nav-reg,#topTool #nav-login{
+	padding: 0 ;
+	width: 54px;
+	text-align: center;
+}
+#topTool #nav-reg:hover,#topTool #nav-login:hover{
+	background-image:url(../images/sprite.png);
+	background-repeat: no-repeat;
+	background-position: -1px -1450px;
+}
+
+#mic{
+	width: 52.986111%;
+	height: 62%;
+}
+/*场景1 左侧草莓*/
+#left-s1-strawberries{
+	width: 8.9583333%;
+	top: 16%;
+}
+#left-s1-text-0{
+	width: 18.819444%;
+	top: 29.125%;
+}
+#left-s1-text-1{
+	width:11.805555%;
+	top: 37%;
+
+}
+#left-s1-video{
+	width:23.819444%;
+	position: relative;
+}
+#left-s1-video .videoContainer{
+	position: absolute;
+	top: 4.984442%;
+	left: 11.95335%;
+	width: 69.67930%;
+	height: 51.090342%;
+}
+#popVideo{
+	position: absolute;
+	top: 4.984442%;
+	left: 11.95335%;
+	width: 69.67930%;
+	height: 51.090342%;
+}
+#left-s1-video-milk{
+	width:9.583333%;
+}
+#right-s1-text{
+	width:20.277777%;
+	top: 30.875%;
+}
+#right-s1-text .text-1{
+	width: 79.452054%;
+}
+#right-s1-text .text-2{
+	width: 41.09589%;
+}
+#right-s1-text .text-3{
+	font-size: .75em;
+}
+#right-s1-text .text-3 .left{
+	width: 23.287671%;
+	padding-right: 3%;
+}
+#right-s1-text .text-4{
+	width: 46.575342%;
+}
+
+#right-s1-notitext{
+	min-width: 200px;
+	width: 15.208333%;
+	bottom: 2.25%;
+}
+#right-s1-notitext .text-1{
+	width: 75.79990%;
+	padding-left: 6.84931%;
+}
+#right-s1-notitext .text-1 img{
+	display: block;
+}
+#right-s1-notitext .text{
+	font-size: .75em;
+	background: rgba(255,162,0,.8);
+	border-radius: 10px;
+	padding: 5.9%;
+	box-shadow:  10px 10px 5px rgba(0,0,0,.4);
+	position: relative;
+}
+#right-s1-notitext .btn-close{
+	width: 26px;
+	height: 28px;
+	background-position: -17px -14px;
+	position: absolute;
+	right: -3%;
+	top: -3%;
+}
+#right-s1-milk{
+	bottom: 0;
+}
+#right-s1-strawberries{
+	width: 27.9166667%;
+	right: 4.65278%;
+}
+
+
+
+/*场景2 左侧草莓*/
+#left-s2-strawberries{
+	width: 8.9583333%;
+	left:5.0927%;
+}
+#left-s2-text-0{
+	width: 27.708333%;
+	left: 20.347222%;
+}
+#left-s2-text-0 .text{
+	margin-left: 10.7769%;
+	width: 80%;
+	font-size: .75em;
+	padding: 3.7594%;
+	border-top: 1px solid #2a75b8;
+	border-bottom: 1px solid #2a75b8;
+}
+#left-s2-text-0 .code{
+	width: 49%; 
+	margin: 10% 0 0 40%;
+	box-shadow:  -20px 20px 10px rgba(0,0,0,.4);
+}
+#left-s2-text-0 .code img{
+	display: block;
+}
+#right-s2-text-0{
+	width: 19.652%;
+	font-size: .75em;
+	top: 26.5%;
+}
+#right-s2-text-0 .img{
+	width: 31.44876%;
+}
+#left-s2-Fruit{
+	width: 31.66667%;
+	left: 54.02777%;
+}
+#left-s2-milk{
+	width: 34.72222%;
+	left: -11.875%;
+}
+
+
+/*导航*/
+#left-nav{
+	width: 75px;
+	right: 3.194444%;
+	top: 30%;
+}
+#left-nav ul,#left-nav li{ list-style: none;margin: 0; padding: 0;
+	width: 100%;}
+#left-nav a{ 
+	color: #fff; text-decoration: none; text-indent: -999999px;
+	display: block;
+	width: 100%;
+	height: 25px;
+	background-image: url(../images/sprite.png);
+	background-repeat: no-repeat;
+}
+#left-nav a:hover,#left-nav .current a{ text-indent: 0;}
+#left-nav a.home{
+	background-position: 10px -1956px;
+}
+#left-nav a.activity{
+	background-position: 10px -1986px;
+}
+#left-nav ul{ 
+	width: 100%;
+	background: url(../images/right-nav-bg.png) bottom right no-repeat;
+	height: 238px;
+}
+
+#flashBg{
+	width: 100%;
+}
+#flashBgArea{
+	height: 100%;
+}

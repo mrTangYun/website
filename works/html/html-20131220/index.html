@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>蒙牛真果粒</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" >
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<link href="digroup/css/style.css" rel="stylesheet" type="text/css" class="cssfx">
+<link href="digroup/css/media-queries.css" rel="stylesheet" type="text/css">
+<link href="digroup/css/fixed-positioning.css" rel="stylesheet" type="text/css" />
+<script src="digroup/js/jquery-1.9.1.min.js"></script>  
+
+<script src="digroup/js/swfobject.js"></script>    
+<script src="digroup/js/videoplayer.js"></script>  
+
+<script src="digroup/js/init.js"></script>
+<script src="digroup/js/js-webshim/minified/extras/modernizr-custom.js"></script>
+<script src="digroup/js/js-webshim/minified/polyfiller.js"></script>
+<script src="digroup/js/imsky-cssFx-b9775cd/cssfx.min.js"></script>
+<script> 
+    $.webshims.polyfill();
+</script>
+<script type="text/javascript" src="digroup/js/skrollr.min.js"></script>
+<script type="text/javascript" src="digroup/js/skrollr.menu.min.js"></script>
+
+<!--[if lt IE 9]>    
+	<script type="text/javascript" src="digroup/js/skrollr.ie.min.js"></script>
+    <script src="digroup/js/css3-mediaqueries.js"></script> 
+<![endif]-->  
+</head>
+<body>
+	<div id="flashBg">
+		<div id="flashBgArea"></div>
+	</div>
+    <div id="scene-2-bg" data-0="top:0%; " data-end="top:0%; ">
+    	<img src="digroup/images/Scene-2-bg.jpg" width="100%" height="100%">
+    </div>
+    <div id="scene-1-bg" data-0="top:0%; " data-700="top:0%;opacity: 1;" data-1200="top:0%;opacity: 0; display:block;"  data-1201="display:none;">
+    	<img src="digroup/images/Scene-1-bg.jpg" width="100%" height="100%">
+    </div>
+    <div id="topTool" data-0="top:4.75%;"  data-end="top:4.75%; ">
+    	<div class="container">
+	    	<div id="logo"><img src="digroup/images/logo.png" width="100%"></div>
+	    	
+	    	<a id="nav-login" href="http://www.zhenguoli.com/index.php?m=content&c=index&a=index_bak#login" target="_blank">登录</a>
+	    	<a id="nav-reg" href="http://www.zhenguoli.com/ums/register.shtml?data=VFUPZx8LPSusbIl5KfShrlkpXn3Emd8ssHWdIYw1xrS+qnNJ/mkzoYcTB2aDiQkqnHLei8T7Fr8=" target="_blank">注册</a>
+	    	<a id="nav-mainwebsite" href="http://www.mengniu.com.cn/" target="_blank">蒙牛官网</a>
+	    	<a id="nav-contact" href="http://www.zhenguoli.com/index.php?m=member&c=content&a=contact_us" target="_blank">联系我们</a>
+	    	
+	    	<div class="clearfloat"></div>
+    	</div>
+    </div>
+
+    <!-- 场景1大牛奶-->
+    <div id="right-s1-milk" data-100="bottom:-30%;right:-44.236111%;width: 44.236111%;" data-700="right:0%;width: 44.236111%;bottom:0%;" data-800="right:0%;width: 44.236111%;bottom:0%;" 
+     data-1300="right:-10%;width: 74.236111%;bottom:-20%;"  >
+    	<img src="digroup/images/milk-1.png" width="100%">
+    </div>
+    <!--舞台-->
+    <div id="mic" data-0="left:24.5138888%; top:15.5% " data-700="left:24.5138888%; top:15.5%;width: 52.986111%; " data-1400="left:32.9166667%; top:17.5%;width: 49.30555%; ">
+    	<img src="digroup/images/wutai.png" width="100%">
+    </div>
+    <!--草莓-->
+    <div id="left-s1-strawberries" data-0="left:-10.347222%; " data-600="left:1.25%;" data-900="left:1.25%;top: 16%;" data-1200="top:-100%; ">
+    	<img src="digroup/images/left-strawberries.png" width="100%">
+    </div>
+    <!--真实就是-->
+    <div id="left-s1-text-0" data-0="left:-18.819444%; opacity:0;" data-300="left:13.33333%;opacity:1;" data-700="left:13.33333%;top: 29.125%;" data-900="left:13.33333%;top: -29.125%;">
+    	<img src="digroup/images/text-zhenshi-0.png" width="100%">
+    </div>
+    <!--真果粒-->
+    <div id="left-s1-text-1" data-0="left:-11.805555%; transform:scale(15);opacity:0;" data-500="left:24.583333%;top: 37%; transform:scale(1);opacity:1;" data-750="left:24.583333%;top: 37%;" data-950="left:24.583333%;top: -37%;">
+    	<img src="digroup/images/text-zhenguoli-0.png" width="100%">
+    </div>
+    <!--视频-->
+    <div id="left-s1-video" data-0="top:100%;left:-23.819444%; " data-400="top: 45.875%;left:12.4305555%;"  data-800="top: 45.875%;left:12.4305555%;"  data-1200="top: -45.875%;">
+    	<img src="digroup/images/video.png" width="100%">
+        <!--
+        <div class="videoContainer">
+            <video id="video" width="100%" height="100%" controls="controls" preload="Metadata">
+                <source src="digroup/video/loading.mp4" type="video/mp4">
+            </video>
+        </div>
+    	<a href="#" id="popVideo"></a>-->
+    </div>
+    <!--视频下方牛奶-->
+    <div id="left-s1-video-milk" data-300="top:100%;left:-9.583333%; " data-700="top: 77.625%;left:8.680555%;">
+    	<img src="digroup/images/milk-0.png" width="100%">
+    </div>
+
+    <!--草莓-->
+    <div id="right-s1-strawberries" data-300="bottom:-50.25%; " data-700="bottom:-25.125%;"  data-1400="bottom:100%;">
+    	<img src="digroup/images/right-strawberries.png" width="100%">
+    </div>
+
+    <!-- 场景1右侧文字-->
+    <div id="right-s1-text" data-100="right:-20.277777%;"  data-400="right:10.347222%;"   data-800="right:10.347222%;" data-1000="right:-20.277777%;" >
+    	<div class="text-1">
+    		<img src="digroup/images/text-s1-r1.png" width="100%">
+    	</div>
+    	<div class="text-2">
+    		<img src="digroup/images/text-s1-r2.png" width="100%">
+    	</div>
+    	<div class="text-3">
+    		<div class="left">
+    			<img src="digroup/images/text-s1-r3.jpg" width="100%">
+    		</div>
+    		《我是歌手》即将拉开战幕！睽违一年，谁将登台，用最真实的声音感动2014？马上扫描二维码，关注“我是歌手我爱真实”官方微信！精彩大奖由你赢！
+    		<div class="clearfloat"></div>
+    	</div>
+    	<div class="text-4">
+    		<a href="" title="立即参与" id="goto-activePage">
+    		<img src="digroup/images/text-s1-r4.png" width="100%">
+    		</a>
+    	</div>
+    </div>
+    <!--导航-->
+    <div id="s1-nav" data-300="bottom:-100.25%; " data-700="bottom:5.125%;"  data-1000="bottom:5.125%;" data-1300="bottom:-100.25%;" >
+    	<a target="_blank" href="http://www.zhenguoli.com/index.php?m=member&c=content&a=person" id="nav-mycenter" title="个人中心"><span>个人中心</span></a>
+    	<a target="_blank" href="http://www.zhenguoli.com/index.php?m=content&c=index&a=index_bak#pinpai" id="nav-brand" title="品牌故事"><span>品牌故事</span></a>
+    	<a target="_blank" href="http://www.zhenguoli.com/index.php?m=content&c=index&a=index_bak#chaowan" id="nav-game" title="潮玩时刻"><span>潮玩时刻</span></a>
+    	<a target="_blank" href="http://www.zhenguoli.com/index.php?m=content&c=index&a=index_bak#jiazu" id="nav-family" title="果粒家族"><span>果粒家族</span></a>
+    	<a target="_blank" href="#acitive" id="nav-message" title="最新消息" data-menu-offset="1000"><span>最新消息</span></a>
+    	<a target="_blank" href="http://www.zhenguoli.com/index.php?m=content&c=index&a=index_bak#riji" id="nav-diary" title="真实日记"><span>真实日记</span></a>
+    	<a target="_blank" href="http://www.zhenguoli.com/index.php?m=content&c=index&a=index_bak#letao" id="nav-shop" title="自在乐淘"><span>自在乐淘</span></a>
+    </div>
+
+
+
+
+
+    <!--牛奶-->
+    <div id="left-s2-milk" data-700="top:100%" data-900="top:63.625%; ">
+    	<img src="digroup/images/milk-2.png" width="100%">
+    </div>
+    <!--草莓-->
+    <div id="left-s2-strawberries" data-1200="top:100%" data-1400="top:90.25%; ">
+    	<img src="digroup/images/left-strawberries.png" width="100%">
+    </div>
+    <!--水果-->
+    <div id="left-s2-Fruit" data-1200="top:100%" data-1400="top:53.625%; ">
+    	<img src="digroup/images/right-Fruit.png" width="100%">
+    </div>
+    <!--我是歌手-->
+    <div id="left-s2-text-0" data-0=" display:none;" data-300="left:13.33333%;" data-800="display:block;top: 100%;" data-1400="left:13.33333%;top: 24.5%;">
+    	<img src="digroup/images/woshigeshou2.png" width="100%">
+    	<div class="text">《我是歌手》即将拉开战幕！睽违一年，谁将登台，用最真实的声音感动2014？马上扫描二维码，关注“我是歌手我爱真实”官方微信！精彩大奖由你赢！</div>
+    	<div class="code" data-0=" display:none" data-1300=" display:block">
+    		<img src="digroup/images/text-s1-r3.jpg" width="100%">
+    	</div>
+    </div>
+    <!--活动背景-->
+    <div id="right-s2-text-0" data-0=" display:none;" data-300="right:-19.652%" data-800="display:block;" data-1400="right:11.388889%;">
+    	<div class="img"><img src="digroup/images/huodongbeijing.png" width="100%"></div>
+    	<div class="text">《我是歌手》第二季将于1月3日黄金强档播出，蒙牛真果粒将携手《我是歌手》，一同呼唤最真实最震撼人心的声音！我们将第一时间分享节目的内部花絮，并与您一同回顾每期的精彩瞬间！</div>
+    </div>
+
+    <div id="left-nav" data-0="right: 3.194444%;" data-end="right: 3.194444%;">
+    	<ul id="nav-right">
+    		<li><a href="" title="首页" class="home">首页</a></li>
+    		<li><a href="" title="活动" class="activity">活动</a></li>
+    	</ul>
+    </div>
+    <!-- 场景1通知-->
+    <div id="right-s1-notitext" data-100="right:-20.277777%;"  data-400="right:1.347222%; display:block" data-800="display:none;"  >
+    	<div class="text-1">
+    		<img src="digroup/images/text-s1-r5.png" width="100%">
+    	</div>
+    	<div class="text">
+    		距离积分清零还有<span id="countBackwards"></span>天了，我们将在2013年12月31日24时进行积分清零，请您抓紧时间兑换好礼。<br/>12月16、20、25、30日将上传新的礼品信息，数量有限，先到先得！2014年将取消积分换礼活动，更多精彩活动尽在真果粒官网，请您持续关注。<br/>更多兑换信息，我们会第一时间通知您，时刻关注真果粒官网，了解更多礼品兑换信息！
+    		<a class="btn-close" href="#" title="关闭">关闭</a> 
+    	</div>
+    	
+    </div>
+
+</body>
+</html>
