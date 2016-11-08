@@ -306,12 +306,12 @@ jQuery(document).ready(function($) {
 
 				if (works[i].url.length > 0){
 					if ($.inArray( "pc", works[i].support )>= 0){
-						_html.push("<a class=\"link\" href=\""+works[i].url+"\" target=\"_blank\" title=\"在线浏览\">");
+						_html.push("<a class=\"link icon-IE\" href=\""+works[i].url+"\" target=\"_blank\" title=\"在线浏览\">");
 						_html.push("访问网站");
 						_html.push("</a>");
 					}
 					if ($.inArray( "mobile", works[i].support) >= 0){
-						_html.push("<a class=\"link link-mobile\" href=\""+works[i].url+"\" target=\"_blank\" title=\"在线浏览\">");
+						_html.push("<a class=\"link icon-IE link-mobile\" href=\""+works[i].url+"\" target=\"_blank\" title=\"在线浏览\">");
 						_html.push("手机端浏览");
 						_html.push("</a>");
 					}

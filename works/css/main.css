@@ -1,3 +1,97 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?n0mzcv');
+  src:  url('../fonts/icomoon.eot?n0mzcv#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?n0mzcv') format('truetype'),
+    url('../fonts/icomoon.woff?n0mzcv') format('woff'),
+    url('../fonts/icomoon.svg?n0mzcv#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-home:before {
+  content: "\e900";
+}
+.icon-home2:before {
+  content: "\e901";
+}
+.icon-home3:before {
+  content: "\e902";
+}
+.icon-office:before {
+  content: "\e903";
+}
+.icon-phone:before {
+  content: "\e942";
+}
+.icon-phone-hang-up:before {
+  content: "\e943";
+}
+.icon-location:before {
+  content: "\e947";
+}
+.icon-location2:before {
+  content: "\e948";
+}
+.icon-display:before {
+  content: "\e956";
+}
+.icon-mobile:before {
+  content: "\e958";
+}
+.icon-mobile2:before {
+  content: "\e959";
+}
+.icon-tablet:before {
+  content: "\e95a";
+}
+.icon-redo2:before {
+  content: "\e968";
+}
+.icon-forward:before {
+  content: "\e969";
+}
+.icon-user-tie:before {
+  content: "\e976";
+}
+.icon-sad:before {
+  content: "\e9e5";
+}
+.icon-wink:before {
+  content: "\e9e7";
+}
+.icon-mail:before {
+  content: "\ea83";
+}
+.icon-chrome:before {
+  content: "\ead9";
+}
+.icon-firefox:before {
+  content: "\eada";
+}
+.icon-IE:before {
+  content: "\eadb";
+}
+.icon-edge:before {
+  content: "\eadc";
+}
+
+
 html,body{
 	font: 1em "微软雅黑";
 }
@@ -75,7 +169,7 @@ html,body{
 }
 .project > div{
 	width: 100%;
-	background-color: rgba(0,0,0,.8);
+	background-color: rgba(0,0,0,.6);
 }
 .project:hover > div{
 	background-color: rgba(0,0,0,.95);
@@ -83,6 +177,7 @@ html,body{
 .project .name{
 	padding-top: .4em;
 	padding-left: .4em;
+	cursor: default;
 }
 
 .images{
@@ -122,6 +217,7 @@ html,body{
 	position: relative;
 }
 .tips{
+	cursor: default;
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
@@ -138,15 +234,16 @@ html,body{
 .tips .link{
 	position: absolute;
 	right: .4em;
-	bottom: .4em;
+	bottom: -1.2em;
 	color: #fff;
-	transition: .5s;
+	transition: .3s;
 	opacity: .5;
 }
 .project:hover .tips .link{
-	transition-delay: .1s;
+	transition-delay: .3s;
 	color: #eee;
 	opacity: 1;
+	bottom: 1em;
 }
 .project:hover .tips .link:hover{
 	/*color: #0166bf;*/
