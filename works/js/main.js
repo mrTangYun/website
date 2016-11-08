@@ -3,7 +3,6 @@ var works = [
 	//宠优,
 	//durex
 	//haier
-	//蒙牛
 	//风电商情
 	//unilever
 	//surface
@@ -15,8 +14,6 @@ var works = [
 	//立美
 	//upg
 	//timesartmuseum
-	//sanlitun
-	//heqizheng
 	//mbmenuprice
 	//benz
 	// {
@@ -31,9 +28,11 @@ var works = [
 	// 	point : ["php","mysql","css","js"],		//技术
 	// 	images: 0,
 	// 	desc : "",
+	//	support : ["pc"],
 	//	exp : ""
 	// },
 	{
+		flag : 1,
 		name : "国道黄金",
 		brand : "国道黄金",
 		year : 2008,
@@ -44,11 +43,13 @@ var works = [
 		point : ["asp","js","falsh"],
 		images: 5,
 		desc : "项目小组为2人配置，负责所有前端和后端",
+		support : ["pc"],
 		exp : "自学了flash的as2.0并完成项目"
 	},
 	{
-		name : "郎泰官网",
-		brand : "国道黄金",
+		flag : 1,
+		name : "朗泰官网",
+		brand : "朗泰",
 		year : 2009,
 		folder : "liveneo",
 		job : "前端|后端", //职责
@@ -57,9 +58,11 @@ var works = [
 		point : ["asp.net","js","falsh","css"],
 		images: 3,
 		desc : "项目小组为2人配置，负责所有前端和后端",
+		support : ["pc"],
 		exp : ""
 	},
 	{
+		flag : 1,
 		name : "运通官网",
 		brand : "北京运通",
 		year : 2011,
@@ -70,21 +73,8 @@ var works = [
 		point : ["flash","php"],		//技术
 		images: 10,
 		desc : "项目小组为2人配置，负责所有前端和后端",
+		support : ["pc"],
 		exp : "自学了flash的as3.0并完成项目"
-	},
-	{
-		flag : 0,
-		name : "安利净水器",
-		brand : "安利",
-		year : 2012,
-		folder : "",
-		job : "前端", //职责
-		url : "./html/htdocs_amway/index.htm",
-		isOnline : false,		//是否在线
-		point : ["css","js"],		//技术
-		images: 0,
-		desc : "负责所有的页面制作工作",
-		exp : ""
 	},
 	{
 		flag : 1,
@@ -98,6 +88,7 @@ var works = [
 		point : ["css","js"],		//技术
 		images: 4,
 		desc : "",
+		support : ["pc"],
 		exp : ""
 	},
 	{
@@ -105,13 +96,14 @@ var works = [
 		name : "infiniti gforce车型网站",
 		brand : "infiniti",
 		year : 2012,
-		folder : "",
+		folder : "gforce",
 		job : "前端", //职责
 		url : "./html/infiniti-gforce/index.html",
 		isOnline : false,		//是否在线
 		point : ["flash","css","js"],		//技术
-		images: 0,
+		images: 4,
 		desc : "负责所有的页面制作工作",
+		support : ["pc"],
 		exp : ""
 	},
 	{
@@ -126,6 +118,7 @@ var works = [
 		point : ["css","js"],		//技术
 		images: 3,
 		desc : "",
+		support : ["pc"],
 		exp : ""
 	},
 	{
@@ -139,6 +132,7 @@ var works = [
 		point : ["css","js","php"],		//技术
 		images: 10,
 		desc : "负责所有的前端后端工作",
+		support : ["pc"],
 		exp : ""
 	},
 	{
@@ -152,6 +146,7 @@ var works = [
 		point : ["css","js"],		//技术
 		images: 2,
 		desc : "页面特效为视差动画，负责所有的页面制作工作",
+		support : ["pc"],
 		exp : ""
 	},
 	{
@@ -159,13 +154,14 @@ var works = [
 		name : "intel活动网站-超极本换新季",
 		brand : "intel",
 		year : 2013,
-		folder : "",
+		folder : "intel",
 		job : "前端", //职责
 		url : "./html/intel/index.html",
 		isOnline : false,		//是否在线
 		point : ["css","js"],		//技术
-		images: 0,
+		images: 4,
 		desc : "负责所有的页面制作工作",
+		support : ["pc"],
 		exp : ""
 	},
 	{
@@ -173,13 +169,14 @@ var works = [
 		name : "博尚广告官网",
 		brand : "北京博尚广告公司",
 		year : 2013,
-		folder : "",
+		folder : "deeplyImpressive",
 		job : "前端", //职责
 		url : "./html/deeplyImpressive/index.html",
 		isOnline : false,		//是否在线
 		point : ["css","js"],		//技术
-		images: 0,
+		images: 3,
 		desc : "负责所有的页面制作工作",
+		support : ["pc"],
 		exp : ""
 	},
 	{
@@ -193,6 +190,7 @@ var works = [
 		point : ["php","mysql","css","js"],		//技术
 		images: 2,
 		desc : "网站基于wordpress进行开发;项目小组为2人配置，负责所有前端和后端",
+		support : ["pc"],
 		exp : ""
 	},
 	{
@@ -206,6 +204,7 @@ var works = [
 		point : ["css","js"],		//技术
 		images: 4,
 		desc : "页面特效为视差动画，并用js制作图表。负责所有的页面制作工作",
+		support : ["pc"],
 		exp : ""
 	},
 	{
@@ -217,8 +216,24 @@ var works = [
 		url : "./html/taipingshenshi/index.htm",
 		isOnline : true,		//是否在线
 		point : ["css","js"],		//技术
-		images: 5,
+		images: 8,
 		desc : "页面特效为视差动画，负责所有的页面制作工作",
+		support : ["pc"],
+		exp : ""
+	},
+	{
+		flag : 1,
+		name : "悦己",
+		brand : "悦己",
+		year : 2015,
+		folder : "yueji",
+		job : "前端", //职责
+		url : "./html/yueji/index.html",
+		isOnline : false,		//是否在线
+		point : ["css3","js"],		//技术
+		images: 4,
+		desc : "页面使用了手机的陀螺仪；负责所有的页面制作工作",
+		support : ["mobile"],
 		exp : ""
 	},
 	{
@@ -226,57 +241,46 @@ var works = [
 		name : "可比克",
 		brand : "可比克",
 		year : 2015,
-		folder : "",
+		folder : "copico",
 		job : "前端", //职责
 		url : "./html/copico/index.html",
 		isOnline : false,		//是否在线
 		point : ["css","js"],		//技术
-		images: 0,
+		images: 5,
 		desc : "负责所有的页面制作工作",
+		support : ["pc"],
+		exp : ""
+	},
+	{
+		flag : 1,
+		name : "蒙牛优酸乳",
+		brand : "蒙牛",
+		year : 2016,
+		folder : "mengniu-gyr",
+		job : "前端", //职责
+		url : "./html/mengniu-guanyiru/index.htm",
+		isOnline : false,		//是否在线
+		point : ["css","js"],		//技术
+		images: 6,
+		desc : "负责所有的页面制作工作",
+		support : ["mobile"],
 		exp : ""
 	},
 ];
 
 jQuery(document).ready(function($) {
-	console.log(works);
 	var _html = [],img_group_total = 0;
-	for (var i = 0; i < works.length; i++) {
+	for (var i = works.length-1; i >=0; i--) {
 		//typeof(variable) != "undefined"
 		if (typeof(works[i].flag) && works[i].flag === 0){
 			continue;
 		}
-		
-		_html.push("<li class=\"project\">");
-			_html.push("<div class=\"name\">");
-			_html.push(works[i].name);
-			_html.push("</div>");
 
-			_html.push("<div class=\"tips\">");
-				_html.push("<span class=\"brand\">");
-				_html.push("品牌：");
-				_html.push(works[i].brand);
-				_html.push("</span>");
-				_html.push("<span class=\"year\">");
-				_html.push("年份：");
-				_html.push(works[i].year);
-				_html.push("</span>");
-			_html.push("</div>");
-
-			_html.push("<div class=\"btn\">");
-			if (works[i].url.length > 0){
-				_html.push("<a class=\"link\" href=\""+works[i].url+"\" target=\"_blank\">");
-				_html.push("查看网址");
-				_html.push("</a>");
-			}
+		var css_bgimg = works[i].images > 0 ? "background-image:url(./images/"+works[i].folder+"/0.jpg)" : "";
+		_html.push("<li class=\"project\" style=\""+css_bgimg+"\" title=\"概述\">");
 			if (works[i].images > 0){
-				_html.push("<span class=\"btn-showImages\">");
-				_html.push("项目图片");
-				_html.push("</span>");
-			}
-			_html.push("</div>");
-			if (works[i].images > 0){
-			img_group_total++;
-			_html.push("<ul class=\"images\">");
+				img_group_total++;
+				_html.push("<ul class=\"images\">");
 				for (var _i = 1; _i <= works[i].images; _i++) {
 					_html.push("<li>");
 						_html.push("<a class=\"group"+img_group_total+"\" href=\"./images/"+works[i].folder+"/"+_i+".jpg\" >");
@@ -286,19 +290,91 @@ jQuery(document).ready(function($) {
 					_html.push("</li>");
 				}
 				
-			_html.push("</ul>");
+				_html.push("</ul>");
 			}
+
+			_html.push("<div class=\"btn\">");
+			
+			
+			_html.push("</div>");
+
+			_html.push("<div class=\"tips\">");
+				_html.push("<span class=\"brand\">");
+				_html.push("品牌：");
+				_html.push(works[i].brand);
+				_html.push("</span>");
+
+				if (works[i].url.length > 0){
+					if ($.inArray( "pc", works[i].support )>= 0){
+						_html.push("<a class=\"link\" href=\""+works[i].url+"\" target=\"_blank\" title=\"在线浏览\">");
+						_html.push("访问网站");
+						_html.push("</a>");
+					}
+					if ($.inArray( "mobile", works[i].support) >= 0){
+						_html.push("<a class=\"link link-mobile\" href=\""+works[i].url+"\" target=\"_blank\" title=\"在线浏览\">");
+						_html.push("手机端浏览");
+						_html.push("</a>");
+					}
+				}
+			_html.push("</div>");
+
+			_html.push("<div class=\"name\">");
+				_html.push("<span class=\"name\">");
+				_html.push(works[i].name);
+				_html.push("</span>");
+				// _html.push("<span class=\"year\">");
+				// _html.push(works[i].year);
+				// _html.push("年");
+				// _html.push("</span>");
+			_html.push("</div>");
+
+
 
 		_html.push("</li>");
 	}
 	$("#works").html(_html.join(""));
 	for (var i = 1; i <= img_group_total; i++) {
-		$(".group"+i).colorbox({rel:'group'+i, maxWidth:1240});
+		$(".group"+i).colorbox({rel:'group'+i,width:"90%", maxWidth:1240});
 	}
 	
 
-	$(".project .btn-showImages").click(function(event) {
+	$(".project").click(function(event) {
 		/* Act on the event */
-		$(this).parent().siblings('.images').toggleClass("show");
+		if (!$(event.target).hasClass('cboxElement')){
+			if ($(event.target).hasClass('link') || $(event.target).hasClass('link-mobile') ){
+				
+			}
+			else{
+				$(this).find(".images a").eq(0).click();
+			}
+		}
+		//return false;
 	});
+
+	$(".link-mobile").click(function(event) {
+		/* Act on the event */
+		//event.stopPropagation();
+		if ($(window).innerWidth() > 1000){
+			if ($(this).find(".code").length == 0){
+				var href = $(this).attr("href");
+
+				href = (/^http/.test(href) ? "" : window.location.href) + href;
+				$(this).prepend("<div class=\"code\"></div>");
+				new QRCode($(this).find(".code").eq(0)[0], {
+															  text: href,
+															  width: 150,
+															  height: 150,
+															  colorDark: '#000000',
+															  colorLight: '#ffffff',
+															  correctLevel: QRCode.CorrectLevel.H
+															});
+			}
+			else{
+				$(this).find(".code").remove();
+			}
+			return false;
+		}
+		
+	});
+
 });

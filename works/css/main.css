@@ -1,17 +1,154 @@
 html,body{
 	font: 1em "微软雅黑";
 }
-.project .name{
-	
+#works{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: start;
+	-webkit-justify-content: flex-start;
+	   -moz-box-pack: start;
+	    -ms-flex-pack: start;
+	        justify-content: flex-start;
+	-webkit-align-content: space-around;
+	    -ms-flex-line-pack: distribute;
+	        align-content: space-around;
+	-webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	        flex-wrap: wrap;
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
+.project{
+	padding: .5em 0;
+	min-width: 310px;
+	-webkit-filter:grayscale(1);
+	-moz-background-size: 101% auto;
+	  -o-background-size: 101% auto;
+	     background-size: 101% auto;
+	background-position: 50% 50%;
+	min-height: 160px;
+	background-repeat: no-repeat;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: reverse;
+	-webkit-flex-direction: column-reverse;
+	   -moz-box-orient: vertical;
+	   -moz-box-direction: reverse;
+	    -ms-flex-direction: column-reverse;
+	        flex-direction: column-reverse;
+	-webkit-box-align: start;
+	-webkit-align-items: flex-start;
+	   -moz-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
+	-webkit-align-content: space-around;
+	    -ms-flex-line-pack: distribute;
+	        align-content: space-around;
+	background-color: #000;
+	color: #fff;
+	font-size: .875em;
+	-webkit-transition: .3s;
+	-o-transition: .3s;
+	-moz-transition: .3s;
+	transition: .3s;
+	cursor: pointer;
+	margin: .2em;
+	overflow: hidden;
+}
+.project:hover{
+	-webkit-filter:grayscale(0);
+	        filter:grayscale(0);
+	-moz-background-size: 105% auto;
+	  -o-background-size: 105% auto;
+	     background-size: 105% auto;
+}
+.project > div{
+	width: 100%;
+	background-color: rgba(0,0,0,.8);
+}
+.project:hover > div{
+	background-color: rgba(0,0,0,.95);
+}
+.project .name{
+	padding-top: .4em;
+	padding-left: .4em;
+}
+
 .images{
 	display: none;
 }
-.images.show{
+.btn{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: start;
+	-webkit-justify-content: flex-start;
+	   -moz-box-pack: start;
+	    -ms-flex-pack: start;
+	        justify-content: flex-start
+}
+.brand{
+
+	padding-left: .7em;
+}
+.link,.btn-showImages{
+	cursor: pointer;
+	text-decoration : none;
+	color: #fff;
+}
+.year{
+	padding-left: 1em;
+	font-size: .75em;
 }
 
-.btn-showImages{
-	cursor: pointer;
-	color: #00ff00;
+#cboxLoadedContent {
+    background: #000;
+}
+
+.link-mobile{
+	position: relative;
+}
+.tips{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	   -moz-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	padding-bottom: .2em;
+	position: relative;
+}
+.tips .link{
+	position: absolute;
+	right: .4em;
+	bottom: .4em;
+	color: #fff;
+	transition: .5s;
+	opacity: .5;
+}
+.project:hover .tips .link{
+	transition-delay: .1s;
+	color: #fff;
+	opacity: 1;
+}
+.project:hover .tips .link:hover{
+	color: #0166bf;
+
 }

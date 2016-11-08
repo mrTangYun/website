@@ -1,0 +1,3248 @@
+<!doctype html>
+<html lang="chn">
+<head>
+  <meta charset="utf-8" />
+  <title>悦己</title>
+  <meta name="title" content="裸心密境/发现真实的自己"> 
+	<meta name="description" content="测试你潜意识里的性格" />
+  <script type="text/javascript">
+  
+  if (location.hash && location.hash.match(/#shareid\d+/g)){
+  	var shareid = location.hash.match(/#shareid\d+/g)[0].match(/\d+/g)[0] *1;
+  	window.location = 'evaluate.htm?aid='+ shareid;
+  }
+  </script>
+  <!--alpha：在围绕z轴旋转时（即左右旋转时），y轴的度数差；是一个介于0到365之间的浮点数。
+beta：在围绕x轴旋转时（即前后旋转时），z轴的度数差；是一个介于-180到190之间的浮点数。
+gamma：在围绕y轴旋转时（即扭转设备时），z轴的度数差；是一个介于-180到180之间的浮点数。
+absolute：布尔值，表示设备是否返回一个绝对值。
+compassCalibrated：布尔值，表示设备的指南针是否校准过。-->
+
+  <!-- disable zooming -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <link rel="stylesheet" type="text/css" media="screen" href="css/mainV7.css?v=20150307"/>
+</head>
+<body>
+	<img src="images/share/share.jpg" width="10" height="10" id="shareImg">
+	<div id="loading">
+        
+		<div class="main">
+		  <div class="heart">
+		    <span class='heartL'></span>
+		    <span class='heartR'></span>
+		    <span class='square'></span>
+		  </div>
+		  <div class="shadow"></div>
+		</div>
+
+	</div>
+
+	<div id="itooy"></div>
+	<div id="homePage" class="hide">
+		<div class="float">
+			<div class="flower">
+				<img id="flower" src="images/homepage/flower.png" height="100%" alt="">
+			</div>
+			<div class="heart-mid">
+				<img src="images/homepage/heart.png" height="100%" alt="">
+			</div>
+			<div class="outer">
+				<img id="petal" src="images/homepage/petal.png" height="100%" alt="">
+			</div>
+		</div>
+		<div class="outer">
+		<div id="homeText-0">
+			<img src="images/homepage/t-0.png" alt="" height="100%">
+		</div>
+		<div id="homeText-1">
+			<img src="images/homepage/t-1.png" alt="" height="100%">
+		</div>
+		<div id="goto-section0">
+			<div class="btn" id="goto-section-start">
+				<img src="images/homepage/btn.png" alt="" width="100%">
+			</div>
+		</div>
+		</div>
+	</div>
+	
+	<div id="section_outer" class="hide">
+		<section id="section-0" data-ang="0">
+			<div class="logo"><img src="images/logo.png" /></div>
+			<div class="outer init" id="carousel">
+				<div class="card" id="card-emotion">
+					<div class="front">
+						<div class="star">
+							<img src="images/star_emotion.png" alt="" width="100%">
+						</div>
+						<div class="starTip">
+							<img src="images/star_tip.png" alt="" width="100%">
+						</div>
+					</div>
+					<div class="back"></div>
+				</div>
+
+				<div class="card" id="card-career">
+					<div class="front">
+						<div class="star">
+							<img src="images/star_career.png" alt="" width="100%">
+						</div>
+						<div class="starTip">
+							<img src="images/star_tip.png" alt="" width="100%">
+						</div>
+					</div>
+					<div class="back"></div>
+				</div>
+
+				<div class="card" id="card-beauty">
+					<div class="front">
+						<div class="star">
+							<img src="images/star_beauty.png" alt="" width="100%">
+						</div>
+						<div class="starTip">
+							<img src="images/star_tip.png" alt="" width="100%">
+						</div>
+					</div>
+					<div class="back"></div>
+				</div>
+			</div>
+			<div class="tips">跟随感觉选择一张牌面</div>
+			<div class="btn-bottom">
+				<div class="btn-Description">
+					<div>活动规则</div>
+				</div>
+			</div>
+		</section>
+		<section id="section-2" class="hide">
+			<!--
+			<canvas id="star-bg"></canvas>
+			<div id="lx-bg">
+				
+			</div>
+			-->
+			<div id="miyu" class="hide">
+				<div class="text-0">
+					<img src="images/miyu/text.png" width="100%" alt="">
+					<img src="images/miyu/sTitle-career.png" alt="" width="200%" class="sTitle">
+				</div>
+				<div class="text-1">
+					<img src="images/miyu/mohu.png" width="100%" alt="">
+				</div>
+				<div class="stars">
+					<img src="images/miyu/start-0.png" width="100%" alt="">
+				</div>
+				<div class="stars">
+					<img src="images/miyu/start-1.png" width="100%" alt="">
+				</div>
+				<div class="stars">
+					<img src="images/miyu/start-2.png" width="100%" alt="">
+				</div>
+				<div class="stars">
+					<img src="images/miyu/start-3.png" width="100%" alt="">
+				</div>
+				<div class="stars">
+					<img src="images/miyu/start-4.png" width="100%" alt="">
+				</div>
+				<div class="stars">
+					<img src="images/miyu/start-5.png" width="100%" alt="">
+				</div>
+			</div>
+			<div class="view-outer">
+				<ul>
+				</ul>
+				<div id="chooseACard">
+					<div>
+						<img src="images/chooseACard-Text.png" width="95%" alt="">
+					</div>
+				</div>
+				<div id="dots">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>	
+		</section>
+	</div>
+
+	<div id="RequiredPop">
+		
+	</div>
+
+	<div style="display:none" id="loadimg">
+		<!--领域背景-->
+		<img src="images/html-career-bg.jpg">
+		<img src="images/html-beauty-bg.jpg">
+		<img src="images/html-emotion-bg.jpg">
+		<!--牌背面浮动星座加边框-->
+		<img src="images/back-float.png">
+		<img src="images/back-float-emotion.png">
+		<img src="images/back-float-beauty.png">
+		<!--牌正面的背景带底纹-->
+		<img src="images/car-blank-career-bg.jpg">
+		<img src="images/car-blank-emotion-bg.jpg">
+		<img src="images/car-blank-beauty-bg.jpg">
+		<!--测试领域3张牌-->
+		<img src="images/card-emotion.jpg">
+		<img src="images/card-career.jpg">
+		<img src="images/card-beauty.jpg">
+		<!--牌正面的边框-->
+		<img src="images/beauty-border.png">
+		<img src="images/emotion-border.png">
+		<img src="images/career-border.png">
+		<!--菱形-->
+		<img src="images/lingxing-career-0.png" id="lingxing-career-0">
+		<img src="images/lingxing-emotion-0.png" id="lingxing-emotion-0">
+		<img src="images/lingxing-beauty-0.png" id="lingxing-beauty-0">
+
+		<!--音乐播放按钮-->
+		<img src="images/music-play.png" alt="">
+		<img src="images/music-stop.png" alt="">
+		<!--
+		<img src="images/lingxing-career-1.png" id="lingxing-career-1">
+		<img src="images/lingxing-career-2.png" id="lingxing-career-2">
+		<img src="images/lingxing-career-3.png" id="lingxing-career-3">
+		<img src="images/lingxing-emotion-1.png" id="lingxing-emotion-1">
+		<img src="images/lingxing-emotion-2.png" id="lingxing-emotion-2">
+		<img src="images/lingxing-emotion-3.png" id="lingxing-emotion-3">
+		<img src="images/lingxing-beauty-1.png" id="lingxing-beauty-1">
+		<img src="images/lingxing-beauty-2.png" id="lingxing-beauty-2">
+		<img src="images/lingxing-beauty-3.png" id="lingxing-beauty-3">
+		-->
+	</div>
+
+	<!--用来播放插画动画 end-->
+	<!--显示测试结果 start-->
+	<div id="result" class="career hide long">
+		<div class="outer">
+			<!--插画-->
+			<div class="chahua">
+				<img src="" alt="" width="72.5%">
+			</div>
+			<!--头像-->
+			<div class="face">
+				<div class="img" style="">
+				</div>
+				<div class="text"></div>
+			</div>
+			<div class="result-text">
+				<div class="buding-0">你的测试结果是</div>
+				<div class="part-0" id="data-part-0">
+					<div class="title">职场武媚娘</div>
+					<div class="content"></div>
+				</div>
+				<div class="part-1" id="data-part-1">
+					<div class="title">在职业生涯中你的自信来源于什么</div>
+					<div class="content"></div>
+				</div>
+				<div class="part-1" id="data-part-2">
+					<div class="title">在家庭和工作之间你更倾向于工作</div>
+					<div class="content"></div>
+				</div>
+				<div class="part-1" id="data-part-3">
+					<div class="title" id="yalizhishu">
+						<div class="left no">60</div>
+						<div class="left">+</div>
+						<span class="right">你目前的工作压力指数</span>
+						<div class="clear"></div>
+					</div>
+					<div class="content"></div>
+				</div>
+				<div class="part-1" id="data-part-emotion">
+					<div class="title">
+						<div class="left">你在婚姻中的牺牲程度</div>
+						<span class="right"></span>
+						<div class="clear"></div>
+					</div>
+					<div class="content"></div>
+				</div>
+				<div class="part-1" id="data-part-beauty-0">
+					<div class="title">
+						<div class="left">对美的<br/>理解</div>
+						<span class="right">烟支</span>
+						<div class="clear"></div>
+					</div>
+					<div class="content"></div>
+				</div>
+				<div class="part-1" id="data-part-beauty-1">
+					<div class="title">
+						<div class="left">追求美的<br/>行动力</div>
+						<span class="right">强</span>
+						<div class="clear"></div>
+					</div>
+					<div class="content"></div>
+				</div>
+				<div class="part-1" id="data-part-4">
+					<div class="title">秘语</div>
+					<div class="content"></div>
+				</div>
+			</div>
+			<div class="share-text">
+				<div class="text-0">已有<span id="no-total">0</span>个闺蜜做出评价</div>
+				<div class="cert">
+					<div class="left">
+						<div class="style1"><span>0</span>%</div>
+						<div class="style2">闺蜜认为像</div>
+					</div>
+					<div class="right">
+						<div class="style1"><span>0</span>%</div>
+						<div class="style2">闺蜜认为不像</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="text-1">
+					结果准不准？闺蜜最知晓！<br/>分享给闺蜜评价一下吧~
+				</div>
+				<div class="shre-btn">立即分享</div>
+
+				<div class="btn-showAllPart">
+					解读密语
+				</div>
+			</div>
+		</div>
+
+		<div class="btn-bottom-result">
+			<div class="btn-MyTest">
+				<div>继续测试</div>
+			</div>
+			<div class="btn-Description">
+				<div>活动规则</div>
+			</div>
+		</div>
+	</div>
+	<!--显示测试结果 end-->
+
+	<!--提交信息 start-->
+	<div id="userInfoSubmit">
+		<div class="outer">
+			<div class="top">CAREER</div>
+			<div class="part-1">
+				<table cellspacing="0" cellpadding="0" border="0" width="100%" height="100%" class="table">
+					<tr style="height:24%;">
+						<td class="leftTD first">为了测试准确,需要你的部分信息,请放心,信息只供产出测试结果,绝密!</td>
+						<td class="rightTD address">
+							<div>你从哪里来？</div>
+							<div>
+								-
+								<select name="Province" id="Province">
+									<option value="北京">北京</option>
+								</select>
+								省
+								-
+							</div>
+							<div>
+								-
+								<select name="City" id="City">
+									<option value="">请先选择省份</option>
+								</select>
+								市
+								-
+							</div>
+						</td>
+					</tr>
+					<tr style="height:20.24%;">
+						<td class="leftTD">
+							姑娘芳龄?
+						</td>
+						<td class="rightTD">
+							<div class="table-s">
+								<div class="item topTd">< 25</div>
+								<div class="item topTd">26 - 30</div>
+								<div class="item">31 - 35</div>
+								<div class="item">> 36</div>
+								<div class="clear"></div>
+							</div>
+							
+						</td>
+					</tr>
+					<tr>
+						<td class="leftTD">
+							是否婚嫁？
+						</td>
+						<td class="rightTD">
+							<div class="table-s">
+								<div class="item">单身</div>
+								<div class="item">恋爱</div>
+								<div class="item">已婚</div>
+								<div class="item">已育</div>
+								<div class="clear"></div>
+							</div>
+							
+						</td>
+					</tr>
+					<tr>
+						<td class="leftTD">
+							与【悦己】的亲密程度？
+						</td>
+						<td class="rightTD">
+							<div class="table-s">
+								<div class="item">忠实粉丝</div>
+								<div class="item">经常读</div>
+								<div class="item">偶尔读</div>
+								<div class="item">没看过</div>
+								<div class="clear"></div>
+							</div>
+							<!--
+							<table cellspacing="0" cellpadding="0" border="1" width="100%" height="100%" class="table-s" bordercolor="#ecd5f2">
+								<tr>
+									<td class="item">忠实粉丝</td>
+									<td class="item">经常读</td>
+								</tr>
+								<tr>
+									<td class="item">偶尔读</td>
+									<td class="item">没看过</td>
+								</tr>
+							</table>
+							-->
+						</td>
+					</tr>
+				</table>
+				
+			</div>
+		</div>
+		<div class="submitBtn">
+			<span>提交查看结果</span><span class="arrow">▲<span>
+		</div>
+	</div>
+	<!--提交信息 end-->
+	<!--提交信息2 start-->
+	<div id="userInfoSubmit-2">
+		<div class="outer">
+			<div class="icon">
+				<img src="images/userInfo/icon.png" alt="" width="100%">
+			</div>
+			<div class="text-0">
+				请留下您的联系方式,以便我们进行奖励通知<br/>好友评论数越高您的中奖几率越大哦！
+			</div>
+			<div class="nameAndTel">
+				<div>
+					<span class="towWord">姓&#12288;&#12288;名</span>
+					<input type="text" name="userName" id="userName" class="input-userInfo2">
+				</div>
+				<div>
+					<span>手机号码</span>
+					<input type="number" name="userMobile" id="userMobile" class="input-userInfo2">
+				</div>
+			</div>
+			<div class="jList">
+				<div class="item">
+					<div class="img">
+						<img src="images/userInfo/j0.png" width="100%">
+					</div>
+				</div>
+				<div class="item">
+					<div class="img">
+						<img src="images/userInfo/j1.png" width="100%">
+					</div>
+				</div>
+				<div class="item">
+					<div class="img">
+						<img src="images/userInfo/j2.png" width="100%">
+					</div>
+				</div>
+			</div>
+			<div class="submit" id="userInfo-submit-2">
+				<img src="images/userInfo/submit.jpg" width="100%">
+			</div>
+		</div>
+		<div class="btn-bottom-result">
+			<div class="btn-MyTest">
+				<div>继续测试</div>
+			</div>
+			<div class="btn-Description">
+				<div>活动规则</div>
+			</div>
+		</div>
+	</div>
+	<!--提交信息2 end-->
+
+	<!--竖屏提醒 start-->
+	<div id="shupingtixing">
+	</div>
+	<!--竖屏提醒 end-->
+	<div id="Description">
+		<div class="page hide" id="Description-page-0">
+			<div class="text-0">
+				<img src="images/des/p0-0.png" alt="" height="100%">
+			</div>
+			<div class="text-1">
+				<img src="images/des/p0-1.png" alt="" height="100%">
+			</div>
+			<div class="text-2">
+				<img src="images/des/p0-2.png" alt="" height="100%">
+			</div>
+			<div class="arrow">
+				<img src="images/des/arrow.png" alt="" height="100%">
+			</div>
+		</div>
+		<div class="page hide" id="Description-page-1">
+			<div class="text-0 wx-1">
+				<img src="images/des/p1-0.png" alt="" height="100%">
+			</div>
+			<div class="text-0 wx-0">
+				<img src="images/des/p1-0-2.png" alt="" height="100%">
+			</div>
+			<div class="text-1">
+				<img src="images/des/p1-1.png" alt="" height="100%">
+			</div>
+			<div class="text-2">
+				<img src="images/des/p1-2.png" alt="" height="100%">
+			</div>
+			<div class="text-3">
+				<img src="images/des/p1-3.png" alt="" height="100%">
+			</div>
+		</div>
+		<div class="close">
+			<span></span>
+		</div>
+	</div>
+
+	<div id="clickAnswerTips"></div>
+
+	<div id="shareTips"></div>
+	<div id="sharePop">
+		<div class="list">
+			<div class="item" data-cmd="tsina"><img src="images/share/icon-sina.png" width="100%"></div>
+			<div class="item" data-cmd="qzone"><img src="images/share/icon-qq.png" width="100%"></div>
+			<div class="item" data-cmd="douban"><img src="images/share/icon-douban.png" width="100%"></div>
+		</div>
+	</div>
+
+	<div id="btn-music"></div>
+	<audio id="myAudio" src="media/DCD071_03_1 Kindest Cut.mp3" autoplay="autoplay" loop="loop"></audio>
+	
+	<div id="self-share" style="display:none"></div>
+	
+	
+	<style id="addStyle"></style>
+
+	 <script src="js/jquery-2.1.3.min.js"></script>
+
+	 <script src="js/jgestures.min.js"></script>
+	 <script src="js/jquery.touchSwipe.min.js"></script>
+
+	 <script src="js/utils.js"></script>
+
+  	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+	<script src="http://js.selfimg.com.cn/lib/share/1.0.0/share.js" unrelease></script>
+	<script>
+
+	var browser={    
+				versions:function(){            
+				var u = navigator.userAgent, app = navigator.appVersion;            
+				return {                
+					trident: u.indexOf('Trident') > -1, //IE内核                
+					presto: u.indexOf('Presto') > -1, //opera内核                
+					webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核                
+					gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核                
+					mobile : !!u.match(/AppleWebKit.*Mobile/) || !!u.match(/Windows Phone/) || !!u.match(/Android/) || !!u.match(/MQQBrowser/), //是否为移动终端                
+					ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端                
+					android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器                
+					iPhone: u.indexOf('iPhone') > -1, //是否为iPhone或者QQHD浏览器                
+					iPad: u.indexOf('iPad') > -1, //是否iPad                
+					webApp: u.indexOf('Safari') == -1, //是否web应该程序，没有头部与底部
+					iPhone6plus: false,      //是否为iphone6plus      
+					androidNexus : u.indexOf('Nexus') > -1 ,//是否为nexus
+					animateVer : 1 //执行动画的版本
+				};
+				}()
+			}; 
+
+		var share = [
+			{
+				"img":"images/share/share.jpg",
+				"title":"裸心密境/发现真实的自己",
+				"desc":["测试你潜意识里的性格"]
+			},{
+				"img":"images/share/share.jpg",
+				"title":"裸心密境/发现真实的自己",
+				"desc":["情感/美丽/职场全方位洞悉女性潜意识里的型格。快开启你的发现之旅吧！"]
+			},{
+				"img":"images/share/zcwml.jpg",
+				"title":"职场武媚娘",
+				"desc":["我工作上霸气外露，是当之无愧的职场武媚娘！你也来测测吧！","我总能Duang一下就把工作搞定，实属职场武媚娘！你也来测测吧！","我工作起来颇有女皇范儿，堪称职场武媚娘。你也来测测吧！"]
+			},{
+				"img":"images/share/rxcn.jpg",
+				"title":"任性才女",
+				"desc":["我工作但求问心无愧，实乃任性才女！你也来测测吧！","我是任性才女，工作上坚持原则从不溜须拍马~你也来测测吧！","我在职场上忠于自我，不愧是任性才女！你也来测测吧！"]
+			},{
+				"img":"images/share/zcbzn.jpg",
+				"title":"职场不争女",
+				"desc":["我对工作表现的十分淡定，是典型的职场不争女。你也来测测吧！","作为职场不争女，竞争压力对我来说都是浮云。你也来测测吧！","职场不争女说的就是我这般温顺乖巧的女纸~你也来测测吧！"]
+			},{
+				"img":"images/share/yw.jpg",
+				"title":"御物女",
+				"desc":["我坚信没有物质爱情免谈，是典型的御物女。你也来测测吧！","有钱才能任性爱，我是当之无愧的御物女。你也来测测吧！","作为御物女我坦言，物质是爱情的前提保证~你也来测测吧！"]
+			},{
+				"img":"images/share/efzy.jpg",
+				"title":"爱情合伙人",
+				"desc":["我与伴侣同甘共苦，是爱情合伙人的典范。你也来测测吧！","作为爱情合伙人，我对另一半并无太苛刻的要求。你也来测测吧！","我愿与另一半共同奋斗，是典型的爱情合伙人。你也来测测吧！"]
+			},{
+				"img":"images/share/can.jpg",
+				"title":"纯爱女",
+				"desc":["我不求高富帅只求真心人，是典型纯爱女。你也来测测吧！","我是个纯爱女，憧憬你是风儿我是沙的爱情。你也来测测吧！","我为真爱可以舍弃一切，是纯爱女的典范！你也来测测吧！"]
+			},{
+				"img":"images/share/jdyh.jpg",
+				"title":"绝代艳后",
+				"desc":["我以美武装征服四方，当属绝代艳后！你也来测测吧！","我的石榴裙下跪拜无数，是当之无愧的绝代艳后！你也来测测吧！","我的美颇有绝代艳后气质，令人甘愿臣服。你也来测测吧！"]
+			},{
+				"img":"images/share/ts.jpg",
+				"title":"天使艾米莉",
+				"desc":["我简单纯粹，美好如天使艾米莉一般！你也来测测吧！","我的美独具一格，犹如天使艾米莉。你也来测测吧！","我古灵精怪惹人爱，就像天使艾米莉。你也来测测吧！"]
+			},{
+				"img":"images/share/znl.jpg",
+				"title":"赞女郎",
+				"desc":["我贯彻“女为悦己者容”的美丽哲学，收获赞女郎称号。你也来测测吧！","经测试我的美丽型格是赞女郎，点赞党们请自觉点赞！你也来测测吧！","我是典型赞女郎，po图没有赞的话她会很忧桑哦~你也来测测吧！"]
+			}
+		];
+		var urlFix = location.href.slice(0,location.href.split("?")[0].lastIndexOf("/")+1);
+		 //分享链接的缩略图
+		var imgUrl;
+		//分享链接的链接地址
+		var lineLink = urlFix + 'index.php';
+		//分享链接的描述信息
+		var descContent;
+		//分享链接的标题
+		var shareTitle;
+		//是否微信
+		var isWeixin = is_weixin();
+
+	function makeShare(index){
+		imgUrl = urlFix + share[index].img;
+		if (index === 0){
+			shareTitle = share[index].title;
+			descContent = share[index].desc[0];
+		}
+		else if (index === 1){
+			shareTitle = share[index].title;
+			descContent = share[index].desc[0];
+		}
+		else{
+			var r = Math.round(Math.random()*2);
+			shareTitle = "裸心密境/发现真实的自己";
+			descContent = share[index].desc[r];
+		}
+
+		wx.ready(function(){
+			//朋友圈
+			wx.onMenuShareTimeline({
+				title: descContent, // 分享标题
+				link: lineLink, // 分享链接
+				imgUrl: imgUrl, // 分享图标
+				success: function () {
+					// 用户确认分享后执行的回调函数
+
+				},
+				cancel: function () {
+					// 用户取消分享后执行的回调函数
+				}
+			});
+
+			wx.onMenuShareAppMessage({
+				title: shareTitle, // 分享标题
+				desc: descContent, // 分享描述
+				link: lineLink, // 分享链接
+				imgUrl: imgUrl, // 分享图标
+				type: '', // 分享类型,music、video或link，不填默认为link
+				dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+				success: function () {
+					// 用户确认分享后执行的回调函数
+					//alert("分享给朋友成功");
+				},
+				cancel: function () {
+					// 用户取消分享后执行的回调函数
+				}
+			});
+		});
+	}
+
+	function is_weixin(){
+		var ua = navigator.userAgent.toLowerCase();
+		if(ua.match(/MicroMessenger/i)=="micromessenger") {
+			return true;
+	 	} else {
+			return false;
+		}
+	}
+
+	function getQueryStr(LocString,str){  
+        var rs = new RegExp("(^|)"+str+"=([^\&]*)(\&|$)","gi").exec(LocString), tmp;  
+        if(tmp=rs){  
+            return tmp[2];  
+        }  
+        return "";  
+	} 
+	var imageObj0,imageObj1,imageObj2,imageObj3;
+
+
+	function random(min, max) {
+		return ~~(Math.random() * (max - min)) + min;
+	}
+
+	var VIEW_WIDTH = 0,
+		VIEW_HEIGHT = 0,
+		aid = 0,
+		B_show3DswitchAnimate = false,	//是否显示3D切换动画
+		G_switch3DAnimate_frameIndex = 0 , //3D 切换动画时候的帧序列索引
+		G_3DAnimateTimeDelay = 0,	//3d切换时候的delay时间
+		G_IS_SHOW_A_CARD = false,	//正在显示一个答题卡
+		//用户提交的信息，包括用户的答案、个人信息
+		G_USERS_ANSWER = {
+			"answers" : {
+				"typename" : "",	//测试领域，emotion,beauty,career三种值
+				"list" : {
+					"card0" : "",
+					"card1" : "",
+					"card2" : "",
+					"card3" : "",
+					"card4" : "",
+					"card5" : "",
+					"card6" : "",
+					"card7" : "",
+					"card8" : "",
+					"card9" : "",
+					"card10" : "",
+					"card11" : ""
+				}
+			},
+			"userInfo"	: {
+				"province" :"",	//省份
+				"city" : "",	//城市
+				"age" : "",		//年龄
+				"marry" : "",	//婚姻状况
+				"friendly" : ""	//与悦己的亲密度
+			}
+		},
+
+		/*答题页参数部分 start*/
+		json_QuestList,
+		W_ul_outer_2 = 0,	//总宽度
+		isTouchDown_2 = false,
+		MouseDownX_2 = null,
+		speed_2 = 0,
+		touch_2 = utils.captureTouch($(".view-outer")[0]),	//触摸手指位置;
+		/*答题页参数部分 end*/
+
+		hasChooseAfield = false,	//是否选择了某一领域
+		IS_CANCEL_AUTO_AINIMATE = false, //是否点击了背面
+		TARGET_DEG = 0,	//目标角度
+		isTouchDown_0 = false,	//第一屏是否被触摸
+		BETA = 0,
+		GAMMA = 0,
+		BETA_TMP = 0,
+		GAMMA_TMP = 0,
+		G_perspective = 1600,
+		SECTION_INDEX = 1,	//当前场景序列 0=锥形场景,1=首页场景,2=答题场景
+		SPEED_EDG = 5,	//场景1旋转的速度
+		X_DEG = 30, //x轴角度
+		Y_DEG = 0 ,  //y轴角度
+		X_DEG_FLOAT = 0,	//浮动y轴角度
+		Y_DEG_FLOAT = 0,	//浮动y轴角度
+		IS_SWIPERIGHT = false,	//正在向右
+		IS_SWIPELEFT = false,	//正在向左
+		TMP_TARGET_DEG = Y_DEG ,	//目标角度
+		SPEED = 0 , //手指松开后的速度
+		touch = utils.captureTouch($("#section-0")[0]);	//触摸手指位置
+
+	var G_D_Star = -.2; 	//星星的方向
+
+
+	var pfx = ["webkit", "moz", "MS", "o", ""];
+	function PrefixedEvent_add(element, type, callback) {
+		for (var p = 0; p < pfx.length; p++) {
+			if (!pfx[p]) type = type.toLowerCase();
+			if (p == 0) type = "TransitionEnd";
+			//console.log(pfx[p]+type);
+			element.addEventListener(pfx[p]+type, callback, false);
+		}
+	}
+	function PrefixedEvent_remove(element, type, callback) {
+		for (var p = 0; p < pfx.length; p++) {
+			if (!pfx[p]) type = type.toLowerCase();
+			if (p == 0) type = "TransitionEnd";
+			element.removeEventListener(pfx[p]+type, callback, false);
+		}
+	}
+	var imgLoad = function(url, callback) {
+		var img = new Image();
+
+		img.src = url;
+		if (img.complete) {
+			callback();
+		} else {
+			img.onload = function() {
+				callback();
+				img.onload = null;
+			};
+		};
+	};
+
+	//点击答题界面
+	function clickAnswerHandler(event){
+		event.preventDefault();
+		event.stopPropagation();
+		
+		var cardIndex = $("#section-2 li.click").index("#section-2 li:not(.remove)"),	//当前牌在未删除牌中的索引
+			cardGindex = $("#section-2 li.click").find(".B").attr("data-index")*1;	//当前牌在所有牌中的索引
+		if ($(event.targetTouches[0].target).parents().is(".item") || $(event.targetTouches[0].target).hasClass('item')){
+			var $item = $(event.targetTouches[0].target).parents(".item").length > 0 ? $(event.targetTouches[0].target).parents(".item") : $(event.targetTouches[0].target),
+				a_index = $item.index(),
+				isMultiple = $item.hasClass('Multiple');
+			if (isMultiple){
+				//如果是多选
+				if ($item.hasClass('click')){
+					$item.removeClass("click");
+					//$(".ti-mian .item").eq(a_index).removeClass("click");
+				}
+				else{
+					$item.addClass("click");
+					//$(".ti-mian .item").eq(a_index).addClass('click');
+				}
+			}
+			else{
+				//如果是单选
+				$item.addClass("click").siblings().removeClass("click");
+				//$(".ti-mian .item").eq(a_index).addClass('click').siblings().removeClass("click");
+				eval("G_USERS_ANSWER.answers.list.card"+cardGindex+" = "+(a_index+1)+";");
+				this.removeEventListener('touchstart',clickAnswerHandler,false);
+				SECTION_2.removeCardByIndex(cardIndex);
+			}
+		}
+		else if ($(event.targetTouches[0].target).parents().is(".sibmit") || $(event.targetTouches[0].target).hasClass('sibmit')){
+			//多选的提交按钮
+			var _tmp = [];
+			var $li_now = $("#section-2 li.click");//当前点击的元素
+			if ($li_now.find(".answers .item.click").length == 0){
+				SECTION_2.showRequiredPop();
+				return false;
+			}
+			$li_now.find(".answers .item").each(function(index, el) {
+				if ($(this).hasClass('click')){
+					_tmp.push(index+1);
+				}
+			});
+			
+			eval("G_USERS_ANSWER.answers.list.card"+cardGindex+" = '"+_tmp.join(",")+"';");
+			this.removeEventListener('touchstart',clickAnswerHandler,false);
+			SECTION_2.removeCardByIndex(cardIndex);
+		}
+	}
+	//选择一张牌后
+	function chooseCardhandler(){
+		SECTION_2.hasClickAnyCard = true;
+		var $li = $(this).parents("li");
+		if (G_IS_SHOW_A_CARD || $li.hasClass('remove')){
+			return false;
+		}
+		G_IS_SHOW_A_CARD = true;
+
+		$li.addClass('click');
+		//$("#section_outer_bg").show();
+
+		SECTION_2.isAbortAutoBackPostionAnimate = true;
+		SECTION_2.isAutoBackPostioning = false;
+
+		//背面绑定事件
+		var index_li = $(this).attr("data-index"),	//题目的索引号
+			index = $li.index("#section-2 li:not(.remove)");	//未删除的索引号
+		//更新答题页的题目
+		
+		//SECTION_2.makeAnserPageHtml(index_li);	
+		$(this).next().html(SECTION_2.makeAnserPageHtml(index_li));
+		//aHtml.push(SECTION_2.makeAnserPageHtml(i));
+		//点击后的动画
+		 $(this).unbind();
+		SECTION_2.centerCardByIndex(index);
+	}
+	//修改宽和高的变量
+	function resizeWindow(){
+		VIEW_WIDTH = $(window).outerWidth();
+		VIEW_HEIGHT = $(window).outerHeight();
+		SECTION_2.resizeAnserHeight();
+
+		var w = VIEW_WIDTH * .95 > 640 ? 640 : VIEW_WIDTH * .95,
+			r = w/640;
+		/*
+		$("#canvasChahua").attr("width",w).attr("height",w);
+		*/
+		
+		
+		$("#canvasChahua").css({
+			"left": (VIEW_WIDTH - 640) /2 +"px",
+			"top": (VIEW_HEIGHT - 640) /2 +"px"
+		});
+
+		/*
+		stage.scaleX = r;
+		stage.scaleY = r;
+		*/
+		$("#canvasChahua").css({
+			"-webkit-transform":"scale("+r+")",
+			"transform":"scale("+r+")"
+		});
+		$("#chahuaAnimate .chahua").css({"height": (VIEW_WIDTH * .95 > 640 ? 640 : VIEW_WIDTH * .95) + "px"});
+
+		//牌下面的点
+		$("#dots").css("top",(214 * VIEW_HEIGHT /VIEW_WIDTH /2 + VIEW_HEIGHT /2+10)+"px");
+
+		/*
+		if ($("#userInfoSubmit-2 .outer").outerHeight(true) + $("#userInfoSubmit-2 .btn-bottom-result").outerHeight(true) < VIEW_HEIGHT){
+			var h_margin = $("#userInfoSubmit-2 .outer").outerHeight(true) - $("#userInfoSubmit-2 .outer").outerHeight();
+			var h = VIEW_HEIGHT - $("#userInfoSubmit-2 .btn-bottom-result").outerHeight(true) - h_margin;
+			$("#userInfoSubmit-2 .outer").css("min-height",h+"px");
+		}
+		*/
+	}
+
+	//创建3D翻牌动画
+	function make3DswitchAnimateHtml(imageA,imageB){
+
+		var w = VIEW_WIDTH /2 ;
+			var ahtml = [];
+			ahtml.push('<div class="box3d-container hide">');
+			ahtml.push(' <div id="card-0">');
+			ahtml.push(' 	<div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; -webkit-perspective: 2000px; perspective: 2000px;">');
+			ahtml.push(' 		<div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; z-index: 0; -webkit-transform-style: preserve-3d; -webkit-transform: translate3d(0px, 0px, -'+w+'px);">');
+			ahtml.push(' 			<div class="pa-outer" style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; overflow: hidden; z-index: 0; -webkit-transform: translate3d(0px, 0px, '+w+'px);">');
+			ahtml.push(' 				<img class="pa img-p100 img-A" src="'+imageA+'" width="100%" height="300%" style="position: absolute; bottom: -200%;">');
+			ahtml.push(' 			</div>');
+			ahtml.push(' 			<div class="pa-outer" style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; overflow: hidden; z-index: 0; -webkit-transform: matrix3d(0, 0, -1, 0, 0, 1, 0, 0, 1, 0, 0, 0, '+w+', 0, 0, 1);">');
+			ahtml.push(' 				<img class="pa img-p100 img-B" src="'+imageB+'" width="100%" height="300%" style="position: absolute; bottom: -200%;">');
+			ahtml.push(' 			</div>');
+			ahtml.push(' 		</div>');
+			ahtml.push(' 	</div>');
+			ahtml.push(' </div>');
+			ahtml.push(' <div id="card-1">');
+			ahtml.push(' 	<div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; -webkit-perspective: 2000px; perspective: 2000px;">');
+			ahtml.push(' 		<div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; z-index: 0; -webkit-transform-style: preserve-3d; -webkit-transform: translate3d(0px, 0px, -'+w+'px);">');
+			ahtml.push(' 			<div class="pa-outer" style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; overflow: hidden; z-index: 0; -webkit-transform: translate3d(0px, 0px, '+w+'px);">');
+			ahtml.push(' 				<img class="pa img-p100 img-A" src="'+imageA+'" width="100%" height="300%" style="position: absolute; bottom: -100%;">');
+			ahtml.push(' 			</div>');
+			ahtml.push(' 			<div class="pa-outer" style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; overflow: hidden; z-index: 0; -webkit-transform: matrix3d(0, 0, 1, 0, 0, 1, 0, 0, -1, 0, 0, 0, -'+w+', 0, 0, 1);">');
+			ahtml.push(' 				<img class="pa img-p100 img-B" src="'+imageB+'" width="100%" height="300%" style="position: absolute; bottom: -100%;">');
+			ahtml.push(' 			</div>');
+			ahtml.push(' 		</div>');
+			ahtml.push(' 	</div>');
+			ahtml.push(' </div>');
+			ahtml.push(' <div id="card-2">');
+			ahtml.push(' 	<div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; -webkit-perspective: 2000px; perspective: 2000px;">');
+			ahtml.push(' 		<div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; z-index: 0; -webkit-transform-style: preserve-3d; -webkit-transform: translate3d(0px, 0px, -'+w+'px);">');
+			ahtml.push(' 			<div class="pa-outer" style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; overflow: hidden; z-index: 0; -webkit-transform: translate3d(0px, 0px, '+w+'px);">');
+			ahtml.push(' 				<img class="pa img-p100 img-A" src="'+imageA+'" width="100%" height="300%" style="position: absolute; bottom: 0%;">');
+			ahtml.push(' 			</div>');
+			ahtml.push(' 			<div class="pa-outer" style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; overflow: hidden; z-index: 0; -webkit-transform: matrix3d(0, 0, -1, 0, 0, 1, 0, 0, 1, 0, 0, 0, '+w+', 0, 0, 1);">');
+			ahtml.push(' 				<img class="pa img-p100 img-B" src="'+imageB+'" width="100%" height="300%" style="position: absolute; bottom: 0%;">');
+			ahtml.push(' 			</div>');
+			ahtml.push(' 		</div>');
+			ahtml.push(' 	</div>');
+			ahtml.push(' </div>');
+			ahtml.push('</div>');
+			$("#itooy").append($(ahtml.join("")));
+	}
+
+	var SECTION_2 = {
+		MultipleSubmitBtn : "images/MultipleSubmit-arrow-career.png",	//多选题按钮图片
+		aNumber : ["I","II","III","IV","V","VI","VII","VIII","IX","X","XI","XII","XIII"],
+		aQuestion : {
+			"career": [
+				{
+
+					"chahua_url":"images/first/career/0.png",
+					"q":"猎头夺命追魂call，跳槽？下一份工作你会如何选择？",
+					"a":[
+						"有钱才能任性，当然选薪资最高的！",
+						"选最轻松的。宁做小娇妻，不做女强人！",
+						"选职位最高的！就是喜欢别人看我时羡慕嫉妒恨！",
+						"选喜欢的！做喜欢的事还能赚钱，太赞！",
+						"薪资压力综合考虑，钱够花就行~",
+						"选能让我提高能力，涨姿势的！"
+					]
+				},
+				{
+
+					"totalFrame":11,
+					"chahua_url":"images/first/career/1.png",
+					"q":"老公说：“辞职吧，以后你就负责貌美如花，我来负责赚钱养家！”你怎么想？",
+					"a":[
+						"我要买齐LV全部新款，NO CAN NO BB！",
+						"两耳不闻职场事，几年沦为煮饭婆，何以保持花开不败？",
+						"夫妻双双把钱赚，你的就是我的，我的还是我的。",
+						"保持工作，不做井底之蛙！",
+						"也许就快升职加薪了，拱手让人臣妾做不到啊！",
+						"继续愉快的工作才能更加充实！"
+					]
+				},
+				{
+
+					"chahua_url":"images/first/career/2.png",
+					"q":"身边总不乏一些女汉子用绳命在工作。你觉得女人拼事业为了啥？",
+					"a":[
+						"花男人的钱，自己免不了有受气的时候",
+						"万一在家闲出无聊病，你有药啊？",
+						"趁年轻拼出个荣华与富贵",
+						"想受人尊敬！毕竟这年头连范爷都不靠脸吃饭了。",
+						"工作就图个成就感，淋漓尽致才够High。",
+						"不求功利，只为开心！"
+					]
+				},
+				{
+					"totalFrame":11,
+					"chahua_url":"images/first/career/3.png",
+					"q":"你因人事调动来到一个人少事多不对口的新部门。心塞之余你怒交辞呈，老板说什么能留住你？",
+					"a":[
+						"亲！给你多拨几个小弟，使唤他们别累着你！",
+						"再坚持364天，到时候肯定给你一大笔额外奖金！",
+						"表生气嘛~让你回原来的部门做熟悉的事，好不啦？",
+						"看你这么辛苦，把你的任务分一半给隔壁老王吧！",
+						"在这新部门咬牙坚持下去，你的未来不可限量啊！",
+						"看上哪个部门了？我直接给你转！"
+					]
+				},
+				{
+					"totalFrame":11,
+					"chahua_url":"images/first/career/4.png",
+					"q":"为某重大项目你另辟蹊径提出一个颠覆性的新想法，却遭同事领导质疑。你会？",
+					"a":[
+						"查找资料及案例支持，一定要努力说服她们！",
+						"一枪被毙，拒绝修改。看老娘再做一个新策划震惊你们！",
+						"谁让自己有群不识货的猪队友呢，没办法只能修改了。",
+						"这些意见总有道理吧？或许没道理？多想无益，耐心改过吧。"
+					]
+				},
+				{
+
+					"chahua_url":"images/first/career/5.png",
+					"q":"辛苦很久，一个大项目终于圆满完成了！下面哪种最让你有成就感？",
+					"a":[
+						"被老板器重，全公司大会上得到点名赞扬！",
+						"同事纷纷表示祝贺，连平时没怎么说过话的都来道喜了。",
+						"不可思议！那该死的客户竟发了一封情真意切的感谢信!",
+						"回首这段历程，自我感觉获益良多，变得更自信更坚强。"
+					]
+				},
+				{
+
+					"chahua_url":"images/first/career/6.png",
+					"q":"你得到公司重用外派3年，职位连升两级前途光明。可老公总不忍受两地分居之苦。你如何抉择？",
+					"a":[
+						"接受。爱我你就抱抱我，爱我你就支持我！",
+						"接受。但跟老板商量缩短时间，职位可少升一级。",
+						"放弃。工作再重要，能比我家汉纸重要吗？！"
+					]
+				},
+				{
+
+					"chahua_url":"images/first/career/7.png",
+					"q":"你和老公计划了半年的巴黎之旅就在眼前，公司却在此时接了单大项目。新来的小妹正留着口水等交接。你会？",
+					"a":[
+						"放弃旅行。老娘到嘴的肥鸭子岂能让别人抢了去？",
+						"放弃项目。就让哪个捡了便宜的小绿茶去偷着乐吧！",
+						"鱼和熊掌都要！先把前期工作做好，旅游不忘背上电脑24小时战备状态。"
+					]
+				},
+				{
+
+					"chahua_url":"images/first/career/8.png",
+					"q":"今天你男人一年一度大寿，临下班老板突然扔来大堆工作，怎么破？",
+					"a":[
+						"老板的话就是圣旨，自家男人只好委屈一下了！",
+						"先陪Dear二人世界，再来熬夜完成工作。",
+						"不忍看他失望！直接坦言，工作找能人顶替。"
+					]
+				},
+				{
+
+					"chahua_url":"images/first/career/9.png",
+					"q":"好姐妹表示升职竞争这种事，注定拼不过雄性生物。你怎么看？",
+					"a":[
+						"同意。追男人的本事都快比不上男人了，职场竞争更别提了。",
+						"不同意。这年代还有性别歧视？！你放佛是故意在逗我笑！"
+					]
+				},
+				{
+
+					"chahua_url":"images/first/career/10.png",
+					"q":"闺蜜跟你吐槽，公司新人中有能力的被有靠山的挤走了。你如何回复她？",
+					"a":[
+						"这是常态，看开点吧…<br/>要不怎么都争着抢着认干爹呢？",
+						"这是个例，<br/>别在意！你看多少草根都凭个人实力登上选秀舞台？"
+					]
+				},
+				{
+
+					"chahua_url":"images/first/career/11.png",
+					"q":"工作压力大难免会找人诉诉苦，你跟老公或闺蜜最常坦言的职场压力是？",
+					"a":[
+						"怎么感觉周围人人那么拼，就我提不起劲……",
+						"未来在哪？这把年纪竟又有了青春期的烦恼。",
+						"人情世故真真假假，复杂人际关系已经搞得精力衰竭。",
+						"人微言轻，上至老板下到扫地姨全体无视我。",
+						"长江后浪推前浪，没准哪天我这前浪就被拍死在沙滩上了。"
+					],
+					"Qtype":"Multiple",
+					'h_style':"e6"
+				}
+			],"emotion":[
+				{
+
+					"chahua_url":"images/first/emotion/0.png",
+					"q":"你一定听说过一个女孩和一个男孩爱得死去活来但受到丈母娘因男孩没钱而阻拦的故事。如果是你怎么办？",
+					"a":[
+						"分吧！小孩才谈感情，大人只看money！",
+						"感情是重要，可也不能当饭吃啊！客观条件还是要考虑滴~",
+						"感情第一，相爱哪能拦住，嫁鸡随鸡嫁狗随狗喽。",
+						"干嘛那么势利？为真爱舍弃一切又何妨？！"
+					]
+				},
+				{
+
+					"chahua_url":"images/first/emotion/1.png",
+					"q":"你男闺蜜有个相亲对象，女方性格不错且厨艺很好，重点是家里超级有钱父母也好相处。那货却因女方长相一般不愿相见。你会说？",
+					"a":[
+						"理解……就算其他条件再好，长得不好我不喜欢如何愉快的玩耍在一起。",
+						"傻啊！这么个金枝玉叶还不抓住，娶了能让你少奋斗五十年！",
+						"算了，不见就不见吧，门当户对是永恒的真理，强扭来的有钱妞长久不了。"
+					]
+				},
+				{
+
+					"chahua_url":"images/first/emotion/2.png",
+					"q":"女人们的下午茶里充斥着追求者的各种代号，你现在想要哪个？",
+					"a":[
+						"小A。ATM取款机。让你可以放手任性买买买！",
+						"小伴儿。老实本分的依靠，相拥相伴携手到老。",
+						"小仆。伺候你照顾我的男仆，把你当公主殿下侍奉！",
+						"暖宝宝。懂你的喜怒哀乐，体恤你的坚强与脆弱的灵魂伴侣。",
+						"小石头。有资源有阅历能助你平步青云、实现理想的垫脚石。",
+						"欧巴。人生电影里的男神，童话里的白马王子，为爱可以付出一切！"
+					],
+					'h_style':"e4"
+				},
+				{
+
+					"chahua_url":"images/first/emotion/3.png",
+					"q":"单身闺蜜很享受自己的生活状态，可父母都不停催促她快点结婚。矛盾的她找你聊天，你会说？",
+					"a":[
+						"父母有道理，女人不结婚，人生都不完整！",
+						"难道你不怕别人的闲言碎语？大龄剩女可都是大家眼中的怪物！",
+						"抓紧吧，以后看人家孩子都会打酱油了，你只会空虚寂寞冷！",
+						"能嫁还不赶紧嫁啊，你看那些齐天大剩们多悲哀。",
+						"坚持做自己，女人不结婚生活一样可以过得很美！",
+						"有个男人养着生活会轻松很多~女人一个人过太累了！"
+					],
+					'h_style':"e5"
+				},
+				{
+
+					"chahua_url":"images/first/emotion/4.png",
+					"q":"杂志专栏访问了4种类型婚姻，你最羡慕哪一种？",
+					"a":[
+						"老公疼我爱我，人前人后都对我百依百顺。",
+						"经济基础好的老公才能滋养女人，女人这朵花才不会早早凋谢。",
+						"家庭和谐、平淡美满，坐看花落花开。",
+						"老公跟我志同道合，互相鼓励、扶持，一起追求我们的理想。"
+					]
+				},
+				{
+
+					"chahua_url":"images/first/emotion/5.png",
+					"q":"好友结婚后和她老公都忙于事业，生活在同一屋檐下却聚少离多。好友在纠结是否该换个工作，你会给她哪一种建议？",
+					"a":[
+						"现实版牛郎织女？必须换个轻松工作，把更多精力时间放在家里。",
+						"女人事业也同样重要，不能牺牲掉自己喜欢的工作。"
+					]
+				},
+				{
+
+					"chahua_url":"images/first/emotion/6.png",
+					"q":"娘亲大人对你进行婚姻责任教育，絮絮叨叨说了一堆。你认为哪个是最重要的？",
+					"a":[
+						"说别的都是虚的，握紧财政大权才是正经事！",
+						"洗衣做饭照顾他饮食起居，做个五星好评的贤内助。",
+						"孩子是三个家庭的未来，教育孩子是女人第一要务。",
+						"赚钱养家，共同承担生活重担。",
+						"亲爹亲妈公公婆婆……双方父母都要好好照顾。",
+						"在男人的事业上做得力助手，携手打拼。"
+					]
+				},
+				{
+
+					"chahua_url":"images/first/emotion/7.png",
+					"q":"你是否能够为你爱的他，为了家庭，为了幸福，而做出改变？你认为最重要的改变是？",
+					"a":[
+						"能！改变外貌和气质。他是萝莉控，我得能卖萌。他若爱女王，我可执皮鞭！",
+						"能！改变生活习惯。周末怎么过、早饭吃什么等等都尽量听他的意见。",
+						"能！学习所需的生活技能。洗衣做饭、财务规划……为他变成新一代学霸！！",
+						"能！了解他的工作、听他喜欢的歌、陪他打球伴他喝酒，他爱的你不爱多扫兴啊",
+						"不能！为他人改变是愚蠢的，如果不喜欢那就go away！",
+						"不能！真的爱我就应该努力变成我喜欢的样子。"
+					],
+					'h_style':"e4"
+				},
+				{
+
+					"chahua_url":"images/first/emotion/8.png",
+					"q":"闺蜜跟你吐槽婚后生活，下面哪些让你颇有共鸣？",
+					"a":[
+						"二人激情不再、生活越过越平淡……就差没吃斋念佛了。",
+						"他在床头打游戏，我在床尾追韩剧。夫妻毫无共同话题！",
+						"老公事业发展飞快，感觉他离我越来越远了。",
+						"经济不独立，所以时不时会受点气。",
+						"年长色衰……万一哪天真的变成欧巴桑，他还会爱我吗？",
+						"那么多小三小四，安静的做个唯一怎么那么难",
+						"这世道女人太难了，事业家庭两平衡好难修炼。"
+					],
+					"Qtype":"Multiple",
+					'h_style':"e7"
+				},
+				{
+
+					"chahua_url":"images/first/emotion/9.png",
+					"q":"出轨新闻频现头条，谁能保证自己的男人永远不会背叛？姑娘你的态度是？",
+					"a":[
+						"这种事绝对不可原谅，再痛也要离!",
+						"先自我检讨，再及时改正，婚姻是要誓死捍卫的。",
+						"亡羊补牢为时不晚，加倍对他好，就不信挽不回他的心。",
+						"凭什么自己受委屈？让他净身出户！",
+						"大隐隐于婚，他可以出轨你也可以出墙，不必再为他浪费感情。",
+						"切莫冲动，卧薪尝胆，打点好后路再一脚把他踹了！"
+					],
+					'h_style':"e4"
+				},
+				{
+
+					"chahua_url":"images/first/emotion/10.png",
+					"q":"看娱乐圈那些女明星，有的刚出名就趁热抱个金主嫁了，还有的已经红了很久依然坚持寻找真爱。你认为女人最理想的结婚年纪是？",
+					"a":[
+						"25岁以前",
+						"25-28岁",
+						"29-30岁",
+						"31-35岁"
+					],
+					'h_style':"e2"
+				},
+				{
+
+					"chahua_url":"images/first/emotion/11.png",
+					"q":"你认为自己现在的生活状态怎么样？",
+					"a":[
+						"非常快乐，每天过得都特别嗨！",
+						"比较快乐，挺满意自己目前的状态。",
+						"还行，一般般。没什么大起大落，日子平淡真实。",
+						"不快乐，常常为某些事情焦虑心烦。"
+					]
+				}
+			],"beauty":[
+				{
+
+					"chahua_url":"images/first/beauty/0.png",
+					"q":"女人对于美丽，有着天生的感悟力和鉴赏力，无论天生丽质还是气场夺人对于美的追求永不懈怠！你觉得女人在打扮上的花费占收入的多少比例算正常？",
+					"a":[
+						" 20%以内",
+						" 20％—40%",
+						" 40%—60%",
+						" 60%—80%",
+						" 80%以上"
+					],
+					'h_style':"e2"
+				},
+				{
+
+					"chahua_url":"images/first/beauty/1.png",
+					"q":"已过不惑之年的女上司说“女人之美在于气质”，你赞同吗？",
+					"a":[
+						"不同意。年轻才是美的真相，气质什么的都是老女人的借口！",
+						"不同意。美不美当然要看脸，不信就去问广大外貌协会成员！",
+						"不同意。身材好才是重点，胸大无脑的不照样很受欢迎么？",
+						"同意。岁月是把杀猪刀，容颜终会流逝，气质却可以积累。",
+						"不同意。lady Gaga作证，个性才是女孩的终极杀手锏！"
+					]
+				},
+				{
+
+					"chahua_url":"images/first/beauty/2.png",
+					"q":"自我评价一下，你认为自己最具魅力的地方是？",
+					"a":[
+						"脸。镜子前总会被自己的美貌深深打动！",
+						"身材。男人爱慕，女人羡慕！",
+						"皮肤。男神女神都要来讨教护肤之道！",
+						"气质。内涵决定气场，气场决定魅力值。",
+						"智慧。魅力见仁见智，拼知识完胜。",
+						"性格。每一个女人都应该是独特的。"
+					]
+				},
+				{
+
+					"chahua_url":"images/first/beauty/3.png",
+					"q":"周末朋友组织别墅泳池趴，你精心打扮了整整一个下午。你用心准备是为了？",
+					"a":[
+						"自己美美的玩得更开心。",
+						"总该成为派对女王，羡煞旁人。",
+						"自己美美哒，身边的男人有面子！",
+						"保证绝对杀伤力，吸引异性的目光！"
+					]
+				},
+				{
+
+					"chahua_url":"images/first/beauty/4.png",
+					"q":"王总监是公司传奇人物：脸蛋漂亮身材火辣，从前台爬到高管，还找了个家境雄厚的老公！对于她的成功，你怎么看？",
+					"a":[
+						"刷脸时代，只要美貌一切都可手到擒来。",
+						"事业和婚姻的成功靠的是个人能力，和美貌无关。",
+						"美貌无疑是强大助力，但人家肯定也有自己的过人之处。"
+					]
+				},
+				{
+
+					"chahua_url":"images/first/beauty/5.png",
+					"q":"坐了十几个小时的飞机到达旅行目的地，却发现没带化妆包！你的反应是？",
+					"a":[
+						"直接撒欢去玩耍，反正没人认识！",
+						"第一时间置办齐全~总要让美貌配搭得上这难得景色。",
+						"只能靠超强的自拍技术了，角度＋滤镜照样点赞过百！",
+						"第一时间置办齐全，保证打败沙滩上99%以上比基尼美女！"
+					]
+				},
+				{
+
+					"chahua_url":"images/first/beauty/6.png",
+					"q":"闺蜜结伴逛街，寻到一套得体的套装，她却觉得不适合你，你怎么想？",
+					"a":[
+						"个人品味不同了，我喜欢就要买。",
+						"那算了，她觉得不好也许真的不适合。",
+						"没有那么完美，不过能让我职场魅力飙升！必买！"
+					]
+				},
+				{
+					"totalFrame":11,
+					"chahua_url":"images/first/beauty/7.png",
+					"q":"大表姐的老公新入手助理，22岁刚毕业的清新妹纸一枚。表姐压力山大，你怎么建议她？",
+					"a":[
+						"减肥、美容、微整形……不惜一切打败小白纸！",
+						"年轻、美貌都是过眼烟云，相信自己是最好的。",
+						"姐姐莫慌！朝着咱姐夫喜欢的style努力完善自己是重点。"
+					]
+				},
+				{
+
+					"chahua_url":"images/first/beauty/8.png",
+					"q":"好姐妹能在朋友圈狂晒日渐进化的马甲线，靠的是排毒果汁和魔鬼体能训练。为此你怎么看？ ",
+					"a":[
+						"不值得，本来就很美为何要跟自己过不去？",
+						"钦佩不已，只能点赞以表心情。",
+						"受到刺激，立马加入跟她一起锻炼",
+						"好麻烦……我有更大胆的方法：吸脂！"
+					]
+				},
+				{
+					"totalFrame":7,
+					"chahua_url":"images/first/beauty/9.png",
+					"q":"公司新来邻桌标准女神级，午餐时爆料她的锥子脸其实是打了瘦脸针的效果。对于喜闻乐见的微整形你怎么看？",
+					"a":[
+						"完全无法接受，这不就是画皮嘛！",
+						"见怪不怪了……不过自己是绝对不会去做的！",
+						"追求美的方法而已，我不介意，自己也想尝试~"
+					]
+				},
+				{
+
+					"chahua_url":"images/first/beauty/10.png",
+					"q":"如果说90后的姑娘像是200w高亮电灯泡，有没有感觉自己电压不稳时亮时不亮？面对衰老你怎么想？",
+					"a":[
+						"恐惧激增动力，加倍保养，职场和情场均要保持竞争力！",
+						"要有危机感，做点保养是必须的，不能让别人觉得我老了。",
+						"没必要慌张。阅历和气质让女人永久闪亮。"
+					]
+				},
+				{
+
+					"chahua_url":"images/first/beauty/11.png",
+					"q":"有位同事，是个有2岁孩子的辣妈。她每天坚持锻炼控制饮食，保持不过百的好身材。对此你怎么看？ ",
+					"a":[
+						"真心佩服，美丽是女人的事业，她很成功！",
+						"同情，她一定是担心产后身材走形，被老公抛弃。",
+						"没必要，有时间多关注宝宝成长，享受当下的快乐。"
+					]
+				}
+			]
+		},
+		cardLoad : [],
+		TARGET_X : 0,	//外部ul缓动的目的坐标
+		Direction_3Dswitch : 1 , //旋转方向，B->A =1 ,A -> B = -1
+		isAutoBackPostioning : false,	//正在执行复位动画(左右溢出)
+		isAbortAutoBackPostionAnimate : false, //是否强制退出回位动画
+		animatePostionX_of_li :{
+			aPostion_x_of_li : [],	//每个li的x位置
+			b_animate_Postion_x_of_li : false,	//是否执行定位动画
+			indexFrame : 0 ,	//帧索引
+			indexFrame_1 : 0,	//帧索引,用来调整速度
+			draw : function(callback){
+				var i = this.indexFrame_1,
+					l = this.aPostion_x_of_li.length;
+				if (this.b_animate_Postion_x_of_li){
+					this.indexFrame ++;
+					if (this.indexFrame % 6 == 0){
+						//console.log(this.indexFrame_1,l);
+						$("#section-2 li").eq(l-this.indexFrame_1-1).css({
+							"opacity":1,
+							"-webkit-transform":"translateX("+this.aPostion_x_of_li[l-this.indexFrame_1-1]+"px) scale(1)",
+							"transform":"translateX("+this.aPostion_x_of_li[l-this.indexFrame_1-1]+"px) scale(1)"
+						});
+						this.indexFrame_1 ++;
+					}
+				}
+				if (this.indexFrame_1 >= l){
+					callback();
+					this.aPostion_x_of_li = [];
+					this.b_animate_Postion_x_of_li	= false;
+					this.indexFrame = 0;
+					this.indexFrame_1 = 0;
+				}
+			}
+		},
+		hasClickAnyCard : false,	//是否有点击任何牌
+		isAbortClickTIp : false,	//是否终止显示隐藏点击tip的动画
+		//显示"点选任一牌面开启题目"的圆圈
+		showTips : function(){
+			$("#chooseACard").show();
+			setTimeout(function(){
+				$("#chooseACard").animate({
+					opacity: 1,
+					"top": "50%"
+					},
+					600, function() {
+					/* stuff to do after animation is complete */
+					$("#chooseACard").delay(500).animate({
+						opacity: 0},
+						1000, function() {
+						/* stuff to do after animation is complete */
+						$("#chooseACard").css({
+							opacity: 0,
+							"top": "53%"
+						}).hide();
+					});
+				});
+			},10);
+		},
+		//提示必填项
+		showRequiredPop:function(){
+			$("#RequiredPop").show();
+			setTimeout(function(){
+				$("#RequiredPop").addClass('show').animate({
+					opacity: 1},
+					300, function() {
+					/* stuff to do after animation is complete */
+					$("#RequiredPop").delay(500).animate({opacity: 0},800,function(){
+						$("#RequiredPop").removeClass('show');
+						$("#RequiredPop").hide();
+					});
+				});
+			},10);
+		},
+		//将第i张牌居中
+		centerCardByIndex : function(i){
+			var t_transition_ul = 850;			//ul做css变形的时间,做完后会自动删除
+			(function($e,i){
+				//移动整体ul,使指定的牌居中。
+				var x = VIEW_WIDTH/2 - 230*i - 108;
+
+				//console.log();
+				//$("#section-2 li.click .A").html($("#QuestionCard .front").html());
+				//$(".ti-mian").html($("#QuestionCard .front").html());
+				$e.css({
+					"-webkit-transform":"translateX("+x+"px)",
+					"transform":"translateX("+x+"px)",
+					"-webkit-transition":"-webkit-transform "+t_transition_ul+"ms ease-out",
+					"transition":"transform "+t_transition_ul+"ms ease-out"
+				});
+
+
+				//第二个版本动画
+				if (browser.versions.animateVer === 2){
+					(function(){
+						var index_G = $("#section-2 li.click").data("index"),	//点击的牌的索引
+							index_last =  $("#section-2 li:last").data("index"),	//当前最后一张牌的索引
+							i = index_last + 1;
+							aHtml = [],
+							h = 214 * VIEW_HEIGHT /VIEW_WIDTH,	//每张牌的高度
+							i_Direction = $("#section-2 li.click").index("#section-2 li:not(.remove)"),//当前牌在可视范围内的索引
+							direction = (i_Direction === 0) ? -1 : 1,	//方向，最左边为-1，其余为1
+							nextIndex = false , //下一个要加载的牌的索引
+							nextIndex_next = false,  //下下一个要加载的牌的索引
+							preIndex_pre = false,  //上上一个要加载的牌的索引
+							x = 0;
+
+						function getNextIndex(start,direction){
+							var _i = false;
+							for (var i = start; i <= 11 && i >= 0; i = i+ direction) {
+								if (jQuery.inArray( i, SECTION_2.cardLoad )  === -1 )
+								{
+									_i = i;
+									break;
+								}
+							};
+							return _i;
+						}
+						nextIndex = getNextIndex(index_G,direction);
+						if (nextIndex){
+							//当没有完全加载完毕，加载一张新的牌
+							//opacity: 1; -webkit-transform: translateX(798px) scale(1); transform: translateX(568px) scale(1);
+							//SECTION_2.cardLoad = SECTION_2.cardLoad + 1;
+
+							if (direction > 0){
+								x = 230* 3 + 108;
+							}
+							else{
+								x = 230* -1 + 108;
+							}
+							aHtml.push("<li data-index='"+nextIndex+"' style='opacity: 1; -webkit-transform: translateX("+x+"px) scale(1); transform: translateX("+x+"px);'  ><div class='project project-"+nextIndex+" back' style='width:"+VIEW_WIDTH+"px;height:"+VIEW_HEIGHT+"px;top:"+(VIEW_HEIGHT/-2+1)+"px'><div class='B i"+nextIndex+"' data-index='"+nextIndex+"'><div class='chahua' style='background-image:url("+json_QuestList[nextIndex].chahua_url+")'></div><div class='back-float'></div></div><div class='A front'>");
+							aHtml.push("</div></div></li>");
+							SECTION_2.cardLoad.push(nextIndex);
+
+							if (direction === -1){
+								$(".view-outer ul").prepend(aHtml.join(""));
+								$("#section-2 li:first .project .B").bind('tapone',chooseCardhandler);
+								
+							}
+							else{
+								$(".view-outer ul").append(aHtml.join(""));
+								$("#section-2 li:last .project .B").bind('tapone',chooseCardhandler);
+								
+							}
+
+						}
+						/*
+							aHtml.push("<li data-index='"+i+"'><div class='project project-"+i+" back' style='width:"+VIEW_WIDTH+"px;height:"+VIEW_HEIGHT+"px;top:"+(VIEW_HEIGHT/-2+1)+"px'><div class='B i"+i+"' data-index='"+i+"'><div class='chahua' style='background-image:url("+json_QuestList[i].chahua_url+")'></div><div class='back-float'></div></div><div class='A front'>");
+							
+							aHtml.push("</div></div></li>");
+						};
+						$(".view-outer ul").html(aHtml.join(""));
+						*/
+					})();
+				}
+
+				var index = $("#section-2 li.click").index();
+				
+				setTimeout(function(){
+					//删除ul的css动画时间，方便拖动
+					$e.css({
+						"transition":"",
+						"-webkit-transition":"",
+					});
+
+					var $li_now = $("#section-2 li.click"),//当前点击的元素
+						s_0 = VIEW_WIDTH / 214,	//放大比例
+						x_0 = 230*i + 108, //当前元素的位置 200= 214+16
+						x_1 = 230*(i-1) + 108 - VIEW_WIDTH/2,	//左面的元素往左移动距离
+						x_2 = 230*(i+1) + 108 + VIEW_WIDTH/2;	//右面的元素往右移动距离
+
+					//$li_now.css({"transform":"translate3d("+x_0+"px, 0px, 0px)"});
+					$li_now.prevAll(":not(.remove)").first().css({"transform":"translateX("+x_1+"px)"});
+					$li_now.nextAll(":not(.remove)").first().css({"transform":"translateX("+x_2+"px)"});
+
+					var $project = $li_now.css({
+						"-webkit-transform":"translateX("+x_0+"px) scale(1)",
+						"transform":"translateX("+x_0+"px) scale(1)",
+					}).find(".project").removeClass('back');	
+
+					//是否是该领域的第一张被点击的牌
+					if ($("#section-2 li:not(.remove)").length === 12){
+						var switchBackEnd_handler = function(){
+							PrefixedEvent_remove(this,'transitionEnd',switchBackEnd_handler);
+
+							$("#clickAnswerTips").show();
+							setTimeout(function(){
+								$("#clickAnswerTips").animate({
+									opacity: 1
+									},
+									200, function() {
+									/* stuff to do after animation is complete */
+									$(this).delay(1000).animate({
+										opacity: 0},
+										800, function() {
+										/* stuff to do after animation is complete */
+										$(this).hide();
+									});
+								});
+							},10);
+							
+						};
+						PrefixedEvent_add($project[0],'transitionEnd',switchBackEnd_handler);
+					}
+
+					$li_now.find(".answerPageContent")[0].addEventListener('touchstart',clickAnswerHandler,false);
+					return false;
+				},t_transition_ul);
+			})($("#section-2 ul"),i);
+		},
+		//答题后，移除这张牌
+		removeCardByIndex : function(i){
+			//1、隐藏题目ul
+			//$("#section-2").addClass("hide");
+			//3、翻转牌
+			//$("#QuestionCard").addClass("back");
+
+			//$("#chahuaAnimate .chahua").css("background-image","none").html("");
+
+
+			var i = $("#section-2 li.click").index("#section-2 li:not(.remove)"),
+				$li_now = $("#section-2 li.click");
+
+			var $project = $li_now.addClass("remove").removeClass("click").find(".project").addClass('backSwitch');
+			PrefixedEvent_add($project[0],'transitionEnd',switchBackEnd_handler);
+			function switchBackEnd_handler(){
+				PrefixedEvent_remove(this,'transitionEnd',switchBackEnd_handler);
+				$project.removeClass('backSwitch').addClass('backFadeOut');
+				$("#dots span:not(.click)").eq(0).addClass('click');
+				G_IS_SHOW_A_CARD = false;
+				SECTION_2.hasClickAnyCard = false;
+				SECTION_2.isAbortAutoBackPostionAnimate = false;
+				if ($("#section-2 li:not(.remove)").length == 0){
+					//删除菱形动画
+					SECTION_2.animateLx.isAnimate = false;
+					//$("#lx-bg").html("");
+					//隐藏小点
+					$("#dots").hide();
+
+					$("#miyu").addClass('hide');
+
+					G_USERS_ANSWER.userInfo.age = $("#userInfoSubmit .table-s:eq(0) .item.click").html();
+					G_USERS_ANSWER.userInfo.marry = $("#userInfoSubmit .table-s:eq(1) .item.click").html();
+					G_USERS_ANSWER.userInfo.friendly = $("#userInfoSubmit .table-s:eq(2) .item.click").html();
+					if (G_USERS_ANSWER.userInfo.age && G_USERS_ANSWER.userInfo.marry && G_USERS_ANSWER.userInfo.friendly){
+						//如果不是第一次答题，直接提交
+						SECTION_2.saveTest();
+					}
+					else{
+						//如果是第一次答题
+						$("#userInfoSubmit").show();
+					}
+					return false;
+				}
+				PrefixedEvent_add(this,'transitionEnd',zoomOut_handler);
+				SECTION_2.rePositionLi(2);
+			}
+			function zoomOut_handler(){
+				PrefixedEvent_remove(this,'transitionEnd',zoomOut_handler);
+				$(this).parent().remove();
+			}
+			return false;
+
+		},
+		
+		//重新定位牌的位置(使其上下居中)
+		postionUl_Top : function (){
+			$("#section-2 ul").css("top",(VIEW_HEIGHT-2)/2+"px");
+		},
+		//牌反面，反 -> 正
+		animateB2A : function(){
+			var w = VIEW_WIDTH / 2 ,
+				deg = 0;
+			
+			if (G_switch3DAnimate_frameIndex < G_3DAnimateTimeDelay){
+
+				$(".box3d-container .B").show();
+				$("#card-0 > div > div,#card-2 > div > div").css({
+					"-webkit-transform":"translate3d(0px, 0px, -"+w+"px) rotateY("+0+"deg)",
+					"transform":"translate3d(0px, 0px, -"+w+"px) rotateY("+0+"deg)"
+				});
+				$("#card-1 > div > div").css({
+					"-webkit-transform":"translate3d(0px, 0px, -"+w+"px) rotateY("+0+"deg)",
+					"transform":"translate3d(0px, 0px, -"+w+"px) rotateY("+0+"deg)"
+				});
+				return false;
+			}
+			
+			if (SECTION_2.Direction_3Dswitch == 1){
+				deg = G_switch3DAnimate_frameIndex - G_3DAnimateTimeDelay ;
+				deg = deg >= 90 ? 90 : deg;
+			}
+			$("#card-0 > div > div,#card-2 > div > div").css({
+				"-webkit-transform":"translate3d(0px, 0px, -"+w+"px) rotateY("+deg*-1+"deg)",
+				"transform":"translate3d(0px, 0px, -"+w+"px) rotateY("+deg*-1+"deg)"
+			});
+			$("#card-1 > div > div").css({
+				"-webkit-transform":"translate3d(0px, 0px, -"+w+"px) rotateY("+deg+"deg)",
+				"transform":"translate3d(0px, 0px, -"+w+"px) rotateY("+deg+"deg)"
+			});
+		},
+		//隐藏3d翻牌动画
+		hide3DswitchAnimate : function(){
+			B_show3DswitchAnimate = false;
+			
+		},
+		//重新定位每个li的位置
+		//index=0 开场时候，每个元素需要一个时间delay
+		//index=2	移除元素时候，不需要时间delay
+		rePositionLi : function(index){
+			//定位每张牌的位置
+			$("#section-2 li:not(.remove)").each(function(i){
+				var x = 230*i + 108,
+					t = ($("#section-2 li:not(.remove)").length-1-i)*140;
+				if (index == 0){
+					SECTION_2.animatePostionX_of_li.aPostion_x_of_li.push(x);
+				}
+				else if(index == 2){
+					$(this).css({"transform":"translateX("+x+"px) scale(1)","-webkit-transform":"translateX("+x+"px) scale(1)"});
+				}
+
+			});
+			//首次展开时候的动画
+			if (index == 0){
+				//让第二张牌居中
+				var _x = 214 + 16+ 214/2 - VIEW_WIDTH/2 ;
+				_x *= -1;
+				$("#section-2 ul").css("transform","translateX("+_x+"px)");
+
+				//第一张牌动画完成后，出现点击提示
+				function liMoveEnd_handler(){
+
+					if (browser.versions.animateVer === 1){
+						SECTION_2.showTips();
+					}
+					else{
+						$("#chooseACard").hide();
+					}
+
+					//点
+					$("#dots").show();
+
+					PrefixedEvent_remove(this,'transitionEnd',liMoveEnd_handler);
+				}
+				PrefixedEvent_add($("#section-2 li")[0],'transitionEnd',liMoveEnd_handler);
+
+				//用requestAnimationFrame来设置延时
+				SECTION_2.animatePostionX_of_li.b_animate_Postion_x_of_li = true;	
+			}
+
+			W_ul_outer_2 = ($("#section-2 li:not(.remove)").length - 1) * 230 + 108 * 2 ;
+
+			var left = $("#section-2 ul").offset().left;
+			$("#section-2 ul").width(W_ul_outer_2);
+
+			if (browser.versions.animateVer === 2){
+				//将第二张居中
+				//移动整体ul,使指定的牌居中。
+				var _x = VIEW_WIDTH/2 - 230*1 - 108;
+				if ((VIEW_WIDTH -W_ul_outer_2) > left){
+					if ($("#section-2 li:not(.remove)").length == 1){
+						_x = (VIEW_WIDTH - W_ul_outer_2) /2;
+					}
+				}
+				var t_transition_ul = 850;			//ul做css变形的时间,做完后会自动删除
+				$("#section-2 ul").css({
+					"-webkit-transform":"translateX("+_x+"px)",
+					"transform":"translateX("+_x+"px)",
+					"-webkit-transition":"-webkit-transform "+t_transition_ul+"ms ease-out",
+					"transition":"transform "+t_transition_ul+"ms ease-out"
+				});
+				setTimeout(function(){
+					$("#section-2 ul").css({
+						"transition-duration":"0ms",
+						"-webkit-transition-duration":"0ms"
+					});
+				},t_transition_ul);
+				return false;
+			}
+			if ((VIEW_WIDTH -W_ul_outer_2) > left){
+				var x = VIEW_WIDTH - W_ul_outer_2;
+				if ($("#section-2 li:not(.remove)").length == 1){
+					x = (VIEW_WIDTH - W_ul_outer_2) /2;
+				}
+				$("#section-2 ul").css({
+					"-webkit-transform":"translateX("+x+"px)",
+					"transform":"translateX("+x+"px)",
+					"-webkit-transition":"-webkit-transform 650ms cubic-bezier(.35,0,0,1)",
+					"transition":"transform 650ms cubic-bezier(.35,0,0,1)"
+				});
+				setTimeout(function(){
+					$("#section-2 ul").css({
+						"transition-duration":"0ms",
+						"-webkit-transition-duration":"0ms"
+					});
+				},650);
+			}
+		},
+		resizeAnserHeight : function (){
+			var h =  (VIEW_HEIGHT * .93 * .55) / $(".answerPageContent .item").length;
+			$(".answerPageContent .item").height(h);
+		},
+		//题面html
+		makeAnserPageHtml:function(index){
+			var Data = json_QuestList[index],
+				aHtml = [],
+				h = 0,
+				style = Data.h_style ? Data.h_style : '',	//样式，主要控制头部高度
+				Qtype = Data.Qtype ? Data.Qtype : ''; 	//选项类型,多选
+
+			switch (Data.h_style){
+				case "e2":
+					h =  (VIEW_HEIGHT * .93 * .50) / Data.a.length;
+					break;
+				case "e3":
+					h =  (VIEW_HEIGHT * .93 * .60) / Data.a.length;
+					break;
+				case "e4":
+					h =  (VIEW_HEIGHT * .93 * .70) / Data.a.length;
+					break;
+				case "e5":
+					h =  (VIEW_HEIGHT * .93 * .70) / Data.a.length;
+					break;
+				case "e6":
+					h =  (VIEW_HEIGHT * .93 * .52) / Data.a.length;
+					break;
+				case "e7":
+					h =  (VIEW_HEIGHT * .93 * .62) / Data.a.length;
+					break;
+
+				default:
+					style = 's'+ Data.a.length;
+					switch (Data.a.length){
+						case 3:
+							h =  (VIEW_HEIGHT * .93 * .58) / Data.a.length;
+							break;
+						default:
+							h =  (VIEW_HEIGHT * .93 * .60) / Data.a.length;
+							break
+					}
+					break;
+			}
+
+			
+			aHtml.push('<div class="style-2s answerPageContent '+style+'">');
+			aHtml.push('<div class="top">');
+			if ( Qtype== 'Multiple'){
+				aHtml.push('<div class="question"><span>'+Data.q+'<br/><strong>●{此题为多选题}●</strong></span></div>');
+			}
+			else{
+				aHtml.push('<div class="question"><span>'+Data.q+'</span></div>');
+			}
+
+			aHtml.push('</div>');
+			aHtml.push('<div class="answers">');
+			for (var i = 0; i < Data.a.length; i++) {
+				aHtml.push('<div class="item '+Qtype+'" style="height:'+h+'px">');
+				aHtml.push('<div class="text"><span>'+Data.a[i]+'</span></div>');
+				aHtml.push('</div>');
+			};
+			aHtml.push('</div>');
+
+			if ( Qtype== 'Multiple'){
+				aHtml.push('<div class="MultipleSubmit">');
+				aHtml.push('<div class="sibmit">确认完成&nbsp;&nbsp;&nbsp;<img src="'+SECTION_2.MultipleSubmitBtn+'" height="50%"></div>');
+				aHtml.push('<div class="clear"></div>');
+				aHtml.push('</div>');
+			}
+
+			aHtml.push('</div>');
+			
+			return aHtml.join("");
+			//$("#section-2 li.click .A").html(aHtml.join(""));
+		},
+		//提交数据
+		saveTest : function(){
+			G_USERS_ANSWER.userInfo.province = $("#Province").val();
+				G_USERS_ANSWER.userInfo.city = $("#City").val();
+				G_USERS_ANSWER.userInfo.age = $("#userInfoSubmit .table-s:eq(0) .item.click").html();
+				G_USERS_ANSWER.userInfo.marry = $("#userInfoSubmit .table-s:eq(1) .item.click").html();
+				G_USERS_ANSWER.userInfo.friendly = $("#userInfoSubmit .table-s:eq(2) .item.click").html();
+
+				if (!G_USERS_ANSWER.userInfo.age || !G_USERS_ANSWER.userInfo.marry || !G_USERS_ANSWER.userInfo.friendly){
+					SECTION_2.showRequiredPop();
+					return false;
+				}
+
+				$("#userInfoSubmit").hide();
+				$("#loading").removeClass('hide')
+				//ajax在此提交
+				$.post('lib/api.php?f=saveTest', {
+					"typename" : G_USERS_ANSWER.answers.typename,
+					"card0" : G_USERS_ANSWER.answers.list.card0,
+					"card1" : G_USERS_ANSWER.answers.list.card1,
+					"card2" : G_USERS_ANSWER.answers.list.card2,
+					"card3" : G_USERS_ANSWER.answers.list.card3,
+					"card4" : G_USERS_ANSWER.answers.list.card4,
+					"card5" : G_USERS_ANSWER.answers.list.card5,
+					"card6" : G_USERS_ANSWER.answers.list.card6,
+					"card7" : G_USERS_ANSWER.answers.list.card7,
+					"card8" : G_USERS_ANSWER.answers.list.card8,
+					"card9" : G_USERS_ANSWER.answers.list.card9,
+					"card10" : G_USERS_ANSWER.answers.list.card10,
+					"card11" : G_USERS_ANSWER.answers.list.card11,
+					"province" : G_USERS_ANSWER.userInfo.province,
+					"city" : G_USERS_ANSWER.userInfo.city,
+					"age" : G_USERS_ANSWER.userInfo.age,
+					"marry" : G_USERS_ANSWER.userInfo.marry,
+					"friendly" : G_USERS_ANSWER.userInfo.friendly,
+					"utm_source" : getQueryStr(window.location,'utm_source')
+				}, function(data, textStatus, xhr) {
+					/*optional stuff to do after success */
+					if (data.status == 1){
+						aid = data.data.id;
+						//shareTitle = "" ;
+						if (data.data.headimgurl && data.data.headimgurl != ""){
+							var m = data.data.headimgurl;
+							m = m.slice(0,m.lastIndexOf("/")) + '/96';
+							$("#result .face .img").css("background-image","url("+m+")");
+							$("#result .face .text").html(data.data.nickname);
+							$("#result .face").show();
+						}
+						else{
+							$("#result .face").hide();
+						}
+						if (data.data.username && data.data.username != "" && data.data.mobile && data.data.mobile != ""){
+							$("#result .shre-btn").html("立即分享").removeClass('style-2');
+						}
+						else{
+							$("#result .shre-btn").html("赢取神秘惊喜").addClass('style-2');
+						}
+						$("#data-part-0 .title").html(data.data.part1.title);
+						$("#data-part-0 .content").html(data.data.part1.desc);
+						if (G_USERS_ANSWER.answers.typename == 'emotion'){
+							//情感
+							$("#card-emotion").addClass('hasTest').attr("data-id",data.data.id);
+							$("#data-part-emotion .right").html(data.data.part2.title);
+							$("#data-part-emotion .content").html(data.data.part2.desc);
+							$("#data-part-4 .content").html(data.data.part1.propose); //密语
+						}
+						else if(G_USERS_ANSWER.answers.typename == 'career'){
+							//职场
+							$("#card-career").addClass('hasTest').attr("data-id",data.data.id);
+							$("#data-part-1 .title").html(data.data.part2.title);
+							$("#data-part-1 .content").html(data.data.part2.desc);
+							$("#data-part-2 .title").html(data.data.part3.title);
+							$("#data-part-2 .content").html(data.data.part3.desc);
+							$("#data-part-3 .content").html(data.data.part4.desc);
+							$("#data-part-3 .no").html(data.data.part4.ratio);
+							$("#data-part-4 .content").html(data.data.part1.propose); //密语
+						}
+						else if(G_USERS_ANSWER.answers.typename == 'beauty'){
+							//美丽
+							$("#card-beauty").addClass('hasTest').attr("data-id",data.data.id);
+							$("#data-part-beauty-0 .right").html(data.data.part2.title);
+							$("#data-part-beauty-0 .content").html(data.data.part2.desc);
+							$("#data-part-beauty-1 .right").html(data.data.part3.title);
+							$("#data-part-beauty-1 .content").html(data.data.part3.desc);
+							$("#data-part-4 .content").html(data.data.part1.propose); //密语
+						}
+						if ($("#card-beauty").hasClass('hasTest') && $("#card-emotion").hasClass('hasTest') && $("#card-career").hasClass('hasTest')){
+							$("#section-0 .tips").html("恭喜你已完成全部探索");
+						}
+
+						var chahua_url = '';
+						location.hash = 'shareid'+aid;
+						lineLink = urlFix + 'evaluate.htm?aid='+ aid;
+						switch (data.data.part1.title){
+							case "职场武媚娘":
+								chahua_url = 'images/colorChahua/zcwml.png';
+								makeShare(2);
+								break;
+							case "任性才女":
+								chahua_url = 'images/colorChahua/rxcn.png';
+								makeShare(3);
+								break;
+							case "职场不争女":
+								chahua_url = 'images/colorChahua/zcbzn.png';
+								makeShare(4);
+								break;
+							case "御物女":
+								chahua_url = 'images/colorChahua/yw.png';
+								makeShare(5);
+								break;
+							case "爱情合伙人":
+								chahua_url = 'images/colorChahua/efzy.png';
+								makeShare(6);
+								break;
+							case "纯爱女":
+								chahua_url = 'images/colorChahua/can.png';
+								makeShare(7);
+								break;
+							case "绝代艳后":
+								chahua_url = 'images/colorChahua/jdyh.png';
+								makeShare(8);
+								break;
+							case "赞女郎":
+								chahua_url = 'images/colorChahua/znl.png';
+								makeShare(10);
+								break;
+							case "天使艾米莉":
+								chahua_url = 'images/colorChahua/ts.png';
+								makeShare(9);
+								break;
+							default :
+								chahua_url = 'images/colorChahua/zcwml.png';
+								makeShare(2);
+								break;
+						}
+						$("#result .chahua img").attr("src",chahua_url);
+
+							//var like = ~~(data.like *100 /data.friends);
+						$(".share-text .cert .left span").html(data.like);
+						$(".share-text .cert .right span").html(data.unlike);
+						$(".share-text .cert").show();
+						$("#loading").addClass('hide');
+						$("#result").removeClass('hide');
+					}
+					else{
+						alert("错误信息:"+data.msg+"，代码"+data.status);
+						$("#loading").addClass('hide');
+						$("#userInfoSubmit").show();
+					}
+				},"json");
+		},
+		//菱形动画
+		animateLx : {
+			isAnimate : false,
+			draw : function (){
+				$("#lx-bg .lxitem").each(function(index, el) {
+					var deep = $(this).attr('data-deep')*1,
+						x = $(this).attr('data-x')*1,
+						v = $(this).attr('data-v')*1,
+						y = $(this).attr('data-y')*1;
+
+
+					var _x = x - v/4 * G_D_Star;
+					if (_x < 0){
+						x = VIEW_WIDTH;
+						y = random(0, VIEW_HEIGHT);
+					}
+					else if (_x > VIEW_WIDTH) {
+						x = 0;
+						y = random(0, VIEW_HEIGHT);
+					}
+					else{
+						x = _x;
+					}
+					$(this).attr({
+						"data-x": x,
+						"data-y": y
+					}).css({
+						"top": y+'px',
+						"left": x+'px'
+					});;
+				});
+				/*
+				Point.prototype.update = function() {
+						 var vel;
+						  
+						  switch(this.deep) {
+						      case 2:
+						        vel = 0.4;
+						        break;
+						      case 3:
+						        vel = 0.8;
+						        break;
+						      case 4:
+						        vel = 1.6;
+						      	break;
+						      case 5:
+						      	vel = 3.2;
+						      	break;
+						    default:
+						      break;
+						  } 
+						  
+						  this.x -= vel/4 * G_D_Star;
+
+						  if (this.x < 0) {
+						    this.x = c.width;
+						    this.y = random(0, c.height);
+						  }
+						  else if (this.x > c.width) {
+						    this.x = 0;
+						    this.y = random(0, c.height);
+						  }
+						}
+				*/
+			}
+		}
+	};
+
+	var CHINA = [
+					{
+						"province": "北京",
+						"city": ["北京"]
+					}, {
+						"province": "上海",
+						"city": ["上海"]
+					}, {
+						"province": "天津",
+						"city": ["天津"]
+					}, {
+						"province": "重庆",
+						"city": ["重庆"]
+					}, {
+						"province": "河北",
+						"city": ["石家庄","张家口", "承德", "秦皇岛", "唐山", "廊坊", "保定", "衡水", "沧州", "邢台", "邯郸"]
+					}, {
+						"province": "山西",
+						"city": ["太原","朔州", "大同", "阳泉", "长治", "晋城", "忻州", "晋中", "临汾", "吕梁", "运城"]
+					}, {
+						"province": "内蒙",
+						"city": ["呼和浩特", "包头", "乌海", "赤峰", "通辽", "呼伦贝尔", "鄂尔多斯", "乌兰察布", "巴彦淖尔", "兴安盟", "锡林郭勒盟", "阿拉善盟"]
+					}, {
+						"province": "辽宁",
+						"city": ["沈阳", "大连", "鞍山", "营口", "盘锦", "锦州", "葫芦岛", "抚顺", "铁岭", "本溪", "辽阳", "丹东", "朝阳", "阜新"]
+					}, {
+						"province": "吉林",
+						"city": ["长春", "白城", "松原", "吉林", "四平", "辽源", "通化", "白山", "延边朝鲜族自治州"]
+					}, {
+						"province": "黑龙江",
+						"city": ["哈尔滨", "齐齐哈尔", "黑河", "大庆", "鹤岗", "伊春", "佳木斯", "双鸭山", "鸡西", "牡丹江", "绥化", "七台河", "大兴安岭地区(加格达奇)"]
+					}, {
+						"province": "江苏",
+						"city": ["南京", "苏州", "连云港", "宿迁", "淮安", "盐城", "扬州", "泰州", "南通", "镇江", "常州", "无锡", "徐州"]
+					}, {
+						"province": "浙江",
+						"city": ["杭州", "湖州", "嘉兴", "舟山", "宁波", "绍兴", "衢州", "金华", "台州", "温州", "丽水"]
+					}, {
+						"province": "安徽",
+						"city": ["合肥", "宿州", "淮北", "亳州", "阜阳", "蚌埠", "淮南", "滁州", "马鞍山", "芜湖", "铜陵", "安庆", "黄山", "六安", "巢湖", "池州", "宣城"]
+					}, {
+						"province": "福建",
+						"city": ["福州", "厦门", "漳州", "龙岩", "宁德", "南平", "莆田", "三明", "泉州"]
+					}, {
+						"province": "江西",
+						"city": ["南昌", "九江", "景德镇", "鹰潭", "新余", "萍乡", "赣州", "上饶", "抚州", "宜春", "吉安"]
+					}, {
+						"province": "山东",
+						"city": ["济南", "青岛", "聊城", "德州", "东营", "淄博", "潍坊", "烟台", "威海", "日照", "临沂", "枣庄", "济宁", "泰安", "莱芜", "滨州", "菏泽"]
+					}, {
+						"province": "河南",
+						"city": ["郑州", "洛阳", "焦作", "新乡", "鹤壁", "安阳", "濮阳", "开封", "商丘", "许昌", "漯河", "平顶山", "南阳", "信阳", "周口", "驻马店", "三门峡"]
+					}, {
+						"province": "湖北",
+						"city": ["武汉", "襄樊", "荆门", "孝感", "黄冈", "鄂州", "黄石", "咸宁", "荆州", "宜昌", "随州", "十堰", "恩施土家族苗族自治州"]
+					}, {
+						"province": "湖南",
+						"city": ["长沙", "张家界", "常德", "益阳", "岳阳", "株洲", "湘潭", "衡阳", "郴州", "永州", "邵阳", "怀化", "娄底", "湘西土家族苗族自治州"]
+					}, {
+						"province": "广东",
+						"city": ["广州", "深圳", "珠海", "中山", "清远", "韶关", "河源", "梅州", "潮州", "汕头", "揭阳", "汕尾", "惠州", "东莞", "江门", "佛山", "肇庆", "云浮", "阳江", "茂名", "湛江"]
+					}, {
+						"province": "广西",
+						"city": ["南宁", "桂林", "柳州", "梧州", "贵港", "玉林", "钦州", "北海", "防城港", "崇左", "百色", "河池", "来宾", "贺州"]
+					}, {
+						"province": "海南",
+						"city": ["海口", "三亚"]
+					}, {
+						"province": "四川",
+						"city": ["成都", "广元", "绵阳", "德阳", "南充", "广安", "遂宁", "内江", "乐山", "自贡", "泸州", "宜宾", "攀枝花", "巴中", "达州", "资阳", "眉山", "雅安", "阿坝藏族羌族自治州", "甘孜藏族自治州", "凉山彝族自治州"]
+					}, {
+						"province": "贵州",
+						"city": ["贵阳", "六盘水", "遵义", "安顺", "毕节地区", "铜仁地区", "黔东南苗族侗族自治州", "黔南布依族苗族自治州", "黔西南布依族苗族自治州"]
+					}, {
+						"province": "云南",
+						"city": ["昆明", "曲靖", "玉溪", "保山", "昭通", "丽江", "思茅", "临沧", "德宏傣族景颇族自治州", "怒江傈僳族自治州(泸水县六库镇)", "迪庆藏族自治州", "大理白族自治州", "楚雄彝族自治州", "红河哈尼族彝族自治州", "文山壮族苗族自治州", "西双版纳傣族自治州"]
+					}, {
+						"province": "陕西",
+						"city": ["西安", "延安", "铜川", "渭南", "咸阳", "宝鸡", "汉中", "榆林", "安康", "商洛"]
+					}, {
+						"province": "甘肃",
+						"city": ["兰州", "嘉峪关", "金昌", "白银", "天水", "武威", "酒泉", "张掖", "庆阳", "平凉", "定西", "陇南", "临夏回族自治州", "甘南藏族自治州"]
+					}, {
+						"province": "青海",
+						"city": ["西宁", "海东地区", "海北藏族自治州(海晏县西海镇)", "海南藏族自治州", "黄南藏族自治州", "果洛藏族自治州", "玉树藏族自治州", "海西蒙古族藏族自治州"]
+					}, {
+						"province": "宁夏",
+						"city": ["银川", "石嘴山", "吴忠", "固原", "中卫"]
+					}, {
+						"province": "新疆",
+						"city": ["乌鲁木齐", "克拉玛依", "自治区直辖县级行政单位", "喀什地区", "阿克苏地区", "和田地区", "吐鲁番地区", "哈密地区", "克孜勒苏柯尔克孜自治州", "博尔塔拉蒙古自治州", "昌吉回族自治州", "巴音郭楞蒙古自治州", "伊犁哈萨克自治州", "塔城地区", "阿勒泰地区"]
+					}, {
+						"province": "西藏",
+						"city": ["拉萨", "那曲地区", "昌都地区", "林芝地区(林芝县八一镇)", "山南地区", "日喀则地区", "阿里地区"]
+					}
+				];
+	var O_homepage = {
+		//牌翻面，首页翻到3锥体
+		animateB2A : function(){
+			var w = VIEW_WIDTH / 2 ,
+				deg;
+
+			
+			if (G_switch3DAnimate_frameIndex < G_3DAnimateTimeDelay){
+				$(".box3d-container .B").hide();
+				return false;
+			}
+			
+			deg = G_switch3DAnimate_frameIndex - G_3DAnimateTimeDelay;
+			deg = deg >= 90 ? 90 : deg;
+			$("#card-0 > div > div,#card-2 > div > div").css({
+				"-webkit-transform":"translate3d(0px, 0px, -"+w+"px) rotateY("+deg*-1+"deg)",
+				"transform":"translate3d(0px, 0px, -"+w+"px) rotateY("+deg*-1+"deg)"
+			});
+			$("#card-1 > div > div").css({
+				"-webkit-transform":"translate3d(0px, 0px, -"+w+"px) rotateY("+deg+"deg)",
+				"transform":"translate3d(0px, 0px, -"+w+"px) rotateY("+deg+"deg)"
+
+			});
+			
+		},//隐藏3d翻牌动画
+		hide3DswitchAnimate : function(){
+			$("#section_outer").removeClass('hide');
+			$("#itooy").remove();
+			$("#carousel").addClass('animate');
+			B_show3DswitchAnimate = false;
+			SECTION_INDEX = 0;
+		},
+	};
+
+	function addStyle(){
+		var ratio = 214/VIEW_WIDTH;
+		var a=[];
+		a.push(".project {left: "+VIEW_WIDTH/-2+"px;}");
+		a.push(".project.back{-webkit-transform: rotateY(180deg) rotateZ(0deg) perspective(600px) scale("+ratio+");transform: rotateY(180deg) rotateZ(0deg) perspective(600px) scale("+ratio+");}");
+		if (!isWeixin){
+			var h = VIEW_HEIGHT - ($(".logo").outerHeight() + VIEW_HEIGHT * .03) - 120;
+			
+			if (h < 340 ){
+				var w = (240*h)/361.44 , //每张牌的宽度
+					out_h = w/2 * Math.tan(30*Math.PI/180)+1;
+				a.push("#carousel{height: "+h+"px; width:"+w+"px; margin-top: -"+h/2+"px;margin-left: -"+w/2+"px }");
+
+				a.push("@-webkit-keyframes animationCardEmotion {");
+		  		a.push("0% {");
+		  			a.push("opacity: 0;	");
+   					a.push("-webkit-transform: rotateY(0deg) translateZ(270px) perspective(1600px);");
+   					a.push("transform: rotateY(0deg) translateZ(270px);");
+		  		a.push("}");
+		  		a.push("13.1% {");
+		  			a.push("opacity: 1;	");
+   					a.push("-webkit-transform: rotateY(0deg) translateZ("+out_h+"px) perspective(1600px);");
+   					a.push("transform: rotateY(0deg) translateZ("+out_h+"px);");
+		  		a.push("}");
+		  		a.push("100% { ");
+		  			a.push("opacity: 1;	");
+   					a.push("-webkit-transform: rotateY(480deg) translateZ("+out_h+"px) perspective(1600px);");
+   					a.push("transform: rotateY(480deg) translateZ("+out_h+"px);");
+		  		a.push("}");
+				a.push("}");
+				a.push("@keyframes animationCardEmotion {");
+		  		a.push("0% {");
+		  			a.push("opacity: 0;	");
+   					a.push("-webkit-transform: rotateY(0deg) translateZ(270px) perspective(1600px);");
+   					a.push("transform: rotateY(0deg) translateZ(270px);");
+		  		a.push("}");
+		  		a.push("13.1% {");
+		  			a.push("opacity: 1;	");
+   					a.push("-webkit-transform: rotateY(0deg) translateZ("+out_h+"px) perspective(1600px);");
+   					a.push("transform: rotateY(0deg) translateZ("+out_h+"px);");
+		  		a.push("}");
+		  		a.push("100% { ");
+		  			a.push("opacity: 1;	");
+   					a.push("-webkit-transform: rotateY(480deg) translateZ("+out_h+"px) perspective(1600px);");
+   					a.push("transform: rotateY(480deg) translateZ("+out_h+"px);");
+		  		a.push("}");
+				a.push("}");
+				a.push("@-webkit-keyframes animationCardCareer {");
+		  		a.push("0% {");
+		  			a.push("opacity: 0;	");
+   					a.push("-webkit-transform: rotateY(240deg) translateZ(270px) perspective(1600px);");
+   					a.push("transform: rotateY(240deg) translateZ(270px);");
+		  		a.push("}");
+		  		a.push("13.1% {");
+		  			a.push("opacity: 1;	");
+   					a.push("-webkit-transform: rotateY(240deg) translateZ("+out_h+"px) perspective(1600px);");
+   					a.push("transform: rotateY(240deg) translateZ("+out_h+"px);");
+		  		a.push("}");
+		  		a.push("50% { ");
+		  		a.push("}");
+		  		a.push("100% { ");
+		  			a.push("opacity: 1;	");
+   					a.push("-webkit-transform: rotateY(720deg) translateZ("+out_h+"px) perspective(1600px);");
+   					a.push("transform: rotateY(720deg) translateZ("+out_h+"px);");
+		  		a.push("}");
+				a.push("}");
+				a.push("@keyframes animationCardCareer {");
+		  		a.push("0% {");
+		  			a.push("opacity: 0;	");
+   					a.push("-webkit-transform: rotateY(240deg) translateZ(270px) perspective(1600px);");
+   					a.push("transform: rotateY(240deg) translateZ(270px);");
+		  		a.push("}");
+		  		a.push("13.1% {");
+		  			a.push("opacity: 1;	");
+   					a.push("-webkit-transform: rotateY(240deg) translateZ("+out_h+"px) perspective(1600px);");
+   					a.push("transform: rotateY(240deg) translateZ("+out_h+"px);");
+		  		a.push("}");
+		  		a.push("50% { ");
+		  		a.push("}");
+		  		a.push("100% { ");
+		  			a.push("opacity: 1;	");
+   					a.push("-webkit-transform: rotateY(720deg) translateZ("+out_h+"px) perspective(1600px);");
+   					a.push("transform: rotateY(720deg) translateZ("+out_h+"px);");
+		  		a.push("}");
+				a.push("}");
+				a.push("@-webkit-keyframes animationCardBeauty {");
+		  		a.push("0% {");
+		  			a.push("opacity: 0;	");
+   					a.push("-webkit-transform: rotateY(120deg) translateZ(270px) perspective(1600px);");
+   					a.push("transform: rotateY(120deg) translateZ(270px);");
+		  		a.push("}");
+		  		a.push("13.1% {");
+		  			a.push("opacity: 1;	");
+   					a.push("-webkit-transform: rotateY(120deg) translateZ("+out_h+"px) perspective(1600px);");
+   					a.push("transform: rotateY(120deg) translateZ("+out_h+"px);");
+		  		a.push("}");
+		  		a.push("50% { ");
+		  		a.push("}");
+		  		a.push("100% { ");
+		  			a.push("opacity: 1;	");
+   					a.push("-webkit-transform: rotateY(600deg) translateZ("+out_h+"px) perspective(1600px);");
+   					a.push("transform: rotateY(600deg) translateZ("+out_h+"px);");
+		  		a.push("}");
+				a.push("}");
+				a.push("@keyframes animationCardBeauty {");
+		  		a.push("0% {");
+		  			a.push("opacity: 0;	");
+   					a.push("-webkit-transform: rotateY(120deg) translateZ(270px) perspective(1600px);");
+   					a.push("transform: rotateY(120deg) translateZ(270px);");
+		  		a.push("}");
+		  		a.push("13.1% {");
+		  			a.push("opacity: 1;	");
+   					a.push("-webkit-transform: rotateY(120deg) translateZ("+out_h+"px) perspective(1600px);");
+   					a.push("transform: rotateY(120deg) translateZ("+out_h+"px);");
+		  		a.push("}");
+		  		a.push("50% { ");
+		  		a.push("}");
+		  		a.push("100% { ");
+		  			a.push("opacity: 1;	");
+   					a.push("-webkit-transform: rotateY(600deg) translateZ("+out_h+"px) perspective(1600px);");
+   					a.push("transform: rotateY(600deg) translateZ("+out_h+"px);");
+		  		a.push("}");
+				a.push("}");
+
+
+			}
+			
+		}
+		$("#addStyle").html(a.join(""));
+	}
+	$(document).ready(function(){
+
+		/*窗口改变大小*/
+		/*
+		$(window).resize(function(){
+			resizeWindow();
+			if (SECTION_INDEX == 2){
+				SECTION_2.postionUl_Top();
+				$(".chahua").height($(".chahua").outerWidth());
+			}
+		});
+		*/	
+		resizeWindow();
+		addStyle();
+
+		if (browser.versions.iPhone && VIEW_WIDTH === 414){
+			browser.versions.iPhone6plus = true;
+		}
+		if ( (browser.versions.android && !browser.versions.androidNexus)){
+			browser.versions.animateVer = 2;
+		}
+
+		if (isWeixin){
+			$("body").addClass('wx');
+		}
+		else{
+			$("body").addClass('n-wx');
+		}
+
+		//微信分享
+		// if (isWeixin){
+		// 	(function(){
+		// 		//http://application.cntraveler.com.cn/weixin/api/getSign.php?site=self
+		// 		$.ajax({
+		// 			'url': 'http://application.cntraveler.com.cn/weixin/api/getSign.php',
+		// 			'type': 'get',
+		// 			'dataType': 'jsonp',
+		// 			'data': {"site": 'self',"url":window.location.href.split('#')[0]},
+		//             'success' : function(data){
+		//                 wx.config({
+		// 				    //debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+		// 				    appId: data.appId, // 必填，公众号的唯一标识
+		// 				    timestamp: data.timestamp, // 必填，生成签名的时间戳
+		// 				    nonceStr: data.nonceStr, // 必填，生成签名的随机串
+		// 				    signature: data.signature,// 必填，签名，见附录1
+		// 				    jsApiList: ["onMenuShareTimeline","onMenuShareAppMessage"] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+		// 				});
+
+		// 				makeShare(1);
+		//             }
+		// 		});
+				
+
+
+		// 		wx.error(function(res){
+
+		// 		    // config信息验证失败会执行error函数，如签名过期导致验证失败，具体错误信息可以打开config的debug模式查看，也可以在返回的res参数中查看，对于SPA可以在这里更新签名。
+		// 		});
+		// 	})();
+		// }
+		// else{
+			makeShare(1);
+		// }
+
+
+		//加载图片以及获取用户的一些信息
+		(function(){
+			var imgloaded = false,
+				getUserTested = false; 
+
+			if (location.hostname == 'self.localhost.com' ){
+				getUserTested = true; 
+			}
+			var l = $("#loadimg img").length,
+				_l = 0;
+			$("#loadimg img").each(function(index) {
+				var img = imgLoad($(this).attr("src"),function(){
+					_l ++;
+					if (_l >= l){
+						imgloaded = true;
+						startPage();
+					}
+					else{
+					}
+				});
+			});
+
+			// if (isWeixin){
+
+			// 	$.get('lib/api.php?f=getUserTest', function(data) {
+			// 		/*optional stuff to do after success */
+			// 		//alert(data.status);
+			// 		if (data.status == 1){
+			// 			var a = [0,0,0];
+			// 			for (var i = 0; i < data.data.length; i++) {
+			// 				switch (data.data[i].typename){
+			// 					case "beauty":
+			// 						a[0] = 1;
+			// 						$("#card-beauty").addClass('hasTest').attr("data-id",data.data[i].id);
+			// 						break;
+			// 					case "career":
+			// 						a[1] = 1;
+			// 						$("#card-career").addClass('hasTest').attr("data-id",data.data[i].id);
+			// 						break;
+			// 					case "emotion":
+			// 						a[2] = 1;
+			// 						$("#card-emotion").addClass('hasTest').attr("data-id",data.data[i].id);
+			// 						break;
+			// 				}
+			// 				if (a.join("") === "111"){
+			// 					$("#section-0 .tips").html("恭喜你已完成全部探索");
+			// 				}
+			// 			};
+			// 		}
+			// 		getUserTested = true;
+			// 		startPage();
+			// 	},"json");
+			// }
+			// else{
+				getUserTested = true;
+				startPage();
+			// }
+
+			function startPage(){
+				if (imgloaded && getUserTested){
+					$("#loading").addClass('hide');
+					$("#homePage").removeClass('hide');
+				}
+			}
+		})();
+
+		
+		//提交页面的省份城市
+		(function(){
+			var aprovince = [];
+			for (var i = 0; i < CHINA.length; i++) {
+				aprovince.push("<option value='"+CHINA[i].province+"'>"+CHINA[i].province+"</option>");
+			};
+			$("#Province").html(aprovince.join(""));
+			$("#Province").change(function(){
+				changeProvinceHandler();
+			}); 
+			changeProvinceHandler();
+			function changeProvinceHandler(){
+				var checkIndex = $("#Province").get(0).selectedIndex,
+					aCity = [];
+				for (var j = 0; j < CHINA[checkIndex].city.length; j++) {
+					aCity.push("<option value='"+CHINA[checkIndex].city[j]+"'>"+CHINA[checkIndex].city[j]+"</option>");
+				};
+				$("#City").html(aCity.join(""));
+			}
+		})();
+
+		//活动介绍
+		$(".btn-Description").bind('tapone',function(){
+			$("#Description").show();
+			setTimeout(function(){
+				showDescriptionPage(0);
+			},10);
+		});
+		$("#Description .close").bind('tapone',function(){
+			$("#Description").hide();
+			$("#Description-page-0,#Description-page-1").css({"top":"100%","opacity":0});
+		});
+		function showDescriptionPage(index){
+			var speed = 600;
+			if (index == 0){
+				$("#Description-page-0").stop().animate({top: "0%",opacity:1},
+					speed, function() {
+					/* stuff to do after animation is complete */
+				});
+				$("#Description-page-1").stop().animate({top: "100%",opacity:0},speed,function(){});
+			}
+			else if (index == 1){
+				$("#Description-page-0").stop().animate({top: "-100%",opacity:0},speed,function(){});
+				$("#Description-page-1").stop().animate({top: "0%",opacity:1},
+					speed, function() {
+					/* stuff to do after animation is complete */
+				});
+			}
+		}
+		$("#Description").swipe( {
+        	//Generic swipe handler for all directions
+	        swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+	          //console.log("You swiped " + direction );  
+	          if (direction == "up"){
+				showDescriptionPage(1);
+	          }
+	          else if (direction == "down"){
+				showDescriptionPage(0);
+	          }
+	        }
+	      });
+		$("#Description-page-0 .arrow").bind('tapone',function(){
+			event.preventDefault();
+			event.stopPropagation();
+			showDescriptionPage(1);
+		});
+		//继续测试
+		$(".btn-MyTest").bind('tapone',function(){
+			location.hash = '';
+			lineLink = urlFix + 'index.php';
+			makeShare(1);
+			SECTION_2.cardLoad = [];
+			$("#userInfoSubmit-2").hide();
+			$("#result").addClass('hide');
+			$("#section-2").hide();
+			$("#section-0").show().removeClass('hide');
+			SECTION_INDEX = 0;
+			hasChooseAfield = false;	//是否选择了某一领域
+			IS_CANCEL_AUTO_AINIMATE = false; //是否点击了背面
+			$("#dots span").removeClass('click');	//12个点
+			$("#section-2 ul").html("");
+		});
+		//立即分享
+		$("#result .shre-btn").bind('tapone',function(){
+			if ($(this).hasClass('style-2')){
+				$("#userInfoSubmit-2").show();
+			}
+			else{
+				if (isWeixin){
+					$("#shareTips").show();
+					setTimeout(function(){
+						$("#shareTips").hide();
+					},1500);
+				}
+				else{
+					$("#sharePop").show();
+				}
+			}
+		});
+		//非微信端分享
+		$("#sharePop .item").bind('tapone',function(){
+			var cncShare = new CNC.Share("#self-share", {
+				site: "2",
+				iconSize: 32,
+				sUrl: lineLink,
+				sPic: imgUrl,
+				sText: descContent,
+				appkey: { tsina: "2412621184",tqq: "9e53c694576c4399a1f7ed2046f625ce"},
+				ralateUid: '1658402750'
+			});
+			var cmd = $(this).attr("data-cmd");
+			cncShare.openShare(cmd);
+			$("#sharePop").hide();
+		});
+		//提交信息页
+		$("#userInfo-submit-2").bind('tapone',function(){
+			var userMobile = $("#userMobile").val(),
+				userName = $("#userName").val();
+
+			if(!(/^1[3|4|5|6|7|8][0-9]\d{8}$/.test(userMobile))){ 
+				SECTION_2.showRequiredPop();
+				return false;
+			}
+			if (userName == ""){
+				SECTION_2.showRequiredPop();
+				return false;
+			}	
+
+			$("#loading").removeClass('hide')
+				//ajax在此提交
+				$.post('lib/api.php?f=saveMobile', {
+					"id": aid,
+					"username" : userName,
+					"mobile" : userMobile,
+					"utm_source" : getQueryStr(window.location,'utm_source')
+				}, function(data, textStatus, xhr) {
+					/*optional stuff to do after success */
+					if (data.status == 1){
+						$("#result .shre-btn").html("立即分享").removeClass('style-2');
+						$("#userInfoSubmit-2").hide();
+						$("#loading").addClass('hide');
+
+						if (isWeixin){
+							$("#shareTips").show();
+							setTimeout(function(){
+								$("#shareTips").hide();
+							},1500);
+						}
+						else{
+							$("#sharePop").show();
+						}
+					}
+					else{
+						alert("错误信息:"+data.msg+"，代码"+data.status);
+						$("#loading").addClass('hide');
+					}
+				},"json");
+
+		});
+
+		//首页3切动画元素
+		make3DswitchAnimateHtml("images/homePage.jpg","images/html-bg.jpg");
+		//SECTION_2.makeAnserPageHtml(0,0);
+		//$("#QuestionCard").show();
+		//首页点击后
+		$("#goto-section-start").bind('tapone',function(){
+			$("#homePage .outer").addClass('hide');
+			$("#homePage .float").animate({
+				opacity: 0,
+				top: "0%"},
+				800, function() {
+				/* stuff to do after animation is complete */
+				B_show3DswitchAnimate = true;
+				G_switch3DAnimate_frameIndex = 0;
+				$(".box3d-container").removeClass('hide');
+				$("#homePage").remove();
+				setTimeout(function(){
+					$(".logo").addClass("logoAnimate");
+				},1000);
+				setTimeout(function(){
+					$(".tips").addClass("tipsAnimate");
+					$(".btn-bottom").addClass("btnBottomAnimate");
+				},1500);
+			});
+		});
+		//用户信息页事件
+		$("#userInfoSubmit")[0].addEventListener('touchstart',function(e){
+			var $e = $(e.targetTouches[0].target);
+			if ($e.hasClass('item')){
+				//右侧选项
+				$e.addClass('click').siblings('.click').removeClass('click');
+			}
+			else if ($e.parents().is(".submitBtn") || $e.hasClass('submitBtn')){
+				//提交按钮
+				SECTION_2.saveTest();
+			}
+		},false);
+				
+		$(".btn-showAllPart").bind('tapone',function(){
+			$("#result").removeClass('short');
+			$(".btn-showAllPart").hide();
+		});
+
+		//音乐按钮
+		var audio = $("#myAudio")[0];
+		if (location.hostname == 'self.localhost.com' ){
+				audio.pause();
+		}
+		$("#btn-music").bind('tapone',function(){
+			if (audio.paused){
+				audio.play();
+				$(this).removeClass('muted');
+			}
+			else{
+				audio.pause();
+				$(this).addClass('muted');
+			}
+		});
+
+
+
+		
+		//选择测试领域以后
+		$("#carousel .card").bind('tapone',function(){
+			//显示测试结果
+			if ($(this).hasClass('hasTest')){
+				var textId = $(this).attr("data-id");
+				$("#loading").removeClass('hide');
+				$.post('lib/api.php?f=getTest', {"id":textId}, function(data, textStatus, xhr) {
+					if (data){
+						//shareTitle = "" ;
+						$("#result").removeClass('career').removeClass('beauty').removeClass('emotion').addClass(data.typename);
+						if (data.headimgurl && data.headimgurl != ""){
+							var m = data.headimgurl;
+							m = m.slice(0,m.lastIndexOf("/")) + '/96';
+							$("#result .face .img").css("background-image","url("+m+")");
+							$("#result .face .text").html(data.nickname);
+						}
+						$("#data-part-0 .title").html(data.part1.title);
+						$("#data-part-0 .content").html(data.part1.desc);
+
+						if (data.typename == 'emotion'){
+							//情感
+							$("#data-part-emotion .right").html(data.part2.title);
+							$("#data-part-emotion .content").html(data.part2.desc);
+							$("#data-part-4 .content").html(data.part1.propose); //密语
+						}
+						else if(data.typename == 'career'){
+							//职场
+							$("#data-part-1 .title").html(data.part2.title);
+							$("#data-part-1 .content").html(data.part2.desc);
+							$("#data-part-2 .title").html(data.part3.title);
+							$("#data-part-2 .content").html(data.part3.desc);
+							$("#data-part-3 .content").html(data.part4.desc);
+							$("#data-part-3 .no").html(data.part4.ratio);
+							$("#data-part-4 .content").html(data.part1.propose); //密语
+						}
+						else if(data.typename == 'beauty'){
+							//美丽
+							$("#data-part-beauty-0 .right").html(data.part2.title);
+							$("#data-part-beauty-0 .content").html(data.part2.desc);
+							$("#data-part-beauty-1 .right").html(data.part3.title);
+							$("#data-part-beauty-1 .content").html(data.part3.desc);
+							$("#data-part-4 .content").html(data.part1.propose); //密语
+
+						}
+
+						var chahua_url = '';
+						location.hash = 'shareid'+textId;
+						lineLink = urlFix + 'evaluate.htm?aid='+ textId;
+						switch (data.part1.title){
+							case "职场武媚娘":
+								chahua_url = 'images/colorChahua/zcwml.png';
+								makeShare(2);
+								break;
+							case "任性才女":
+								chahua_url = 'images/colorChahua/rxcn.png';
+								makeShare(3);
+								break;
+							case "职场不争女":
+								chahua_url = 'images/colorChahua/zcbzn.png';
+								makeShare(4);
+								break;
+							case "御物女":
+								chahua_url = 'images/colorChahua/yw.png';
+								makeShare(5);
+								break;
+							case "爱情合伙人":
+								chahua_url = 'images/colorChahua/efzy.png';
+								makeShare(6);
+								break;
+							case "纯爱女":
+								chahua_url = 'images/colorChahua/can.png';
+								makeShare(7);
+								break;
+							case "绝代艳后":
+								chahua_url = 'images/colorChahua/jdyh.png';
+								makeShare(8);
+								break;
+							case "赞女郎":
+								chahua_url = 'images/colorChahua/znl.png';
+								makeShare(10);
+								break;
+							case "天使艾米莉":
+								chahua_url = 'images/colorChahua/ts.png';
+								makeShare(9);
+								break;
+							default :
+								chahua_url = 'images/colorChahua/zcwml.png';
+								break;
+						}
+						$("#no-total").html(data.friends);
+						$("#result .chahua img").attr("src",chahua_url);
+							//var like = ~~(data.like *100 /data.friends);
+						$(".share-text .cert .left span").html(data.like);
+						$(".share-text .cert .right span").html(data.unlike);
+						$(".share-text .cert").show();
+						$(".btn-showAllPart").show();
+						$("#result").addClass('short');
+						$("#loading").addClass('hide');
+						$("#result").removeClass('hide');
+					}
+					else{
+						$("#loading").addClass('hide');
+					}
+				},"json");
+				return false;
+			}
+			if (hasChooseAfield){
+				return false;
+			}
+
+			SECTION_2.cardLoad = [];
+			hasChooseAfield = true;
+			SECTION_INDEX = 2;
+			SECTION_2.postionUl_Top(); 
+			$("#section-0").hide();
+			$("#section-2").show().removeClass('hide');
+
+			switch ($(this).index()){
+				case 0:
+					json_QuestList = SECTION_2.aQuestion.emotion;
+					$("#result,#userInfoSubmit,#chooseACard,#section_outer,#section-2 .view-outer").addClass('emotion').removeClass('beauty').removeClass('career');
+					G_USERS_ANSWER.answers.typename = "emotion";
+				    imageObj0 = document.getElementById("lingxing-emotion-0");
+				    imageObj1 = document.getElementById("lingxing-emotion-1");
+				    imageObj2 = document.getElementById("lingxing-emotion-2");
+				    imageObj3 = document.getElementById("lingxing-emotion-3");
+				    $("#userInfoSubmit .top").html("EMOTION");
+				    $(".sTitle").attr("src","images/miyu/sTitle-emotion.png");
+				    SECTION_2.MultipleSubmitBtn = "images/MultipleSubmit-arrow-emotion.png";
+					break;
+				case 1:
+					json_QuestList = SECTION_2.aQuestion.career;
+					$("#result,#userInfoSubmit,#chooseACard,#section_outer,#section-2 .view-outer").addClass('career').removeClass('emotion').removeClass('beauty');
+					G_USERS_ANSWER.answers.typename = "career";
+				    imageObj0 = document.getElementById("lingxing-career-0");
+				    imageObj1 = document.getElementById("lingxing-career-1");
+				    imageObj2 = document.getElementById("lingxing-career-2");
+				    imageObj3 = document.getElementById("lingxing-career-3");
+				    $("#userInfoSubmit .top").html("CAREER");
+				    $(".sTitle").attr("src","images/miyu/sTitle-career.png");
+				    SECTION_2.MultipleSubmitBtn = "images/MultipleSubmit-arrow-career.png";
+					break;
+				case 2:
+					json_QuestList = SECTION_2.aQuestion.beauty;
+					$("#result,#userInfoSubmit,#chooseACard,#section_outer,#section-2 .view-outer").addClass('beauty').removeClass('emotion').removeClass('career');
+					G_USERS_ANSWER.answers.typename = "beauty";
+				    imageObj0 = document.getElementById("lingxing-beauty-0");
+				    imageObj1 = document.getElementById("lingxing-beauty-1");
+				    imageObj2 = document.getElementById("lingxing-beauty-2");
+				    imageObj3 = document.getElementById("lingxing-beauty-3");
+				    $("#userInfoSubmit .top").html("BEAUTY");
+				    $(".sTitle").attr("src","images/miyu/sTitle-beauty.png");
+					break;
+			}
+
+			if (browser.versions.animateVer === 1){
+				//构建每张牌的元素
+				(function(){
+					var aHtml = [],
+						h = 214 * VIEW_HEIGHT /VIEW_WIDTH;	//每张牌的高度
+					for (var i = 0; i < json_QuestList.length; i++) {
+						//var _htmlTimian = SECTION_2.makeAnserPageHtml(i);
+						aHtml.push("<li data-index='"+i+"'><div class='project project-"+i+" back' style='width:"+VIEW_WIDTH+"px;height:"+VIEW_HEIGHT+"px;top:"+(VIEW_HEIGHT/-2+1)+"px'><div class='B i"+i+"' data-index='"+i+"'><div class='chahua' style='background-image:url("+json_QuestList[i].chahua_url+")'></div><div class='back-float'></div></div><div class='A front'>");
+						
+						aHtml.push("</div></div></li>");
+					};
+					$(".view-outer ul").html(aHtml.join(""));
+					W_ul_outer_2 = (json_QuestList.length -1) * 230 + 108 *2;
+					$("#section-2 ul").width(W_ul_outer_2);
+					$("#section-2 .chahua").height($("#section-2 .chahua").eq(0).outerWidth());
+					$("#section-2 li .project .B").bind('tapone',chooseCardhandler);
+					
+					$("#loading").removeClass('hide');
+				})();
+
+				//在每张牌的图片元素加载完毕后，执行展开动画，以及相关
+				(function(){
+					var l = json_QuestList.length,
+						_l = 0;
+					for (var i = 0; i < json_QuestList.length; i++) {
+						var img = imgLoad(json_QuestList[i].chahua_url,function(){
+							_l ++;
+							if (_l >= l){
+								//console.log("加载完毕")
+								$("#miyu").removeClass('hide');
+								setTimeout(function(){
+									$("#loading").addClass('hide');
+									$("#homePage,#section-0").hide();
+									//定位每个li的位置
+									SECTION_2.rePositionLi(0);
+								},3000);
+							}
+						});
+					};
+				})();
+			}
+			else if (browser.versions.animateVer === 2){
+				//构建每张牌的元素
+				(function(){
+					var aHtml = [],
+						h = 214 * VIEW_HEIGHT /VIEW_WIDTH,	//每张牌的高度
+						aCard = [11,0,1];
+					for (var i = 0; i < 3; i++) {
+						//var _htmlTimian = SECTION_2.makeAnserPageHtml(i);
+						aHtml.push("<li data-index='"+aCard[i]+"'><div class='project project-"+aCard[i]+" back' style='width:"+VIEW_WIDTH+"px;height:"+VIEW_HEIGHT+"px;top:"+(VIEW_HEIGHT/-2+1)+"px'><div class='B i"+aCard[i]+"' data-index='"+aCard[i]+"'><div class='chahua' style='background-image:url("+json_QuestList[aCard[i]].chahua_url+")'></div><div class='back-float'></div></div><div class='A front'>");
+						
+						aHtml.push("</div></div></li>");
+
+						SECTION_2.cardLoad.push(aCard[i]);
+					};
+					$(".view-outer ul").html(aHtml.join(""));
+					W_ul_outer_2 = (json_QuestList.length -1) * 230 + 108 *2;
+					$("#section-2 ul").width(W_ul_outer_2);
+					$("#section-2 .chahua").height($("#section-2 .chahua").eq(0).outerWidth());
+					
+					$("#section-2 li .project .B").bind('tapone',chooseCardhandler);
+					$("#loading").removeClass('hide');
+				})();
+
+				//在每张牌的图片元素加载完毕后，执行展开动画，以及相关
+				(function(){
+					var l = 3,
+						_l = 0;
+					for (var i = 0; i < l; i++) {
+						var img = imgLoad(json_QuestList[i].chahua_url,function(){
+							_l ++;
+							if (_l >= l){
+								$("#miyu").removeClass('hide');
+								
+								$("#loading").addClass('hide');
+								$("#homePage,#section-0").hide();
+								//定位每个li的位置
+								SECTION_2.rePositionLi(0);
+								
+							}
+						});
+					};
+				})();
+			}
+
+			//获取个人信息
+			if (isWeixin){
+				$.get('lib/api.php?f=getUserInfo', function(data) {
+					/*optional stuff to do after success */
+					if (data.status == 1){
+						$("#Province").val(data.data.province);
+						var checkIndex = $("#Province").get(0).selectedIndex,
+							aCity = [];
+						for (var j = 0; j < CHINA[checkIndex].city.length; j++) {
+							aCity.push("<option value='"+CHINA[checkIndex].city[j]+"'>"+CHINA[checkIndex].city[j]+"</option>");
+						};
+						$("#City").html(aCity.join(""));
+						$("#City").val(data.data.city);
+						//age:'',marry:'',friendly:
+						$("#userInfoSubmit .table-s:eq(0) .item:contains('"+data.data.age+"')").addClass('click');
+						$("#userInfoSubmit .table-s:eq(1) .item:contains('"+data.data.marry+"')").addClass('click');
+						$("#userInfoSubmit .table-s:eq(2) .item:contains('"+data.data.friendly+"')").addClass('click');
+					}
+				},'json');
+			}
+			
+		});
+
+		if (browser.versions.animateVer === 1){
+			$(".view-outer")[0].addEventListener('touchstart',function(e){
+				//console.log("anxia"+touch.x);
+				e.preventDefault();
+				isTouchDown_2 = true;
+				SECTION_2.isAutoBackPostioning = false;
+			},false);
+			$(".view-outer")[0].addEventListener('touchend', function(e){
+				e.preventDefault();
+				isTouchDown_2 = false;
+				MouseDownX_2 = null;
+				var left = $("#section-2 ul").offset().left;
+
+				if (left > 0 ){
+					speed_2 = left / 5;
+					SECTION_2.TARGET_X = 0;
+					SECTION_2.isAutoBackPostioning = true;
+				}
+				else if ((VIEW_WIDTH -W_ul_outer_2) > left){
+					speed_2 = ((VIEW_WIDTH -W_ul_outer_2) - left) /5;
+					SECTION_2.TARGET_X = VIEW_WIDTH -W_ul_outer_2;
+					SECTION_2.isAutoBackPostioning = true;
+				}
+				else{
+					var r = 8;	//距离的倍率
+					if (speed_2 > 0){
+						SECTION_2.TARGET_X = (left + speed_2 * r) > 0 ? 0 : (left + speed_2 * r);
+						SECTION_2.isAutoBackPostioning = true;
+					}
+					else if (speed_2 < 0){
+						SECTION_2.TARGET_X = (left + speed_2 * r) < (VIEW_WIDTH -W_ul_outer_2) ? (VIEW_WIDTH -W_ul_outer_2) : (left + speed_2 * r);
+						SECTION_2.isAutoBackPostioning = true;
+					}
+					else{
+						SECTION_2.isAutoBackPostioning = false;
+					}
+					//SECTION_2.TARGET_X = VIEW_WIDTH -W_ul_outer_2;
+				}
+			}, false);
+			$(".view-outer")[0].addEventListener('touchmove', function(e){
+				e.preventDefault();
+				if (SECTION_2.isAbortAutoBackPostionAnimate){
+					return false;
+				}
+				var d = 0; //与上次捕获移动事件时候的手指距离
+				if (MouseDownX_2 != null){
+					d= touch_2.x - MouseDownX_2;
+				}
+				speed_2 = d;
+				MouseDownX_2 = touch_2.x;
+
+				G_D_Star = 0;
+				if (Math.abs(speed_2) > 1){
+					var left = $("#section-2 ul").offset().left;
+					left = left +d;
+					G_D_Star = d*-.8;
+					//console.log(G_D_Star);
+					$("#section-2 ul").css({
+						"-webkit-transform":"translateX("+left+"px)",
+						"transform":"translateX("+left+"px)"
+					});
+				}
+				//console.log("拖动了屏幕"+d+"px");
+			}, false);
+		}
+		else{
+			//console.log("取消了拖动事件");
+		}
+	
+		/*锥形拖动事件 start*/
+			var MouseDownX = 0;
+			$("#section-0")[0].addEventListener('touchstart',function(event){
+				event.preventDefault();
+				isTouchDown_0 = true;
+				MouseDownX = touch.x;
+				TARGET_DEG = 0;
+			},false);
+			$("#section-0")[0].addEventListener('touchend', function(event){
+				event.preventDefault();
+				isTouchDown_0 = false;
+				MouseDownX = 0;
+				//$("#itooy").html(SPEED);
+				var _speed = Math.abs(SPEED*Math.pow(.8,3));
+				//console.log('Y_DEG = ' + Y_DEG);
+
+				//$("#itooy").html(_speed);
+				if (_speed <= 1){
+				   TARGET_DEG = Math.round(Y_DEG / 120) * 120;
+					//console.log('TARGET_DEG = ' + _a);
+				}
+				else {
+					var a;
+					if (SPEED > 0){
+						if (_speed <= 20){
+							a = (Y_DEG*1)+120;
+						}
+						else {
+							a = (Y_DEG*1)+240;
+						}
+					}
+					else if(SPEED < 0){
+						if (_speed <= 20){
+							a = (Y_DEG*1) - 120;
+						}
+						else {
+							a = (Y_DEG*1) - 240;
+						}
+					}
+
+				   	TARGET_DEG = Math.round( a / 120) * 120;
+
+				}
+			}, false);
+			$("#section-0")[0].addEventListener('touchmove', function(event){
+				event.preventDefault();
+				if (MouseDownX > 0){
+					SPEED = (touch.x - MouseDownX) * (180 / VIEW_WIDTH);
+					Y_DEG = Y_DEG + SPEED;
+				}
+				MouseDownX = touch.x;
+			}, false);
+		/*锥形拖动事件 end*/
+
+		//设备晃动事件
+		if (window.DeviceMotionEvent){
+			window.addEventListener('deviceorientation',function(event){
+				GAMMA = event.gamma;
+				BETA = event.beta;
+				GAMMA_TMP = Math.sin(GAMMA*Math.PI/180) * -15;
+				BETA_TMP = Math.sin(BETA*Math.PI/180) * -15;
+
+				var _x_deg = 0;  // x轴倾斜角度
+				if (_x_deg >= 0 && _x_deg <= 90){
+					_x_deg = Math.cos(event.beta*Math.PI/180)*15;
+				}
+				X_DEG = _x_deg;
+				var _y_deg = 0;	// y轴倾斜角度
+				_y_deg = Math.sin(event.gamma*Math.PI/180)*30;
+				Y_DEG_FLOAT = _y_deg;
+				
+				
+			},false);
+		}
+
+	});
+	(function drawFrame(){
+		window.requestAnimationFrame(drawFrame);
+		//$("#console").html($("#console").html()*1+1);
+		//3D切换
+		if (B_show3DswitchAnimate){
+			if (G_switch3DAnimate_frameIndex < 90 + G_3DAnimateTimeDelay){
+				G_switch3DAnimate_frameIndex += 2.25;
+				if(SECTION_INDEX == 1){
+					//首页场景
+					O_homepage.animateB2A();
+				}
+			}
+			else{
+				G_switch3DAnimate_frameIndex = 0;
+				if(SECTION_INDEX == 1){
+					//首页场景
+					O_homepage.hide3DswitchAnimate();
+				}
+			}
+		}
+		if (SECTION_INDEX == 0){
+
+			if (IS_SWIPERIGHT){
+				IS_SWIPELEFT = false;
+				Y_DEG = Y_DEG + SPEED_EDG ;
+				if (Y_DEG >= TMP_TARGET_DEG){
+					Y_DEG = TMP_TARGET_DEG;
+					IS_SWIPERIGHT = false;
+				}
+			}
+			if (IS_SWIPELEFT){
+				IS_SWIPERIGHT = false;
+				Y_DEG = Y_DEG - SPEED_EDG ;
+				if (Y_DEG <= TMP_TARGET_DEG){
+					Y_DEG = TMP_TARGET_DEG;
+					IS_SWIPELEFT = false;
+				}
+			}
+			if (!isTouchDown_0){
+				Y_DEG = Y_DEG + (TARGET_DEG - Y_DEG) * .05;
+				if (Math.abs(SPEED > .5)){
+				}
+			}
+			
+			
+			$("#carousel").css({
+				"-webkit-transform":"rotateX("+X_DEG+"deg) perspective("+G_perspective+"px) rotateY("+Y_DEG+"deg)",
+				"transform":"rotateX("+X_DEG+"deg) perspective("+G_perspective+"px) rotateY("+Y_DEG+"deg)",
+				"-webkit-transition":"0s",
+				"transition":"0s",
+			});
+			
+		}
+		else if (SECTION_INDEX == 1){
+			//$("#console").html(GAMMA+"<br/>"+BETA);
+			var _g = Math.sin(GAMMA*Math.PI/180),
+				_b = Math.sin(BETA*Math.PI/180);
+			
+			$("#flower").css({
+				"-webkit-transform": "translate("+_g*-12+"px,"+_b*-12+"px)",
+				"transform": "translate("+_g*-12+"px,"+_b*-12+"px)"
+			});
+			$("#petal").css({
+				"-webkit-transform": "translate("+_g*-35+"px,"+_b*-35+"px)",
+				"transform": "translate("+_g*-35+"px,"+_b*-35+"px)"
+			});
+
+		}
+		else if (SECTION_INDEX == 2){
+			if (SECTION_2.hasClickAnyCard){
+				return false;
+			}
+			if (SECTION_2.animatePostionX_of_li.b_animate_Postion_x_of_li){
+				SECTION_2.animatePostionX_of_li.draw(function(){});
+			}
+			if (!isTouchDown_2 && browser.versions.animateVer === 1){
+				var left = $("#section-2 ul").offset().left;
+				if (SECTION_2.isAbortAutoBackPostionAnimate){
+					SECTION_2.isAutoBackPostioning = false;
+					//return false;
+				}
+				if (SECTION_2.isAutoBackPostioning){
+					//有目标点回位
+					var d = SECTION_2.TARGET_X - left,
+						s = d * .05;
+					G_D_Star = d*-.05;
+					if (Math.abs(d) > 1){
+						left = left + s;
+						$("#section-2 ul").css({
+							"-webkit-transform":"translateX("+left+"px)",
+							"transform":"translateX("+left+"px)"
+						});
+					}
+					else{
+						SECTION_2.isAutoBackPostioning = false;
+					}
+				}
+			}
+			/*
+			if (SECTION_2.animateLx.isAnimate){
+				SECTION_2.animateLx.draw();
+			}
+			*/
+		}
+	}());
+	</script>
+
+    <!--艾瑞-->
+    <script type="text/javascript">
+		var _iwt_UA="UA-self-000001";
+		(function (D) {
+		var h=D.getElementsByTagName('head')[0],
+		s=D.createElement('script');
+		s.type='text/javascript';
+		s.charset='utf-8';
+		s.src='http://img.self.com.cn/themes/self/selftheme/js_v1/iwt.js';
+		h.firstChild?h.insertBefore(s,h.firstChild):h.appendChild(s);
+		})(document);
+	</script>
+
+    <!--GA-->
+    <script type="text/javascript">
+    try {
+        var _gaq = _gaq || [];    
+        _gaq.push(['selfTracker._setAccount', 'UA-1848314-1']);
+        _gaq.push(['selfTracker._setDomainName', '.self.com.cn']);
+        _gaq.push(function() {
+            var selfTracker = _gat._getTrackerByName('selfTracker');
+            if(window._s_c_d_) {
+                _s_c_d_.detectChannel(selfTracker);
+            }
+         });
+        _gaq.push(['selfTracker._setAllowHash', false]);
+        _gaq.push( ['selfTracker._trackPageview']);
+    } catch(err) {}
+    </script>
+    <script type="text/javascript">  (function() {
+        var ga = document.createElement('script');  ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:'   == document.location.protocol ? 'https://ssl'   : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    <!--CNC统计-->
+    <script type="text/javascript" src="http://js.selfimg.com.cn/statistics/total.js"></script>
+    <!--百度-->
+    <script type="text/javascript">
+    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F6f33fbaa77cc1f26cabae24ffe94f1f0' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <!-- Alexa Certify -->
+    <script type="text/javascript">
+    _atrk_opts = { atrk_acct:"eZk/j1a0Sn00qm", domain:"self.com.cn",dynamic: true};
+    (function() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js"; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as, s); })();
+    </script>
+    <noscript><img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=eZk/j1a0Sn00qm" style="display:none" height="1" width="1" alt="" /></noscript>
+    <!--#页尾 END --> 
+</body>
+</html>

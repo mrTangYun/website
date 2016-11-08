@@ -1,0 +1,1337 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>蒙牛冠益乳</title>
+        <meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+        <link rel="stylesheet" href="css/style.css" />
+        <script src="js/dist/snap.svg-min.js"></script>
+        <script src="js/dist/jquery-1.8.2.min.js"></script>
+    </head>
+    <body >
+      <div id="milkDiv"></div>
+      <div id="share">
+        <a href="">返回首页</a>
+        <a href="">分享这滴好酸奶</a>
+      </div>
+    </body>
+    <script type="text/javascript">
+
+    var HEIGHTVIEWBOX = 1099;
+    var aLine = [];
+    jQuery(document).ready(function($) {
+      init();
+    });
+    function init(){
+      aLine.push("M246.592,210c0,0,47.119,191.843-70.44,308.25");
+      aLine.push("M225.219,657.413c0,0-41.745,80.576-39.186,145.248  s27.379,113.551,42.246,154.796c14.867,41.245,26.19,67.541,28.168,123.543");
+
+      aLine.push("M256.447,1081c1.899,55.924-17.852,118.145-91.621,199.667  c-73.9,82.166-98.175,168.848-58.538,298.091");
+      aLine.push("M224.201,1663.141c0,0,37.953,78.879,35.089,146.869  s-20.397,72.508-52.164,142.886c-26.139,47.166-39.227,84.965-39.78,126.438");
+      
+      aLine.push("M167.341,2079.334c-0.109,9.49,0.439,19.575,1.636,29.61  c0,0,2.628,52.924,48.635,143.721c5.991,11.822,12.716,24.286,20.268,37.359c65.546,113.477,69.514,232.743,29.53,328.86");
+      aLine.push("M121.887,2569.82c0,0-38.05,73.514-35.996,195.514  s45.852,160.837,101.497,245.039c46.861,70.909,61.598,94.291,61.598,94.291");
+      
+      //丹麦
+      aLine.push("m248.98599,3104.66309c20.375,34.88696 33.793,72.45483 42.13998,108.84302c26.005,113.36816 4.664,218.48315 4.66302,218.48315l-28.70401,114.12573");
+      //aLine.push("M248.986,3104.663c20.375,35.045,33.793,72.783,42.14,109.336c26.005,113.882,4.664,219.473,4.663,219.473l-28.704,114.643");
+      aLine.push("M131.142,3752c0,0-45.282,68.467-45.367,160.492c-0.071,76.508,32.764,81.676,69.208,214.842");
+
+      //胃8,9
+      aLine.push("M154.982,4127.334c0.953,3.479,13.788,40.379,13.788,171.164  c0,14.835-0.101,70.346-0.101,70.346c-0.101,8.899-0.104,75.258-0.078,153.156c0.032,96.148,0.11,209.877,0.11,254.838  c0,7.385-0.844,15.326,0,22.212c0.952,7.427,5.726,12.201,11.435,15.537c1.475-14.316,9.008-24.473,22.544-26.34  c7.537-1.032,16.182-0.482,24.11-0.308c23.399,0.466,37.496,10.993,46.376,27c5.983,10.782,8.277,25.493,3.475,39.974  c-3.989,11.992-11.051,21.324-21.263,27.621c-11.036,6.813-23.647,7.604-40.939,7.604c-16.625,0-33.931-0.992-48.896,0  c-9.631,0.652-15.114-0.352-19.997-4.442c-6.189-5.186-11.645-12.324-12.378-23.803c-11.916,1.663-18.621,7.767-20.317,17.789  c-1.913,11.266,4.974,20.488,13.956,23.48c8.264,2.759,27.176,0.949,37.156,0.949h38.062c12.994,0,25.446-0.76,33.052,5.103  c6.569,5.058,12.032,15.763,6.965,27.281c-4.438,10.069-12.572,13.654-24.456,13.654c-11.503,0-24.225-0.695-37.752,0  c-7.905,0.404-11.353,4.95-10.168,15.218");
+      aLine.push("M154.748,4687.903v74.325c0,12.771-0.744,24.43,0,35.237  c1.405,20.192,15.82,33.333,37.122,33.333h17.48c10.266,0,22.296-1.537,23.471,7.604c1.741,13.199-12.793,10.588-23.162,10.479  c-21.116-0.223-41.293,0.206-60.925-0.646c-14.186-0.585-26.141-0.035-34.944,6.051c-7.649,5.282-14.071,14.19-14.899,26.013  c-0.997,13.818,5.304,23.572,11.732,29.219c7.927,6.944,18.434,8.57,32.375,8.57h61.596c12.683,0,26.747-2.249,25.705,10.153  c-0.901,10.686-15.442,8.256-28.275,8.256c-8.397,0-17.664-0.518-25.062,0c-14.451,0.99-21.737,12.069-21.311,27.598  c0.006,0.43,0.027,300.679,0.048,301.104c0,0-1.354,21.053,2.227,50.801");
+
+      //bb冠菌10-11
+      aLine.push("M157.925,5315.998c5.482,45.304,23.542,117.645,74.889,203.565  c31.797,53.206,50.378,96.544,60.867,132.433c18.576,63.56,11.771,103.752,8.051,134.005  c-10.324,83.965-73.367,167.999-81.087,176.499");
+      aLine.push("M151.692,6080.511c0,0-82.218,129.79-17.492,301.89  c20.668,59.064,42.632,96.75,64.768,133.603");
+
+      //地球放大镜12-13
+      aLine.push("M198.967,6516.003c23.593,39.274,47.474,77.796,70.091,140.118  c0,0,22.714,60.467,22.643,147.217c-0.064,76.535-17.862,173.528-84.641,267.503");
+      //aLine.push("M132.041,7211.144c0,0-77.206,120.277-1.828,261.9  c0,0,52.558,69.314,55.431,172.956");
+      aLine.push("m132.041,7211.14404c0,0 -56.803,93.58496 -24.782,205.22119s84.52,104.63477 84.52,229.63477");
+
+      //大麦14-15
+      aLine.push("m191.77901,7646c-0.09,133.22119 -63.601,135.25977 -90.041,301.5708c0,0 -31.93999,113.18604 64.922,266.46924");
+      aLine.push("M253.011,8473.349c0,0-65.983,104.032-26.742,295.656");
+
+      //地球16-17
+      aLine.push("M226.269,8769.005c8.241,40.195,21.147,84.409,40.229,132.159  c30.293,75.81,48.971,143.865,58.365,204.836c24.749,160.604-14.904,272.044-76.273,346.547");
+      aLine.push("M152.168,9569.983c0,0-115.707,156.064-32.976,321.374  c0,0,51.086,89.643,54.086,101.643");
+      
+      var s = Snap(320, 568);
+      s.attr({viewBox : "0 0 640 "+HEIGHTVIEWBOX});
+      fit();
+
+      //画出形状(形状原件，是否同步画出，速度，结束函数)
+      //
+      function drawShape(Shape,syn,speedRadio,callback){
+        var d=Shape.selectAll("path");
+        var t = 0;
+        if (syn == 1){
+          //如果是同步绘制的
+          d.forEach(function(a,b){
+            t = t+1;
+            var len = a.getTotalLength();
+            var fill = a.attr("fill");
+            var new_path = s.paper.path().attr({fill: "none",stroke: "#c7a046",strokeWidth: 2,transform : "matrix(1,0,0,1,0,0)"});
+            Shape.append(new_path);
+            Snap.animate(0, len, function (l) {
+                new_path.attr({
+                      d: a.getSubpath(0, l)
+                });
+             }, len*speedRadio , function(){
+                a.remove();
+                new_path.attr({
+                      fill: fill
+                });
+                t = t-1;
+                //console.log(t);
+                if (t == 0){
+                  callback();
+                }
+            });
+          });
+        }
+        else if(syn == 0){
+          var l  = d.length;
+          if ( l == 0){
+            callback();
+            return false;
+          }
+          drawByIndex(0,l);
+          function drawByIndex(index,total){
+            var a = d[index];
+            var len = a.getTotalLength();
+            var fill = a.attr("fill");
+            var new_path = s.paper.path().attr({fill: "none",stroke: "#c7a046",strokeWidth: 2,transform : "matrix(1,0,0,1,0,0)"});
+            Shape.append(new_path);
+            Snap.animate(0, len, function (l) {
+              try {
+                new_path.attr({
+                      d: a.getSubpath(0, l)
+                });
+              } catch (e) {
+
+              }
+             }, len*speedRadio , function(){
+                a.remove();
+                new_path.attr({
+                      fill: fill
+                });
+                if (index >= total-1){
+                  callback();
+                  return false;
+                }
+                else{
+                  drawByIndex(index+1,total);
+                  return false;
+                }
+            });
+          }
+        }
+      }
+
+
+      
+      //画出路径（父元素，路径数据，速度，结束后的函数）
+      function drawPath(g_parent,d_index,speedRadio,callback){
+        
+        var _line = s.paper.path(aLine[d_index]).attr({
+                      display: "none"
+                  });
+
+        // if ( (d_index == 14) || (d_index == 15)){
+        //   _line.attr({
+        //               stroke: "#c7a046",
+        //               strokeWidth: 3,
+        //               display: "",
+        //               fill: "none"
+        //   });
+        //   g_parent.add(_line);
+        //   callback(); 
+        //   return false;
+        // }
+        
+        var line =  s.paper.path().attr({
+                      fill: "none",
+                      stroke: "#c7a046",
+                      strokeWidth: 3
+                    });
+        g_parent.add(_line);
+        g_parent.add(line);
+
+        var len = _line.getTotalLength();
+        Snap.animate(0, len, function (l) {
+                                              line.attr({
+                                                  d: _line.getSubpath(0, l)
+                                              });
+                                          }, len*speedRadio,function(){ 
+                                                                        _line.remove();
+                                                                        callback(); 
+                                                                      }
+                    );
+      }
+      //画出路径（路径数据，速度，结束后的函数）
+      function drawPath2(d,speedRadio,callback){
+        var _line = s.paper.path(d).attr({
+                    display: "none"
+                });
+        var line =  s.paper.path().attr({
+                      fill: "none",
+                      stroke: "#c7a046",
+                      strokeWidth: 3
+                    });
+
+        var len = _line.getTotalLength();
+        Snap.animate(0, len, function (l) {
+                                              line.attr({
+                                                  d: _line.getSubpath(0, l)
+                                              });
+                                          }, len*speedRadio,function(){ 
+                                                                        _line.remove();
+                                                                        callback(); 
+                                                                      }
+                    );
+      }
+
+
+      var milk = s.paper.image("images/milk.png",230,-171,178,171);
+      //var $milk = $("#milkDiv");
+      var page1 = {};
+      var G1 = s.g().attr({
+            transform:"matrix(1,0,0,1,0,0)",
+            "class" : "page1"
+          });
+
+      //奶瓶
+      page1.milkBottle = s.paper.image("images/milkBottle0.png",199,285,242,434).attr({
+      });
+      page1.milkBottle2 = s.paper.image("images/milkBottle.png",199,285,242,434).attr({
+      });
+      G1.add(page1.milkBottle);
+      G1.add(page1.milkBottle2);
+      page1.title = s.paper.image("images/title.png",123,564,394,144).attr({ opacity: 0});
+      G1.add(page1.title);
+      page1.button = s.paper.image("images/button.png",225,849,189,91).attr({ opacity: 0});
+      G1.add(page1.button);
+
+
+      page1.textShow = function(){
+        page1.text = s.paper.text(150, 50, ["你会挑好酸奶吗？","喝酸奶你到底在喝什么？","什么才是好酸奶？"]).attr({
+                            textAnchor:"middle",
+                            textLength:"200",
+                            lengthAdjust:"spacing",
+                            "class":"intro",
+                            transform:"matrix(1,0,0,1,0,438)",
+                            //"id":"intro",
+                            fill : "#c7a046"
+                          });
+        GText.add(page1.text);
+        var d=page1.text.selectAll("tspan");
+        d.forEach(function(a,b){
+          //console.log(a,b);
+          if (b != 1){
+            a.attr({x:320,y:70*b+20,opacity:0,"fill-opacity":0,"class":"intro"+b});
+          }
+          else{
+            a.attr({x:320,y:70*b-10+20,opacity:0,"fill-opacity":0,"class":"intro"+b});
+          }
+          setTimeout(function(){
+
+            if (b != 1){
+              a.animate({opacity:1,"fill-opacity":.7,y:70*b},800,mina.easein);
+            }
+            else{
+              a.animate({opacity:1,"fill-opacity":.7,y:70*b-10},800,mina.easein);
+            }
+          },500*b)
+        });
+      };
+
+      page1.start = function(){
+        setTimeout(function(){
+
+          page1.milkBottle2.animate({opacity: 0}, 1500,mina.backout,function(){
+            page1.textShow();
+            setTimeout(function(){
+              page1.step2();
+            },4000);
+          });
+        },800);
+        
+
+        
+      }
+      //文字消失，奶瓶消失
+      page1.step2 = function(){
+        var d=page1.text.selectAll("tspan");
+        d.forEach(function(a,b){
+          setTimeout(function(){
+            if (b == 0){
+              a.animate({opacity:0,"fill-opacity":0,y:70*b+20},500,mina.easein);
+            }
+            if (b == 2){
+              a.animate({opacity:0,"fill-opacity":0,y:70*b+20},500,mina.easein,function(){
+                page1.milkBottle.animate({opacity:0},500,mina.easein,function(){
+                  page1.step3();
+                });
+              });
+            }
+            else{
+              a.animate({opacity:0,"fill-opacity":0,y:70*b-10+20},500,mina.easein);
+            }
+          },300*b)
+        });
+      };
+      //奶滴下落，title和button出现
+      page1.step3 = function(){
+        //$milk.animate({"top":283}, 800,function(){
+        milk.animate({y:283},800,mina.backout,function(){
+          //奶滴从顶端下落后
+          page1.title.animate({opacity : 1}, 800,mina.backout,function(){
+            page1.button.animate({opacity : 1}, 800,mina.backout,function(){
+              var gamePlay = false;
+              page1.button.touchstart(function() {
+                                              //page4.showLine1();  
+                                              if (gamePlay){
+                                                return false;
+                                              }
+                                              else{
+                                                gamePlay = true;
+                                              }
+                                              page1.text.remove();
+                                              milk.animate({x : 372, y: 322, width : 145 ,height: 140}, 500,mina.easein);
+                                              G2.attr({"display":""});
+                                              Snap.animate(0, HEIGHTVIEWBOX, function (l) {
+                                                        G1.attr({
+                                                                    opacity : (HEIGHTVIEWBOX-l)/HEIGHTVIEWBOX
+                                                                });
+                                                        G2.attr({
+                                                                    transform: "t" + [0, HEIGHTVIEWBOX-l] +"r" + 0
+                                                                });
+
+                                                },1500,function(){ 
+                                                  //滚屏完成后
+                                                  page2.start();
+                                                  G1.remove();
+                                                  page1 = "";
+                                              });
+              });
+            });
+          });
+        });
+      };
+
+      //奶滴
+      //var milk = s.paper.image("images/milk.png",372,322,145,140);
+
+      //第2屏
+      var page2 = {};
+      var G2 = s.g().attr({
+            transform:"matrix(1,0,0,1,0,"+HEIGHTVIEWBOX+")",
+            "display": "none"
+          });
+      //第二屏左边的线和形状
+      page2.g_left = s.g().attr({
+            transform:"matrix(1,0,0,1,0,0)",
+            "class" : "g2_left"
+          });
+      G2.add(page2.g_left);
+
+      //第二页的文字动画
+      page2.textShow = function(){
+        page2.text = s.paper.text(150, 50, ["一滴好酸奶","源自一滴好牛奶","专属牧场奶源","品质保证"]).attr({
+                            textAnchor:"middle",
+                            textLength:"200",
+                            lengthAdjust:"spacing",
+                            "class":"intro",
+                            fontSize:"xx-large",
+                            transform:"matrix(1,0,0,1,100,580)",
+                            "id":"intro",
+                            fill : "#656565"
+                          });
+        GText.add(page2.text);
+        var d=page2.text.selectAll("tspan");
+        d.forEach(function(a,b){
+          //console.log(a,b);
+          a.attr({x:320,y:70*b,opacity:0,"fill-opacity":0});
+          setTimeout(function(){
+            a.animate({opacity:1,"fill-opacity":.7},500,mina.easeout)
+          },500*b)
+        });
+      };
+      //动画
+      page2.start = function(){
+          //显示第二页第一条线条
+          drawPath(page2.g_left,0,3,function(){
+                                                      //显示第二页的文字
+                                                      page2.textShow();
+                                                      //显示奶牛
+                                                      drawShape(page2.cow,1,3,function(){
+                                                                                          //显示第二页第2条线条
+                                                                                          drawPath(page2.g_left,1,3,function(){
+
+                                                                                                                                G3.attr({"display":""});
+                                                                                                                                page3.showLine1();  
+                                                                                                                                page2.text.remove();
+                                                                                                                                Snap.animate(0, HEIGHTVIEWBOX, function (l) {
+                                                                                                                                                            G2.attr({
+                                                                                                                                                                        transform: "t" + [0, l*-1] +"r" + 0
+                                                                                                                                                                    });
+                                                                                                                                                            G3.attr({
+                                                                                                                                                                        transform: "t" + [0, HEIGHTVIEWBOX-l] +"r" + 0
+                                                                                                                                                                    });
+
+                                                                                                                                                    },2300,function(){ 
+                                                                                                                                                      //滚屏完成后
+                                                                                                                                                      G2.remove();
+                                                                                                                                                  });
+                                                                                                                              });
+                                                                                        });
+                                                    });
+      };
+     
+
+
+      //第3屏烧杯-试管----------------------------------------开始
+      var page3 = {};
+      var G3 = s.g().attr({
+            transform:"matrix(1,0,0,1,0,"+HEIGHTVIEWBOX+")",
+            "display": "none"
+          });
+      //第3屏左边的线和形状
+      page3.g_left = s.g().attr({
+            transform:"matrix(1,0,0,1,0,"+HEIGHTVIEWBOX*-1+")",
+            "class" : "g3_left"
+          });
+      G3.add(page3.g_left);
+      
+      page3.bottle_l = s.paper.path("M183.205,1528.967h28.347c3.422,0,6.208-2.781,6.208-6.202   c0-3.415-2.786-6.195-6.208-6.195h-28.347c-3.408,0-6.189,2.781-6.189,6.195C177.016,1526.186,179.797,1528.967,183.205,1528.967z    M246.602,1643.937c0,0-33.128-57.383-35.921-62.225v-52.26h-26.69v52.26c-0.417,0.711-35.919,62.225-35.919,62.225   c-1.668,2.879-2.509,5.697-2.509,8.273c0,1.877,0.448,3.636,1.348,5.195c2.134,3.692,6.48,5.735,12.246,5.735h76.361   c5.759,0,10.111-2.043,12.245-5.735c0.895-1.56,1.349-3.318,1.349-5.195C249.111,1649.633,248.263,1646.815,246.602,1643.937z    M188.622,1618.085c0,2.572-2.092,4.669-4.673,4.669s-4.666-2.097-4.666-4.669c0-2.578,2.085-4.671,4.666-4.671   S188.622,1615.507,188.622,1618.085z M223.005,1638.62c0,4.575-3.712,8.292-8.286,8.292c-4.575,0-8.292-3.717-8.292-8.292   c0-4.578,3.717-8.29,8.292-8.29C219.293,1630.331,223.005,1634.042,223.005,1638.62z M183.942,1637.493   c0,1.206-0.985,2.182-2.188,2.182c-1.203,0-2.182-0.976-2.182-2.182c0-1.203,0.979-2.188,2.182-2.188   C182.957,1635.305,183.942,1636.291,183.942,1637.493z M209.238,1606.994c0,3.422-2.774,6.192-6.189,6.192   c-3.415,0-6.189-2.771-6.189-6.192c0-3.414,2.774-6.185,6.189-6.185C206.463,1600.81,209.238,1603.58,209.238,1606.994z").attr({
+          display: "none"
+      });
+      page3.bottle=  s.paper.path().attr({
+                    fill: "none",
+                    stroke: "#c7a046",
+                    strokeWidth: 3,
+                    //strokeDasharray: "10 5"
+                });
+      page3.g_left.add(page3.bottle_l);
+      page3.g_left.add(page3.bottle);
+      //显示试管、烧杯
+      page3.showBottle = function(){
+        var len = page3.bottle_l.getTotalLength();
+          Snap.animate(0, len, function (l) {
+                           page3.bottle.attr({
+                              d: page3.bottle_l.getSubpath(0, l)
+                           });
+                           //console.log(l);
+                        }, len*5,function(){
+                            page3.bottle_left = s.paper.path("M121.133,1612.752v-27.262h-14.42v27.277   c-10.68,3.125-18.472,12.981-18.472,24.665c0,14.198,11.508,25.708,25.712,25.708c14.198,0,25.705-11.51,25.705-25.708   C139.658,1625.737,131.831,1615.861,121.133,1612.752z M106.288,1585.458h15.323c1.85,0,3.342-1.506,3.342-3.355   c0-1.841-1.492-3.345-3.342-3.345h-15.323c-1.843,0-3.348,1.504-3.348,3.345C102.94,1583.952,104.445,1585.458,106.288,1585.458z").attr({
+                              stroke: "#c7a046",
+                              fill : "none",
+                              strokeWidth: 3,
+                              transform : "matrix(1,0,0,1,0,20)",
+                              opacity:0
+                            });
+                            drawShape(page3.bottle_right,1,3,function(){
+                                setTimeout(function(){page3.showLine2();},3000);
+                            });
+                            page3.g_left.add(page3.bottle_left);
+                            Snap.animate(0, 1, function (l) {
+                                //console.log(l);
+                                var i_z = 20-20*l,
+                                    i_f = -20+20*l;
+                                //console.log(i_z,i_f);
+                                page3.bottle_left.attr({
+                                  transform : "matrix(1,0,0,1,0,"+i_z+")",
+                                  opacity: l
+                                });
+                                
+                            },1000,function(){
+                            });
+                        });
+      };
+      //第二条线
+      page3.showLine2 = function(){
+        drawPath(page3.g_left,3,3,function(){
+                                              G4.attr({"display":""});
+                                              page4.showLine1();  
+                                              page3.text.remove();
+                                              Snap.animate(0, HEIGHTVIEWBOX, function (l) {
+                                                        G3.attr({
+                                                                    transform: "t" + [0, l*-1] +"r" + 0
+                                                                });
+                                                        G4.attr({
+                                                                    transform: "t" + [0, HEIGHTVIEWBOX-l] +"r" + 0
+                                                                });
+
+                                                },2300,function(){ 
+                                                  //滚屏完成后
+                                                  G3.remove();
+                                              });
+                                            });
+        return false
+        
+      }
+      //第三条线
+      page3.showLine1 = function(fn){
+        drawPath(page3.g_left,2,3,function(){
+          page3.showBottle();
+          page3.textShow();
+        });
+        return false;
+      };
+      //第三页的文字动画
+      page3.textShow = function(){
+        page3.text = s.paper.text(150, 50, ["每一百毫升奶源","富含2.7g优质乳蛋白","通过层层检验","只为让您更放心"]).attr({
+                            textAnchor:"middle",
+                            textLength:"200",
+                            lengthAdjust:"spacing",
+                            "class":"intro",
+                            fontSize:"xx-large",
+                            transform:"matrix(1,0,0,1,100,580)",
+                            "id":"intro",
+                            fill : "#656565"
+                          });
+        GText.add(page3.text);
+        var d=page3.text.selectAll("tspan");
+        d.forEach(function(a,b){
+          //console.log(a,b);
+          a.attr({x:320,y:70*b,opacity:0,"fill-opacity":0});
+          setTimeout(function(){
+            a.animate({opacity:1,"fill-opacity":.7},500,mina.easeout)
+          },500*b)
+        });
+      };
+      //第3屏烧杯-试管----------------------------------------结束
+
+      //第4屏牛头----------------------------------------开始
+      var page4 = {};
+      var G4 = s.g().attr({
+            transform:"matrix(1,0,0,1,0,-"+HEIGHTVIEWBOX+")",
+            "display": "none"
+          });
+      //第4屏左边的线和形状
+      page4.g_left = s.g().attr({
+            transform:"matrix(1,0,0,1,0,"+HEIGHTVIEWBOX*-2+")",
+            "class" : "g4_left"
+          });
+      G4.add(page4.g_left);
+      //显示牛头
+      page4.showbull = function(){
+        drawShape(page4.bull,1,3,function(){page4.showLine2();});
+        return false;
+      };
+      //第4页的文字动画
+      page4.textShow = function(){
+        page4.text = s.paper.text(150, 50, ["牧场奶源","安心保证"]).attr({
+                            textAnchor:"middle",
+                            textLength:"200",
+                            lengthAdjust:"spacing",
+                            "class":"intro_p4",
+                            transform:"matrix(1,0,0,1,100,650)",
+                            "id":"intro",
+                            fill : "#c7a046"
+                          });
+        GText.add(page4.text);
+        var d=page4.text.selectAll("tspan");
+        d.forEach(function(a,b){
+          //console.log(a,b);
+          a.attr({x:320,y:70*b,opacity:0,"fill-opacity":0});
+          setTimeout(function(){
+            a.animate({opacity:1,"fill-opacity":.7},500,mina.easeout)
+          },500*b)
+        });
+      };
+      //第一条线
+      page4.showLine1 = function(fn){
+          drawPath(page4.g_left,4,3,function(){
+            page4.textShow();
+            page4.showbull();
+          });
+          return false;
+      };
+      //第二条线
+      page4.showLine2 = function(){
+        drawPath(page4.g_left,5,3,function(){
+                            G5.attr({"display":""});
+                            if (page4.text){
+                              page4.text.remove();
+                            }
+                            page1 = {};
+                            page2 = {};
+                            page3 = {};
+                            page5.showLine1(); 
+                            Snap.animate(0, HEIGHTVIEWBOX, function (l) {
+                                      G4.attr({
+                                                  transform: "t" + [0, l*-1] +"r" + 0
+                                              });
+                                      G5.attr({
+                                                  transform: "t" + [0, HEIGHTVIEWBOX-l] +"r" + 0
+                                              });
+
+                              },2300,function(){ 
+                                //滚屏完成后
+                                G4.remove();
+                            });
+        });
+        return false;
+      }
+      //第4屏牛头----------------------------------------结束
+
+
+      //第5屏丹麦----------------------------------------开始
+      var page5 = {};
+      var G5 = s.g().attr({
+            transform:"matrix(1,0,0,1,0,-"+HEIGHTVIEWBOX+")",
+            "display": "none"
+          });
+      //第4屏左边的线和形状
+      page5.g_left = s.g().attr({
+            transform:"matrix(1,0,0,1,0,"+HEIGHTVIEWBOX*-3+")",
+            "class" : "g4_left"
+          });
+      G5.add(page5.g_left);
+      
+      //第一条线
+      page5.showLine1 = function(fn){
+
+          drawPath(page5.g_left,6,3,function(){
+            page5.textShow();
+            page5.showShape();
+          });
+      };
+      //第二条线
+      page5.showLine2 = function(){
+        drawPath(page5.g_left,7,3,function(){
+                            G6.attr({"display":""});
+                            page5.text.remove();
+                            page6.showLine1();  
+                            Snap.animate(0, HEIGHTVIEWBOX, function (l) {
+                                      G5.attr({
+                                                  transform: "t" + [0, l*-1] +"r" + 0
+                                              });
+                                      G6.attr({
+                                                  transform: "t" + [0, HEIGHTVIEWBOX-l] +"r" + 0
+                                              });
+
+                              },2300,function(){ 
+                                //滚屏完成后
+                                G5.remove();
+                            });
+        });
+        return false;
+          
+      };
+      //显示图形动画
+      page5.showShape = function(){
+        Snap.animate(0, 1, function (l) {
+                          page5.shape.attr({
+                            opacity:l
+                          });
+                        }, 2000,function(){
+                          setTimeout(function(){
+                              page5.showLine2();
+                          },1);
+                          
+                        });
+      };
+      //第5页的文字动画
+      page5.textShow = function(){
+        page5.text = s.paper.text(150, 50, ["十年前","寻找“冠菌”的远征军","在丹麦发现“不死之菌”","bb冠菌"]).attr({
+                            textAnchor:"middle",
+                            textLength:"200",
+                            lengthAdjust:"spacing",
+                            "class":"intro",
+                            fontSize:"xx-large",
+                            transform:"matrix(1,0,0,1,100,580)",
+                            "id":"intro",
+                            fill : "#656565"
+                          });
+        GText.add(page5.text);
+        var d=page5.text.selectAll("tspan");
+        d.forEach(function(a,b){
+          //console.log(a,b);
+          a.attr({x:320,y:70*b,opacity:0,"fill-opacity":0});
+          setTimeout(function(){
+            a.animate({opacity:1,"fill-opacity":.7},500,mina.easeout)
+          },500*b)
+        });
+      };
+      page5.start = function (){
+        this.showLine1();
+      };
+      //第5屏丹麦----------------------------------------结束
+
+      //第6屏胃----------------------------------------开始
+      var page6 = {};
+      var G6 = s.g().attr({
+            transform:"matrix(1,0,0,1,0,-"+HEIGHTVIEWBOX+")",
+            "display": "none"
+          });
+      //第5屏左边的线和形状
+      page6.g_left = s.g().attr({
+            transform:"matrix(1,0,0,1,0,"+HEIGHTVIEWBOX*-4+")",
+            "class" : "g6_left"
+          });
+      G6.add(page6.g_left);
+      
+      //第一条线
+      page6.showLine1 = function(fn){
+          drawPath(page6.g_left,8,3,function(){
+            page6.textShow();
+            page6.showShape();
+            page6.showLine2();
+          });
+          return false;
+      };
+      //显示图形动画
+      page6.showShape = function(){
+          s.append(page6.shape);
+          page6.g_left.add(page6.shape);
+
+          (function(){
+            var d=page6.shape.selectAll("g");
+            d.forEach(function(a,b){
+              //console.log(a,b);
+              a.attr({opacity:0,"fill-opacity":0});
+              setTimeout(function(){
+                a.animate({opacity:1,"fill-opacity":1},500,mina.easeout)
+              },100*b)
+            });
+          })();
+      };
+      //第6页的文字动画
+      page6.textShow = function(){
+        page6.text = s.paper.text(150, 50, ["十年间，它不断创造奇迹","42天活性记录","上亿美元身价","只为守护您的健康"]).attr({
+                            textAnchor:"middle",
+                            textLength:"200",
+                            lengthAdjust:"spacing",
+                            "class":"intro",
+                            fontSize:"xx-large",
+                            transform:"matrix(1,0,0,1,100,580)",
+                            "id":"intro",
+                            fill : "#656565"
+                          });
+        GText.add(page6.text);
+        var d=page6.text.selectAll("tspan");
+        d.forEach(function(a,b){
+          //console.log(a,b);
+          a.attr({x:320,y:70*b,opacity:0,"fill-opacity":0});
+          setTimeout(function(){
+            a.animate({opacity:1,"fill-opacity":.7},500,mina.easeout)
+          },500*b)
+        });
+      };
+      //第二条线
+      page6.showLine2 = function(){
+        drawPath(page6.g_left,9,3,function(){
+                            G7.attr({"display":""});
+                            page6.text.remove();
+                            page7.showLine1();       
+                            Snap.animate(0, HEIGHTVIEWBOX, function (l) {
+                                      G6.attr({
+                                                  transform: "t" + [0, l*-1] +"r" + 0
+                                              });
+                                      /*
+                                      page6.g_left.attr({
+                                        transform: "t" + [0, (HEIGHTVIEWBOX*-4 - l/3)] +"r" + 0
+                                      });   
+                                      */   
+
+                                      G7.attr({
+                                                  transform: "t" + [0, HEIGHTVIEWBOX-l] +"r" + 0
+                                              });
+
+                              },2300,function(){ 
+                                //滚屏完成后
+                                //return false;
+                                
+                                G6.remove();
+                            });
+        });
+        return false; 
+      };
+      page6.start = function (){
+        this.showLine1();
+      };
+      //第6屏胃----------------------------------------结束   
+
+
+
+      //第7冠菌----------------------------------------开始
+      var page7 = {};
+      var G7 = s.g().attr({
+            transform:"matrix(1,0,0,1,0,-"+HEIGHTVIEWBOX+")",
+            "display": "none"
+          });
+      //第7屏左边的线和形状
+      page7.g_left = s.g().attr({
+            transform:"matrix(1,0,0,1,0,"+HEIGHTVIEWBOX*-5+")",
+            "class" : "g7_left"
+          });
+      G7.add(page7.g_left);
+      
+      //第一条线
+      page7.showLine1 = function(fn){
+          drawPath(page7.g_left,10,3,function(){
+            page7.textShow();
+            page7.showShape();
+          });
+          return false;
+      };
+      //显示图形动画
+      page7.showShape = function(){
+          s.append(page7.shape);
+          page7.g_left.add(page7.shape);
+
+          drawShape(page7.shape,1,3,function(){
+            page7.showLine2();
+          });
+          return false;
+      };
+      //第6页的文字动画
+      page7.textShow = function(){
+        page7.text = s.paper.text(150, 50, ["BB冠菌","守护健康"]).attr({
+                            textAnchor:"middle",
+                            textLength:"200",
+                            lengthAdjust:"spacing",
+                            "class":"intro",
+                            fontSize:"xx-large",
+                            transform:"matrix(1,0,0,1,100,580)",
+                            "id":"intro",
+                            fill : "#656565"
+                          });
+        GText.add(page7.text);
+        var d=page7.text.selectAll("tspan");
+        d.forEach(function(a,b){
+          //console.log(a,b);
+          a.attr({x:320,y:70*b,opacity:0,"fill-opacity":0});
+          setTimeout(function(){
+            a.animate({opacity:1,"fill-opacity":.7},500,mina.easeout)
+          },500*b)
+        });
+      };
+      //第二条线
+      page7.showLine2 = function(){
+        drawPath(page7.g_left,11,3,function(){
+                            G8.attr({"display":""});
+                            page8.showLine1();
+                            page7.text.remove();  
+                            Snap.animate(0, HEIGHTVIEWBOX, function (l) {
+                                      G7.attr({
+                                                  transform: "t" + [0, l*-1] +"r" + 0
+                                              });
+                                      
+                                      G8.attr({
+                                                  transform: "t" + [0, HEIGHTVIEWBOX-l] +"r" + 0
+                                              });
+                                      
+                              },2300,function(){ 
+                                //滚屏完成后
+                                
+                                G7.remove();
+                            });
+        });
+        return false; 
+      };
+      page7.start = function (){
+        this.showLine1();
+      };
+      //第7冠菌----------------------------------------结束   
+
+
+      //第8地球放大镜----------------------------------------开始
+      var page8 = {};
+      var G8 = s.g().attr({
+            transform:"matrix(1,0,0,1,0,-"+HEIGHTVIEWBOX+")",
+            "display": "none"
+          });
+      //第7屏左边的线和形状
+      page8.g_left = s.g().attr({
+            transform:"matrix(1,0,0,1,0,"+HEIGHTVIEWBOX*-6+")",
+            "class" : "g8_left"
+          });
+      G8.add(page8.g_left);
+      
+      //第一条线
+      page8.showLine1 = function(fn){
+          drawPath(page8.g_left,12,3,function(){
+            page8.textShow();
+            page8.showShape();
+          });
+          return false;
+      };
+      //显示图形动画
+      page8.showShape = function(){
+          s.append(page8.shape);
+          page8.g_left.add(page8.shape.attr({opacity:0,transform:"matrix(1,0,0,1,0,20)"}));
+
+
+          Snap.animate(0, 1, function (l) {
+                            page8.shape.attr({
+                              opacity:l,
+                              transform:"matrix(1,0,0,1,0,"+(20-20*l)+")"
+                            });
+                          }, 2000,function(){
+                            setTimeout(function(){
+                                page8.showLine2();
+                            },1);
+                            
+                          });
+          /*
+          drawShape(page8.shape,1,3,function(){
+            page8.showLine2();
+          });
+          */
+          
+      };
+      //第6页的文字动画
+      page8.textShow = function(){
+        page8.text = s.paper.text(150, 50, ["10年时间","40000公里","4个国家"]).attr({
+                            textAnchor:"middle",
+                            textLength:"200",
+                            lengthAdjust:"spacing",
+                            "class":"intro",
+                            fontSize:"xx-large",
+                            transform:"matrix(1,0,0,1,100,580)",
+                            "id":"intro",
+                            fill : "#656565"
+                          });
+        GText.add(page8.text);
+        var d=page8.text.selectAll("tspan");
+        d.forEach(function(a,b){
+          //console.log(a,b);
+          a.attr({x:320,y:70*b,opacity:0,"fill-opacity":0});
+          setTimeout(function(){
+            a.animate({opacity:1,"fill-opacity":.7},500,mina.easeout)
+          },500*b)
+        });
+      };
+      //第二条线
+      page8.showLine2 = function(){
+        drawPath(page8.g_left,13,3,function(){
+                            G9.attr({"display":""});
+                            page9.showLine1();  
+                            page8.text.remove();
+                            Snap.animate(0, HEIGHTVIEWBOX, function (l) {
+                                      G8.attr({
+                                                  transform: "t" + [0, l*-1] +"r" + 0
+                                              });
+                                      
+                                      G9.attr({
+                                                  transform: "t" + [0, HEIGHTVIEWBOX-l] +"r" + 0
+                                              });
+                                      
+                              },2300,function(){ 
+                                //滚屏完成后
+                                
+                                G8.remove();
+                            });
+        });
+        return false; 
+      };
+      page8.start = function (){
+        this.showLine1();
+      };
+      //第8地球放大镜----------------------------------------结束  
+
+
+      //第9大麦----------------------------------------开始
+      var page9 = {};
+      var G9 = s.g().attr({
+            transform:"matrix(1,0,0,1,0,-"+HEIGHTVIEWBOX+")",
+            "display": "none"
+          });
+      //第7屏左边的线和形状
+      page9.g_left = s.g().attr({
+            transform:"matrix(1,0,0,1,0,"+HEIGHTVIEWBOX*-7+")",
+            "class" : "g9_left"
+          });
+      G9.add(page9.g_left);
+      
+      //第一条线
+      page9.showLine1 = function(fn){
+          //page4 = page5 = page6 = page7 = {};
+          drawPath(page9.g_left,14,3,function(){
+            page9.textShow();
+            page9.showShape();
+            //page9.showLine2();
+          });
+          return false;
+      };
+      //显示图形动画
+      page9.showShape = function(){
+          s.append(page9.shape);
+          page9.g_left.add(page9.shape);
+          
+          page9.shape.animate({opacity:1,"fill-opacity":1},1500,mina.easeout,function(){
+            page9.showLine2();
+          });
+          return false;
+      };
+      //第6页的文字动画
+      page9.textShow = function(){
+        page9.text = s.paper.text(150, 50, ["澳洲黄金燕麦","美国超级水果","寻遍全球","如此苛求","只为挑剔的您"]).attr({
+                            textAnchor:"middle",
+                            textLength:"200",
+                            lengthAdjust:"spacing",
+                            "class":"intro",
+                            fontSize:"xx-large",
+                            transform:"matrix(1,0,0,1,100,580)",
+                            "id":"intro",
+                            fill : "#656565"
+                          });
+        GText.add(page9.text);
+        var d=page9.text.selectAll("tspan");
+        d.forEach(function(a,b){
+          //console.log(a,b);
+          a.attr({x:320,y:70*b,opacity:0,"fill-opacity":0});
+          setTimeout(function(){
+            a.animate({opacity:1,"fill-opacity":.7},500,mina.easeout)
+          },500*b)
+        });
+      };
+      //第二条线
+      page9.showLine2 = function(){
+        drawPath(page9.g_left,15,3,function(){
+                            G10.attr({"display":""});
+                            page10.showLine1();  
+                            page9.text.remove();
+                            Snap.animate(0, HEIGHTVIEWBOX, function (l) {
+                                      G9.attr({
+                                                  transform: "t" + [0, l*-1] +"r" + 0
+                                              });
+                                      
+                                      G10.attr({
+                                                  transform: "t" + [0, HEIGHTVIEWBOX-l] +"r" + 0
+                                              });
+                                      
+                              },2300,function(){ 
+                                //滚屏完成后
+                                
+                                G9.remove();
+                            });
+        });
+        return false; 
+      };
+      page9.start = function (){
+        this.showLine1();
+      };
+      //第9大麦----------------------------------------结束   
+
+
+      //第10地球----------------------------------------开始
+      var page10 = {};
+      var G10 = s.g().attr({
+            transform:"matrix(1,0,0,1,0,-"+HEIGHTVIEWBOX+")",
+            "display": "none"
+          });
+      //第7屏左边的线和形状
+      page10.g_left = s.g().attr({
+            transform:"matrix(1,0,0,1,0,"+(HEIGHTVIEWBOX*-8)+")",
+            "class" : "g10_left"
+          });
+      G10.add(page10.g_left);
+      
+      //第一条线
+      page10.showLine1 = function(fn){
+          drawPath(page10.g_left,16,3,function(){
+            page10.textShow();
+            page10.showShape();
+            //page10.showLine2();
+          });
+          return false;
+      };
+      //显示图形动画
+      page10.showShape = function(){
+          s.append(page10.shape);
+          page10.g_left.add(page10.shape);
+
+          page10.shape.animate({opacity:1,"fill-opacity":1},1500,mina.easeout,function(){
+            page10.showLine2();
+          });
+          return false;
+          //setTimeout(function(){page10.showLine2();},3000);
+          //return false;
+          drawShape(page10.shape,0,3,function(){
+            page10.showLine2();
+          });
+          return false;
+      };
+      //第6页的文字动画
+      page10.textShow = function(){
+
+        page10.text = s.paper.text(150, 50, ["全球甄选","品质保障"]).attr({
+                            textAnchor:"middle",
+                            textLength:"200",
+                            lengthAdjust:"spacing",
+                            "class":"intro_p4",
+                            transform:"matrix(1,0,0,1,100,650)",
+                            "id":"intro",
+                            fill : "#c7a046"
+                          });
+        GText.add(page10.text);
+
+        var d=page10.text.selectAll("tspan");
+        d.forEach(function(a,b){
+          //console.log(a,b);
+          a.attr({x:320,y:70*b,opacity:0,"fill-opacity":0});
+          setTimeout(function(){
+            a.animate({opacity:1,"fill-opacity":.7},500,mina.easeout)
+          },500*b)
+        });
+      };
+      //第二条线
+      page10.showLine2 = function(){
+        drawPath(page10.g_left,17,3,function(){
+                            //page10.showLine1();  
+            milkFall();
+        });
+        return false; 
+      };
+      page10.start = function (){
+        this.showLine1();
+      };
+      //第10地球----------------------------------------结束   
+
+      //牛奶滴入奶瓶
+      var G11 = s.g().attr({
+            transform:"matrix(1,0,0,1,0,-"+HEIGHTVIEWBOX+")",
+            "display": "none"
+          });
+
+      //皇冠
+      var crown = s.paper.image("images/crown.png",186,137,269,138).attr({
+        "display": "none",
+        //transform:"matrix(0.5,0,0,0.5,160,250)"
+      });
+      G11.add(crown);
+      //牛奶瓶2
+      var milkBottle2 = s.paper.image("images/milkBottle2.png",193,270,254,509).attr({
+        "display": "none"
+      });
+      G11.add(milkBottle2);
+
+      //牛奶瓶1
+      var milkBottle = s.paper.image("images/milkBottle.png",193,270,254,509).attr({
+        //"display": "none"
+      });
+      G11.add(milkBottle);
+
+
+      function milkFall(){
+                            if (page10.text){
+                              page10.text.remove();
+                            }
+
+                            G11.attr({"display":""});
+                            milk.animate({
+                                width : 74,
+                                height : 71,
+                                x : 279,
+                                y : 188
+                            }, 2300, mina.linear, function() {
+                                setTimeout(function(){
+                                  milk.animate({
+                                    y : 388
+                                  },300,mina.easeout,function(){
+                                    milkBottle.attr({"display":"none"});
+                                    milkBottle2.attr({"display":""});
+                                    crown.attr({"display":""});
+
+                                    crown.flash = function(){
+                                      crown.animate({
+                                                      opacity : 0
+                                                    },1500,mina.easeout,function(){
+                                                      crown.animate({opacity : 1},1500,mina.easeout,function(){
+                                                        crown.flash();
+                                                      });
+                                                    });
+                                    };
+                                    setTimeout(crown.flash(),2500);
+
+                                    G11.i_3 = s.paper.image("images/3.png",61,795,59,73);
+                                    G11.intro = s.paper.text(150, 50, ["冠标准，成就无可复制的好酸奶"]).attr({
+                                                          textAnchor:"middle",
+                                                          textLength:"200",
+                                                          lengthAdjust:"spacing",
+                                                          "class":"intro_g11",
+                                                          transform:"matrix(1,0,0,1,202,801)",
+                                                          //"id":"intro",
+                                                          fill : "#c7a046"
+                                                        });
+                                    //GText.add(G11.i_3);
+                                    //GText.add(G11.intro);
+                                    
+                                    //.animate({transform:"matrix(1,0,0,1,0,0)"},300,mina.easeout);
+                                  });
+
+                                },100);
+                            }); 
+                            Snap.animate(0, HEIGHTVIEWBOX, function (l) {
+                                      G10.attr({
+                                                  transform: "t" + [0, l*-1] +"r" + 0
+                                              });
+                                      
+                                      G11.attr({
+                                                   transform: "t" + [0, HEIGHTVIEWBOX-l] +"r" + 0
+                                               });
+                                      
+                              },2300,function(){ 
+                                //滚屏完成后
+                                $("#share").show();
+                                G10.remove();
+                            });
+      }
+
+
+
+      var GText = s.g().attr({
+            transform:"matrix(1,0,0,1,0,0)",
+            "class" : "page_text"
+          });
+
+
+      Snap.load("l.svg", function (f) {
+          page5.shape = f.select("#denmark").attr({
+                                    display : "",
+                                    opacity : 0,
+                                    //transform : "matrix(.8,0,0,.8,50,0)"
+                                  });
+          s.append(page5.shape);
+          page5.g_left.add(page5.shape);
+
+          page6.shape = f.select("#page6_wei");
+
+          //bb冠菌
+          page7.shape = f.select("#page7_bb");
+          (function(){
+            var d=page7.shape.selectAll("path");
+            d.forEach(function(a,b){
+              a.attr({display: "none"});
+            });
+          })();
+
+          //地球放大镜
+          page8.shape = f.select("#page8_shape");
+          /*
+          (function(){
+            var d=page8.shape.selectAll("path");
+            d.forEach(function(a,b){
+              a.attr({display: "none"});
+            });
+          })();
+          */
+          //大麦
+          page9.shape = f.select("#page9_shape").attr({
+            opacity : 0
+          });
+          /*
+          (function(){
+            var d=page9.shape.selectAll("path");
+            d.forEach(function(a,b){
+              a.attr({display: "none"});
+            });
+          })();
+          */
+          //地球
+          page10.shape = f.select("#page10_shape").attr({
+            opacity : 0
+          });
+          /*
+          (function(){
+            var d=page10.shape.selectAll("path");
+            d.forEach(function(a,b){
+              a.attr({display: "none"});
+            });
+          })();
+          */
+          
+          //奶牛
+          page2.cow = f.select("#cow").attr({
+                                    display : "",
+                                    transform : "matrix(1,0,0,1,0,0)"
+                                  });
+          s.append(page2.cow);
+          page2.g_left.add(page2.cow);
+          (function(){
+            var d=page2.cow.selectAll("path");
+            d.forEach(function(a,b){
+              a.attr({display: "none"});
+            });
+          })();
+
+          //试管
+          page3.bottle_right = f.select("#shiguan");
+          page3.g_left.add(page3.bottle_right);
+          (function(){
+            var d=page3.bottle_right.selectAll("path");
+            d.forEach(function(a,b){
+              a.attr({display: "none"});
+            });
+          })();
+
+          //牛头
+          page4.bull= f.select("#niutou");
+          page4.g_left.add(page4.bull);
+          (function(){
+            var d=page4.bull.selectAll("path");
+            d.forEach(function(a,b){
+              a.attr({display: "none"});
+            });
+          })();
+
+          //logo
+          var G_logo = f.select("#logo").attr({
+            transform : "matrix(.5,0,0,.5,15,15)"
+          });
+          s.append(G_logo);
+
+          //显示第二页第一条线条
+          //page2.start();
+
+
+          page1.start();
+          //page5.showLine1();
+          //milkFall();
+          return false;
+         
+      });
+    }
+
+
+
+            //适配屏幕
+            function fit(){
+          
+                var willH=$(window).width()*HEIGHTVIEWBOX/640;
+                if(willH>$(window).height()){
+                    //setH=$(window).height()-4;
+                    //setW=$(window).height()*640/HEIGHTVIEWBOX;
+                    $("svg").width($(window).height()*640/HEIGHTVIEWBOX-4).height($(window).height()-4);
+                    $("svg").css("paddingTop",0);
+                }else{
+                    //$("svg").width($(window).width()).height($(window).width()*HEIGHTVIEWBOX/640-4);
+                    //setW=$(window).width();
+                    //setH=willH;
+                    $("svg").width($(window).width()).height($(window).height()-($(window).height()-willH)-4);
+                    $("svg").css("marginTop",($(window).height()-willH)/2);
+
+                    //console.log($(window).height(),willH);
+                }
+                //$("#fit").width(setW).height(setH);
+              
+                //$("svg").height($(window).height()-5);
+
+                $('body').css('height',$(window).height());
+            }
+
+            $(function(){
+                fit();
+                $(window).resize(function(){
+                    fit();
+                });
+            });
+    </script>
+</html>

@@ -1,0 +1,706 @@
+<!doctype html>
+<html lang="chn">
+<head>
+  <meta charset="utf-8" />
+  <title>悦己</title>
+  <!--好友评价-->
+  <!-- disable zooming -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <link rel="stylesheet" type="text/css" media="screen" href="css/mainV7.css"/>
+</head>
+<body>
+	<img src="images/share/share.jpg" width="10" height="10" id="shareImg">
+	<div id="loading">
+		<div class="main">
+		  <div class="heart">
+		    <span class='heartL'></span>
+		    <span class='heartR'></span>
+		    <span class='square'></span>
+		  </div>
+		  <div class="shadow"></div>
+		</div>
+	</div>
+
+
+	<!--显示测试结果 start-->
+	<div id="result" class="career hide short">
+		<div class="outer">
+			<!--插画-->
+			<div class="chahua">
+				<img src="" alt="" width="72.5%">
+			</div>
+			<!--头像-->
+			<div class="face">
+				<div class="img" style="background-image:url(images/touxiang.png)">
+				</div>
+				<div class="text"></div>
+			</div>
+			<div class="result-text">
+				<div class="part-0" id="data-part-0">
+					<div class="title"></div>
+					<div class="content"></div>
+				</div>
+				<div class="part-1" id="data-part-1">
+					<div class="title">在职业生涯中你的自信来源于什么</div>
+					<div class="content"></div>
+				</div>
+				<div class="part-1" id="data-part-2">
+					<div class="title">在家庭和工作之间你更倾向于工作</div>
+					<div class="content"></div>
+				</div>
+				<div class="part-1" id="data-part-3">
+					<div class="title" id="yalizhishu">
+						<div class="left no">60</div>
+						<div class="left">+</div>
+						<span class="right">你目前的工作压力指数</span>
+						<div class="clear"></div>
+					</div>
+					<div class="content"></div>
+				</div>
+				<div class="part-1" id="data-part-emotion">
+					<div class="title">
+						<div class="left">你在婚姻中的牺牲程度</div>
+						<span class="right"></span>
+						<div class="clear"></div>
+					</div>
+					<div class="content"></div>
+				</div>
+				<div class="part-1" id="data-part-beauty-0">
+					<div class="title">
+						<div class="left">对美的<br/>理解</div>
+						<span class="right">烟支</span>
+						<div class="clear"></div>
+					</div>
+					<div class="content"></div>
+				</div>
+				<div class="part-1" id="data-part-beauty-1">
+					<div class="title">
+						<div class="left">追求美的<br/>行动力</div>
+						<span class="right">强</span>
+						<div class="clear"></div>
+					</div>
+					<div class="content"></div>
+				</div>
+				<div class="part-1" id="data-part-4">
+					<div class="title">秘语</div>
+					<div class="content"></div>
+				</div>
+			</div>
+			<div class="share-text">
+				<div id="evaluateArea">
+					<div class="text-1">
+						你觉得这一描述像她吗？
+					</div>
+					<div class="btn-area">
+						<div class="left">
+							<span></span>
+						</div>
+						<div class="right">
+							<span></span>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<div class="text-0">已有<span id="no-total">582</span>个闺蜜做出评价</div>
+				<div class="cert">
+					<div class="left">
+						<div class="style1"><span>60</span>%</div>
+						<div class="style2">闺蜜认为像</div>
+					</div>
+					<div class="right">
+						<div class="style1"><span>40</span>%</div>
+						<div class="style2">闺蜜认为不像</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="text-2">
+					结果准不准？闺蜜最知晓！<br/>分享给闺蜜评价一下吧~
+				</div>
+				<div class="shre-btn">立即分享</div>
+
+				<div class="btn-showAllPart">
+					解读密语
+				</div>
+			</div>
+		</div>
+		<div class="btn-bottom-result">
+			<div class="btn-MyTest">
+				<div>我的测试</div>
+			</div>
+			<div class="btn-Description">
+				<div>活动规则</div>
+			</div>
+		</div>
+	</div>
+	<!--显示测试结果 end-->
+
+	<div id="shupingtixing">
+		
+	</div>
+	<div id="Description">
+		<div class="page hide" id="Description-page-0">
+			<div class="text-0">
+				<img src="images/des/p0-0.png" alt="" height="100%">
+			</div>
+			<div class="text-1">
+				<img src="images/des/p0-1.png" alt="" height="100%">
+			</div>
+			<div class="text-2">
+				<img src="images/des/p0-2.png" alt="" height="100%">
+			</div>
+			<div class="arrow">
+				<img src="images/des/arrow.png" alt="" height="100%">
+			</div>
+		</div>
+		<div class="page hide" id="Description-page-1">
+			<div class="text-0">
+				<img src="images/des/p1-0.png" alt="" height="100%">
+			</div>
+			<div class="text-1">
+				<img src="images/des/p1-1.png" alt="" height="100%">
+			</div>
+			<div class="text-2">
+				<img src="images/des/p1-2.png" alt="" height="100%">
+			</div>
+			<div class="text-3">
+				<img src="images/des/p1-3.png" alt="" height="100%">
+			</div>
+		</div>
+		<div class="close">
+			<span></span>
+		</div>
+	</div>
+	
+	<div id="shareTips"></div>
+
+	 <script src="js/jquery-2.1.3.min.js"></script>
+
+	 <script src="js/jgestures.min.js"></script>
+	 <script src="js/jquery.touchSwipe.min.js"></script>
+	 <script src="js/utils.js"></script>
+	
+  	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script>
+
+		var share = [
+			{
+				"img":"images/share/share.jpg",
+				"title":"裸心密境/发现真实的自己",
+				"desc":["测试你潜意识里的性格"]
+			},{
+				"img":"images/share/share.jpg",
+				"title":"裸心密境/发现真实的自己",
+				"desc":["情感/美丽/职场全方位洞悉女性潜意识里的型格。快开启你的发现之旅吧！"]
+			},{
+				"img":"images/share/zcwml.jpg",
+				"title":"职场武媚娘",
+				"desc":["我工作上霸气外露，是当之无愧的职场武媚娘！你也来测测吧！","我总能Duang一下就把工作搞定，实属职场武媚娘！你也来测测吧！","我工作起来颇有女皇范儿，堪称职场武媚娘。你也来测测吧！"]
+			},{
+				"img":"images/share/rxcn.jpg",
+				"title":"任性才女",
+				"desc":["我工作但求问心无愧，实乃任性才女！你也来测测吧！","我是任性才女，工作上坚持原则从不溜须拍马~你也来测测吧！","我在职场上忠于自我，不愧是任性才女！你也来测测吧！"]
+			},{
+				"img":"images/share/zcbzn.jpg",
+				"title":"职场不争女",
+				"desc":["我对工作表现的十分淡定，是典型的职场不争女。你也来测测吧！","作为职场不争女，竞争压力对我来说都是浮云。你也来测测吧！","职场不争女说的就是我这般温顺乖巧的女纸~你也来测测吧！"]
+			},{
+				"img":"images/share/yw.jpg",
+				"title":"御物女",
+				"desc":["我坚信没有物质爱情免谈，是典型的御物女。你也来测测吧！","有钱才能任性爱，我是当之无愧的御物女。你也来测测吧！","作为御物女我坦言，物质是爱情的前提保证~你也来测测吧！"]
+			},{
+				"img":"images/share/efzy.jpg",
+				"title":"爱情合伙人",
+				"desc":["我与伴侣同甘共苦，是爱情合伙人的典范。你也来测测吧！","作为爱情合伙人，我对另一半并无太苛刻的要求。你也来测测吧！","我愿与另一半共同奋斗，是典型的爱情合伙人。你也来测测吧！"]
+			},{
+				"img":"images/share/can.jpg",
+				"title":"纯爱女",
+				"desc":["我不求高富帅只求真心人，是典型纯爱女。你也来测测吧！","我是个纯爱女，憧憬你是风儿我是沙的爱情。你也来测测吧！","我为真爱可以舍弃一切，是纯爱女的典范！你也来测测吧！"]
+			},{
+				"img":"images/share/jdyh.jpg",
+				"title":"绝代艳后",
+				"desc":["我以美武装征服四方，当属绝代艳后！你也来测测吧！","我的石榴裙下跪拜无数，是当之无愧的绝代艳后！你也来测测吧！","我的美颇有绝代艳后气质，令人甘愿臣服。你也来测测吧！"]
+			},{
+				"img":"images/share/ts.jpg",
+				"title":"天使艾米莉",
+				"desc":["我简单纯粹，美好如天使艾米莉一般！你也来测测吧！","我的美独具一格，犹如天使艾米莉。你也来测测吧！","我古灵精怪惹人爱，就像天使艾米莉。你也来测测吧！"]
+			},{
+				"img":"images/share/znl.jpg",
+				"title":"赞女郎",
+				"desc":["我贯彻“女为悦己者容”的美丽哲学，收获赞女郎称号。你也来测测吧！","经测试我的美丽型格是赞女郎，点赞党们请自觉点赞！你也来测测吧！","我是典型赞女郎，po图没有赞的话她会很忧桑哦~你也来测测吧！"]
+			}
+		];
+		var urlFix = location.href.slice(0,location.href.split("?")[0].lastIndexOf("/")+1);
+		 //分享链接的缩略图
+		var imgUrl = urlFix + 'images/share/share.jpg';
+		//分享链接的链接地址
+		var lineLink = location.href;
+		//分享链接的描述信息
+		var descContent;
+		//分享链接的标题
+		var shareTitle;
+		//是否微信
+		var isWeixin = is_weixin();
+
+		function is_weixin(){
+			var ua = navigator.userAgent.toLowerCase();
+			if(ua.match(/MicroMessenger/i)=="micromessenger") {
+				return true;
+		 	} else {
+				return false;
+			}
+		}
+
+
+	function makeShare(index){
+		imgUrl = urlFix + share[index].img;
+		if (index === 0){
+			shareTitle = share[index].desc[0];
+			descContent = share[index].title;
+		}
+		else if (index === 1){
+			shareTitle = share[index].desc[0];
+			descContent = share[index].title;
+		}
+		else{
+			var r = Math.round(Math.random()*2);
+			shareTitle = "裸心密境/发现真实的自己";
+			descContent = share[index].desc[r];
+		}
+
+		wx.ready(function(){
+			//朋友圈
+			wx.onMenuShareTimeline({
+				title: descContent, // 分享标题
+				link: lineLink, // 分享链接
+				imgUrl: imgUrl, // 分享图标
+				success: function () {
+					// 用户确认分享后执行的回调函数
+
+				},
+				cancel: function () {
+					// 用户取消分享后执行的回调函数
+				}
+			});
+
+			wx.onMenuShareAppMessage({
+				title: shareTitle, // 分享标题
+				desc: descContent, // 分享描述
+				link: lineLink, // 分享链接
+				imgUrl: imgUrl, // 分享图标
+				type: '', // 分享类型,music、video或link，不填默认为link
+				dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+				success: function () {
+					// 用户确认分享后执行的回调函数
+					//alert("分享给朋友成功");
+				},
+				cancel: function () {
+					// 用户取消分享后执行的回调函数
+				}
+			});
+		});
+		//console.log(imgUrl,shareTitle,descContent);
+	}
+
+		//微信分享
+		if (isWeixin){
+			(function(){
+				$.ajax({
+					'url': 'http://application.cntraveler.com.cn/weixin/api/getSign.php',
+					'type': 'get',
+					'dataType': 'jsonp',
+					'data': {"site": 'self',"url":window.location.href.split('#')[0]},
+		            'success' : function(data){
+		                wx.config({
+						    //debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+						    appId: data.appId, // 必填，公众号的唯一标识
+						    timestamp: data.timestamp, // 必填，生成签名的时间戳
+						    nonceStr: data.nonceStr, // 必填，生成签名的随机串
+						    signature: data.signature,// 必填，签名，见附录1
+						    jsApiList: ["onMenuShareTimeline","onMenuShareAppMessage"] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+						});
+		            }
+				});
+
+				
+				wx.error(function(res){
+
+				    // config信息验证失败会执行error函数，如签名过期导致验证失败，具体错误信息可以打开config的debug模式查看，也可以在返回的res参数中查看，对于SPA可以在这里更新签名。
+				});
+			})();
+		}
+		else{
+			$("#evaluateArea,.share-text .text-0,.share-text .cert").hide();
+		}
+		
+	var VIEW_WIDTH = 0,
+		VIEW_HEIGHT = 0,
+		LocString=String(window.document.location.href); 
+
+
+	var pfx = ["webkit", "moz", "MS", "o", ""];
+	function PrefixedEvent_add(element, type, callback) {
+		for (var p = 0; p < pfx.length; p++) {
+			if (!pfx[p]) type = type.toLowerCase();
+			element.addEventListener(pfx[p]+type, callback, false);
+		}
+	}
+	function PrefixedEvent_remove(element, type, callback) {
+		for (var p = 0; p < pfx.length; p++) {
+			if (!pfx[p]) type = type.toLowerCase();
+			element.removeEventListener(pfx[p]+type, callback, false);
+		}
+	}
+
+	var imgLoad = function(url, callback) {
+		var img = new Image();
+
+		img.src = url;
+		if (img.complete) {
+			callback();
+		} else {
+			img.onload = function() {
+				callback();
+				img.onload = null;
+			};
+		};
+	};
+
+
+	//修改宽和高的变量
+	function resizeWindow(){
+		VIEW_WIDTH = $(window).outerWidth();
+		VIEW_HEIGHT = $(window).outerHeight();
+	}
+
+	function getQueryStr(LocString,str){  
+        var rs = new RegExp("(^|)"+str+"=([^\&]*)(\&|$)","gi").exec(LocString), tmp;  
+        if(tmp=rs){  
+            return tmp[2];  
+        }  
+        return "";  
+	}  
+
+	$(document).ready(function(){
+
+		resizeWindow();
+
+		//活动介绍
+		$(".btn-Description").bind('tapone',function(){
+			$("#Description").show();
+		});
+		$("#Description .close").bind('tapone',function(){
+			$("#Description").hide();
+		});
+
+		$(".btn-showAllPart").bind('tapone',function(){
+			$(this).remove();
+			$("#result").removeClass('short');
+		});
+		var id = getQueryStr(LocString,"aid");
+		//获取数据
+		$.post('lib/api.php?f=getTest', {"id":id}, function(data, textStatus, xhr) {
+			/*optional stuff to do after success */
+			//console.log(data);
+			if (data.typename){
+				//测试领域
+				switch (data.typename){
+					case "career":
+						$("#result").addClass('career').removeClass('beauty').removeClass('emotion');
+						break;
+					case "beauty":
+						$("#result").addClass('beauty').removeClass('career').removeClass('emotion');
+						break;
+					case "emotion":
+						$("#result").addClass('emotion').removeClass('career').removeClass('beauty');
+						break;
+				}
+				//头像
+				if (data.headimgurl != ""){
+					$("#result .face").show();
+					var m = data.headimgurl;
+					m = m.slice(0,m.lastIndexOf("/")) + '/96';
+					$("#result .face .img").css("background-image","url("+m+")");
+				}
+				else{
+					$("#result .face").hide();
+				}
+				//插画
+				var chahua_url = '';
+				
+						switch (data.part1.title){
+							case "职场武媚娘":
+								chahua_url = 'images/colorChahua/zcwml.png';
+								makeShare(2);
+								break;
+							case "任性才女":
+								chahua_url = 'images/colorChahua/rxcn.png';
+								makeShare(3);
+								break;
+							case "职场不争女":
+								chahua_url = 'images/colorChahua/zcbzn.png';
+								makeShare(4);
+								break;
+							case "御物女":
+								chahua_url = 'images/colorChahua/yw.png';
+								makeShare(5);
+								break;
+							case "爱情合伙人":
+								chahua_url = 'images/colorChahua/efzy.png';
+								makeShare(6);
+								break;
+							case "纯爱女":
+								chahua_url = 'images/colorChahua/can.png';
+								makeShare(7);
+								break;
+							case "绝代艳后":
+								chahua_url = 'images/colorChahua/jdyh.png';
+								makeShare(8);
+								break;
+							case "赞女郎":
+								chahua_url = 'images/colorChahua/znl.png';
+								makeShare(10);
+								break;
+							case "天使艾米莉":
+								chahua_url = 'images/colorChahua/ts.png';
+								makeShare(9);
+								break;
+							default :
+								chahua_url = 'images/colorChahua/zcwml.png';
+								makeShare(2);
+								break;
+						}
+				$("#result .chahua img").attr("src",chahua_url);
+				//用户名
+				$("#result .face .text").html(data.nickname);
+				//测试结果
+				$("#data-part-0 .title").html(data.part1.title);
+				$("#data-part-0 .content").html(data.part1.desc);
+
+				
+				//参与总人数
+				$("#no-total").html(data.friends);
+				//var like = ~~(data.like *100 /data.friends);
+				$(".share-text .cert .left span").html(data.like);
+				$(".share-text .cert .right span").html(data.unlike);
+
+				//如果不是自己来访问
+				if (data.isme === 0){
+					$("#result").addClass('notme');
+					$("#result .shre-btn").html("开始你的测试");
+					$("#data-part-1,#data-part-2,#data-part-3,#data-part-4,#data-part-emotion,#data-part-beauty-0,#data-part-beauty-1").remove();
+				}
+				else{
+					$(".btn-showAllPart").show();
+					if (data.typename == 'emotion'){
+						//情感
+						$("#data-part-emotion .right").html(data.part2.title);
+						$("#data-part-emotion .content").html(data.part2.desc);
+						$("#data-part-4 .content").html(data.part1.propose); //密语
+					}
+					else if(data.typename == 'career'){
+						//职场
+						$("#data-part-1 .title").html(data.part2.title);
+						$("#data-part-1 .content").html(data.part2.desc);
+						$("#data-part-2 .title").html(data.part3.title);
+						$("#data-part-2 .content").html(data.part3.desc);
+						$("#data-part-3 .content").html(data.part4.desc);
+						$("#data-part-3 .no").html(data.part4.ratio);
+						$("#data-part-4 .content").html(data.part1.propose); //密语
+					}
+					else if(data.typename == 'beauty'){
+						//美丽
+						$("#data-part-beauty-0 .right").html(data.part2.title);
+						$("#data-part-beauty-0 .content").html(data.part2.desc);
+						$("#data-part-beauty-1 .right").html(data.part3.title);
+						$("#data-part-beauty-1 .content").html(data.part3.desc);
+						$("#data-part-4 .content").html(data.part1.propose); //密语
+					}
+				}
+
+				$("#loading").hide();
+				$("#result").show();
+			}
+		},"json");
+		
+		function ref_likedata(){
+			$.get('lib/api.php?f=getLike&id='+id , function(data, textStatus, xhr) {
+					/*optional stuff to do after success */
+					if (data.status == 1){
+
+						$("#no-total").html(data.data.friends);
+						if (data.data.friends == 0){
+							$(".share-text .cert").hide();
+						}
+						else{
+							//var like = ~~(data.like *100 /data.friends);
+							$(".share-text .cert .left span").html(data.data.like);
+							$(".share-text .cert .right span").html(data.data.unlike);
+							$(".share-text .cert").show();
+						}
+					}
+					else{
+						alert("程序出错啦！");
+					}
+				},"json");
+		}
+		var isloading = false;
+		//像
+		$("#evaluateArea .btn-area .left").bind('tapone',function(){
+			if (isloading){
+				return false;
+			}
+			isloading = true;
+			$.post('lib/api.php?f=setLike', {
+				"id":id,
+				"type": 1
+			}, function(data, textStatus, xhr) {
+				/*optional stuff to do after success */
+				ref_likedata();
+				isloading = false;
+			});
+		});
+		//不像
+		$("#evaluateArea .btn-area .right").bind('tapone',function(){
+			if (isloading){
+				return false;
+			}
+			isloading = true;
+			$.post('lib/api.php?f=setLike', {
+				"id":id,
+				"type": 0
+			}, function(data, textStatus, xhr) {
+				/*optional stuff to do after success */
+				ref_likedata();
+				isloading = false;
+			});
+			
+		});
+		//活动介绍
+		$(".btn-Description").bind('tapone',function(){
+			$("#Description").show();
+			setTimeout(function(){
+				showDescriptionPage(0);
+			},10);
+		});
+		$("#Description .close").bind('tapone',function(){
+			$("#Description").hide();
+			$("#Description-page-0,#Description-page-1").css({"top":"100%","opacity":0});
+		});
+		function showDescriptionPage(index){
+			var speed = 600;
+			if (index == 0){
+				$("#Description-page-0").stop().animate({top: "0%",opacity:1},
+					speed, function() {
+					/* stuff to do after animation is complete */
+				});
+				$("#Description-page-1").stop().animate({top: "100%",opacity:0},speed,function(){});
+			}
+			else if (index == 1){
+				$("#Description-page-0").stop().animate({top: "-100%",opacity:0},speed,function(){});
+				$("#Description-page-1").stop().animate({top: "0%",opacity:1},
+					speed, function() {
+					/* stuff to do after animation is complete */
+				});
+			}
+		}
+		$("#Description").swipe( {
+        	//Generic swipe handler for all directions
+	        swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+	          //console.log("You swiped " + direction );  
+	          if (direction == "up"){
+				showDescriptionPage(1);
+	          }
+	          else if (direction == "down"){
+				showDescriptionPage(0);
+	          }
+	        }
+	      });
+		/*
+		$("#Description").bind('swipeup swiperightup swipeleftup',function(event){
+			event.preventDefault();
+			event.stopPropagation();
+			showDescriptionPage(1);
+		});
+		$("#Description").bind('swipedown swiperightdown swipeleftdown',function(event){
+			event.preventDefault();
+			event.stopPropagation();
+			showDescriptionPage(0);
+		});
+		*/
+		$("#Description-page-0 .arrow").bind('tapone',function(){
+			event.preventDefault();
+			event.stopPropagation();
+			showDescriptionPage(1);
+		});
+		//继续测试
+		$(".btn-MyTest").bind('tapone',function(){
+			window.location = "index.php";
+		});
+		//立即分享
+		$(".shre-btn").bind('tapone',function(){
+			if ($("#result").hasClass('notme')){
+				window.location = "index.php";
+				return false;
+			}
+			else{
+				$("#shareTips").show();
+				setTimeout(function(){
+					$("#shareTips").hide();
+				},1500);
+			}
+		});
+
+	});
+	</script>
+
+    <!--艾瑞-->
+    <script type="text/javascript">
+		var _iwt_UA="UA-self-000001";
+		(function (D) {
+		var h=D.getElementsByTagName('head')[0],
+		s=D.createElement('script');
+		s.type='text/javascript';
+		s.charset='utf-8';
+		s.src='http://img.self.com.cn/themes/self/selftheme/js_v1/iwt.js';
+		h.firstChild?h.insertBefore(s,h.firstChild):h.appendChild(s);
+		})(document);
+	</script>
+
+    <!--GA-->
+    <script type="text/javascript">
+    try {
+        var _gaq = _gaq || [];    
+        _gaq.push(['selfTracker._setAccount', 'UA-1848314-1']);
+        _gaq.push(['selfTracker._setDomainName', '.self.com.cn']);
+        _gaq.push(function() {
+            var selfTracker = _gat._getTrackerByName('selfTracker');
+            if(window._s_c_d_) {
+                _s_c_d_.detectChannel(selfTracker);
+            }
+         });
+        _gaq.push(['selfTracker._setAllowHash', false]);
+        _gaq.push( ['selfTracker._trackPageview']);
+    } catch(err) {}
+    </script>
+    <script type="text/javascript">  (function() {
+        var ga = document.createElement('script');  ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:'   == document.location.protocol ? 'https://ssl'   : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    <!--CNC统计-->
+    <script type="text/javascript" src="http://js.selfimg.com.cn/statistics/total.js"></script>
+    <!--百度-->
+    <script type="text/javascript">
+    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F6f33fbaa77cc1f26cabae24ffe94f1f0' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <!-- Alexa Certify -->
+    <script type="text/javascript">
+    _atrk_opts = { atrk_acct:"eZk/j1a0Sn00qm", domain:"self.com.cn",dynamic: true};
+    (function() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js"; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as, s); })();
+    </script>
+    <noscript><img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=eZk/j1a0Sn00qm" style="display:none" height="1" width="1" alt="" /></noscript>
+    <!--#页尾 END --> 
+</body>
+</html>

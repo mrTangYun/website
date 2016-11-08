@@ -1,0 +1,83 @@
+/*声明 WebFont*/
+@font-face {
+  font-family: 'fzzhjt';
+  src: url('../font/fzzhjt.eot');
+  src:
+    url('../font/fzzhjt.eot?#font-spider') format('embedded-opentype'),
+    url('../font/fzzhjt.woff') format('woff'),
+    url('../font/fzzhjt.ttf') format('truetype'),
+    url('../font/fzzhjt.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.page_text{}
+.page_text .intro0{
+  font-size: 50.04px;
+}
+.page_text .intro1{
+  font-size: 31.17px;
+}
+.page_text .intro2{
+  font-size: 61.89px;
+}
+.intro_p4{
+  
+}
+.intro_p4 tspan:nth-child(1){
+  font-size: 3.5em;
+}
+.intro_p4 tspan:nth-child(2){
+  font-size: 3em;
+}
+svg{
+  margin: 0 auto;
+}
+
+.intro_g11{
+  font-size: 32.59px;
+}
+
+#share{
+  position: absolute;
+  bottom: 35px;
+  width: 100% ;
+  text-align: center;
+  margin: 0 auto;
+  display: none;
+  z-index: 3;
+}
+#share a{
+  display: inline-block;
+  width: 40%;
+  font-size: 1em;
+  color: #c7a046;
+  text-decoration: none;
+  border-radius: .3em;
+  border: 1px solid #c7a046;
+  padding: .8em .5em;
+}
+
+        body,html {
+          margin: 0;
+          padding: 0;
+            background: #fff;
+            font-family: 'fzzhjt';
+            text-align: center;
+        }
+        body{
+          background-image: url(../images/html-bg.jpg);
+          background-size: 100% 100%;
+          background-repeat: no-repeat;
+        }
+        
+#milkDiv{
+  width: 5em;
+  height: 5em;
+  background-color: red;
+  position: absolute;
+  top: -171px;
+  left: 230px;
+  /*display: none;*/
+
+}
