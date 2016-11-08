@@ -145,10 +145,10 @@ html,body{
 }
 .project:hover .tips .link{
 	transition-delay: .1s;
-	color: #fff;
+	color: #eee;
 	opacity: 1;
 }
 .project:hover .tips .link:hover{
-	color: #0166bf;
-
+	/*color: #0166bf;*/
+	color: #00daff;
 }
