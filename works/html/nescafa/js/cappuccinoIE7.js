@@ -905,7 +905,8 @@ $(document).ready(function() {
 	});
 	//全部发布
 	$("#submitWord").click(function() {
-
+		cappuccino.goToPage("sent-ok");
+		return false;
 		if ($("#input_friend").val().length == 0 || $("#status").val().length == 0) {
 			alert("请@一位好友，并说出你的心意");
 			return false;
