@@ -783,7 +783,7 @@ $(document).ready(function() {
 				
 				media.addEventListener(events[i], function(e) {
 					//console.log(e.type);
-					SUDA.uaTrack("ebusiness_apps","2240206400:92069987:other1_video::::"+e.type);
+					//SUDA.uaTrack("ebusiness_apps","2240206400:92069987:other1_video::::"+e.type);
 					//$('#output').append( $('<div>' + e.type + '</div>') );
 				});
 				
@@ -801,49 +801,49 @@ $(document).ready(function() {
 		cappuccino.goToPage(cappuccino.defaultPage);
 	});
 	$("#logo").click(function() {
-		SUDA.uaTrack("ebusiness_apps",$(this).attr("suda-uatrack"));
+		//SUDA.uaTrack("ebusiness_apps",$(this).attr("//suda-uatrack"));
 		cappuccino.goToPage("start-holder");
 		return false;
 	}); //点击活动规则
 	$("#rule").click(function() {
-		SUDA.uaTrack("ebusiness_apps",$(this).attr("suda-uatrack"));
+		//SUDA.uaTrack("ebusiness_apps",$(this).attr("//suda-uatrack"));
 		cappuccino.goToPage("start-rule");
 		return false;
 	}); //点击活动规则
 	$("#lawer").click(function() {
-		SUDA.uaTrack("ebusiness_apps",$(this).attr("suda-uatrack"));
+		//SUDA.uaTrack("ebusiness_apps",$(this).attr("//suda-uatrack"));
 		cappuccino.goToPage("start-lawer");
 		return false;
 	}); //点击声明条款
 	$("#btn-start").click(function() {
-		SUDA.uaTrack("ebusiness_apps",$(this).attr("suda-uatrack"));
+		//SUDA.uaTrack("ebusiness_apps",$(this).attr("//suda-uatrack"));
 		cappuccino.goToPage("step-0");
 		return false;
 	}); //点击开始制作
 	$("#step_1").click(function() {
-		SUDA.uaTrack("ebusiness_apps",$(this).attr("suda-uatrack"));
+		//SUDA.uaTrack("ebusiness_apps",$(this).attr("//suda-uatrack"));
 		cappuccino.goToPage("step-1");
 		return false;
 	}); //撒入咖啡粉
 	$("#step_2").click(function() {
-		SUDA.uaTrack("ebusiness_apps",$(this).attr("suda-uatrack"));
+		//SUDA.uaTrack("ebusiness_apps",$(this).attr("//suda-uatrack"));
 		cappuccino.goToPage("step-2");
 		return false;
 	}); //倒入热水
 	$("#step_3").click(function() {
-		SUDA.uaTrack("ebusiness_apps",$(this).attr("suda-uatrack"));
+		//SUDA.uaTrack("ebusiness_apps",$(this).attr("//suda-uatrack"));
 		cappuccino.goToPage("step-3");
 		return false;
 	}); //用心搅拌
 	$("#step_4").click(function() {
-		SUDA.uaTrack("ebusiness_apps",$(this).attr("suda-uatrack"));
+		//SUDA.uaTrack("ebusiness_apps",$(this).attr("//suda-uatrack"));
 		cappuccino.goToPage("step-4");
 		return false;
 	}); 
 
 	//选择文字
 	$("#drawWord span").click(function(event) {
-		SUDA.uaTrack("ebusiness_apps",$(this).attr("suda-uatrack"));
+		//SUDA.uaTrack("ebusiness_apps",$(this).attr("//suda-uatrack"));
 		cappuccino.chooseTextIcon($(this).index("#drawWord span"), 1 ,'text');
 		event.stopPropagation();
 		return false;
@@ -861,7 +861,7 @@ $(document).ready(function() {
 	
 	//撒出你的心意
 	$("#rightControl li a").click(function(event) {
-		SUDA.uaTrack("ebusiness_apps",$(this).attr("suda-uatrack"));
+		//SUDA.uaTrack("ebusiness_apps",$(this).attr("//suda-uatrack"));
 		if ($(this).index("#rightControl li a") != 9) {
 			cappuccino.chooseIcon($(this).index("#rightControl li a"), 1);
 		}
@@ -887,19 +887,19 @@ $(document).ready(function() {
 
 	//重新选择图案
 	$("#resetCanvas").click(function() {
-		SUDA.uaTrack("ebusiness_apps",$(this).attr("suda-uatrack"));
+		//SUDA.uaTrack("ebusiness_apps",$(this).attr("//suda-uatrack"));
 		cappuccino.reDraw();
 		return false;
 	});
 	//绘制完成
 	$("#submitCanvas").click(function() {
-		SUDA.uaTrack("ebusiness_apps",$(this).attr("suda-uatrack"));
+		//SUDA.uaTrack("ebusiness_apps",$(this).attr("//suda-uatrack"));
 		cappuccino.createImg();
 		return false;
 	});
 	//返回绘制图案
 	$("#backToDraw").click(function() {
-		SUDA.uaTrack("ebusiness_apps",$(this).attr("suda-uatrack"));
+		//SUDA.uaTrack("ebusiness_apps",$(this).attr("//suda-uatrack"));
 		cappuccino.backToDraw();
 		return false;
 	});
@@ -910,7 +910,7 @@ $(document).ready(function() {
 			alert("请@一位好友，并说出你的心意");
 			return false;
 		};
-		SUDA.uaTrack("ebusiness_apps",$(this).attr("suda-uatrack"));
+		//SUDA.uaTrack("ebusiness_apps",$(this).attr("//suda-uatrack"));
 		//url,[data],[callback],[type]
 		$("#submitWord").hide();
 		/*
@@ -975,7 +975,7 @@ $(document).ready(function() {
 	});
 	//再发一张
 	$("#createNew").click(function() {
-		SUDA.uaTrack("ebusiness_apps",$(this).attr("suda-uatrack"));
+		//SUDA.uaTrack("ebusiness_apps",$(this).attr("//suda-uatrack"));
 		cappuccino.createNew();
 		//window.location.reload();
 		return false;
