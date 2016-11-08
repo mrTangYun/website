@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>超极本焕新季</title>
+<link rel="stylesheet" type="text/css" href="css/common.css" />
+<link rel="stylesheet" type="text/css" href="css/css2.css" />
+<script type="text/javascript" src="js/jquery-1.7.js"></script>
+<script>
+	function getQuerySring(name){
+		var regexp = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+		var match = window.location.search.substr(1).match(regexp);
+		if (match != null) return decodeURIComponent(match[2]); return null;
+	};
+
+	var browser={    
+				versions:function(){            
+				var u = navigator.userAgent, app = navigator.appVersion;            
+				return {                
+				trident: u.indexOf('Trident') > -1, //IE内核                
+				presto: u.indexOf('Presto') > -1, //opera内核                
+				webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核                
+				gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核                
+				mobile : !!u.match(/AppleWebKit.*Mobile/) || !!u.match(/Windows Phone/) || !!u.match(/Android/) || !!u.match(/MQQBrowser/), //是否为移动终端                
+				ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端                
+				android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器                
+				iPhone: u.indexOf('iPhone') > -1, //是否为iPhone或者QQHD浏览器                
+				iPad: u.indexOf('iPad') > -1, //是否iPad                
+				webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部            
+				};
+				}()
+			} 
+		if(browser.versions.mobile||browser.versions.ios
+				||browser.versions.android||browser.versions.iPhone
+				||browser.versions.iPad ){
+			
+		}else{
+			//web版
+			var p = getQuerySring("p");
+			if(p==null || p==""){
+				p = "0";
+			}
+			//window.location = "../index.html?p="+p;
+			//window.location = "../index.html?"+window.location.search.substr(1);
+		}
+
+</script>
+<script>
+$(function(){
+	var videoname = 
+	[
+		"images/v1.mp4","images/v2.mp4","images/v3.mp4","images/v4.mp4","images/v5.mp4"
+	];
+	$(".play").click(function(e) {
+        $(".player").show().get(0).play();
+		$(".open,.end,.play").hide()
+    });
+	$(".nav div").click(function(e) {
+		$(".open,.play,.end").hide();
+		for(var i =1; i<=5;i++){
+        	$(".nav div").removeClass("n" + i + "_s");
+		}
+		var c = $(this).index()+1;
+		$(".player").attr("src",videoname[c-1]).show().get(0).play();
+		$(this).addClass("n"+ c +"_s");
+    });
+	
+	function resize(){
+		var w = $(window).width();
+		var m = (w-1024)/2;	
+		$(".jkhx").css("right",m)
+	}
+	resize();
+	$(window).resize(function(){
+		resize();	
+	});
+	$(".link_mabi,.jkhx").click(function(e) {
+        var s='s_gs()'; 
+		waCustomLink(this,'id_consumer_ultrabook','e','wa_iid=consumer:zh_cn:ultrabook:360buy_online');
+		waTrackAsLink('prc_ultrabook_links','o','wa_eCustom10=shop:buy_referral&wa_events=se_points');
+    });
+	//锚点
+	$(function(){
+		var p = getQuerySring("p");
+		if(p==null || p==""){
+			p = 0;
+		}	
+		var dic = [1,2,4,6,8];
+		var top = $(".s"+dic[parseInt(p)]).offset().top-65;
+		$("body,html").scrollTop(top);
+	});
+});
+function end(){
+	$(".open,.player").hide();
+	$(".end,.play").show();
+};
+</script>
+</head>
+<body>
+<div id="header">
+<!--#include virtual="/sites/sitewide/zh_CN/inc/gh_home.inc" -->
+</div>
+<a onclick="var s='s_gs()'; waCustomLink(this,'id_ipad_consumer_ultrabook','e','wa_iid=consumer:zh_cn:ultrabook:jd_online');waTrackAsLink('prc_ultrabook_links','o','wa_eCustom10=shop:buy_referral&wa_events=se_points');" href="http://sale.jd.com/act/Sq28en1QoWD0T.html#vps=shop:browse" target="_blank" class="jkhx"></a>
+<div class="container">
+	<div class="s s1">
+    	<div class="video">
+        	<img class="open" src="images/open.jpg" />
+           	<a onclick="var s='s_gs()'; waCustomLink(this,'id_ipad_consumer_ultrabook','e','wa_iid=consumer:zh_cn:ultrabook:jd_online');waTrackAsLink('prc_ultrabook_links','o','wa_eCustom10=shop:buy_referral&wa_events=se_points');" target="_blank" href="http://sale.jd.com/act/Sq28en1QoWD0T.html#vps=shop:browse"><img class="end" src="images/end.jpg" /></a>
+            <img class="play" src="images/play.png" />
+            <video src="images/v2.mp4" onended="end()" width="860" height="510" controls="controls" class="player"></video>
+        </div>
+        <div class="nav">
+        	<div class="n1 n1_s"></div>
+            <div class="n2"></div>
+            <div class="n3"></div>
+            <div class="n4"></div>
+            <div class="n5"></div>
+        </div>
+    </div>
+    <div class="s s4">
+	    <a onclick="var s='s_gs()'; waCustomLink(this,'id_ipad_consumer_ultrabook','e','wa_iid=consumer:zh_cn:ultrabook:jd_online');waTrackAsLink('prc_ultrabook_links','o','wa_eCustom10=shop:buy_referral&wa_events=se_points');" href="http://sale.jd.com/act/Sq28en1QoWD0T.html" target="_blank" class="link_mabi s4_link"></a>
+    </div>
+    <div class="s s2">
+	    <a onclick="var s='s_gs()'; waCustomLink(this,'id_ipad_consumer_ultrabook','e','wa_iid=consumer:zh_cn:ultrabook:jd_online');waTrackAsLink('prc_ultrabook_links','o','wa_eCustom10=shop:buy_referral&wa_events=se_points');" href="http://sale.jd.com/act/Sq28en1QoWD0T.html" target="_blank" class="link_mabi s2_link"></a>
+    </div>
+    <div class="s s6">
+    	<a onclick="var s='s_gs()'; waCustomLink(this,'id_ipad_consumer_ultrabook','e','wa_iid=consumer:zh_cn:ultrabook:jd_online');waTrackAsLink('prc_ultrabook_links','o','wa_eCustom10=shop:buy_referral&wa_events=se_points');" href="http://sale.jd.com/act/Sq28en1QoWD0T.html" target="_blank" class="link_mabi s6_link"></a>
+    </div>
+    <div class="s s6-1">
+    	<a onclick="var s='s_gs()'; waCustomLink(this,'id_ipad_consumer_ultrabook','e','wa_iid=consumer:zh_cn:ultrabook:jd_online');waTrackAsLink('prc_ultrabook_links','o','wa_eCustom10=shop:buy_referral&wa_events=se_points');" href="http://sale.jd.com/act/Sq28en1QoWD0T.html" target="_blank" class="link_mabi s6_1_link"></a>
+    </div>
+    <div class="s s3">
+    	<a onclick="var s='s_gs()'; waCustomLink(this,'id_ipad_convertible_ultrabook_lenovo-yoga','e','wa_iid=consumer:zh_cn:ultrabook:jd_online:lenovo-yoga');waTrackAsLink('prc_ultrabook_links','o','wa_eCustom10=shop:buy_referral&wa_events=se_points');" href="http://item.jd.com/914007.html#none" target="_blank" class="link_mabi s3_link1"></a>
+        <a onclick="var s='s_gs()'; waCustomLink(this,'id_ipad_convertible_ultrabook_asus-taichi','e','wa_iid=consumer:zh_cn:ultrabook:jd_online:asus-taichi');waTrackAsLink('prc_ultrabook_links','o','wa_eCustom10=shop:buy_referral&wa_events=se_points');" href="http://item.jd.com/854345.html" target="_blank" class="link_mabi s3_link2"></a>
+        <a onclick="var s='s_gs()'; waCustomLink(this,'id_ipad_convertible_ultrabook_acer-p3','e','wa_iid=consumer:zh_cn:ultrabook:jd_online:acer-p3');waTrackAsLink('prc_ultrabook_links','o','wa_eCustom10=shop:buy_referral&wa_events=se_points');" href="http://item.jd.com/829372.html" target="_blank" class="link_mabi s3_link3"></a>
+        <a onclick="var s='s_gs()'; waCustomLink(this,'id_ipad_convertible_ultrabook_thinkpad-s230u','e','wa_iid=consumer:zh_cn:ultrabook:jd_online:thinkpad-s230u');waTrackAsLink('prc_ultrabook_links','o','wa_eCustom10=shop:buy_referral&wa_events=se_points');" href="http://item.jd.com/754012.html" target="_blank" class="link_mabi s3_link4"></a>
+    	<!--交换人生-->
+    	<a onclick="var s='s_gs()'; waCustomLink(this,'id_ipad_convertible_ultrabook_lenovo-yoga','e','wa_iid=consumer:zh_cn:ultrabook:jd_online:lenovo-yoga');waTrackAsLink('prc_ultrabook_links','o','wa_eCustom10=shop:buy_referral&wa_events=se_points');" href="http://prcappzone.intel.com/ultrabook/exchangelife/" target="_blank" class="link_mabi s3_link1_jh"></a>
+        <a onclick="var s='s_gs()'; waCustomLink(this,'id_ipad_convertible_ultrabook_asus-taichi','e','wa_iid=consumer:zh_cn:ultrabook:jd_online:asus-taichi');waTrackAsLink('prc_ultrabook_links','o','wa_eCustom10=shop:buy_referral&wa_events=se_points');" href="http://prcappzone.intel.com/ultrabook/exchangelife/"></a>
+        <a onclick="var s='s_gs()'; waCustomLink(this,'id_ipad_convertible_ultrabook_acer-p3','e','wa_iid=consumer:zh_cn:ultrabook:jd_online:acer-p3');waTrackAsLink('prc_ultrabook_links','o','wa_eCustom10=shop:buy_referral&wa_events=se_points');" href="http://prcappzone.intel.com/ultrabook/exchangelife/" target="_blank" class="link_mabi s3_link3_jh"></a>
+    	<!--交换人生-->
+    </div>
+    <div class="s s5">
+    	<a onclick="var s='s_gs()'; waCustomLink(this,'id_ipad_touch_ultrabook_thinkpad-x1','e','wa_iid=consumer:zh_cn:ultrabook:jd_online:thinkpad-x1');waTrackAsLink('prc_ultrabook_links','o','wa_eCustom10=shop:buy_referral&wa_events=se_points');" href="http://item.jd.com/885975.html" target="_blank" class="link_mabi s5_link1"></a>
+        <a onclick="var s='s_gs()'; waCustomLink(this,'id_ipad_touch_ultrabook_asus-s400','e','wa_iid=consumer:zh_cn:ultrabook:jd_online:asus-s400');waTrackAsLink('prc_ultrabook_links','o','wa_eCustom10=shop:buy_referral&wa_events=se_points');" href="http://item.jd.com/925707.html" target="_blank" class="link_mabi s5_link2"></a>
+        <a onclick="var s='s_gs()'; waCustomLink(this,'id_ipad_touch_ultrabook_acer-s7','e','wa_iid=consumer:zh_cn:ultrabook:jd_online:acer-s7');waTrackAsLink('prc_ultrabook_links','o','wa_eCustom10=shop:buy_referral&wa_events=se_points');" href="" target="_blank" class="link_mabi s5_link3"></a>
+        <a onclick="var s='s_gs()'; waCustomLink(this,'id_ipad_touch_ultrabook_asus-s550','e','wa_iid=consumer:zh_cn:ultrabook:jd_online:asus-s550');waTrackAsLink('prc_ultrabook_links','o','wa_eCustom10=shop:buy_referral&wa_events=se_points');" href="http://item.jd.com/846325.html" target="_blank" class="link_mabi s5_link4"></a>
+    </div>
+    <div class="s s7">
+    	<a onclick="var s='s_gs()'; waCustomLink(this,'id_ipad_performance_ultrabook_ideapad-u410','e','wa_iid=consumer:zh_cn:ultrabook:jd_online:ideapad-u410');waTrackAsLink('prc_ultrabook_links','o','wa_eCustom10=shop:buy_referral&wa_events=se_points');" href="http://item.jd.com/852969.html" target="_blank" class="link_mabi s7_link1"></a>
+        <a onclick="var s='s_gs()'; waCustomLink(this,'id_ipad_performance_ultrabook_hp-pavilion 14','e','wa_iid=consumer:zh_cn:ultrabook:jd_online:hp-pavilion14');waTrackAsLink('prc_ultrabook_links','o','wa_eCustom10=shop:buy_referral&wa_events=se_points');" href="http://item.jd.com/899379.html" target="_blank" class="link_mabi s7_link2"></a>
+        <a onclick="var s='s_gs()'; waCustomLink(this,'id_ipad_performance_ultrabook_samsung-530u3','e','wa_iid=consumer:zh_cn:ultrabook:jd_online:samsung-530u3');waTrackAsLink('prc_ultrabook_links','o','wa_eCustom10=shop:buy_referral&wa_events=se_points');" href="http://item.jd.com/862239.html" target="_blank" class="link_mabi s7_link3"></a>
+        <a onclick="var s='s_gs()'; waCustomLink(this,'id_ipad_performance_ultrabook_dell-inspiron 14z','e','wa_iid=consumer:zh_cn:ultrabook:jd_online:dell-inspiron14z');waTrackAsLink('prc_ultrabook_links','o','wa_eCustom10=shop:buy_referral&wa_events=se_points');" href="http://item.jd.com/777347.html" target="_blank" class="link_mabi s7_link4"></a>
+    </div>
+    <div class="s s8">
+    	<a onclick="var s='s_gs()'; waCustomLink(this,'id_ipad_consumer_ultrabook','e','wa_iid=consumer:zh_cn:ultrabook:jd_online');waTrackAsLink('prc_ultrabook_links','o','wa_eCustom10=shop:buy_referral&wa_events=se_points');" href="http://sale.jd.com/act/Sq28en1QoWD0T.html#vps=shop:browse" target="_blank" class="link_mabi s8_link1"></a>
+        <a href="http://prcappzone.intel.com/ultrabook/exchangelife/" target="_blank" class="link_mabi s8_link3"></a>
+        <a href="http://prcappzone.intel.com/ultrabook/video.aspx#vps=shop:browse" target="_blank" class="link_mabi s8_link4"></a>
+    </div>
+</div>
+<div id="footer"><!--#include virtual="/sites/sitewide/zh_CN/inc/footer_10x7.inc" --></div>
+<script type="text/javascript">var p_contentcat="ssc:nav";</script>
+<script type="text/javascript" src="/scripts-include/wa/wa_setup.js"></script>      
+<script type="text/javascript" src="/cn/js/cim_setup.js"></script>                                                                  
+<script type="text/javascript" src="/cn/js/apac_setup.js"></script>
+<script type="text/javascript" src="/scripts-include/wa/wa_process.js"></script> 
+</body>
+</html>

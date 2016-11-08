@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>博尚广告</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="description" content="" />
+<style type="text/css">
+@import "css/digroup.css";
+@import "js/svg/jquery.svg.css";
+</style>
+<script src="js/jquery-1.7.1.min.js"></script>
+<script src="js/jquery.transit.js"></script>
+<script src="http://code.createjs.com/createjs-2013.02.12.min.js"></script>
+
+<script src="js/digroup.js"></script>
+<!--[if lte IE 6]> 
+	<script type="text/javascript" src="js/iepngfix_tilebg.js"></script>
+<![endif]--> 
+<!--[if IE]>
+	<script type="text/javascript" src="js/html5.js"></script>
+<![endif]-->
+<!--
+
+                               ____                  
+                            _.' :  `._               
+                        .-.'`.  ;   .'`.-.           
+               __      / : ___\ ;  /___ ; \      __  
+             ,'_ ""=-.:__;".-.";: :".-.":__;.-="" _`,
+             :' `.t""=-.. '<@.`;_  ',@:` ..-=""j.' `;
+                  `:-.._J '-.-'L__ `-.-' L_..-;'     
+                    "-.__ ;  .-"  "-.  : __.-"       
+                        L ' /.======.\ ' J           
+                         "-.   "__"   .-"            
+                        __.l"-:_JL_;-";.__           
+                     .-j/'.;  ;""""  / .'\"-.        
+                   .' /:`. "-.:     .-" .';  `.      
+                .-"  / ;  "-. "-..-" .-"  :    "-.   
+             .+"-.  : :      "-.__.-"      ;-._   \  
+             ; \  `.; ;                    : : "+. ; 
+             :  ;   ; ;                    : ;  : \: 
+             ;  :   ; :                    ;:   ;  : 
+            : \  ;  :  ;                  : ;  /  :: 
+            ;  ; :   ; :                  ;   :   ;: 
+            :  :  ;  :  ;                : :  ;  : ; 
+            ;\    :   ; :                ; ;     ; ; 
+            : `."-;   :  ;              :  ;    /  ; 
+             ;    -:   ; :              ;  : .-"   : 
+             :\     \  :  ;            : \.-"      : 
+              ;`.    \  ; :            ;.'_..-=  / ; 
+              :  "-.  "-:  ;          :/."      .'  :
+               \         \ :          ;/  __        :
+                \       .-`.\        /t-""  ":-+.   :
+                 `.  .-"    `l    __/ /`. :  ; ; \  ;
+                   \   .-" .-"-.-"  .' .'j \  /   ;/ 
+                    \ / .-"   /.     .'.' ;_:'    ;  
+                     :-""-.`./-.'     /    `.___.'   
+                           \ `t  ._  /               
+                            "-.t-._:'   
+-->
+</head>
+<body>
+	<header>
+        <nav>
+        </nav>
+    </header>
+    <div class="popWindow">
+      <div class="gray"></div>
+      <div class="Content-container"></div>
+    </div>
+    <!--左上-->
+    <div class="logo"><img src="images/logo.png"></div>
+    <!--右上-->
+    <div class="right-menu">
+    	<!--<a href="" id="ShowNumber">number</a>-->
+    	<a href="" id="menu-Info">Info</a>
+    	<a href="" id="menu-Works">Works</a>
+    	<a href="" id="menu-Team">Team</a>
+        <a href="" id="btn-closeSound"></a>
+    </div>
+    
+    <!--左下-->
+    <div class="bottom-menu">
+    	<div>
+            <a href="" id="share-sina"></a>
+            <a href="" id="share-qq"></a>
+            <a href="" id="share-douban"></a>
+            <a href="" id="share-renren"></a>
+            <div class="clear"></div>
+        </div>
+        <div>
+        	&copy; Deeply Impressive.  -<a href="">About</a>-<a href="">Feedback</a>-<a href="" id="Contact" title="Contact">Contact</a>-
+        </div>
+    </div>
+    <!--右下-->
+    <div class="bottom-right"></div>
+    
+   
+    <div id="showArea">
+        <div class="showArea"></div>
+        <div class="grayDiv"></div>
+    </div>
+    
+    <div id="Team" >
+    	<a href="" id="btn-TeamPre" data-name=''>上一页</a>
+        <div class="animation">
+        	<div class="user"></div>
+            <div class="text"></div>
+        </div>
+    	<a href="" id="btn-TeamNext" data-name=''>下一页</a>
+        <div class="clear"></div>
+    </div>
+    
+    <div id="Info">
+    	<div>1</div>
+    	<div>2</div>
+    	<div>3</div>
+    	<div>4</div>
+    	<div>5</div>
+    	<div>6</div>
+    	<div>7</div>
+    	<div>8</div>
+    	<div>9</div>
+    	<div>10</div>
+    	<div>11</div>
+    </div>
+    
+    <div id="Works">
+      <canvas id="canvasWorks" width="1280" height="800"></canvas>
+    	<!--
+    	<div id="svgintro"></div>
+        -->
+    </div>
+    <!--
+    <div class="container">
+      <div class="flip">
+        <div class="front">front</div>
+        <div class="back">back</div>
+      </div>
+    </div>
+    -->
+    <footer>
+    	<div class="Team"></div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+html,body{ padding:0; margin:0; text-align:center;}
+body{ }
+.clearFloat{ clear:both;}
+
+/*头部*/
+.header{ background:#eee; }
+header{ height:92px; background:#ffcc00; margin:0; padding:0; border-bottom:1px solid #a8b8c5;}
+header .container{}
+header .logo{  height:100%; width:100px; background:red;}
+header .shareAndNav{  height:100%; width:838px; background:blue;}
+header .gforceLogo{  height:100%; width:171px; background:black;}
+header .shareAndNav .nav .item{ display:inline; cursor:pointer; padding:10px;}
+header .logo,header .shareAndNav,header .gforceLogo{ float:left;margin:0px; height:92px;}
+header .gforceLogo{ float:right;}
+
+.backgroundDiv{ height:805px; width:100%; overflow:hidden; background:url(../images/gforce/bg/bg.jpg) no-repeat; left:0; top:0; position:absolute; z-index:-1; }
+
+
+.backgroundDiv{}
+.container{ height:100%; }
+
+/*红牛标志*/
+.redbull{right:20px; bottom:20px; position:absolute; z-index:-1; height:71px; width:144px; background:blue; }
+
+.floatTool{position:relative;margin:35px auto 0; width:838px; height:650px;  overflow:hidden;  }
+.floatTool .div_Btn_regAndGoon{height:650px;width:838px;  position:relative; left:0; top:0;}
+.floatTool .div_Btn_regAndGoon .btn{ position:absolute;top:534px;height:116px; background:red;width:838px;  left:0;  }
+.floatTool .div_Btn_regAndGoon .btn .container .item{ display:inline; cursor:pointer; padding:20px;}
+.floatTool .div_Btn_regAndGoon .popDiv{  background:#ee00ee;  height:535px;width:838px; margin-top:650px; position:relative; top:0; left:0; }
+.floatTool .div_Btn_regAndGoon .popDiv .popDivContainer{ position:absolute; top:0; left:0; width:1990px;}
+.floatTool .tangyun{ height:1px; overflow:hidden;}
+
+.popDiv_item{ height:535px;width:838px; float:left; }
+
+#popRegDiv .reg_div h1{ margin:0; padding:0;}

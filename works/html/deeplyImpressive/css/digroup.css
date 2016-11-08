@@ -1,0 +1,227 @@
+html,body{ background:#404547; font-family: "微软雅黑","黑体", "宋体" ; font-size:14px; text-align:center; margin:0; padding:0; background:url(../images/bg/bg.jpg) ; color:#666;}
+.left{ float:left}
+.right{ float:right}
+.clear{ clear:both;}
+a{ text-decoration:none; color:#666}
+img{ border:0;}
+.radius-4{-moz-border-radius: 4px;-khtml-border-radius: 4px;-webkit-border-radius: 4px;border-radius: 4px;}
+ul,li{ margin:0; padding:0; list-style:none;}
+
+body{ background:url(../images/bg/bg_net.png) center center no-repeat;}
+body.noline{ background:none;}
+
+/*左上*/
+.logo{ position:absolute; top:0; left:0; position:fixed;
+z-index: 1000;}
+
+/*右上*/
+.right-menu{ position:absolute; top:20px; right:20px; z-index:10; position:fixed}
+#menu-Info,#menu-Works,#menu-Team,#ShowNumber{ float:left; width:39px; height:17px;text-indent:-9999px; margin:18px 0 0 0; padding: 0 1.5em; white-space: nowrap}
+#menu-Info{ width:39px; background:url(../images/btn/btn_info.png) no-repeat;}
+#menu-Works{ width:70px; background:url(../images/btn/btn_works.png) no-repeat;}
+#menu-Team{ width:60px; background:url(../images/btn/btn_team.png) no-repeat;}
+#menu-Info:hover,#menu-Works:hover,#menu-Team:hover{ background-position:0 -21px; }
+#ShowNumber{ text-indent:0;}
+#btn-closeSound{ float:left; width:38px; height:38px; background:url(../images/btn/sprite.png) -109px -176px no-repeat; }
+
+/*左下*/
+.bottom-menu{ position:absolute;bottom:22px; left:14px;  z-index:10; position:fixed}
+#share-sina,#share-qq,#share-douban,#share-renren{ width:30px; height:30px; float:left; padding:0 2px; margin-bottom:10px;}
+#share-sina{background:url(../images/btn/sprite.png) -124px -278px no-repeat;}
+#share-qq{background:url(../images/btn/sprite.png) -79px -278px no-repeat;}
+#share-douban{background:url(../images/btn/sprite.png) -79px -231px  no-repeat;}
+#share-renren{background:url(../images/btn/sprite.png) -124px -231px  no-repeat;}
+
+
+/*右下*/
+.bottom-right{ position:absolute; bottom:0px; right:0px; background:url(../images/bg/bottom-right.png) no-repeat; width:239px; height:107px; position:fixed }
+
+
+footer{ display:none;}
+
+#showArea{ overflow:hidden;  }
+.showArea{ position:relative;  width:1280px; height:100%; margin:0 auto;}
+.showArea .item{   position:absolute;}
+.showArea .hasAction{ cursor:pointer; z-index:1;}
+.showArea .hasAction:hover{  z-index:2;}
+
+#Team{ position:absolute; display:none; top:0;  z-index:1; width:738px;}
+#btn-TeamPre{ position:absolute; top:150px; left:0; z-index:2; width:58px; height:58px; background:url(../images/btn/sprite.png) 0 -264px  no-repeat;  text-indent:-99999px;}
+#btn-TeamNext{ position:absolute; top:150px; left:570px;  z-index:2;width:165px; height:58px; background:url(../images/btn/sprite.png)  no-repeat; text-indent:-99999px;}
+#btn-TeamPre:hover{ background-position:0 -166px;}
+#btn-TeamNext:hover{  background-position:0 -75px; }
+#Team .animation{ position:absolute; top:0; left:130px; z-index:1; }
+#Team .user{ width:100px; height:100px;  position:absolute;}
+#Team .user div{ position:absolute; top:0; left:0;}
+#Team .text{ width:100px; height:100px; position:absolute;left:165px; top:132px;}
+#Team .text div{ position:absolute; top:0; left:0;}
+
+#Info{ position:absolute; top:0; left:0; width:100%; display:none; }
+#Info div{ background:red; width:300px; height:200px; position:absolute; top:0; left:0; display:none; }
+
+#Works{ position:absolute; top:0; left:0; width:100%; display: none; }
+#Works div{ }
+/*
+#svgbasics,#svgintro{ width: 400px; height: 300px; border: 1px solid #484; }
+*/
+
+.justFlip{
+	-webkit-transition: all 0.5s 0s ease;
+	-moz-transition: all 0.5s 0s ease;
+	-o-transition: all 0.5s 0s ease;
+	transition: all 0.5s 0s ease;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-perspective: 1000px;
+	-moz-perspective: 1000px;
+	-o-perspective: 1000px;
+	perspective: 1000px;
+}
+.hasAction.justFlip:hover{
+	-webkit-transform: scaleX(1.3) scaleY(1.3);
+	-webkit-transition: all 0.5s 0s ease;
+	-webkit-transform-origin : 50% 50%;
+	-moz-transform: scaleX(1.3) scaleY(1.3);
+	-moz-transition: all 0.5s 0s ease;
+	-moz-transform-origin : 50% 50%;
+	-o-transform: scaleX(1.3) scaleY(1.3);
+	-o-transition: all 0.5s 0s ease;
+	-o-transform-origin : 50% 50%;
+	transform: scaleX(1.3) scaleY(1.3);
+	transition: all 0.5s 0s ease;
+	transform-origin : 50% 50%;
+}
+.hasAction.justFlip.run{
+	/*
+	left: 50%;
+	top: 50%;
+	-webkit-transform: rotateX(180deg) scaleX(4) scaleY(4);
+	-webkit-transition: all 1.5s 0s ease;
+	-webkit-transform-origin : 50% 50%;
+	-moz-transform: rotateX(180deg) scaleX(4) scaleY(4);
+	-moz-transition: all 1.5s 0s ease;
+	-moz-transform-origin : 50% 50%;
+	transform: rotateX(180deg) scaleX(4) scaleY(4);
+	transition: all 1.5s 0s ease;
+	transform-origin : 50% 50%;*/
+
+	-webkit-transform: rotateX(180deg) scaleX(1) scaleY(1);
+	-webkit-transition: all 1.5s 0s ease;
+	-webkit-transform-origin : 50% 50%;
+	-moz-transform: rotateX(180deg) scaleX(1) scaleY(1);
+	-moz-transition: all 1.5s 0s ease;
+	-moz-transform-origin : 50% 50%;
+	-o-transform: rotateX(180deg) scaleX(1) scaleY(1);
+	-o-transition: all 1.5s 0s ease;
+	-o-transform-origin : 50% 50%;
+	transform: rotateX(180deg) scaleX(1) scaleY(1);
+	transition: all 1.5s 0s ease;
+	transform-origin : 50% 50%;
+	z-index: 10000;
+	left: 100px;
+	top: 110px;
+}
+
+.justFlip .face-front,.justFlip .face-back{
+	position: absolute;
+	-webkit-backface-visibility: hidden; 
+	-moz-backface-visibility: hidden; 
+	-o-backface-visibility: hidden; 
+	backface-visibility: hidden; 
+}
+.justFlip .face-back{
+   -webkit-transform:rotateY(180deg) ;
+   -moz-transform:rotateY(180deg) ;
+   -o-transform:rotateY(180deg) ;
+   transform:rotateY(180deg) ;
+   cursor:default;
+}
+.justFlip .face-front{
+	-webkit-transition: all 1.5s 0s ease;
+	-moz-transition: all 1.5s 0s ease;
+	-o-transition: all 1.5s 0s ease;
+	transition: all 1.5s 0s ease;
+}
+.justFlip.run .face-front{
+	-webkit-transform:scaleX(2) scaleY(2);
+	-moz-transform:scaleX(2) scaleY(2);
+	-o-transform:scaleX(2) scaleY(2);
+	transform:scaleX(2) scaleY(2);
+}
+#showArea .grayDiv{
+	-webkit-transition: all 5s 0s ease;
+	-moz-transition: all 5s 0s ease;
+	-o-transition: all 5s 0s ease;
+	transition: all 5s 0s ease;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	display: none;
+}
+#showArea .grayDiv.red{
+	display: block;
+	cursor: pointer;
+}
+
+/*
+.container { 
+  width: 1000px;
+  height: 200px;
+  position: relative; 
+  background-color: #ccc;
+  perspective: 1000px; }
+.container .flip   {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 1s; }
+
+ .container .flip > div {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  backface-visibility: hidden; }
+.container .flip .back {
+	background-color: blue;
+  transform:rotateY(180deg); 
+}
+.container .flip:hover {
+  transform: rotateX(180deg);
+  transition: transform 0.5s 0s;
+}
+*/
+
+.popWindow{ 
+	position:fixed;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.3);
+	z-index: 1003;
+	display: none;
+}
+.popWindow .Content-container{
+	text-align: center;
+}
+.popWindow .Content-container .contact-container{
+	width: 686px;
+	height: 457px;
+	margin: 0 auto;
+	position: relative;
+}
+.popWindow .Content-container .contact-container a{
+	position: absolute;
+	top: 84px;
+	left: 482px;
+	width: 88px;
+	height: 40px;
+	cursor: pointer;
+	text-indent: -999999px;
+}

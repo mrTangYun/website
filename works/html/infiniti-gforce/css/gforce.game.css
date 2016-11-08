@@ -1,0 +1,35 @@
+.mission_main_div .main{ margin-top:-2px;}
+#flashGameArea{ text-align:left; position:absolute; top:-344px; left:0;}
+#flashGameArea {}
+.game_share{ text-align:right}
+.game_share img{ cursor:pointer;}
+.game_inter_page .pop_bg_share .defen{ height:100px;}
+.mission_main_div .main {
+    margin-top: -2px;
+}
+
+.flash_1_popDiv{ text-align:left; position:absolute; left:0; height:358px; top:-358px;top:0px; width:750px; background:url("../images/gforce/mission/G/pop_bg.jpg") no-repeat; margin-top:-360px;}
+.flash_1_popDiv .rule { text-align:left; display:none;}
+.flash_1_popDiv .rule .title{ height:83px; line-height:83px; padding:0 0 0 17px; font-size:18px;}
+.flash_1_popDiv .rule .content{ padding:0 0 0 96px;}
+
+.flash_1_popDiv .top100 .title{ height:37px; line-height:37px; padding:0 0 0 17px; font-size:18px;}
+.flash_1_popDiv .top100 .content{ width:694px; margin:0 auto;}
+.flash_1_popDiv .top100 .hd_title{ height:24px; line-height:24px; text-align:center;}
+.flash_1_popDiv .top100 .hd{ background:#260033; border-bottom:0;}
+.flash_1_popDiv .top100 .hd td{  border:1px solid #676767;  border-left:0;}
+.flash_1_popDiv .top100 .hd td.td1{  border-left:1px solid #676767;}
+.flash_1_popDiv .top100 .hd,.flash_1_popDiv .top100 .hd_title .list{ text-align:center;}
+.flash_1_popDiv .top100 .td1{ width:110px;}
+.flash_1_popDiv .top100 .td2{ width:114px; overflow:hidden;}
+.flash_1_popDiv .top100 .td3{ width:110px;}
+.flash_1_popDiv .top100 td{ height:24px; line-height:24px; text-align:center;}
+.flash_1_popDiv .top100 .list_box{ height:220px; overflow:hidden;}
+.flash_1_popDiv .top100 .list{ border-top:0;}
+.flash_1_popDiv .top100 .list td{ height:21px; line-height:21px; border:1px solid #676767; border-top:0; border-left:0;}
+.flash_1_popDiv .top100 .list td.td1{ border-left:1px solid #676767;}
+.flash_1_popDiv .top100 .page{ margin-top:10px;}
+.flash_1_popDiv .top100 .page ul,.flash_1_popDiv .top100 .page li{ list-style:none; display:inline; text-align:center; margin:0; padding:0;}
+.flash_1_popDiv .top100 .page ul{}
+.flash_1_popDiv .top100 .page li{ background: url("../images/gforce/ask/num_bg.gif") no-repeat scroll 0 0 transparent;color: #333333;cursor: pointer;float: left; font-family: Arial,Helvetica,sans-serif; font-size: 11px;height: 15px;line-height: 15px; margin: 0 3px 0 0;text-align: center;width: 15px;}
+.flash_1_popDiv .btn_close_1{background: url("../images/gforce/btn_back.gif") no-repeat scroll 0 0 transparent; cursor: pointer; height: 23px; width: 54px; right:0; top:20px; position:absolute; }

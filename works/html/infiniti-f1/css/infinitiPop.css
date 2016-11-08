@@ -1,0 +1,57 @@
+
+.LikeBody{text-align:center; background:url(../images/pop/Content_BG.jpg) no-repeat top center #191919; text-align:center; margin:0; padding:0; font-size:12px; font-family:"Î¢ÈíÑÅºÚ","ËÎÌå"; position:relative; color:#ccc;padding:25px 0; height:150px; overflow:hidden;}
+.LoginWidth{ width:289px; margin:0 auto;}
+.LoginWidth table{ font-weight:bold;}
+.LoginWidth table a{ color:#ccc;}
+.LoginWidth table .td1{width:62px; height:25px; line-height:25px; font-weight:bold; text-align:left}
+.LoginWidth table .td2{ width:227px;}
+.loginInput{ background:#7c7c7c; border:1px solid #bbbbbb; height:18px; line-height:18px;  color:#ccc; width:225px;}
+.loginCheckBox{background:#7c7c7c;  }
+.LoginWidth .button{ background:url(../images/pop/button_bg.jpg) repeat-x;margin:0 0 0;}
+.LoginWidth .button.first{ border-right:1px solid #000;}
+.LoginWidth .button a{ color:#ccc; text-decoration:none;}
+.LoginWidth table .link a{ font-weight:normal; color:#e5ff00;}
+
+.LikeBody form{ margin:0; padding:0;}
+
+.LikeBody .popchooseTeam{ width:306px; margin:0 auto;}
+.LikeBody .button{ width:127px; height:29px;  background:url(../images/pop/button_bg.jpg) repeat-x; line-height:29px;color:#ccc; text-decoration:none; margin:20px 0 0; text-align:center;}
+.LikeBody .button a{ color: #ccc; text-decoration:none;}
+
+.ChooseTeamStep2{ padding:0 0 0 0; text-align:center; height:200px;}
+.ChooseTeamStep2 .bg{background:url(../images/pop/ChooseTeamStep2.jpg) no-repeat top center #191919; padding:117px 0 54px 0; height:29px; margin:0 auto;}
+.ChooseTeamStep2 .bg a,.ChooseTeamStep2 .bg .button{ margin:0 auto;}
+
+.LikeBody .ExchangeList{ background:none; border:0;}
+.LikeBody .ExchangeList .Item .text {padding: 17px 0 0 10px; text-align:left; line-height:24px;}
+.LikeBody .ExchangeOk{ text-align:left; margin-left:77px;}
+.LikeBody .ExchangeOk strong{ color:#ffbb00; font-size:18px;}
+.rightBorder .button{ border-right:1px solid #000;}
+
+.memberInfo{}
+.memberInfo table{}
+.memberInfo .table1{ height:104px; overflow:hidden;}
+.memberInfo .memberInfoBox{  height:143px; overflow:hidden;}
+.memberInfo .text{ color:#ffbb00; height:17px; overflow:hidden; }
+.memberInfoBox{ width:320px; margin:0 auto;}
+.memberInfoBox td{ padding:0;}
+.memberInfoBox .td2{ padding:2px 0; height:22px; line-height:22px; overflow:hidden;}
+.memberInfoBox .td3{ color:#fa7000; font-weight:bold;}
+.LikeBody .memberInfoBox .button{margin:5px auto 0;}
+.inputText{ background:#7c7c7c; border:1px solid #bbbbbb; height:18px; line-height:18px;  color:#ccc; width:225px;}
+
+.ShenQingOK{text-align:left; overflow:hidden;}
+.ShenQingOK .Text{ width:305px; margin:0 0; text-align:left; padding:0px 0 0 150px;background:url(../images/pop/infiniti.jpg) 45px 50px no-repeat; }
+..ShenQingOK .Text .Div{ height:96px; overflow:hidden;}
+.ShenQingOK .Text strong{ color:#ffbb00; font-size:18px;}
+.ShenQingOK .Text .link a{ color:#dcf600; font-size:15px;}
+
+.voteForm .Title{ color:#ddf700; font-size:14px; font-weight:bold; }
+.voteForm .link{ color:#ccc; font-size:14px; font-weight:bold; }
+.voteForm .link a{ color:#ccc;}
+
+.voteResultPage{background:url(../images/pop/voteResult_BG.jpg) no-repeat top center #191919; height:297px; margin:0; overflow:hidden;}
+.voteResultPage .Item{ height:31px; line-height:31px;}
+.voteResultPage .Area{ width:51px; padding:0 15px 0 54px;  }
+.voteResultPage .green{ height:4px; background:#b8cc0c; font-size:0; overflow:hidden; margin-top:15px; margin-right:15px;}
+.voteResultPage .close{ padding:0 0 0 185px; }

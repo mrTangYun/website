@@ -1,0 +1,293 @@
+@charset "gb2312";
+.left{ float:left;}
+.right{ float:right;}
+.clearFloat{ clear:both;}
+img{ border:0;}
+body{ text-align:center; background:url(../images/body_bg.jpg) no-repeat bottom center #000000; text-align:center; margin:0; padding:0; font-size:12px; font-family:"Î¢ÈíÑÅºÚ","ËÎÌå"; position:relative;}
+.commonWidth{width:955px; margin:0 auto; text-align:left;}
+
+#PersonalInfo{ background:url(../images/PersonalInfo_BigBG.png) repeat-x 0 31px; height:59px; color:#eae4cc; position:absolute; top:-29px; left:0; width:100%; }
+#PersonalInfo .top{font-weight:bold;height:31px; line-height:31px; background:url(../images/PersonalInfo_content_BG.jpg) no-repeat 0 31px; }
+#PersonalInfo .bottom{ text-align:left; padding:0; }
+#PersonalInfo .bottom .btn{cursor:pointer;}
+#PersonalInfo .myName{ color:#feba01; font-size:12px; width:180px;  text-align:right; padding-right:10px;}
+#PersonalInfo #myScore,#PersonalInfo #myFast{ font-size:14px;  font-family:Arial; }
+#PersonalInfo #myScore {color:#bbfe00}
+#PersonalInfo #myFast{color:#ffba02}
+#PersonalInfo .welcome{ }
+#myArea{ color:#bcff00;}
+.btn_PersonalInfo{ padding:5px 107px 0 15px;}
+#PersonalInfo .PersonalInfo{ width:457px; text-align:left;}
+#myArea{}
+
+.index .header{ text-align:left;}
+.index .header{ height:399px; background:url(../images/index_top_bg.jpg) 0 32px no-repeat;}
+.header .goToOfficial{ padding:49px 0 0 818px; cursor:pointer;}
+.header .menu{ height:35px; width:460px; margin:0 0 8px 426px; text-align:left; background:url(../images/cssSprite.jpg) 0  -219px no-repeat; }
+.header .menu .Item0 a div{ height:35px; width:98px; cursor:pointer;}
+.header .menu .Item1 a div{ height:35px; width:116px; cursor:pointer;}
+.header .menu .Item2 a div{ height:35px; width:119px; cursor:pointer;}
+.header .menu .Item3 a div{ height:35px; width:116px; cursor:pointer;}
+.header .Share{ margin:0 0 0 728px; }
+.index .header .indexJoin{ padding:221px 0 0 211px; width:116px; height:29px; }
+.index .header .index_flash{ width:568px; height:241px;}
+.index .header .Top10Hearder{ width:231px; height:24px; background:url(../images/cssSprite.jpg) no-repeat; margin: 0 0 0 313px; }
+.index .header .Top10Hearder .left{ height:24px; cursor:pointer;}
+.index .header .Top10Hearder .Area{ width:78px; }
+.index .header .Top10Hearder .Solo{width:75px; }
+.index .header .Top10Hearder .BestUnit{width:78px; }
+
+.index .underHearder{ background:url(../images/index_list_BG.jpg) no-repeat; height:330px; overflow:hidden;}
+.index .underHearder .leftButton{ cursor:pointer; padding:98px 0 0 67px; height:47px; width:34px; }
+.index .underHearder .rightButton{ cursor:pointer; padding:98px 0 0 0px;height:47px; width:34px; }
+.index .underHearder .leftButton div,.index .underHearder .rightButton div{  height:47px; width:34px;}
+.index .underHearder .leftButton div{ background:url(../images/cssSprite.jpg) -354px  -359px no-repeat; }
+.index .underHearder .rightButton div{ background:url(../images/cssSprite.jpg) -388px  -359px no-repeat; }
+.index .underHearder .mapArea .mapBox{ height:215px ; width:398px;overflow:hidden;position:relative;}
+.index .underHearder .mapArea .mapBoxPostion{ width:1592px;position:absolute; top:0px; left:0px;}
+.index .underHearder .mapArea .mapBoxPostion .item{ float:left; position:relative;}
+.index .underHearder .mapArea .mapBoxPostion .item .btn_mapInfo{ position:absolute; top:75px; left:300px; cursor:pointer;}
+.index .underHearder .GoToGameArea{ padding:0 0 0 48px;}
+.index .underHearder .GoToGameArea .TestDrive a{ width:160px; height:108px; background:url(../images/cssSprite.jpg) -300px 0 no-repeat; display:block; }
+.index .underHearder .GoToGameArea .GoToRace a{ width:354px; height:108px; background:url(../images/cssSprite.jpg) 0  -359px no-repeat;display:block; }
+.index .underHearder .GoToGameArea .TestDrive a:hover{background:url(../images/cssSprite.jpg) -300px -108px no-repeat; }
+.index .underHearder .GoToGameArea .GoToRace a:hover{ background:url(../images/cssSprite.jpg) 0  -467px no-repeat; }
+
+.index .ListArea { height:165px; overflow:hidden;}
+.ListArea .ItemBox{ padding:6px 0 0; display:none;}
+.ListArea .ItemBox .TextArea{ color:#adb18e; padding:0px 0px 0 56px;  width:88px; height:21px; line-height:21px; overflow:hidden; }
+.ListArea .ItemBox .TextArea span{ font-size:13px; }
+.ListArea .ItemBox .FormatNumber_B,.ListArea .ItemBox .FormatNumber_A{ width:120px;  text-align:right; overflow:hidden; padding:3px 10px 0 0; overflow:hidden; height:15px; }
+.ListArea .ItemBox .item0,.ListArea .ItemBox .item1,.ListArea .ItemBox .item2,.ListArea .ItemBox .item3,.ListArea .ItemBox .item4,.ListArea .ItemBox .item5,.ListArea .ItemBox .item6{ width:274px; height:21px;}
+.ListArea .ItemBox .item0 .TextArea{ color:#fff;}
+.ListArea .ItemBox .item0 { padding:0 0 0 32px; width:274px;background:url(../images/cssSprite.jpg) 32px -72px no-repeat; margin-bottom:2px;}
+.ListArea .ItemBox .item1 { background:url(../images/cssSprite.jpg) 0  -93px no-repeat; margin:0 0 2px 29px;}
+.ListArea .ItemBox .item2 { background:url(../images/cssSprite.jpg) 0  -114px no-repeat; margin:0 0 2px 26px;}
+.ListArea .ItemBox .item3 { background:url(../images/cssSprite.jpg) 0  -135px no-repeat; margin:0 0 2px 23px;}
+.ListArea .ItemBox .item4 { background:url(../images/cssSprite.jpg) 0  -156px no-repeat; margin:0 0 2px 21px;}
+.ListArea .ItemBox .item5 { background:url(../images/cssSprite.jpg) 0  -177px no-repeat; margin:0 0 2px 18px;}
+.ListArea .ItemBox .item6 { background:url(../images/cssSprite.jpg) 0  -198px no-repeat; margin:0 0 2px 15px;}
+.ListArea .ItemBox .FastHeader{ padding:0 0 0 52px; width:257px;background:url(../images/cssSprite.jpg) 52px -575px no-repeat; margin:0 0 1px; height:22px; }
+.ListArea .ItemBox .FastBox{ display:none;}
+.ListArea .ItemBox .race1{ height:22px; width:74px;}
+.ListArea .ItemBox .race2{ height:22px; width:49px;}
+.ListArea .ItemBox .race3{ height:22px; width:86px;}
+.ListArea .ItemBox .race4{ height:22px; width:46px;}
+.ListArea .ItemBox .FastHeader .left{ cursor:pointer;}
+
+.VideoArea{ }
+.VideoArea .top{ background:url(../images/video_heaer_BG.jpg) no-repeat;  height:18px; margin:22px 0 0 39px;padding:0 0 0 176px;}
+.VideoArea .SwichContent{ margin:0; padding:0;  text-align:left; }
+.VideoArea .SwichContent .Item{ display:none; padding:5px 0 0 14px; cursor:pointer;}
+.SwithButton_BG{ background:url(../images/cssSprite.jpg) -231px  0px no-repeat; width:63px; }
+.SwithButton .Item{width:20px; height:18px; float: left;  margin:0 1px 0 0; cursor:pointer;}
+
+.WatchSeasonArea{  margin:23px auto 0 ; background:url(../images/WatchSeasonArea_BG.jpg) no-repeat top center;}
+.WatchSeasonArea .top{ color:#fff9b4; font-size:14px; font-style:italic; line-height:20px; padding:26px 0 0 134px; }
+.WatchSeasonArea .top .text{width:476px; padding:13px 0 0; height:60px; overflow:hidden; }
+.WatchSeasonArea .top .Png{ padding:0 0 0 123px;}
+.WatchSeasonArea .bottom{ width:844px; margin:0px auto 0;}
+
+.DealerArea{ height:281px;  background:url(../images/DealerArea_BG.jpg) no-repeat top center; margin:18px auto 0; padding:57px 0 0 240px; overflow:hidden;}
+.DealerArea .ShowCar_Big{ width:512px;  height:179px; padding:55px 0 0 0; text-align:center;}
+.DealerArea .ShowCar_Big .Content{ height:179px; overflow:hidden;}
+.DealerArea .ShowCar_Big .Content .Item{ }
+.DealerArea .ShowCar_Big .btn_bottom{ height:46px; text-align:center;}
+.DealerArea .ShowCar_Big .ButtonArea{ width:41px; height:18px; margin: 0 20px 0 450px; background:url(../images/cssSprite.jpg) -354px -406px  no-repeat;}
+.DealerArea .ShowCar_Big .ButtonArea .Button1{ width:20px; height:18px; cursor:pointer;}
+.DealerArea .ShowCar_Big .ButtonArea .Button2{ width:21px; height:18px; cursor:pointer;}
+.ShowCar_Small{ width:229px; height: 282px; }
+.ShowCar_Small .btn_top{ height:20px; width:113px;  background:url(../images/cssSprite.jpg) -257px -575px  no-repeat; margin-left:76px; cursor:pointer;}
+.ShowCar_Small .CarListBox{ height:241px; overflow:hidden; position:relative;}
+.ShowCar_Small .btn_bottom{ height:20px; width:113px;  background:url(../images/cssSprite.jpg) -257px -595px  no-repeat; margin-left:51px;cursor:pointer;}
+.ShowCar_Small .CarListBox div{ height:60px; line-height:60px;  width:170px; text-align:center; position:absolute; }
+
+
+.inc_bottom{ text-align:center; padding:28px 0 95px; color:#fffefe; height:49px; overflow:hidden;}
+.inc_bottom a{ font-size:12px; color:#fffefe; text-decoration:none;}
+.inc_bottom .copyright{ color:#ffffff; font-family:Arial; font-size:11px; height:15px; line-height:15px;}
+.inc_bottom .icp{color:#d0d0d0; font-size:12px;}
+
+
+.game{background:url(../images/index_game_bg.jpg)  center  0 no-repeat #000;}
+.GameRule{width:389px; padding:15px 10px 0 0; color:#cccccc; line-height:24px; font-size:12px;}
+.GameRule span{ color:#ccff00;}
+.GameRule .Remarks{ color:#ff9900;}
+.GameReward{width:296px; padding:20px 0 0; color:#cccccc;}
+.GameReward .tr1{ height:22px; line-height:22px;   background:url(../images/cssSprite.jpg) 0  -663px no-repeat; }
+.GameReward .tr2{ height:22px; line-height:22px; background:url(../images/cssSprite.jpg) 0  -685px no-repeat; }
+.GameReward .td1{ width:80px; padding:0 0 0 18px; color:#abfeff;}
+.GameReward .td2{ width:147px;}
+.GameReward .td1,.GameReward .td2,.GameReward .td3{background:url(../images/cssSprite.jpg) no-repeat; margin-bottom:1px; }
+.GameReward .tr1 .td1{ background-position:0 -663px;}
+.GameReward .tr1 .td2{ background-position:-80px -663px;}
+.GameReward .tr1 .td3{ background-position:-227px -663px;}
+.GameReward .tr2 .td1{ background-position:0 -685px;}
+.GameReward .tr2 .td2{ background-position:-80px -685px;}
+.GameReward .tr2 .td3{ background-position:-227px -685px;}
+.GameReward .GameRewardTH { height:22px;  background:url(../images/cssSprite.jpg) 0  -707px no-repeat; margin:15px 0 0 0;}
+.GameReward .UnderTable{ margin:8px 0 0 ; color:#ff9900;}
+.AwardWinningNotes{ line-height:20px; color:#d9d686; width:518px;}
+.game .FlashGame{ text-align:center;}
+#FlashGame{ height:501px; width:815px; margin:0 auto;}
+#F1Question{ height:241px; margin:0 0 0 300px; width:568px;}
+.QandA{ color:#fff; font-size:12px; line-height:20px; list-style:none; margin:0 auto; padding:0; width:625px;}
+.QandA li{ border-top:1px solid #1c1c1c; padding:18px 52px 18px 0; margin:0; width:580px;}
+.QandA .Question{ color:#ccff00; font-size:14px; font-weight:bold;} 
+.QandA .Answer{ font-family:"ËÎÌå"; }
+.QandA .Answer span{ font-family:Arial; font-size:12px; font-weight:bold; color:#ff9900;}
+.outDiv{ text-align:center;}
+.SubPageContent{ background:url(../images/subpage_bottom_bg.jpg) center bottom no-repeat; }
+.SubPageContent .subBox{ padding:20px 0 29px ; background:url(../images/subpage_ContentBox_top_bg.jpg) no-repeat center top;}
+.SubPage{background:url(../images/SubPage_bg.jpg)  center  0 no-repeat #000;}
+.game .SubPageContent .subBox{ background:url(../images/GamePage_ContentBox_top_bg.jpg) no-repeat center top; margin:5px auto 0;}
+.SubPageContent .subBox .ContentBox{ width:698px; margin:0 auto;}
+
+.Txt_Activity{ width:646px; margin:0 auto; text-align:left; line-height:24px; color:#cccccc; padding:25px 0 34px; }
+.DateChoose{ width:464px; margin:27px auto 25px;}
+.DateChoose .left{ background:url(../images/cssSprite.jpg) -257px -615px; width:151px; height:23px; line-height:23px; color:#fff; font-weight:bold; text-align:center; margin:0 3px 0 0;}
+.DateChoose a{ color:#fff; text-decoration:none;}
+.DateTitle{ width:244px; height:28px;background:url(../images/cssSprite.jpg) 0 -729px; font-size:14px; font-weight:bold; color:#fff; line-height:28px; padding:0 0 0 22px; margin:0 0 0 98px;}
+.DateTitle2{ margin:0 0 0 18px;}
+.DateTitle3{ margin:20px 0 10px 0px;}
+.Content_Activity_News .ImgBox{ width:634px; margin:6px 0 76px 48px; color:#fff;}
+.Content_Activity_News .ImgBox .ImgList{ width:485px; height:67px; overflow:hidden;}
+.Content_Activity_News .ImgBox .ImgList .left{ margin:0 7px 0 0; cursor:pointer;}
+.Content_Activity_News .ImgBox .ShowImg{ width:517px; height:323px; overflow:hidden; border:6px solid #414141; border-bottom:5px solid #414141; border-top:5px solid #414141;} 
+.Content_Activity_News .ImgBox .LeftButton{ width:34px; height:47px;  margin:148px 15px 0 0; background:url(../images/cssSprite.jpg) -354px -442px; cursor:pointer;}
+.Content_Activity_News .ImgBox .RightButton{ width:34px; height:47px; margin:148px 0 0 0; background:url(../images/cssSprite.jpg) -388px -442px; cursor:pointer;}
+.Content_Activity_News .ImgBox .BigBox{ width:529px; overflow:hidden;   margin:0 15px 0 0;}
+.Content_Activity_News .ImgBox .Text{ margin:17px 0 0 0;}
+.ImgListBox{ height:67px; background:url(../images/repeatX_Activit.jpg) repeat-x ; margin:7px 0 0; padding:5px 0 5px 8px;}
+.Content_Activity_News .ImgBox .LeftButton_2{ width:12px; height:19px;  margin:30px 6px 0 0; background:url(../images/cssSprite.jpg) -274px -56px; cursor:pointer;}
+.Content_Activity_News .ImgBox .RightButton_2{ width:12px; height:19px; margin:30px 0 0 0; background:url(../images/cssSprite.jpg) -286px -56px; cursor:pointer;}
+.Content_Activity_News .ImgBox .ImgListBoxBar{ display:none;}
+.Content_Activity_News .ImgBox .Text{}
+.Content_Activity_News .ImgBox .TextBar{ display:none;}
+.Content_Activity_News .ImgBox .BarDe{ color:#fff; line-height:20px; color:#cccccc; padding:25px 0 31px;}
+.Content_Activity_News .ImgBox .BarDe span{ color:#ff9900; }
+.Content_Activity_News .ImgBox .ZhuanBoTitle{width:244px; height:28px;background:url(../images/cssSprite.jpg) 0 -729px; font-size:14px; font-weight:bold; color:#fff; line-height:28px;padding:0 0 0 22px; margin:21px 0 17px;}
+.Content_Activity_News .ImgBox .ZhuanBoTable{}
+.Content_Activity_News .ImgBox .ZhuanBoTable .td1{ width:102px; height:30px; line-height:30px; color:#ff9900; font-weight:bold; font-size:16px; text-align:center;}
+.Content_Activity_News .ImgBox .ZhuanBoTable .td2{ height:30px; line-height:30px;font-weight:bold; font-size:16px; width:66px;}
+.Content_Activity_News .ImgBox .ZhuanBoTable .td3{ height:30px; line-height:30px;font-weight:bold; font-size:16px; width:144px;}
+.Content_Activity_News .ImgBox .f1ad {padding:20px 0 0 22px; }
+.Content_Activity_News .RaceShowBox{ padding:60px 28px 0 28px;}
+.Content_Activity_News .RaceShowBox .LeftButton{ width:34px; height:47px;  margin:148px 40px 0 0; background:url(../images/cssSprite.jpg) -354px -442px; cursor:pointer;}
+.Content_Activity_News .RaceShowBox .RightButton{ width:34px; height:47px; margin:148px 0 0 0; background:url(../images/cssSprite.jpg) -388px -442px; cursor:pointer;}
+.Content_Activity_News .RaceShowBox .ImgAreaSprite{ width:500px; height:311px; overflow:hidden; position:relative; left:0; top:0;}
+.Content_Activity_News .RaceShowBox .ImgAreaSprite .list{ position:absolute; left:0; top:0; width:2000px;}
+.RaceInfo{ text-align:center; color:#abfeff;}
+.RaceInfo .GuoQi{ width:581px; margin:0 auto;}
+.RaceInfo_Txt{ background:#121212; padding:10px 30px; color:#CCC; line-height:24px; width:511px; margin:0 auto; text-align:left;}
+.RaceInfo table{ width:571px; margin:0 auto; text-align:left;}
+.RaceInfo table .tr1 .td1{width:219px; height:22px;line-height:22px; background:url(../images/cssSprite2.jpg) 0 -224px; padding:0 0 0 32px;}
+.RaceInfo table .tr1 .td2{width:286px; height:22px;line-height:22px; background:url(../images/cssSprite2.jpg) -251px -224px; padding:0 0 0 32px;}
+.RaceInfo table .tr2 .td1{width:219px; height:22px;line-height:22px; background:url(../images/cssSprite2.jpg) 0 -246px; padding:0 0 0 32px;}
+.RaceInfo table .tr2 .td2{width:286px;; height:22px;line-height:22px; background:url(../images/cssSprite2.jpg) -251px -246px; padding:0 0 0 32px;}
+.RaceInfo table .tr3 .td1{width:251px; height:22px;line-height:22px; background:url(../images/cssSprite2.jpg) 0 -268px;}
+.RaceInfo table .tr3 .td2{width:318px; height:22px;line-height:22px; background:url(../images/cssSprite2.jpg) -251px -268px;}
+.Content_Activity_News .JobArea{ margin:33px 0 0; color:#ccc; line-height:24px;}
+.Content_Activity_News .Txt1{ width:557px; margin:11px 0 11px 56px;}
+.Content_Activity_News .Txt1 span{ color:#ccff00; font-weight:bold;}
+.Content_Activity_News .Txt1 div{ background:url(../images/ArrowRight_dot.gif) 0 4px no-repeat; padding:0 0 0 10px;}
+.Content_Activity_News .Txt2{ width:557px; margin:11px 0 11px 66px;}
+.Content_Activity_News .Txt2 div{ background:url(../images/ArrowRight_dot.gif) 0 4px no-repeat; padding:0 0 0 10px; color:#ff9900;}
+.Content_Activity_News .JobArea .Png{ margin:0 0 20px 65px;}
+
+.NumberList_Winner{background:url(../images/cssSprite2.jpg) 0  -318px no-repeat; height:24px; margin:29px auto 0;}
+.NumberList_Winner .No1 a div{ height:24px; width:81px; cursor:pointer; }
+.NumberList_Winner .No2 a div{ height:24px; width:81px; cursor:pointer; }
+.NumberList_Winner .No3 a div{ height:24px; width:81px; cursor:pointer;}
+.NumberList_Winner .Txt{color:#fffc00; line-height:24px; height:24px; font-size:13px; font-weight:bold;}
+.Winner_BoxArea{ padding:0 0 60px;}
+.Winner_Box {}
+.Winner_Box .Title{color:#abfeff; font-size:14px; font-weight:bold; height:33px; line-height:33px; background:url(../images/ArrowRight_dot.gif) 5px 9px no-repeat; padding-left:19px;}
+.Winner_Box .TH{ background:url(../images/cssSprite2.jpg) 0px -390px no-repeat; height:22px; }
+.Winner_Box .Li1,.Winner_Box .Li2{ width:698px; text-align:center; height:22px;margin:2px 0 0; overflow:hidden; line-height:22px;}
+.Winner_Box .Li1{background:url(../images/cssSprite2.jpg) 0px -434px no-repeat;}
+.Winner_Box .Li2{background:url(../images/cssSprite2.jpg) 0px -412px no-repeat; }
+.Winner_Box .Li1 ul,.Winner_Box .Li2 ul{ color:#ccc; margin:0; padding:0;}
+.Winner_Box .Li1 ul li,.Winner_Box .Li2 ul li{ display:inline; list-style:none;  margin:0;padding:0 48px; }
+
+.w658{ width:658px; margin:0 auto;}
+.ExchangeArea{ color:#d9d686; line-height:20px; margin-top:25px;}
+.ExchangeArea_headArea{ padding-left:27px;}
+.ExchangeArea_headArea .Text{padding:12px 0 23px 21px; }
+.ExchangeList{ border:1px solid #222222; background:url(../images/repeatY_Ex.jpg) repeat-y;}
+.ExchangeList .Line{ height:1px; font-size:0;  background:url(../images/line_ex.jpg) repeat-y;}
+.ExchangeList .Item{}
+.ExchangeList .Item .pic{ padding:15px 0 15px 18px;}
+.ExchangeList .Item .pic img{ border:1px solid #363636;}
+.ExchangeList .Item .text{ padding:47px 0 0 30px; }
+.ExchangeList .Item .text p{ margin:0; padding:0;}
+.ExchangeList .Item .text .title{color:#ffbb00; font-weight:bold;}
+.ExchangeList .Item .text .info{ color:#ccc;}
+.ExchangeList .Item .text .score{ color:#abfeff; font-weight:bold;}
+.ExchangeList .Item .text .score span{ color:#ff5500;}
+.ExchangeList .Item .text .link{ margin:10px 0 0 0;}
+.ExchangeList .Item .text .link a{color:#ffbb00}
+.ExchangeArea .Text{ color:#cccccc;}
+.ExchangeArea .Text span{ color:#ff9900;  margin:0 0 0 51px; width:611px;}
+
+.RuleText{ color:#ccc; width:570px; margin-left:48px;}
+.RuleText strong{ color:#ccff00;}
+.RuleText .ps{ color:#ff9900;}
+
+.w698{ width:698px; margin:0 auto; }
+.CssMenu_Model{ height:28px; background:url(../images/cssSprite2.jpg) no-repeat 0 -540px;}
+.CssMenu_Model .left{ float:left; cursor:pointer}
+.CssMenu_Model .Item1 a div{ height:28px; width:135px;cursor:pointer}
+.CssMenu_Model .Item2 a div{ height:28px; width:101px;cursor:pointer}
+.CssMenu_Model .Item3 a div{ height:28px; width:97px;cursor:pointer}
+.CssMenu_Model .Item4 a div{ height:28px; width:56px;cursor:pointer}
+.CssMenu_Model .Item5 a div{ height:28px; width:58px;cursor:pointer}
+.w647{ width:647px; margin:0 auto;}
+.CarModelPage{ height:451px; }
+.CarModelPage .ImgBox{} 
+.CarModelPage .ImgBox .TopButton{ height:17px; width:150px;  background:url(../images/cssSprite.jpg) no-repeat -296px -638px; cursor:pointer;}
+.CarModelPage .ImgBox .BottomButton{height:17px; width:150px; background:url(../images/cssSprite.jpg) no-repeat -296px -654px; cursor:pointer;}
+.CarModelPage .ImgBox .ImgBoxList{ width:150px; height:403px; overflow:hidden; margin:7px 0; position:relative; top:0; left:0;}
+.CarModelPage .ImgBox .ImgBoxList .Postion{ position:absolute; top:0; left:0;}
+.CarModelPage .ImgBox .ImgBoxList .Postion div{ margin:0 0 6px; }
+.CarModelPage .CarInfo{ padding:0 0 90px 10px; width:487px;}
+.CarModelPage .CarInfo table{ color:#ccc}
+.CarModelPage .CarInfo table .head{ width:468px; height:22px; line-height:22px;background:url(../images/cssSprite2.jpg) 0  -680px no-repeat;padding:0 0 0 18px; }
+.CarModelPage .CarInfo table .tr1 .td1{ width:80px; height:22px; line-height:22px;background:url(../images/cssSprite2.jpg) 0  -702px no-repeat;padding:0 0 0 18px;}
+.CarModelPage .CarInfo table .tr2 .td1{ width:80px; height:22px; line-height:22px;background:url(../images/cssSprite2.jpg) 0  -724px no-repeat;padding:0 0 0 18px;}
+.CarModelPage .CarInfo table .tr1 .td2{ width:387px; height:22px; line-height:22px;background:url(../images/cssSprite2.jpg) -97px  -702px no-repeat;}
+.CarModelPage .CarInfo table .tr2 .td2{ width:387px; height:22px; line-height:22px;background:url(../images/cssSprite2.jpg) -97px  -724px no-repeat;}
+.CarModelPage .CarInfo .table1 .td1,.CarModelPage .CarInfo .table1 .head{color:#abfeff; }
+.CarModelPage .CarInfo .table2 .td1,.CarModelPage .CarInfo .table2 .head{color:#ccff00; }
+.CarModelPage .CarInfo .table3 .td1,.CarModelPage .CarInfo .table3 .head{color:#ff9900; }
+.CarModelPage .address{ color:#ccc;}
+.CarModelPage .address p{ color:#ccff00; font-weight:bold;}
+.CarModelPage .address .sanlitun{ width:250px; padding:0 6px 0 0;}
+.CarModelPage .address .yizhuang{ padding:0 0 0 0px;}
+
+.PageList{ list-style:none; margin:0 auto; width:375px;}
+.PageList li{ height:29px; line-height:29px; padding:0 6px; float:left;}
+.PageList li a{ color:#fff; font-weight:bold; font-family:Arial; font-size:14px; text-decoration:none;}
+
+.CssSprite2{ height:28px;line-height:28px;}
+.Title_Knowledge{background:url(../images/cssSprite2.jpg) no-repeat;}
+.Title_Notice{background:url(../images/cssSprite2.jpg) 0  -28px no-repeat; color:#abfeff;}
+.Title_Notice span{ padding:0 26px 0 21px; color:#ccff00;}
+.Title_Rule{background:url(../images/cssSprite2.jpg) 0  -56px no-repeat; margin-top:12px;}
+.Title_Activity{background:url(../images/cssSprite2.jpg) 0  -84px no-repeat; }
+.Title_Activity_News{background:url(../images/cssSprite2.jpg) 0  -112px no-repeat; }
+.Title_Activity_Bar{background:url(../images/cssSprite2.jpg) 0  -140px no-repeat; }
+.Title_Activity_Race{background:url(../images/cssSprite2.jpg) 0  -168px no-repeat; }
+.Title_Activity_Job{background:url(../images/cssSprite2.jpg) 0  -196px no-repeat; }
+.Title_WinnersList{background:url(../images/cssSprite2.jpg) 0 -290px  no-repeat;}
+.Title_Exchange{background:url(../images/cssSprite2.jpg) 0 -456px  no-repeat;margin-top:12px; }
+.Title_TheRule{background:url(../images/cssSprite2.jpg) 0 -484px  no-repeat;}
+.Title_CarModel{background:url(../images/cssSprite2.jpg) 0 -512px  no-repeat;}
+
+#floatVote{position:absolute; color:#fff; width:244px; height:140px; background:url(../images/VoteBG.jpg) right bottom no-repeat; text-align:right; overflow:hidden;}
+#floatVote .Png{ width:26px; height:140px;}
+#floatVote .close{ padding:14px 16px 0 0; cursor:pointer;}
+.gotoVote{ padding:60px 62px 0 0;}
+
+
+/*---*/

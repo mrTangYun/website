@@ -1,0 +1,7 @@
+.videoPage .item, .videoPage .container .gongshi.beijing { background: url("../images/gforce/video/gongshi_bg_beijing_2.jpg") no-repeat scroll 0 0 transparent;}
+.videoPage .item, .videoPage .container .gongshi.shanghai { background: url("../images/gforce/video/gongshi_bg_shanghai_2.jpg") no-repeat scroll 0 0 transparent;}
+.videoPage .item, .videoPage .container .gongshi.guangzhou { background: url("../images/gforce/video/gongshi_bg_guangzhou_2.jpg") no-repeat scroll 0 0 transparent;}
+.videoPage .container .gongshi .pageName { height: 47px;line-height: 47px;padding-left: 20px;}
+.videoPage .container .gongshi .city_btn{width:335px; padding:10px;}
+.videoPage .container .gongshi .city_btn .left{ width:110px; height:27px; cursor:pointer; margin-right:2px;}
+.videoPage .container .gongshi .city_btn .right{ width:110px; height:27px;  cursor:pointer;}

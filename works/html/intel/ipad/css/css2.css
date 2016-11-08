@@ -1,0 +1,294 @@
+@charset "utf-8";
+#header{
+	height:65px;
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	z-index: 10000;
+}
+#footer{
+	height:57px;
+	overflow:hidden;
+	position:fixed;
+	bottom:0px;
+	left:0px;
+	width:100%;
+}
+.container{
+	width:1024px;
+	overflow:hidden;
+	margin:65px auto 57px auto;
+}
+.link_mabi{
+	display:block;
+	position:absolute;
+}
+.s{
+	width:1024px;
+	position:relative;
+}
+.s1{
+	height:551px;
+}
+.s1 .video{
+	height:510px;
+	overflow:hidden;
+	margin-left:82px;
+	position:relative;
+}
+.s1 .video .open{
+	width:860px;
+	height:510px;
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:100;
+}
+.s1 .video .end{
+	width:860px;
+	height:510px;
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:100;
+	display:none;
+}
+.s1 .video .play{
+	width:76px;
+	height:76px;
+	position:absolute;
+	top:220px;
+	right:135px;
+	z-index:990;
+	cursor:pointer;
+}
+.s1 .video .player{
+	width:860px;
+	height:510px;
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:10;
+	background:#000;
+	display:none;
+}
+.s1 .nav{
+	height:38px;
+	overflow:hidden;
+	margin-left:82px;
+}
+.s1 .nav div{
+	cursor:pointer;
+	float:left;
+	width:136px;
+	height:39px;
+}
+.s1 .nav .n1{
+	background:url(../images/nn1.jpg) no-repeat;
+}
+.s1 .nav .n2{
+	background:url(../images/nn2.jpg) no-repeat;
+}
+.s1 .nav .n3{
+	background:url(../images/nn3.jpg) no-repeat;
+}
+.s1 .nav .n4{
+	background:url(../images/nn4.jpg) no-repeat;
+}
+.s1 .nav .n5{
+	background:url(../images/nn5.jpg) no-repeat;
+}
+.s1 .nav .n1_s{
+	background:url(../images/nn1_s.jpg) no-repeat;
+}
+.s1 .nav .n2_s{
+	background:url(../images/nn2_s.jpg) no-repeat;
+}
+.s1 .nav .n3_s{
+	background:url(../images/nn3_s.jpg) no-repeat;
+}
+.s1 .nav .n4_s{
+	background:url(../images/nn4_s.jpg) no-repeat;
+}
+.s1 .nav .n5_s{
+	background:url(../images/nn5_s.jpg) no-repeat;
+}
+.s2{
+	height:572px;
+	background:url(../images/s2.jpg) no-repeat;
+}
+.s3{
+	height:466px;
+	background:url(../images/s3.jpg) no-repeat;
+}
+.s4{
+	height:589px;
+	background:url(../images/s4.jpg) no-repeat;
+}
+.s5{
+	height:447px;
+	background:url(../images/s5.jpg) no-repeat;
+}
+.s6{
+	height:587px;
+	background:url(../images/s6.jpg) no-repeat;
+}
+.s6-1{
+	height:587px;
+	background:url(../images/s6-1.jpg) no-repeat;
+}
+.s7{
+	height:489px;
+	background:url(../images/s7.jpg) no-repeat;
+}
+.s8{
+	height:328px;
+	background:url(../images/s8.jpg) no-repeat;
+}
+
+
+
+.s2_link{
+	width:132px;
+	height:40px;
+	left: 106px;
+    top: 365px;
+}
+.s3_link1{
+	width:207px;
+	height:352px;
+	top:160px;
+	left:86px;
+}
+.s3_link2{
+	width:207px;
+	height:352px;
+	top:160px;
+	left:292px;
+}
+.s3_link3{
+	width:207px;
+	height:352px;
+	top:160px;
+	left:504px;
+}
+.s3_link1_jh,.s3_link2_jh,.s3_link3_jh{ width: 87px; height: 87px; position: absolute; top: 75px; left: 0; }
+.s3_link1_jh{
+	left:186px;
+}
+.s3_link2_jh{
+	left:422px;
+}
+.s3_link3_jh{
+	left:634px;
+}
+.s3_link4{
+	width:237px;
+	height:362px;
+	top:100px;
+	left:718px;
+}
+.s4_link{
+	width:132px;
+	height:40px;
+    left: 627px;
+    top: 410px;
+}
+
+.s5_link1{
+	width:207px;
+	height:352px;
+	top:75px;
+	left:86px;
+}
+.s5_link2{
+	width:207px;
+	height:352px;
+	top:75px;
+	left:292px;
+}
+.s5_link3{
+	width:207px;
+	height:352px;
+	top:75px;
+	left:504px;
+}
+.s5_link4{
+	width:207px;
+	height:352px;
+	top:75px;
+	left:718px;
+}
+
+.s6_link{
+	width:132px;
+	height:40px;
+	left: 105px;
+    top: 316px;
+}
+
+.s6_1_link{
+	width:132px;
+	height:40px;
+	left: 598px;
+    top: 306px;
+}
+.s7_link1{
+	width:207px;
+	height:362px;
+	top:75px;
+	left:86px;
+}
+.s7_link2{
+	width:207px;
+	height:362px;
+	top:75px;
+	left:290px;
+}
+.s7_link3{
+	width:207px;
+	height:362px;
+	top:75px;
+	left:500px;
+}
+.s7_link4{
+	width:207px;
+	height:362px;
+	top:75px;
+	left:710px;
+}
+.s8_link1{
+	width:308px;
+	height:233px;
+	left:50px;
+	top:90px;
+}
+.s8_link2{
+	width:216px;
+	height:155px;
+	left:283px;
+	top:70px;
+}
+.s8_link3{
+	width:308px;
+	height:233px;
+	left:360px;
+	top:90px;
+}
+.s8_link4{
+	width:308px;
+	height:233px;
+	left:670px;
+	top:90px;
+}
+.jkhx{
+	width:180px;
+	height:34px;
+	position:fixed;
+	bottom:57px;
+	z-index:10000;
+	right:0px;
+	position:fixed;
+	background:url(../images/jkxg.png) no-repeat;
+}

@@ -1,0 +1,114 @@
+@charset "utf-8";
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption { color: #585858;    font-family: "微软雅黑","宋体",Verdana;    font-size: 12px;}
+
+html,body{ text-align:center; margin:0; padding: 0; font-family:"微软雅黑","宋体";}
+.w880{ width:880px; margin:0 auto; text-align:left;  }
+.left{ float:left}
+.right{ float:right}
+.clearFloat,.clear{ clear:both; font-size:0;}
+form,ul,li{ margin:0; padding:0;list-style:none;}
+a{ text-decoration:none;}
+img{ border:0;}
+img.Png{ behavior: url(templets/default/js/iepngfix.htc) }
+.displayNone{ display:none;}
+
+#footer { color: #5B5858; font-size: 12px; height: 99px; margin: 0 auto; width: 960px; text-align:left}
+#footercontent {float:left;padding-left:30px;width:125px;}
+#footerlink {color:#6F6D6D;float:left;font-family: Verdana;height:72px;padding-left:22px;   padding-top: 27px;width:763px;}
+#footerlink p {color: #585858; font-size: 12px; margin: 0;  padding: 15px 0 0;}
+
+.mainBody{ width:960px; height:582px; margin:0 auto; position:relative; top:0; left:0; }
+.home_page .mainBody{ background:url(../images/amway/bg_homepage.jpg) no-repeat;}
+.sub_ex_page .mainBody{ background:url(../images/amway/common_bg.jpg) bottom no-repeat;}
+.ex_live_page .mainBody{ background:url(../images/amway/common_bg.jpg) bottom no-repeat;}
+.reason_page .mainBody{ background:url(../images/amway/common_bg.jpg) bottom no-repeat; height:590px;}
+.video_page .mainBody{  height:590px;}
+.anxin_page .mainBody{ background:url(../images/amway/common_bg.jpg) bottom no-repeat; height:auto; padding:0 0 12px;}
+
+
+.mainBody #logo{ position:absolute; top:45px;left:-1px;}
+
+nav{ height:42px; padding:67px 0 0;  display:block; text-align:right;  overflow:hidden;}
+nav ul,nav li{ list-style:none;}
+nav li{ display:inline;}
+.level_1{ height:29px;}
+.level_1 li{ padding:0 30px;}
+.level_2{ height:34px; padding:17px; margin-top:-17px;}
+.level_2 li{ padding:0 6px;}
+.downloadAndVideo{ width:321px; height:38px;}
+.home_page .downloadAndVideo{ margin:409px 0 0 577px;}
+.sub_ex_page .downloadAndVideo{ margin:31px 0 0 577px;}
+.ex_live_page .downloadAndVideo{ margin:31px 0 0 577px;}
+.reason_page .downloadAndVideo{ margin:31px 0 0 577px;}
+.anxin_page .downloadAndVideo{ margin:31px 0 0 577px;}
+
+/*展区现场*/
+.ex_live_page{}
+.ex_live_page .mainbox{ text-align:left;}
+.ex_live_page .mainbox .imagesBox {}
+.ex_live_page .mainbox .imagesBox li{ float:left;padding:0 9px 0; line-height:81px; height:107px; overflow:hidden;}
+.ex_live_page .mainbox .imagesBox ul{ width:766px; height:305px; background:url(../images/amway/ex_imgbox_bg.png) no-repeat; margin:0 auto; padding:30px 0 0 15px; display:none; overflow:hidden; }
+.ex_live_page .mainbox .imagesBox li img{}
+.ex_live_page .mainbox .imagesBox ul.Current{ display:block;}
+#cboxTitle{ text-align:center;}
+
+/* 展区抢先看*/
+.sub_ex_page{}
+.sub_ex_page .pageBox{ height:27px; line-height:27px;}
+.sub_ex_page .imagesBox{ width:781px; height:335px; overflow:hidden; margin:0 auto;}
+.sub_ex_page .imagesBox li{ display:none;}
+.sub_ex_page .imagesBox li.Current{ display:block;}
+.sub_ex_page .imagesBox img{ width:781px; height:335px;}
+.sub_ex_page .pageBox,.ex_live_page .pageBox{ padding:8px 0 15px 266px; height:27px; overflow:hidden;}
+.sub_ex_page .pageBox ul li,.ex_live_page .pageBox ul li{ float:left; height:27px; line-height:27px; width:27px; background:url(../images/amway/page_bg.png) no-repeat; color:#fff; font-size:14px; cursor:pointer; margin:0 5px 0 0; text-align:center;}
+.sub_ex_page .pageBox ul li.Current,.ex_live_page .pageBox ul li.Current{  background:url(../images/amway/page_bg.png) -27px 0 no-repeat; }
+
+/*8大理由*/
+.reason_page .headtitle{ text-align:left; margin:60px 0 0 145px;}
+.reason_page .reason_choose_box{}
+.reason_page .reason_choose_box ul{padding:23px 0 0 145px;  }
+.reason_page .reason_choose_box ul li{ height:60px; width:60px; float:left;  margin:0 27px 0 0; cursor:pointer; overflow:hidden;}
+
+.reason_page .reason_choose_box ul #item_2 div{ margin:0 0 0 -60px}
+.reason_page .reason_choose_box ul #item_3 div{ margin:0 0 0 -120px}
+.reason_page .reason_choose_box ul #item_4 div{ margin:0 0 0 -180px}
+.reason_page .reason_choose_box ul #item_5 div{ margin:0 0 0 -240px}
+.reason_page .reason_choose_box ul #item_6 div{ margin:0 0 0 -300px}
+.reason_page .reason_choose_box ul #item_7 div{ margin:0 0 0 -360px}
+.reason_page .reason_choose_box ul #item_8 div{ margin:0 0 0 -420px}
+.reason_page .reason_choose_box ul #item_1.hover div,.reason_page .reason_choose_box ul #item_1.Current div{ margin:-60px 0 0 0px}
+.reason_page .reason_choose_box ul #item_2.hover div,.reason_page .reason_choose_box ul #item_2.Current div{ margin:-60px 0 0 -60px}
+.reason_page .reason_choose_box ul #item_3.hover div,.reason_page .reason_choose_box ul #item_3.Current div{ margin:-60px 0 0 -120px}
+.reason_page .reason_choose_box ul #item_4.hover div,.reason_page .reason_choose_box ul #item_4.Current div{ margin:-60px 0 0 -180px}
+.reason_page .reason_choose_box ul #item_5.hover div,.reason_page .reason_choose_box ul #item_5.Current div{ margin:-60px 0 0 -240px}
+.reason_page .reason_choose_box ul #item_6.hover div,.reason_page .reason_choose_box ul #item_6.Current div{ margin:-60px 0 0 -300px}
+.reason_page .reason_choose_box ul #item_7.hover div,.reason_page .reason_choose_box ul #item_7.Current div{ margin:-60px 0 0 -360px}
+.reason_page .reason_choose_box ul #item_8.hover div,.reason_page .reason_choose_box ul #item_8.Current div{ margin:-60px 0 0 -420px}
+.reason_page .imageBox{ position:relative; top:0; left:0; width:676px; height:167px; margin:11px auto 0; -webkit-box-shadow:0 5px 10px #ccc; -moz-box-shadow:0 5px 10px #ccc; box-shadow:0 5px 10px #ccc;}
+.reason_page .imageBox li{ display:none;}
+.reason_page .imageBox li.Current{ display:block;}
+.reason_page .imageBox .arrow{ position:absolute; top:-7px; left:0;}
+.reason_page .arrow{ width:21px; height:9px;  background:url(../images/amway/arrow.png) no-repeat; }
+/*安装视频*/
+.video_page{ background:url(../images/amway/bg_sub_video.jpg) center top no-repeat;}
+.video_page .videoContent{ margin:78px 0 0 110px; width:454px; height:272px; background:url(../images/amway/video_bg.gif) no-repeat; text-align:center;}
+.video_page .headtitle{ margin:0px 0 19px 0px;}
+.video_page .headAndDownload{ text-align:left; margin:112px 0 0 0px; width:346px;}
+.video_page  #flash{ width:432px; height:244px; overflow:hidden; margin:0 auto; padding:15px 0 0;}
+/*安心喝好水*/
+.anxin_page .itemChoose{ width:606px; height:128px; margin:49px auto 26px;}
+.anxin_page .itemChoose .item{ cursor:pointer; width:127px; height:128px; overflow:hidden;}
+.anxin_page .itemChoose .arrow2{ width:62px; padding:55px 0 0;}
+.anxin_page .itemChoose .arrow1{ width:37px; text-align:left;padding:55px 0 0;}
+.anxin_page .itemChoose .w137{ width:137px;}
+.anxin_page .itemChoose #Choose_item_2 div{ margin:0 0 0 -127px }
+.anxin_page .itemChoose #Choose_item_3 div{ margin:0 0 0 -254px }
+.anxin_page .itemChoose #Choose_item_1.Current div { margin:-128px 0 0; }
+.anxin_page .itemChoose #Choose_item_2.Current div{ margin:-128px 0 0 -127px }
+.anxin_page .itemChoose #Choose_item_3.Current div{ margin:-128px 0 0 -254px }
+
+.anxin_page .imagesBox{ width:659px; margin:0 auto; position:relative; top:0; left:0;}
+.anxin_page .imagesBox ul li{ display:none;}
+.anxin_page .imagesBox ul li.Current{ display:block;}
+.anxin_page .imagesBox .arrow{ position:absolute; top:-7px; left:0;}
+.anxin_page .arrow{ width:21px; height:9px;  background:url(../images/amway/arrow.png) no-repeat; }

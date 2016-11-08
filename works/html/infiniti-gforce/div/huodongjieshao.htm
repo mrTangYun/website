@@ -1,0 +1,198 @@
+<script>
+
+$(".huodongjieshaoPage .sonPageBox .btn_close").live('click',function(){
+		$(".huodongjieshaoPage .sonPageBox .sonPageItem:visible").fadeOut();
+		$(".huodongjieshaoPage .PopWindows").hide();
+});
+
+function jimsons_DoFSCommand(command, args) { 
+ if (command == "send_var") { 
+ 	var index=(args*1)-1;
+	$(".huodongjieshaoPage .sonPageBox .sonPageItem").each(function(i){$(this).hide();});
+ 	$(".huodongjieshaoPage .PopWindows").show();
+ 	$(".huodongjieshaoPage .sonPageBox .sonPageItem").eq(index).fadeIn();
+ }
+}
+
+if (navigator.appName && navigator.appName.indexOf("Microsoft") != -1 && 
+  navigator.userAgent.indexOf("Windows") != -1 && navigator.userAgent.indexOf("Windows 3.1") == -1) {
+  document.write('<SCRIPT LANGUAGE=VBScript\> \n');
+  document.write('on error resume next \n');
+  document.write('Sub jimsons_FSCommand(ByVal command, ByVal args)\n');
+  document.write(' call jimsons_DoFSCommand(command, args)\n');
+  document.write('end sub\n');
+  document.write('</SCRIPT\> \n');
+}
+
+
+</script>
+<div class="huodongjieshaoPage">
+	<div class="outerBox">
+		<div class="PageItem">
+			<div id="myFlash">
+			<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"  codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0"   width="820" height="402" id="jimsons"> 				<param name="movie" value="flash/huodongjieshao.swf"> 
+				<param value="transparent" name="wmode">
+				<param name="quality" value="high"> 
+				<embed src="flash/huodongjieshao.swf" width="820" height="402" wmode="transparent" quality="high"  pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" swLiveConnect="true"  name="jimsons"></embed>
+			</object> 
+			</div>
+		</div>
+		<div class="PopWindows sonPageBox">
+			<div class="sonPageItem">
+				<!--文字内容-->
+				<h4>挑战极限 下一个Master G就是你</h4>
+				<p>2012年3月10日-9月1日，融合F1极限赛车精神，体验G系车型动感之风，英菲尼迪“G-Force极风之旅2012”挑战赛磅礴启程，极速竞G全面开战。</p>
+				<p>即日起，在活动网站上填写报名信息，即可加入G-Force极风之旅，在线体验众多精彩互动，更有机会凭借专业驾控与澎湃激情，征服一切平庸，成为冠军Master G，获得灵感座驾G37一年免费使用权。</p>
+				<p>在活动期间，登录http://gforce.infiniti.com.cn注册并参与互动的网友、拨打400-880-9090电话或至当地授权经销商处报名的网友，即有机会前往上海F1现场观赛并与维特尔亲密接触，更有幸运者可亲临新加坡F1夜战现场，纵情呐喊助阵。</p>
+				<p>本次活动禁止英菲尼迪中国事业总部或其授权经销商员工参加，一经发现立刻取消比赛资格。</p>
+				<div>
+						<div class="btn" ga_islogin="0" ga_label="即刻报名" ga_action="reg_user" ga_category="Forms" target-div="view_2">
+							<img height="36" width="131" class="png" src="images/gforce/bg/btn_reg.png">
+						</div>
+				</div>
+
+				<!--文字内容-->
+			</div>
+			<div class="sonPageItem">
+				<!--文字内容-->
+				<h4>品牌故事</h4>
+				<p>1985年11月，日产高层决定成立高端品牌向北美市场进军的目标，开始研究北美豪华汽车市场。1987年7月，计划开始逐步实施，并设计出了Infiniti作为最终品牌标识和名称。Infiniti音译为“英菲尼迪”，直译为“无限”，其椭圆形标志代表了一条无限延伸道路。椭圆曲线代表无限扩张之意，两条向中心汇集的直线象征无尽的发展。从此，英菲尼迪便开始了飞速发展的征程。</p>
+<p>2007年英菲尼迪品牌进入中国，成为日产集团在中国打造的高端豪华车品牌，目前中国已经成为英菲尼迪全球的第二大市场。</p>
+<p>英菲尼迪一直秉承顾客至上的服务理念，作为英菲尼迪尊贵的车主，您理应尽享怡然无忧的驾驭生活。英菲尼迪为您的爱车提供了4年或10万公里的新车保修期限、免费定期检查及保养服务、24小时道路救援服务、旅程无忧服务、个性化管家服务、满箱油交车服务等客户增值礼遇，让您在享受爱车的同时也感受到作为英菲尼迪车主的尊贵超值体验。</p>
+				<div>
+						<div class="btn" ga_islogin="0" ga_label="即刻报名" ga_action="reg_user" ga_category="Forms" target-div="view_2">
+							<img height="36" width="131" class="png" src="images/gforce/bg/btn_reg.png">
+						</div>
+				</div>
+
+				<!--文字内容-->
+			</div>
+			<div class="sonPageItem">
+				<!--文字内容-->
+				<h4>线下赛程</h4>
+				<p>2012年3月10日－8月20日    全国50城市经销商海选招募</p>
+				<p>2012年4月11日－8月23日    经销商海选挑战赛</p>
+				<p>2012年6月01日－6月03日    北京半决赛 </p>
+				<p>2012年6月29日－7月01日    上海半决赛</p>
+				<p>2012年7月27日－7月29日    广州半决赛</p>
+				<p>2012年8月24日－8月26日    成都半决赛</p>
+				<p>2012年9月01日       		G-Force极风之旅全国决赛</p>
+				<div>
+						<div class="btn" ga_islogin="0" ga_label="即刻报名" ga_action="reg_user" ga_category="Forms" target-div="view_2">
+							<img height="36" width="131" class="png" src="images/gforce/bg/btn_reg.png">
+						</div>
+				</div>
+				<!--文字内容-->
+			
+			</div>
+			<div class="sonPageItem">
+				<!--文字内容-->
+				
+				<!--文字内容-->
+			
+			</div>
+			<div class="sonPageItem">
+				<div>
+					<!---文字内容-->
+					<h4>积分规则</h4>
+					<h5>1、参与方式：</h5>
+					* 网友通过“即刻报名”填写信息后，即可成为竞G挑战者，参与到G-Force活动中。<br/>
+					* 报名成功后，网友可用人人网或新浪微博账号，也可在设置密码后，使用报名邮箱获得参与活动资格。<br/>
+					注：选择登陆账号后不能更改。<br/>
+					<h5>2、获得G分的方式：</h5>
+					* 网友在登录后，获得个人G分账户。<br/>
+					* 网友通过完成“任务挑战”获得每个任务相应的G分。<br/>
+					<h5>3、G分使用方式：</h5>
+					* 本站活动的奖品均通过抽奖方式来获得。<br/>
+					* 在“挑战冠军”页面进入“我的奖项”，即点击开放的奖品参与抽奖，完成一次抽奖获得一个抽奖号，每完成一次抽奖即消耗相应G分，可多次参与同一奖品的抽奖。<br/>
+					* 在活动期间的每周五公布获奖号码，每个活动阶段所开放的奖品类型及数额不同，直至奖品发放完毕为止。<br/>
+					* 中奖后相应账户所得G分清零。<br/>
+					
+					<h5>抽奖规则：</h5>
+					* 本站秉承公平、公正的原则，为每个参与活动的网友提供透明的抽奖机制：<br/>
+					•	在活动期间的每周五公布获奖号码，则以开奖日收盘时的上证指数 × 收盘时的深证成指 × 10000 = 12位数。（指数以证交所公布数字为准）；<br/> 
+					•	将此12位数的数字倒序排列后（如首位是0，则直接抹去），再除以截止至开奖日前一天23:59:59参加本次活动的人数（每个抽奖号为一个人数），得到的余数加1即为本次活动的最终获奖号码。 <br/>
+					•	如果当天需要开多个奖，则用此号码分别+2011 +3011 +4011……得出当天其他获奖号码。 <br/>
+					•	如果活动期间抽奖号码加值后超过了前一天的抽奖人数，则顺延至次日参加抽奖的抽奖号码<br/> 
+					•	如果开奖最后一天抽奖号码加值后抽奖号码超过了总参加人数，则将抽奖号码减去参加人数得到新的抽奖号码。<br/> 
+					•	若您的“抽奖号”与最终获奖号码完全一致，就可以获得本次活动的大奖。 <br/>
+					<h5>例如：</h5>
+					2012-03-15收盘时的上证指数是 2927.08，<br/>
+					2012-03-15收盘时的深证成指是 12926.61，<br/>
+					将这两个数字相乘后再乘以10000得到的12位数为378372215988，<br/>
+					将这12位数的数字倒序排列得到889512273873。<br/>
+					如果截止至2012-03-14 23:59:59活动结束时的抽奖人数为1907899，<br/>
+					以889512273873整除以1907899，商为466226，余数为154699，<br/>
+					用154699+1=154700，获奖即为154700，如果当天需要开多个奖，则用此号码分别+2011 +3011 +4011……得出当天其他获奖号码。<br/>
+					* 注意事项：<br/>
+					•	为避免引起不必要的误会，如果员工或家属的“抽奖号”是最终获奖号码，则最终抽奖号码直接再+1，得出新的抽奖号码。<br/> 
+					•	开奖期间请保持手机畅通，开奖后超过7天无法联系视为主动放弃，抽奖号码+1顺延至下一位。 <br/>
+				<div>
+						<div class="btn" ga_islogin="0" ga_label="即刻报名" ga_action="reg_user" ga_category="Forms" target-div="view_2">
+							<img height="36" width="131" class="png" src="images/gforce/bg/btn_reg.png">
+						</div>
+				</div>
+
+
+					<!--文字内容区域-->
+				</div>
+			</div>
+			<div class="sonPageItem">
+				<!--文字内容-->
+				<h4>奖项设置</h4>
+				<p>
+				<h5>I．2012年G-Force冠军大奖 决赛男女组冠军各1名</h5>
+				<p>G37免费使用权一年，同时获得Master G头衔，并可直接参加2013年总决赛</p>
+				<h5>II．F1新加坡站夜战观赛尊贵礼遇 34名</h5>
+				<p>亲临新加坡，观赏2012年F1夜战</p>
+				<p>获得方式：</p>
+				<p>1. 决赛男子组第二、三、四名，决赛女子组第二名可直接获得，或</p>
+				<p>2. 2012年3月1日-8月30日购买G系列车型的用户，完成活动网站注册，且半决赛G系车主竞赛成绩前30名即可获得</p>
+				</p>
+				<h5>III．中汽联G级赛车执照 10名</h5>
+				<p>获得方式：决赛最终成绩前10名选手</p>
+				<h5>IV．复活机会</h5>
+				<p>直接晋级半决赛的机会</p>
+				<p>获得方式：</p>
+				<p>3月1日-8月10日期间购买G系列车型的用户，完成活动网站注册，且莅临经销店索取名额即有机会获得，或</p>
+				<p>2.参与活动网站活动获得（数量：2名）</p>
+
+				<h5>V．2012年G-Force启动盛典 100名</h5>
+				<p>亲临上海，会见维特尔，感受英菲尼迪品牌及G系产品魅力</p>
+				<p>获得方式：</p>
+				<p>1.2012年G系列车型新购车用户，完成活动网站注册，且莅临经销店索取即有机会获得，或</p>
+				<p>2.参与活动网站活动或参与车主俱乐部活动亦有机会获得</p>
+				
+				<h5>VI．F1上海站现场观赛尊贵礼遇 600套（一套两张）</h5>
+				<p>观看2012年F1上海站决赛</p>
+				<p>获得方式：</p>
+				<p>1.2012年G系列车型新购车用户，完成活动网站注册，并莅临经销店索取即有机会获得，或</p>
+				<p>2.参与活动网站活动或车主俱乐部活动即有机会获得</p>
+				
+				<h5>VII．F1上海站4月13日VIP名额 30名</h5>
+				<p>与Sebastian Vettel见面互动，观看F1上海站练习赛，参观围场俱乐部</p>
+				<p>获得方式：完成活动网站注册，且参与活动网站活动或车主俱乐部活动即有机会获得</p>
+				
+				<h5>VIII．F1上海站4月14日VIP名额 30名</h5>
+				<p>与Sebastian Vettel见面互动，观看F1上海站杆位赛，参观围场俱乐部</p>
+				<p>获得方式：完成活动网站注册，且参与活动网站活动或车主俱乐部活动即有机会获得</p>
+				
+				
+				<h5>IX．iPad2 24名</h5>
+				<p>获得方式：进入半决赛的选手，完成活动网站注册，通过抽奖方式获得</p>
+				<div>
+						<div class="btn" ga_islogin="0" ga_label="即刻报名" ga_action="reg_user" ga_category="Forms" target-div="view_2">
+							<img height="36" width="131" class="png" src="images/gforce/bg/btn_reg.png">
+						</div>
+				</div>
+				
+				<!--文字内容-->
+			
+			</div>
+			<div class="btn_close">
+			
+			</div>
+		</div>
+		<div class="clearFloat"></div>
+	</div>
+</div>
