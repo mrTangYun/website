@@ -1,0 +1,138 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+
+}
+*{ margin:0; padding:0; }
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+
+/*******************************************************************************************/
+/*                                      缃戠珯鍩虹鏍峰紡                                       ***/
+/*******************************************************************************************/
+html,body{ width:100%; margin:0 auto;}
+
+
+/*viaggio KV*/
+.swiper-container {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.swiper-container1 {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.swiper-slide {
+	text-align: center;
+        font-size: 14px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+}
+.gallery-top {
+	height: 80%;
+	width: 100%;
+}
+.gallery-thumbs {
+	height: 20%;
+	box-sizing: border-box;
+}
+.gallery-thumbs .swiper-slide {
+	height: 100%;
+}
+.gallery-thumbs .swiper-slide-active {
+	opacity: 1;
+}
+.gallery-thumbs .swiper-slide{ width:30%;}
+.kv_thumbs {border-top:1px solid #FFF;}
+.kv_thumbs1 {border-top:1px solid #FFF;}
+.swiper-slide1 {
+	text-align: center;
+        font-size: 14px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+}
+.gallery-top1 {
+	height: 80%;
+	width: 100%;
+}
+.gallery-thumbs1 {
+	height: 20%;
+	box-sizing: border-box;
+}
+.gallery-thumbs1 .swiper-slide {
+	height: 100%;
+}
+.gallery-thumbs1 .swiper-slide-active {
+	opacity: 1;
+}
+.gallery-thumbs1 .swiper-slide{ width:30%;}
+
+
+.flashBg {
+    background: rgba(0, 0, 0, 0.95);
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 11000;
+	display:none;
+}
+#swf-close{
+    background: url("http://www.jeep.com.cn/11_grand_cherokee/fancybox/fancybox.png") -40px 0;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+	float:right;
+	margin:10px 10px 0 0
+}
+

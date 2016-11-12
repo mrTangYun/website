@@ -232,35 +232,72 @@
 	"buffers":
 	[
 		{
-			"file": "works/index.html",
-			"settings":
-			{
-				"buffer_size": 629,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/Users/唐云/Documents/GitHub/colorbox/example2/index.html",
-			"settings":
-			{
-				"buffer_size": 5552,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "works/css/main.css",
-			"settings":
-			{
-				"buffer_size": 3143,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "works/js/main.js",
 			"settings":
 			{
-				"buffer_size": 8227,
+				"buffer_size": 9899,
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "Searching 176 files for \"prop1_png\" (regex)\n\nE:\\EgretDocument\\brick\\brick\\brick\\resource\\default.res.json:\n    2  	\"groups\": [\n    3  		{\n    4: 			\"keys\": \"description_json,brick1_png,brick2_png,brick3_png,brick4_png,bt3_png,btn1_png,btn2_png,btn3_png,btn4_png,go_png,one_png,prop1_png,prop2_png,prop3_png,propDesc_png,rule_png,text3_png,two_png,text1_png,text2_png,three_png,text4_png,logo1_png,resultBg_png,fpBg_png,title1_png,loadingBg2_jpg,btn5_png,btn6_png,arrow_png\",\n    5  			\"name\": \"preload\"\n    6  		},\n    .\n   89  			\"url\": \"assets/prop1.png\",\n   90  			\"type\": \"image\",\n   91: 			\"name\": \"prop1_png\"\n   92  		},\n   93  		{\n\n2 matches in 1 file\n\n\nSearching 295 files for \"btnGame\" (regex)\n\nE:\\EgretDocument\\brick\\brick\\brick\\bin-debug\\Wnd\\FirstPageScene.js:\n   11      };\n   12      p.init = function () {\n   13:         this.btnGame.addEventListener(egret.TouchEvent.TOUCH_TAP, this.btnGameClick, this);\n   14          this.textEffect();\n   15      };\n   ..\n   25          this.addChild(maskRect);\n   26          this.text2.mask = maskRect;\n   27:         this.btnGame.alpha = 0;\n   28          egret.setTimeout(function () {\n   29              egret.Tween.get(maskRect).to({ x: 640 }, 1000);\n   30:             egret.Tween.get(_this.btnGame).to({ alpha: 1 }, 1000);\n   31          }, this, 500);\n   32          this.ballFall();\n   ..\n   40          egret.Tween.get(this.ball).to({ y: 500 }, 300).call(this.ballFall, this);\n   41      };\n   42:     p.btnGameClick = function (e) {\n   43          WndManager.root.closeWnd(FirstPageScene);\n   44          WndManager.root.openWnd(GameScene);\n\nE:\\EgretDocument\\brick\\brick\\brick\\bin-release\\web\\161109214826\\main.min.js:\n    1  var AssetAdapter=function(){function e(){}var t=(__define,e),i=t.prototype;return i.getAsset=function(e,t,i){function s(s){t.call(i,s,e)}if(RES.hasRes(e)){var n=RES.getRes(e);n?s(n):RES.getResAsync(e,s,this)}else RES.getResByUrl(e,s,this,RES.ResourceItem.TYPE_IMAGE)},e}();egret.registerClass(AssetAdapter,\"AssetAdapter\",[\"eui.IAssetAdapter\"]);var Ball=function(e){function t(t,i,s,n,r){e.call(this),this.scoreLastThrough=0,this.startX=t,this.startY=i,this.dx=s,this.dy=n,this.r=r,this.throughTimes=0,this.initImg(),this.initData(),this.addEventListener(egret.Event.ENTER_FRAME,this.onHandleFrame,this)}__extends(t,e);var i=(__define,t),s=i.prototype;return s.onHandleFrame=function(e){},s.initData=function(){this.resetPosition(),this.hideCircle(),this.resetScoreLastThrough(),this.anchorOffsetX=this.r,this.anchorOffsetY=this.r},s.resetScoreLastThrough=function(){this.scoreLastThrough=0},s.isSlowSpeedStatus=function(){return this.blackCircle.visible},s.resetPosition=function(){this.x=this.startX,this.y=this.startY},s.resetSpeed=function(e,t){this.dx=e,this.dy=t},s.hideCircle=function(){this.blackCircle.visible=!1,this.GoldCircle.visible=!1},s.initImg=function(){this.img=new eui.Image(RES.getRes(\"ball_png\")),this.addChild(this.img),this.blackCircle=new egret.Shape,this.blackCircle.graphics.beginFill(13586799),this.blackCircle.graphics.drawCircle(0,0,this.r),this.blackCircle.graphics.endFill(),this.blackCircle.x=this.r,this.blackCircle.y=this.r,this.addChild(this.blackCircle),this.GoldCircle=new egret.Shape,this.GoldCircle.graphics.beginFill(13543936),this.GoldCircle.graphics.drawCircle(0,0,this.r),this.GoldCircle.graphics.endFill(),this.GoldCircle.x=this.r,this.GoldCircle.y=this.r,this.addChild(this.GoldCircle)},s.decreaseSpeed=function(){this.blackCircle.visible=!0},s.normalSpeed=function(){this.blackCircle.visible=!1},s.AddThroughTimes=function(){this.GoldCircle.visible||(this.throughTimes++,this.GoldCircle.visible=!0)},s.MinusThroughTimes=function(){this.scoreLastThrough>0&&(this.throughTimes>0&&this.throughTimes--,this.GoldCircle.visible=this.throughTimes>0,this.resetScoreLastThrough())},s.getThroughTimes=function(){return this.throughTimes},s.addScoreLastThrough=function(){this.scoreLastThrough++},s.getCollidePoints=function(){var e=5,t=this.x,i=this.y-this.r,s=this.x+this.r-e,n=this.y-this.r+e,r=this.x+this.r,a=this.y,o=this.x+this.r-e,h=this.y+this.r-e,l=this.x,u=this.y+this.r,c=this.x-this.r+e,d=this.y+this.r-e,m=this.x-this.r,g=this.y,E=this.x-this.r+e,p=this.y-this.r+e,_=[];return _.push(t),_.push(i),_.push(s),_.push(n),_.push(r),_.push(a),_.push(o),_.push(h),_.push(l),_.push(u),_.push(c),_.push(d),_.push(m),_.push(g),_.push(E),_.push(p),_},t}(egret.Sprite);egret.registerClass(Ball,\"Ball\");var BallFIxedMove=function(){function e(e,t){this.points=[],this.moveTimes=0,this.ball=e,this.points=t,this.moveTimes=0}var t=(__define,e),i=t.prototype;return i.move=function(){if(null!=this.ball&&null!=this.points&&this.points.length>0){var e=this.points.length;e%2==0&&this.startMove()}},i.startMove=function(){if(this.points.length>=2*this.moveTimes+4){this.ball.x=this.points[2*this.moveTimes+0],this.ball.y=this.points[2*this.moveTimes+1];var e=this.points[2*this.moveTimes+2],t=this.points[2*this.moveTimes+3];egret.Tween.get(this.ball).to({x:e,y:t},350-30*this.moveTimes).call(this.startMove,this),this.moveTimes++}},e}();egret.registerClass(BallFIxedMove,\"BallFIxedMove\");var Emitter=function(e){function t(t){e.call(this),this.idManager=new IdManager,this.isPause=!1,this.isOver=!1,this.propsArr={},this.propsWidth=[48,54,48],this.isStart=!1,this.currentLayoutIndex=-1,this.gameScene=t}__extends(t,e);var i=(__define,t),s=i.prototype;return s.makeLayout=function(){this.curGameLayout=null,this.gameLayout1=null,this.gameLayout2=null,this.gameLayout3=null,MakeGameLayout.MakeGameLayout1(this),MakeGameLayout.MakeGameLayout2(this),MakeGameLayout.MakeGameLayout3(this)},s.initData=function(){WndManager.root.main.protocol.score=0,this.gameScene.lScore.text=WndManager.root.main.protocol.score.toString(),this.currentLayoutIndex=-1,this.cleanAllParticles(),this.cleanAllProps(),this.makeLayout(),this.isPause=!0,this.isOver=!0,this.isStart=!1,this.randomLayout(),this.createParticles(),this.createBall(),this.createPadd()},s.randomLayout=function(){var e=Math.floor(3*Math.random());this.currentLayoutIndex=e,0==e?this.curGameLayout=this.gameLayout1:1==e?this.curGameLayout=this.gameLayout2:this.curGameLayout=this.gameLayout3},s.cleanAllParticles=function(){if(null!=this.curGameLayout&&null!=this.curGameLayout.particlesArr)for(var e in this.curGameLayout.particlesArr)this.gameScene==this.curGameLayout.particlesArr[e].parent&&this.gameScene.removeChild(this.curGameLayout.particlesArr[e]),delete this.curGameLayout.particlesArr[e]},s.cleanAllProps=function(){for(var e in this.propsArr)this.gameScene==this.propsArr[e].parent&&this.gameScene.removeChild(this.propsArr[e]),delete this.propsArr[e]},s.createParticles=function(){this.curGameLayout.createParticles(this.gameScene)},s.createBall=function(){null==this.ball&&(this.ball=new Ball(t.Ball_INIT_X,t.Ball_INIT_Y-t.Ball_RADIUS,t.Ball_INIT_DX,t.Ball_INIT_DY,t.Ball_RADIUS),this.gameScene.addChild(this.ball)),this.ball.resetPosition(),this.ball.hideCircle(),this.ball.resetSpeed(t.Ball_INIT_DX,t.Ball_INIT_DY),this.ball.resetScoreLastThrough(),this.ball.throughTimes=0},s.createPadd=function(){null==this.padd&&(this.padd=new Padd(t.Ball_INIT_X,t.Ball_INIT_Y+(t.PADD_HEIGHT>>1),t.PADD_SPEEDX,t.PADD_WIDTH,t.PADD_HEIGHT),this.gameScene.addChild(this.padd)),this.padd.resetPosition()},s.gameStart=function(){this.isPause=!1,this.isOver=!1,this.addEventListener(egret.Event.ENTER_FRAME,this.enterFrameHandler,this)},s.gameOver=function(){this.isOver=!0,this.removeEventListener(egret.Event.ENTER_FRAME,this.enterFrameHandler,this)},s.updatePaddFastMove=function(e){this.padd.updateFastMove(e)},s.updatePropsMove=function(){for(var e in this.propsArr)this.propsArr[e].updateMove()},s.checkPropsCollide=function(){for(var e in this.propsArr)if(this.propsArr[e].y+this.propsArr[e].height>=t.Ball_INIT_Y&&this.propsArr[e].y+this.propsArr[e].height<t.Ball_INIT_Y+t.PADD_HEIGHT&&(this.propsArr[e].x>this.padd.x-(t.PADD_WIDTH>>1)&&this.propsArr[e].x<this.padd.x+(t.PADD_WIDTH>>1)||this.propsArr[e].x+this.propsArr[e].hitTestWidth>this.padd.x-(t.PADD_WIDTH>>1)&&this.propsArr[e].x+this.propsArr[e].hitTestWidth<this.padd.x+(t.PADD_WIDTH>>1))){var i=this.propsArr[e].getPropType();this.updatePropEffect(i),this.gameScene==this.propsArr[e].parent&&this.gameScene.removeChild(this.propsArr[e]),delete this.propsArr[e]}},s.updatePropEffect=function(e){switch(e){case 1:this.ball.isSlowSpeedStatus()||(this.ball.dx=this.ball.dx>>1,this.ball.dy=this.ball.dy>>1),this.ball.decreaseSpeed(),this.gameScene.initnDecSpeedTimer();break;case 2:this.gameScene.handlePropAddTime(e);break;case 3:this.ball.AddThroughTimes()}},s.destoryProps=function(){for(var e in this.propsArr)this.propsArr[e].y>MainScene.screen_height-this.propsArr[e].height&&(this.gameScene==this.propsArr[e].parent&&this.gameScene.removeChild(this.propsArr[e]),delete this.propsArr[e])},s.judgeIsOver=function(){var e=this.curGameLayout.getParticlesNum();0>=e&&((this.ball.y>this.curGameLayout.getBottomBoardY()||this.ball.y<this.curGameLayout.startY)&&(this.curGameLayout=null,0==this.currentLayoutIndex?(this.gameLayout1=null,MakeGameLayout.MakeGameLayout1(this),this.curGameLayout=this.gameLayout1):1==this.currentLayoutIndex?(this.gameLayout2=null,MakeGameLayout.MakeGameLayout2(this),this.curGameLayout=this.gameLayout2):(this.gameLayout3=null,MakeGameLayout.MakeGameLayout3(this),this.curGameLayout=this.gameLayout3)),this.createParticles())},s.checkCollideBricks=function(){var e=this.ball.getCollidePoints(),i=e.length>>1;if(null!=this.curGameLayout&&null!=this.curGameLayout.particlesArr)for(var s in this.curGameLayout.particlesArr)for(var n=0;i>n;n++){var r=e[2*n],a=e[2*n+1];if(this.curGameLayout.particlesArr[s].hitTestPoint(r,a)){var o=this.ball.getThroughTimes();if(o>0?this.ball.addScoreLastThrough():this.ball.dy=-this.ball.dy,WndManager.root.main.protocol.score+=1,this.gameScene.lScore.text=WndManager.root.main.protocol.score.toString(),this.curGameLayout.particlesArr[s].parent==this.gameScene&&this.gameScene.removeChild(this.curGameLayout.particlesArr[s]),delete this.curGameLayout.particlesArr[s],this.curGameLayout.ObjArr[s]>=2){var h=this.idManager.getNewId(),l=this.curGameLayout.ObjArr[s]-1,u=new Prop(l,this.ball.x+(this.ball.width>>1)-(this.propsWidth[l-1]>>1),this.ball.y+this.ball.height,t.PROP_SPEED_Y);this.propsArr[h]=u,this.gameScene.addChild(this.propsArr[h])}return this.curGameLayout.ObjArr[s]=0,void WndManager.root.playSound1()}}},s.checkBrick1=function(){var e=this.curGameLayout.getRowIndex(this.ball.y),i=this.curGameLayout.getColIndex(this.ball.x),s=e*this.curGameLayout.cols+i;if(this.ball.y-this.curGameLayout.startY<this.curGameLayout.rows*t.BRICK_HEIGHT&&e>=0&&i>=0&&this.curGameLayout.ObjArr[s]>=1){var n=this.ball.getThroughTimes();if(n>0?this.ball.addScoreLastThrough():this.ball.dy=-this.ball.dy,WndManager.root.main.protocol.score+=1,this.gameScene.lScore.text=WndManager.root.main.protocol.score.toString(),this.curGameLayout.particlesArr[s].parent==this.gameScene&&this.gameScene.removeChild(this.curGameLayout.particlesArr[s]),delete this.curGameLayout.particlesArr[s],this.curGameLayout.ObjArr[s]>=2){var r=this.idManager.getNewId(),a=this.curGameLayout.ObjArr[s]-1,o=new Prop(a,this.ball.x+(this.ball.width>>1)-(this.propsWidth[a-1]>>1),this.ball.y+this.ball.height,t.PROP_SPEED_Y);this.propsArr[r]=o,this.gameScene.addChild(this.propsArr[r])}this.curGameLayout.ObjArr[s]=0,WndManager.root.playSound1()}},s.checkBrick2=function(){var e=this.curGameLayout.getRowIndex(this.ball.y),i=this.curGameLayout.getColIndex(this.ball.x+t.Ball_RADIUS),s=e*this.curGameLayout.cols+i;if(this.ball.y-this.curGameLayout.startY<this.curGameLayout.rows*t.BRICK_HEIGHT&&e>=0&&i>=0&&this.curGameLayout.ObjArr[s]>=1){var n=this.ball.getThroughTimes();if(n>0?this.ball.addScoreLastThrough():this.ball.dy=-this.ball.dy,WndManager.root.main.protocol.score+=1,this.gameScene.lScore.text=WndManager.root.main.protocol.score.toString(),this.curGameLayout.particlesArr[s].parent==this.gameScene&&this.gameScene.removeChild(this.curGameLayout.particlesArr[s]),delete this.curGameLayout.particlesArr[s],this.curGameLayout.ObjArr[s]>=2){var r=this.idManager.getNewId(),a=this.curGameLayout.ObjArr[s]-1,o=new Prop(a,this.ball.x+(this.ball.width>>1)-(this.propsWidth[a-1]>>1),this.ball.y+this.ball.height,t.PROP_SPEED_Y);this.propsArr[r]=o,this.gameScene.addChild(this.propsArr[r])}this.curGameLayout.ObjArr[s]=0,WndManager.root.playSound1()}},s.checkBrick3=function(){var e=this.curGameLayout.getRowIndex(this.ball.y),i=this.curGameLayout.getColIndex(this.ball.x-t.Ball_RADIUS),s=e*this.curGameLayout.cols+i;if(this.ball.y-this.curGameLayout.startY<this.curGameLayout.rows*t.BRICK_HEIGHT&&e>=0&&i>=0&&this.curGameLayout.ObjArr[s]>=1){var n=this.ball.getThroughTimes();if(n>0?this.ball.addScoreLastThrough():this.ball.dy=-this.ball.dy,WndManager.root.main.protocol.score+=1,this.gameScene.lScore.text=WndManager.root.main.protocol.score.toString(),this.curGameLayout.particlesArr[s].parent==this.gameScene&&this.gameScene.removeChild(this.curGameLayout.particlesArr[s]),delete this.curGameLayout.particlesArr[s],this.curGameLayout.ObjArr[s]>=2){var r=this.idManager.getNewId(),a=this.curGameLayout.ObjArr[s]-1,o=new Prop(a,this.ball.x+(this.ball.width>>1)-(this.propsWidth[a-1]>>1),this.ball.y+this.ball.height,t.PROP_SPEED_Y);this.propsArr[r]=o,this.gameScene.addChild(this.propsArr[r])}this.curGameLayout.ObjArr[s]=0,WndManager.root.playSound1()}},s.enterFrameHandler=function(e){this.isPause||this.isOver||(this.judgeIsOver(),this.destoryProps(),this.checkPropsCollide(),this.updatePropsMove(),this.ball.x+=this.ball.dx,this.ball.y+=this.ball.dy,this.checkBrick1(),this.checkBrick2(),this.checkBrick3(),(this.ball.x+this.ball.dx+this.ball.r>MainScene.screen_width||this.ball.x+this.ball.dx-this.ball.r<0)&&(this.ball.dx=-this.ball.dx),this.ball.y+this.ball.dy-this.ball.r<0?(this.ball.MinusThroughTimes(),this.ball.dy=-this.ball.dy):this.ball.y+this.ball.r>t.Ball_INIT_Y&&this.ball.y<t.Ball_INIT_Y+5&&this.ball.x>this.padd.x-(t.PADD_WIDTH>>1)&&this.ball.x<this.padd.x+(t.PADD_WIDTH>>1)?(this.ball.dx=10*((this.ball.x-this.padd.x)/t.PADD_WIDTH),this.ball.dy=-Math.abs(this.ball.dy),this.ball.MinusThroughTimes(),WndManager.root.playSound3()):this.ball.y+this.ball.r>MainScene.screen_height&&(WndManager.root.playSound2(),this.gameScene.endGame()))},s.initBallSpeed=function(){this.ball.dx=2*this.ball.dx,this.ball.dy=2*this.ball.dy,this.ball.normalSpeed()},t.BRICK_WIDTH=113,t.BRICK_HEIGHT=41,t.Ball_INIT_X=320,t.Ball_INIT_Y=800,t.Ball_INIT_DX=.5,t.Ball_INIT_DY=-16,t.Ball_RADIUS=16,t.Ball_MIN_DX=.5,t.Ball_MIN_DY=5,t.PADD_WIDTH=181,t.PADD_HEIGHT=36,t.PADD_SPEEDX=5,t.PROP_SPEED_Y=5,t}(egret.Sprite);egret.registerClass(Emitter,\"Emitter\");var GameLayout=function(){function e(){this.ObjArr=[],this.particlesArr={}}var t=(__define,e),i=t.prototype;return i.getRowIndex=function(e){var t=Math.floor((e-this.startY)/Emitter.BRICK_HEIGHT);return t>=this.rows||0>t?-1:t},i.getColIndex=function(e){var t=Math.floor((e-this.startX)/Emitter.BRICK_WIDTH);return t>=this.cols||0>t?-1:t},i.createParticles=function(e){if(null!=e)for(var t=0;t<this.rows;t++)for(var i=0;i<this.cols;i++){var s=t*this.cols+i,n=this.ObjArr[s];if(n>0){var r=this.startX+i*Emitter.BRICK_WIDTH,a=this.startY+t*Emitter.BRICK_HEIGHT,o=new Particle(n,s,r,a);e.addChild(o),this.particlesArr[s]=o}}},i.getParticlesNum=function(){for(var e=0,t=0;t<this.ObjArr.length;t++)this.ObjArr[t]>0&&e++;return e},i.getParticlesNumByType=function(e){for(var t=0,i=0;i<this.ObjArr.length;i++)this.ObjArr[i]==e&&t++;return t},i.getBottomBoardY=function(){return this.startY+Emitter.BRICK_HEIGHT*this.rows},e}();egret.registerClass(GameLayout,\"GameLayout\");var IdManager=function(){function e(){this.resetId()}var t=(__define,e),i=t.prototype;return i.resetId=function(){this.id=e.START_ID},i.getNewId=function(){var e=this.id;return this.id++,e},e.START_ID=0,e}();egret.registerClass(IdManager,\"IdManager\");var MakeGameLayout=function(){function e(){}var t=(__define,e);t.prototype;return e.getPropIds=function(e){for(var t=[],i=0;3>i;i++)this.getRam(e,t);return t},e.getRam=function(e,t){if(null!=t)for(var i=1;i>0;){i=0;for(var s=Math.floor(Math.random()*e),n=0;n<t.length;n++)s==t[n]&&i++;0==i&&t.push(s)}},e.MakeGameLayout1=function(t,i){if(void 0===i&&(i=!0),null!=t){var s=[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],n=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24];t.gameLayout1=new GameLayout,t.gameLayout1.rows=5,t.gameLayout1.cols=5,t.gameLayout1.startX=37,t.gameLayout1.startY=150;var r=0,a=t.gameLayout1.rows*t.gameLayout1.cols,o=e.getPropIds(n.length);for(t.gameLayout1.ObjArr=[];a>r;r++)s[r]>0?i?r==n[o[0]]?t.gameLayout1.ObjArr.push(2):r==n[o[1]]?t.gameLayout1.ObjArr.push(3):r==n[o[2]]?t.gameLayout1.ObjArr.push(4):t.gameLayout1.ObjArr.push(1):t.gameLayout1.ObjArr.push(1):t.gameLayout1.ObjArr.push(0)}},e.MakeGameLayout2=function(t,i){if(void 0===i&&(i=!0),null!=t){var s=[0,0,1,0,0,0,1,1,1,0,1,1,1,1,1,1,1,1,1,1,0,1,1,1,0,0,0,1,0,0],n=[2,6,7,8,10,11,12,13,14,15,16,17,18,19,21,22,23,27];t.gameLayout2=new GameLayout,t.gameLayout2.rows=6,t.gameLayout2.cols=5,t.gameLayout2.startX=37,t.gameLayout2.startY=150;var r=0,a=t.gameLayout2.rows*t.gameLayout2.cols,o=e.getPropIds(n.length);for(t.gameLayout2.ObjArr=[];a>r;r++)s[r]>0?i?r==n[o[0]]?t.gameLayout2.ObjArr.push(2):r==n[o[1]]?t.gameLayout2.ObjArr.push(3):r==n[o[2]]?t.gameLayout2.ObjArr.push(4):t.gameLayout2.ObjArr.push(1):t.gameLayout2.ObjArr.push(1):t.gameLayout2.ObjArr.push(0)}},e.MakeGameLayout3=function(t,i){if(void 0===i&&(i=!0),null!=t){var s=[1,1,0,1,1,1,0,1,0,1,0,1,1,1,0,1,1,1,1,1,0,1,1,1,0,1,0,1,0,1,1,1,0,1,1],n=[0,1,3,4,5,7,9,11,12,13,15,16,17,18,19,21,22,23,25,27,29,30,31,33,34];t.gameLayout3=new GameLayout,t.gameLayout3.rows=7,t.gameLayout3.cols=5,t.gameLayout3.startX=37,t.gameLayout3.startY=150;var r=0,a=t.gameLayout3.rows*t.gameLayout3.cols,o=e.getPropIds(n.length);for(t.gameLayout3.ObjArr=[];a>r;r++)s[r]>0?i?r==n[o[0]]?t.gameLayout3.ObjArr.push(2):r==n[o[1]]?t.gameLayout3.ObjArr.push(3):r==n[o[2]]?t.gameLayout3.ObjArr.push(4):t.gameLayout3.ObjArr.push(1):t.gameLayout3.ObjArr.push(1):t.gameLayout3.ObjArr.push(0)}},e}();egret.registerClass(MakeGameLayout,\"MakeGameLayout\");var Padd=function(e){function t(t,i,s,n,r){e.call(this),this.tw=null,this.startX=t,this.startY=i,this.speedX=s,this.w=n,this.h=r,this.initImg(),this.initData()}__extends(t,e);var i=(__define,t),s=i.prototype;return s.initData=function(){this.resetPosition(),this.anchorOffsetX=this.w>>1,this.anchorOffsetY=this.h>>1},s.resetPosition=function(){this.x=this.startX,this.y=this.startY},s.initImg=function(){this.img=new eui.Image(RES.getRes(\"padd_png\")),this.addChild(this.img)},s.updateMove=function(e){null!=this.tw&&(this.tw.pause(),this.tw=null),this.x+=e*this.speedX},s.updateFastMove=function(e){null!=this.tw&&(this.tw.pause(),this.tw=null),this.tw=egret.Tween.get(this).to({x:e},50).call(this.onTweenComplete,this)},s.onTweenComplete=function(){this.tw=null},t.MOVE_LEFT=-1,t.MOVE_RIGHT=1,t}(egret.Sprite);egret.registerClass(Padd,\"Padd\");var Particle=function(e){function t(t,i,s,n){e.call(this),this.imgNo=t,this.id=i,this.startX=s,this.startY=n,this.initImg(),this.initData()}__extends(t,e);var i=(__define,t),s=i.prototype;return s.initData=function(){this.x=this.startX,this.y=this.startY},s.initImg=function(){this.img=new eui.Image(RES.getRes(\"brick\"+this.imgNo+\"_png\")),this.addChild(this.img)},s.getId=function(){return this.id},t}(egret.Sprite);egret.registerClass(Particle,\"Particle\");var Prop=function(e){function t(t,i,s,n){e.call(this),this.imgNo=t,this.startX=i,this.startY=s,this.speedY=n,this.initImg(),this.initData()}__extends(t,e);var i=(__define,t),s=i.prototype;return s.initData=function(){this.x=this.startX,this.y=this.startY},s.initImg=function(){var e=this;this.img=new eui.Image(RES.getRes(\"prop\"+this.imgNo+\"_png\")),this.addChild(this.img),this.img.addEventListener(egret.Event.ADDED_TO_STAGE,function(t){e.hitTestWidth=e.img.width},this),this.textimg=new eui.Image(RES.getRes(\"prop\"+this.imgNo+\"_t_png\")),this.addChild(this.textimg)},s.updateMove=function(){this.y+=this.speedY;var e=.5+this.y%130/130/2;console.log(e),this.textimg.alpha=e},s.getPropType=function(){return this.imgNo},t}(egret.Sprite);egret.registerClass(Prop,\"Prop\");var JSSDK=function(e){function t(){e.call(this),this.CLASS_NAME=\"JSSDK\",this.addEventListener(egret.Event.ADDED_TO_STAGE,this.onAddToStage,this)}__extends(t,e);var i=__define,s=t,n=s.prototype;return n.onAddToStage=function(e){this.removeEventListener(egret.Event.ADDED_TO_STAGE,this.onAddToStage,this),this.init()},i(n,\"Title\",function(){return this.title},function(e){this.title=e,this.getSignPackage()}),i(n,\"Desc\",function(){return this.desc},function(e){this.desc=e,this.getSignPackage()}),n.Desc2=function(e){this.title=e,this.getSignPackage()},n.selectImageWX=function(){var e=this;wx.chooseImage({count:1,sizeType:[\"compressed\"],sourceType:[\"album\",\"camera\"],success:function(t){var i=t.localIds;e.uploadImage(i[0])}})},n.uploadImage=function(e){wx.uploadImage({localId:e,isShowProgressTips:1,success:function(e){e.serverId}})},n.init=function(){console.log(\"jssdkinit\");var e=\"http://m.yx.renren.com/2497/\";this.title=\"华为友乐季 不玩不“型”\",this.desc=\"华为畅享友乐季 每日攒积分 赢奖品欢乐不停 不玩不“型”\",this.link=e+\"m/index.html\",this.imgUrl=e+\"m/share.jpg\",this.url=\"http://www.amo9.com/jssdk/sign.do?url=\"+encodeURIComponent(location.href.split(\"#\")[0]),this.getSignPackage()},n.getSignPackage=function(){var e=this,t=new egret.URLLoader,i=new egret.URLRequest(this.url);t.load(i),i.method=egret.URLRequestMethod.GET,t.addEventListener(egret.Event.COMPLETE,function(t){e.signPackage=JSON.parse(t.target.data),e.getWeiXinConfig();var i=e,s=function(){i.getWeiXinShareTimeline(),i.getWeiXinShareAppMessage(),i.getWeiXinShareQQ(),i.getWeiXinShareWeiBo()},n=function(e){};wx.ready(s),wx.error(n)},this)},n.getWeiXinConfig=function(){var e={};e.debug=!1,e.appId=this.signPackage.appId,e.timestamp=this.signPackage.timestamp,e.nonceStr=this.signPackage.nonceStr,e.signature=this.signPackage.signature,e.jsApiList=[\"checkJsApi\",\"onMenuShareTimeline\",\"onMenuShareAppMessage\",\"onMenuShareQQ\",\"onMenuShareWeibo\",\"hideMenuItems\",\"showMenuItems\",\"hideAllNonBaseMenuItem\",\"showAllNonBaseMenuItem\",\"translateVoice\",\"startRecord\",\"stopRecord\",\"playVoice\",\"pauseVoice\",\"stopVoice\",\"uploadVoice\",\"downloadVoice\",\"chooseImage\",\"previewImage\",\"uploadImage\",\"downloadImage\",\"getNetworkType\",\"openLocation\",\"getLocation\",\"hideOptionMenu\",\"showOptionMenu\",\"closeWindow\",\"scanQRCode\",\"chooseWXPay\",\"openProductSpecificView\",\"addCard\",\"chooseCard\",\"openCard\"],wx.config(e)},n.getWeiXinShareTimeline=function(){var e=new BodyMenuShareTimeline;e.title=this.desc,e.link=this.link,e.imgUrl=this.imgUrl,e.trigger=function(){},e.success=function(){},e.cancel=function(){},e.fail=function(e){},wx.onMenuShareTimeline(e)},n.getWeiXinShareAppMessage=function(){var e=new BodyMenuShareAppMessage;e.title=this.title,e.desc=this.desc,e.link=this.link,e.imgUrl=this.imgUrl,e.trigger=function(){},e.success=function(){},e.cancel=function(){},e.fail=function(e){},wx.onMenuShareAppMessage(e)},n.getWeiXinShareQQ=function(){var e=new BodyMenuShareQQ;e.title=this.title,e.desc=this.desc,e.link=this.link,e.imgUrl=this.imgUrl,e.trigger=function(){},e.complete=function(e){},e.success=function(){},e.cancel=function(){},e.fail=function(e){},wx.onMenuShareQQ(e)},n.getWeiXinShareWeiBo=function(){var e=new BodyMenuShareWeibo;e.title=this.title,e.desc=this.desc,e.link=this.link,e.imgUrl=this.imgUrl,e.trigger=function(){},e.complete=function(e){},e.success=function(){},e.cancel=function(){},e.fail=function(e){},wx.onMenuShareWeibo(e)},n.getWeixinShowMenuItems=function(e){void 0===e&&(e=null);var t=[\"menuItem:share:appMessage\",\"menuItem:share:timeline\",\"menuItem:share:qq\",\"menuItem:share:weiboApp\",\"menuItem:favorite\",\"menuItem:share:facebook\",\"menuItem:share:QZone\",\"menuItem:editTag\",\"menuItem:delete\",\"menuItem:copyUrl\",\"menuItem:originPage\",\"menuItem:readMode\",\"menuItem:openWithQQBrowser\",\"menuItem:openWithSafari\",\"menuItem:share:email\",\"menuItem:share:brand\"];null!=e&&(t=e),wx.showMenuItems({menuList:t,success:function(e){},fail:function(e){}})},n.getWeixinHideMenuItems=function(e){void 0===e&&(e=null);var t=[\"menuItem:share:appMessage\",\"menuItem:share:timeline\",\"menuItem:share:qq\",\"menuItem:share:weiboApp\",\"menuItem:favorite\",\"menuItem:share:facebook\",\"menuItem:share:QZone\",\"menuItem:editTag\",\"menuItem:delete\",\"menuItem:copyUrl\",\"menuItem:originPage\",\"menuItem:readMode\",\"menuItem:openWithQQBrowser\",\"menuItem:openWithSafari\",\"menuItem:share:email\",\"menuItem:share:brand\"];null!=e&&(t=e),wx.hideMenuItems({menuList:t,success:function(e){},fail:function(e){}})},t}(egret.DisplayObjectContainer);egret.registerClass(JSSDK,\"JSSDK\");var LoadingUI=function(e){function t(t){e.call(this),this.points=[210,314,230,614,250,464,270,614,290,539,310,614,330,577,350,614,370,596,390,614],this.main=t;var i=new egret.Shape;i.graphics.beginFill(55294),i.graphics.drawRect(0,0,MainScene.screen_width,MainScene.screen_height),i.graphics.endFill(),this.addChild(i)}__extends(t,e);var i=(__define,t),s=i.prototype;return s.setImg=function(e,t,i,s,n){this.bg2=e,this.bg2.x=0,this.bg2.y=0,this.addChild(this.bg2),this.title1=t,this.title1.x=45,this.title1.y=890,this.addChild(this.title1),this.logo=i,this.logo.x=534,this.logo.y=15,this.addChild(this.logo),this.ball=s,this.ball.x=534,this.ball.y=15,this.addChild(this.ball),this.padd=n,this.padd.x=230,this.padd.y=646,this.addChild(this.padd),this.lProgress=new eui.Label,this.lProgress.x=this.lProgress.x=245,this.lProgress.y=690,this.lProgress.width=150,this.lProgress.height=30,this.lProgress.textAlign=egret.HorizontalAlign.CENTER,this.lProgress.verticalAlign=egret.VerticalAlign.MIDDLE,this.lProgress.textColor=3060774,this.addChild(this.lProgress),this.onComplete()},s.onComplete=function(){var e=this;this.ballFIxedMove=new BallFIxedMove(this.ball,this.points),this.ballFIxedMove.move(),egret.setTimeout(function(){e.main.setLoadingUIAniFinished()},this,3e3)},s.setProgress=function(e,t){var i=e/t;i=100*i;var s=i.toString(),n=s.indexOf(\".\");-1==n&&(n=0),s=s.substring(0,n+3),this.lProgress.text=s+\"%\"},t}(eui.Component);egret.registerClass(LoadingUI,\"LoadingUI\");var Main=function(e){function t(){e.apply(this,arguments),this.protocol=new Protocol,this.loadingUIAniFinished=!1,this.isThemeLoadEnd=!1,this.isResourceLoadEnd=!1}__extends(t,e);var i=(__define,t),s=i.prototype;return s.createChildren=function(){e.prototype.createChildren.call(this);var t=new AssetAdapter;this.stage.registerImplementation(\"eui.IAssetAdapter\",t),this.stage.registerImplementation(\"eui.IThemeAdapter\",new ThemeAdapter),this.loadingView=new LoadingUI(this),this.stage.addChild(this.loadingView),RES.addEventListener(RES.ResourceEvent.CONFIG_COMPLETE,this.onConfigComplete,this),RES.loadConfig(\"resource/default.res.json\",\"resource/\")},s.onConfigComplete=function(e){RES.removeEventListener(RES.ResourceEvent.CONFIG_COMPLETE,this.onConfigComplete,this);var t=new eui.Theme(\"resource/default.thm.json\",this.stage);t.addEventListener(eui.UIEvent.COMPLETE,this.onThemeLoadComplete,this)},s.onThemeLoadComplete=function(){this.isThemeLoadEnd=!0,RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE,this.onResourceLoadComplete,this),RES.addEventListener(RES.ResourceEvent.GROUP_LOAD_ERROR,this.onResourceLoadError,this),RES.addEventListener(RES.ResourceEvent.GROUP_PROGRESS,this.onResourceProgress,this),RES.addEventListener(RES.ResourceEvent.ITEM_LOAD_ERROR,this.onItemLoadError,this),RES.loadGroup(\"beforePreload\")},s.onResourceLoadComplete=function(e){\"beforePreload\"==e.groupName&&(this.loadingView.setImg(t.createBitmapByName(\"loadingBg2_jpg\"),t.createBitmapByName(\"title2_png\"),t.createBitmapByName(\"logo_png\"),t.createBitmapByName(\"ball_png\"),t.createBitmapByName(\"padd_png\")),RES.loadGroup(\"preload\")),\"preload\"==e.groupName&&(this.isResourceLoadEnd=!0,this.enterGame())},s.setLoadingUIAniFinished=function(){this.loadingUIAniFinished=!0,this.enterGame()},s.enterGame=function(){this.isResourceLoadEnd&&this.isThemeLoadEnd&&this.loadingUIAniFinished&&(this.stage.removeChild(this.loadingView),RES.removeEventListener(RES.ResourceEvent.GROUP_COMPLETE,this.onResourceLoadComplete,this),RES.removeEventListener(RES.ResourceEvent.GROUP_LOAD_ERROR,this.onResourceLoadError,this),RES.removeEventListener(RES.ResourceEvent.GROUP_PROGRESS,this.onResourceProgress,this),RES.removeEventListener(RES.ResourceEvent.ITEM_LOAD_ERROR,this.onItemLoadError,this),this.createScene())},s.createScene=function(){this.isThemeLoadEnd&&this.isResourceLoadEnd&&this.startCreateScene()},s.onItemLoadError=function(e){console.warn(\"Url:\"+e.resItem.url+\" has failed to load\")},s.onResourceLoadError=function(e){console.warn(\"Group:\"+e.groupName+\" has failed to load\"),this.onResourceLoadComplete(e)},s.onResourceProgress=function(e){\"preload\"==e.groupName&&this.loadingView.setProgress(e.itemsLoaded,e.itemsTotal)},s.startCreateScene=function(){this.mainScene=new MainScene(this),this.addChild(this.mainScene)},t.createBitmapByName=function(e){var t=new egret.Bitmap,i=RES.getRes(e);return t.texture=i,t},s.startAnimation=function(e){for(var t=this,i=new egret.HtmlTextParser,s=[],n=0;n<e.length;n++)s.push(i.parser(e[n]));var r=t.textfield,a=-1,o=function(){a++,a>=s.length&&(a=0);var e=s[a];t.changeDescription(r,e);var i=egret.Tween.get(r);i.to({alpha:1},200),i.wait(2e3),i.to({alpha:0},200),i.call(o,t)};o()},s.changeDescription=function(e,t){e.textFlow=t},s.onButtonClick=function(e){console.log(\"点击按钮\");var t=new eui.Panel;t.title=\"Title\",t.horizontalCenter=0,t.verticalCenter=0,this.addChild(t)},t}(eui.UILayer);egret.registerClass(Main,\"Main\");var MainScene=function(e){function t(i){e.call(this),this.soundPlay=!1,this._jssdk=new JSSDK,this.currentleftTime=t.TOTAL_SECONDS_FOR_ANSWER,this.main=i,this.addEventListener(egret.Event.ADDED_TO_STAGE,this._int,this)}__extends(t,e);var i=(__define,t),s=i.prototype;return s._int=function(e){this.removeEventListener(egret.Event.ADDED_TO_STAGE,this._int,this),this.bg=new eui.Image(RES.getRes(\"bg_png\")),this.bg.x=0,this.bg.y=0,this.addChild(this.bg),WndManager.root=this,this.wndmanager=new WndManager,this.addChild(this.wndmanager),WndManager.root.openWnd(FirstPageScene,!1),this.stage.addChild(this._jssdk),this.notifyWnd=new NotityWnd(this),this.addChild(this.notifyWnd),this.addListener(),this.initSound()},s.onSoundLoadOK=function(e){this.soundImg=new eui.Image(RES.getRes(\"bt3_png\")),this.soundImg.anchorOffsetX=31,this.soundImg.anchorOffsetY=32,this.soundImg.x=40,this.soundImg.y=42,this.soundImg.touchEnabled=!0,this.soundImg.addEventListener(egret.TouchEvent.TOUCH_TAP,this.soundEvent,this),this.soundTw=egret.Tween.get(this.soundImg,{loop:!0}).to({rotation:360},1e3),this.addChild(this.soundImg),this.soundPlay||(this.musicChannel&&this.musicChannel.stop(),this.soundTw.pause()),this.initMusic(e)},s.addListener=function(){this.main.protocol.addEventListener(\"onShowResult\",this.onShowResult,this)},s.onShowResult=function(e){var t=WndManager.getWnd(GameScene);null!=t&&t.showHuaWeiResult()},s.onStartGame=function(e){WndManager.root.openWnd(GameScene)},s.onEndGame=function(e){},s.openWnd=function(e,t){void 0===t&&(t=null),WndManager.switchWnd(e,WIN_OPERATOR.WIN_OPEN_NEW,0,t)},s.closeWnd=function(e){WndManager.switchWnd(e,WIN_OPERATOR.WIN_CLOSE_DELETE)},s.initMusic=function(e){this.musicBg=e,this.playMusic()},s.soundEvent=function(e){this.soundPlay=!this.soundPlay,this.soundPlay?(this.soundTw=egret.Tween.get(this.soundImg,{loop:!0}).to({rotation:360},1e3),this.musicChannel=this.musicBg.play(0,0)):(this.musicChannel.stop(),this.soundTw.pause())},s.playMusic=function(){this.soundPlay&&(this.musicChannel=this.musicBg.play(0,0))},s.initSound=function(){this.sound1=RES.getRes(\"snd1_wav\"),this.sound2=RES.getRes(\"snd2_wav\"),this.sound3=RES.getRes(\"snd3_wav\")},s.playSound1=function(){this.soundPlay&&null!=this.sound1&&(this.soundChannel=this.sound1.play(0,1))},s.playSound2=function(){this.soundPlay&&null!=this.sound2&&(this.soundChannel=this.sound2.play(0,1))},s.playSound3=function(){this.soundPlay&&null!=this.sound3&&(this.soundChannel=this.sound3.play(0,1))},s.stopSound=function(){null!=this.soundChannel&&this.soundChannel.stop()},t.screen_width=640,t.screen_height=1036,t.TOTAL_SECONDS_FOR_ANSWER=120,t}(eui.UILayer);egret.registerClass(MainScene,\"MainScene\");var MyUtils=function(){function e(){}var t=(__define,e);t.prototype;return e.GetBtn=function(e,t,i){var s=new egret.Bitmap;return s.x=e,s.y=t,s.touchEnabled=!0,s.texture=RES.getRes(i),s},e.GetBtn1=function(e,t,i,s){var n=new egret.Sprite;return n.graphics.beginFill(65280,0),n.graphics.drawRect(0,0,e,t),n.graphics.endFill(),n.width=e,n.height=t,n.x=i,n.y=s,n.touchEnabled=!0,n},e.createBitmapByName=function(e){var t=new egret.Bitmap,i=RES.getRes(e);return t.texture=i,t},e.getMovieClip=function(e){var t=RES.getRes(e+\"_json\"),i=RES.getRes(e+\"_png\"),s=new egret.MovieClipDataFactory(t,i),n=s.generateMovieClipData(e),r=new egret.MovieClip(n);return r},e.GetRequest=function(){var e=document.location.search,t=new Object;if(-1!=e.indexOf(\"?\"))for(var i=e.substr(1),s=i.split(\"&\"),n=0;n<s.length;n++)t[s[n].split(\"=\")[0]]=s[n].split(\"=\")[1];return t},e.getMyParamer=function(t){var i=new Object;return i=e.GetRequest(),i[t]},e.calcStringByte=function(t){e.by.writeUTFBytes(t);var i=e.by.length;return e.by.clear(),i},e.hitTest=function(e,t){var i=e.getBounds();i.x=e.x,i.y=e.y;var s=t.getBounds();return s.x=t.x,s.y=t.y,i.intersects(s)?!0:!1},e.hitTest1=function(e,t){var i=e.getBounds();i.x=e.x,i.y=e.y;var s=t.getBounds();return s.x=t.x,s.y=t.y,s.width=30,s.height=30,i.intersects(s)?!0:!1},e.isPhoneNumber=function(e){var t=/^(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/;\n    2: return t.test(e)?!0:!1},e.setAorn=function(e){e.anchorOffsetX=e.width/2,e.anchorOffsetY=e.height/2},e.getTextInput=function(e,t,i,s,n){var r=new egret.TextField;return r.type=\"input\",r.x=e,r.y=t,r.width=i,r.height=s,r.textColor=n,r.verticalAlign=egret.VerticalAlign.MIDDLE,r},e.getTextAlignCenter=function(e,t,i,s,n){var r=new egret.TextField;return r.x=e,r.y=t,r.width=i,r.height=s,r.textColor=n,r.textAlign=\"center\",r.verticalAlign=egret.VerticalAlign.MIDDLE,r},e.getTextAlignCenter1=function(e,t,i,s,n){var r=new eui.Label;return r.x=e,r.y=t,r.width=i,r.height=s,r.textColor=n,r.textAlign=\"center\",r.size=20,r.verticalAlign=egret.VerticalAlign.MIDDLE,r},e.by=new egret.ByteArray,e}();egret.registerClass(MyUtils,\"MyUtils\");var NotityWnd=function(e){function t(t){e.call(this),this.msgLabel=new eui.Label,this.msgLabel.x=0,this.msgLabel.y=0,this.addChild(this.msgLabel),this.root=t}__extends(t,e);var i=(__define,t),s=i.prototype;return s.show=function(e,i,s,n,r,a,o,h,l,u){\"\"!=e&&null!=e&&(this.visible=!0,this.root.setChildIndex(this,this.root.numChildren-1),this.msgLabel.text=e,this.msgLabel.textColor=i,this.msgLabel.stroke=s,this.msgLabel.strokeColor=n,r==t.MOVE_HORIZONTAL&&(this.x=a,this.y=o,this.twMove=egret.Tween.get(this),this.twMove.to({x:h,y:l},u).call(this.onTweenComplete,this)))},s.onTweenComplete=function(){this.visible=!1},t.MOVE_HORIZONTAL=\"MOVE_HORIZONTAL\",t}(eui.Component);egret.registerClass(NotityWnd,\"NotityWnd\");var Protocol=function(e){function t(){e.call(this),this.openId=\"ot2HIwaG3ATMtx8nJhZFaVn122p7\",this.urlPrefix=\"http://xxxx/\",this.score=0,this.huaweiScore=0,this.addScoreTimes=0,this.submitTimes=0,this.openId=MyUtils.getMyParamer(\"openid\")}__extends(t,e);var i=(__define,t),s=i.prototype;return s.getCanSubmitScore=function(){return this.submitTimes<5},s.addHuaweiScore=function(){var e=\"../score?scoreType=3\";console.log(e);var t=new egret.URLLoader,i=new egret.URLRequest(e);i.method=egret.URLRequestMethod.POST;var s=this;t.addEventListener(egret.Event.COMPLETE,function(e){var t=e.target.data,i=JSON.parse(t);if(i){s.submitTimes=Number(i.status);var n=new egret.Event(\"onShowResult\");s.dispatchEvent(n)}},this),t.load(i)},t}(egret.Sprite);egret.registerClass(Protocol,\"Protocol\");var ThemeAdapter=function(){function e(){}var t=(__define,e),i=t.prototype;return i.getTheme=function(e,t,i,s){function n(e){t.call(s,e)}function r(t){t.resItem.url==e&&(RES.removeEventListener(RES.ResourceEvent.ITEM_LOAD_ERROR,r,null),i.call(s))}RES.addEventListener(RES.ResourceEvent.ITEM_LOAD_ERROR,r,null),RES.getResByUrl(e,n,this,RES.ResourceItem.TYPE_TEXT)},e}();egret.registerClass(ThemeAdapter,\"ThemeAdapter\",[\"eui.IThemeAdapter\"]);var TimerCount=function(e){function t(t,i,s){e.call(this),this.showCount=s,this.showCount,this.leftTimes=i,this.timer=new egret.Timer(t,i),this.timer.addEventListener(egret.TimerEvent.TIMER,this.timerFunc,this),this.timer.addEventListener(egret.TimerEvent.TIMER_COMPLETE,this.timerComFunc,this),this.timer.start()}__extends(t,e);var i=(__define,t),s=i.prototype;return s.timerFunc=function(){this.showCount,this.leftTimes--,this.dispatchEvent(new egret.Event(\"count_update\",!0,!1,this.leftTimes))},s.timerComFunc=function(){this.dispatchEvent(new egret.Event(\"count_finish\",!0))},t}(egret.DisplayObjectContainer);egret.registerClass(TimerCount,\"TimerCount\");var control_type=function(){function e(){}var t=(__define,e);t.prototype;return e.control_image=\"ImageViewObjectData\",e.control_textfield=\"TextObjectData\",e}();egret.registerClass(control_type,\"control_type\");var WinBase=function(e){function t(){e.call(this),this.data=null,this.touchEnabled=!0}__extends(t,e);var i=(__define,t),s=i.prototype;return s.create=function(e){this.groupName=e,RES.isGroupLoaded(this.groupName)?this.creating():(RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE,this.onResourceLoadComplete,this),RES.addEventListener(RES.ResourceEvent.GROUP_LOAD_ERROR,this.onResourceLoadError,this),RES.addEventListener(RES.ResourceEvent.GROUP_PROGRESS,this.onResourceProgress,this),RES.loadGroup(this.groupName))},s.creating=function(){this.createOk()},s.createOk=function(){},s.Destroy=function(){this.parent&&this.parent.removeChild(this)},s.createChildren=function(){e.prototype.createChildren.call(this)},s.onResourceLoadComplete=function(e){e.groupName==this.groupName&&(RES.removeEventListener(RES.ResourceEvent.GROUP_COMPLETE,this.onResourceLoadComplete,this),RES.removeEventListener(RES.ResourceEvent.GROUP_LOAD_ERROR,this.onResourceLoadError,this),RES.removeEventListener(RES.ResourceEvent.GROUP_PROGRESS,this.onResourceProgress,this),this.creating())},s.onResourceLoadError=function(e){e.groupName==this.groupName&&(console.warn(\"Group:\"+e.groupName+\" has failed to load\"),this.onResourceLoadComplete(e))},s.onResourceProgress=function(e){e.groupName==this.groupName},s.setData=function(e){this.data=e},s.getData=function(){return this.data},t}(eui.Panel);egret.registerClass(WinBase,\"WinBase\");var Notify=function(e){function t(){e.call(this)}__extends(t,e);var i=(__define,t),s=i.prototype;return t.NotifyMsg=function(e){},s.NotifyMsg=function(e){var i=new egret.Sprite;this.addChild(i);var s=new egret.TextField;s.text=e,s.size=25,this.addChild(s),s.textColor=16711680,s.x=t.root.stage.stageWidth,s.stroke=1,s.strokeColor=16566272,s.y=200;var n=(t.root.stage.stageWidth-s.width)/2;s.bold=!0;var r=this;i.graphics.beginFill(16777215,1),i.graphics.drawRoundRect(0,0,s.width+40,s.height+10,10,10),i.graphics.endFill(),i.x=s.x-20,i.y=s.y-5,egret.Tween.get(s).to({x:n},400).wait(1e3).to({x:-t.root.stage.stageWidth},400).call(function(){r.removeChild(s)},this),egret.Tween.get(i).to({x:n-20},400).wait(1e3).to({x:-t.root.stage.stageWidth-20},400).call(function(){r.removeChild(i)},this)},t}(WinBase);egret.registerClass(Notify,\"Notify\");var WIN_OPERATOR;!function(e){e[e.WIN_OPEN_NEW=0]=\"WIN_OPEN_NEW\",e[e.WIN_CLOSE_DELETE=1]=\"WIN_CLOSE_DELETE\",e[e.WIN_CLOSE_HIDE=2]=\"WIN_CLOSE_HIDE\",e[e.WIN_OPEN_SHOW=3]=\"WIN_OPEN_SHOW\",e[e.WIN_OPEN_SHOW_OR_HIDE=4]=\"WIN_OPEN_SHOW_OR_HIDE\",e[e.WIN_OPEN_SHOW_AND_HIDE_OTHER=5]=\"WIN_OPEN_SHOW_AND_HIDE_OTHER\"}(WIN_OPERATOR||(WIN_OPERATOR={}));var WIN_EFFECT;!function(e){e[e.EFFECT_WIN_CLOSE_BEGIN=0]=\"EFFECT_WIN_CLOSE_BEGIN\",e[e.EFFECT_WIN_CLOSE_MOVE_LEFT=1]=\"EFFECT_WIN_CLOSE_MOVE_LEFT\",e[e.EFFECT_WIN_CLOSE_MOVE_RIGHT=2]=\"EFFECT_WIN_CLOSE_MOVE_RIGHT\",e[e.EFFECT_WIN_CLOSE_MOVE_UP=3]=\"EFFECT_WIN_CLOSE_MOVE_UP\",e[e.EFFECT_WIN_CLOSE_MOVE_DOWN=4]=\"EFFECT_WIN_CLOSE_MOVE_DOWN\",e[e.EFFECT_WIN_CLOSE_SCALE=5]=\"EFFECT_WIN_CLOSE_SCALE\",e[e.EFFECT_WIN_CLOSE_ALPHA=6]=\"EFFECT_WIN_CLOSE_ALPHA\",e[e.EFFECT_WIN_CLOSE_END=7]=\"EFFECT_WIN_CLOSE_END\",e[e.EFFECT_WIN_OPEN_MOVE_LEFT=8]=\"EFFECT_WIN_OPEN_MOVE_LEFT\",e[e.EFFECT_WIN_OPEN_MOVE_RIGHT=9]=\"EFFECT_WIN_OPEN_MOVE_RIGHT\",e[e.EFFECT_WIN_OPEN_MOVE_UP=10]=\"EFFECT_WIN_OPEN_MOVE_UP\",e[e.EFFECT_WIN_OPEN_MOVE_DOWN=11]=\"EFFECT_WIN_OPEN_MOVE_DOWN\",e[e.EFFECT_WIN_OPEN_SCALE=12]=\"EFFECT_WIN_OPEN_SCALE\",e[e.EFFECT_WIN_OPEN_ALPHA=13]=\"EFFECT_WIN_OPEN_ALPHA\",e[e.EFFECT_WIN_OPEN_END=14]=\"EFFECT_WIN_OPEN_END\"}(WIN_EFFECT||(WIN_EFFECT={}));var WndManager=function(e){function t(){e.call(this),this.wins=[]}__extends(t,e);var i=(__define,t),s=i.prototype;return s.switchWnd=function(e,i,s,n){void 0===n&&(n=null);var r=null;switch(i){case WIN_OPERATOR.WIN_OPEN_SHOW_AND_HIDE_OTHER:for(var a=0;a<this.wins.length;a++)this.wins[a]instanceof e?r=this.wins[a]:this.wins[a].visible=!1;null==r&&(r=new e,this.wins.push(r)),this.addChild(r),r.visible=!0;break;case WIN_OPERATOR.WIN_OPEN_NEW:r=new e,this.addChild(r),this.wins.push(r);break;case WIN_OPERATOR.WIN_OPEN_SHOW:for(var a=0;a<this.wins.length;a++)if(this.wins[a]instanceof e){r=this.wins[a];break}null==r&&(r=new e,this.wins.push(r)),this.addChild(r),r.visible=!0;break;case WIN_OPERATOR.WIN_CLOSE_DELETE:for(var a=0;a<this.wins.length;a++)if(this.wins[a]instanceof e){r=this.wins[a],this.wins.splice(a,1);break}break;case WIN_OPERATOR.WIN_CLOSE_HIDE:for(var a=0;a<this.wins.length;a++)if(this.wins[a]instanceof e){r=this.wins[a];break}null==r&&(r=new e,this.wins.push(r)),this.addChild(r);break;case WIN_OPERATOR.WIN_OPEN_SHOW_OR_HIDE:for(var a=0;a<this.wins.length;a++)if(this.wins[a]instanceof e){r=this.wins[a];break}null==r&&(r=new e,this.wins.push(r)),this.addChild(r),r.visible=!1}if(null!=r&&null!=n&&r.setData(n),null==r)return console.error(\"wnd can't null !!!!!!!!'\"),r;var o=null;if(null==s||0==s)i==WIN_OPERATOR.WIN_CLOSE_HIDE?r.visible=!1:i==WIN_OPERATOR.WIN_CLOSE_DELETE?r.Destroy():i==WIN_OPERATOR.WIN_OPEN_SHOW_OR_HIDE&&(r.visible=!r.visible);else if(s>WIN_EFFECT.EFFECT_WIN_CLOSE_END&&s<WIN_EFFECT.EFFECT_WIN_OPEN_END){switch(s){case WIN_EFFECT.EFFECT_WIN_OPEN_MOVE_LEFT:r.x=-t.root.stage.stageWidth,r.y=0,r.scaleX=1,r.scaleY=1,o=egret.Ease.bounceOut;break;case WIN_EFFECT.EFFECT_WIN_OPEN_MOVE_RIGHT:r.x=t.root.stage.stageWidth,r.y=0,r.scaleX=1,r.scaleY=1,o=egret.Ease.bounceOut;break;case WIN_EFFECT.EFFECT_WIN_OPEN_MOVE_UP:r.x=0,r.y=-t.root.stage.stageHeight,r.scaleX=1,r.scaleY=1,o=egret.Ease.bounceOut;break;case WIN_EFFECT.EFFECT_WIN_OPEN_MOVE_DOWN:r.x=0,r.y=t.root.stage.stageHeight,r.scaleX=1,r.scaleY=1,o=egret.Ease.bounceOut;break;case WIN_EFFECT.EFFECT_WIN_OPEN_SCALE:r.x=t.root.stage.stageWidth>>1,r.y=t.root.stage.stageHeight>>1,r.scaleX=0,r.scaleY=0,o=egret.Ease.backOut;break;case WIN_EFFECT.EFFECT_WIN_OPEN_ALPHA:r.alpha=.5}egret.Tween.get(r).to({x:0,y:0,scaleX:1,scaleY:1,alpha:1},500,o)}else if(s>WIN_EFFECT.EFFECT_WIN_CLOSE_BEGIN&&s<WIN_EFFECT.EFFECT_WIN_CLOSE_END){var h,l,u,c,d;switch(s){case WIN_EFFECT.EFFECT_WIN_CLOSE_MOVE_LEFT:h=-t.root.stage.stageWidth,l=0,u=1,c=1,d=1,o=egret.Ease.bounceIn;break;case WIN_EFFECT.EFFECT_WIN_CLOSE_MOVE_RIGHT:h=t.root.stage.stageWidth,l=0,u=1,c=1,d=1,o=egret.Ease.bounceIn;break;case WIN_EFFECT.EFFECT_WIN_CLOSE_MOVE_UP:h=0,l=-t.root.stage.stageHeight,u=1,c=1,d=1,o=egret.Ease.bounceIn;break;case WIN_EFFECT.EFFECT_WIN_CLOSE_MOVE_DOWN:h=0,l=t.root.stage.stageHeight,u=1,c=1,d=1,o=egret.Ease.bounceIn;break;case WIN_EFFECT.EFFECT_WIN_CLOSE_SCALE:u=0,c=0,d=1;break;case WIN_EFFECT.EFFECT_WIN_CLOSE_ALPHA:u=1,c=1,d=0}i==WIN_OPERATOR.WIN_CLOSE_DELETE&&this.addChild(r),egret.Tween.get(r).to({x:h,y:l,scaleX:u,scaleY:c,alpha:d},500).call(function(){i==WIN_OPERATOR.WIN_CLOSE_HIDE?r.visible=!1:i==WIN_OPERATOR.WIN_CLOSE_DELETE&&r.Destroy()},this)}return r},t.switchWnd=function(e,i,s,n){return void 0===n&&(n=null),t.root.wndmanager.switchWnd(e,i,s,n)},s.getWnd=function(e){for(var t=0;t<this.wins.length;t++)if(this.wins[t]instanceof e)return this.wins[t];return null},t.getWnd=function(e){return t.root.wndmanager.getWnd(e)},t.setinfo=function(e,t){},s.clear=function(){this.wins=[],this.removeChildren()},t.clear=function(){t.root.wndmanager.clear()},t}(egret.Sprite);egret.registerClass(WndManager,\"WndManager\");var FirstPageScene=function(e){function t(){e.call(this),this.addEventListener(eui.UIEvent.COMPLETE,this.onComplete,this),this.skinName=\"resource/wnd/FirstPageWnd.exml\"}__extends(t,e);var i=(__define,t),s=i.prototype;return s.onComplete=function(){this.init()},s.init=function(){this.btnGame.addEventListener(egret.TouchEvent.TOUCH_TAP,this.btnGameClick,this),this.textEffect()},s.textEffect=function(){var e=this,t=new egret.Shape;t.graphics.beginFill(16711935,.7),t.graphics.drawRect(-150,209,20,400),t.graphics.endFill(),t.rotation=-20,t.x=0,t.y-=50,this.addChild(t),this.text2.mask=t,this.btnGame.alpha=0,egret.setTimeout(function(){egret.Tween.get(t).to({x:640},1e3),egret.Tween.get(e.btnGame).to({alpha:1},1e3)},this,500),this.ballFall()},s.ballFall=function(){this.ball.x=304,this.ball.y=500,egret.Tween.get(this.ball).to({y:776},300).call(this.ballPop,this)},s.ballPop=function(){egret.Tween.get(this.ball).to({y:500},300).call(this.ballFall,this)},s.btnGameClick=function(e){WndManager.root.closeWnd(t),WndManager.root.openWnd(GameScene)},t}(WinBase);egret.registerClass(FirstPageScene,\"FirstPageScene\");var GameScene=function(e){function t(){e.call(this),this.tw=null,this.imgArr=[],this.curTotalCountDown=0,this.curGameTotalCountDown=0,this.addEventListener(eui.UIEvent.COMPLETE,this.onComplete,this),this.skinName=\"resource/wnd/GameWnd.exml\"}__extends(t,e);var i=(__define,t),s=i.prototype;return s.onComplete=function(){this.bindElement(),this.initGameNumLayer(),this.initTouchRect(),this.emitter=null,this.initRuleScene(),this.initPropScene(),this.initResultScene(),this.initArrow()},s.bindElement=function(){this.lGameTime=this.lGameTime,this.lDesSpeedTime=this.lDesSpeedTime},s.initArrow=function(){this.imgArrow?this.imgArrow.alpha=1:(this.imgArrow=new eui.Image(RES.getRes(\"arrow_png\")),this.addChild(this.imgArrow),this.imgArrow.bottom=175,this.imgArrow.horizontalCenter=0,this.imgArrow.alpha=1)},s.initRuleScene=function(){this.ruleScene=new RuleScene(this),this.addChild(this.ruleScene)},s.initPropScene=function(){this.propScene=new PropScene(this),this.addChild(this.propScene),this.propScene.setVisible(!1)},s.initResultScene=function(){this.resultScene=new ResultScene(this),this.addChild(this.resultScene),this.resultScene.visible=!1},s.initTouchRect=function(){this.touchRect=new egret.Shape,this.touchRect.graphics.beginFill(0,0),this.touchRect.graphics.drawRect(0,0,MainScene.screen_width,MainScene.screen_height),this.touchRect.graphics.endFill(),this.addChild(this.touchRect),this.touchRect.addEventListener(egret.TouchEvent.TOUCH_TAP,this.handleClick,this),this.touchRect.addEventListener(egret.TouchEvent.TOUCH_MOVE,this.handleTouchMove,this),this.touchRect.touchEnabled=!0},s.handleClick=function(e){if(null!=e&&null!=this.emitter&&(this.emitter.isStart&&this.emitter.isPause&&(this.imgArrow.alpha=0,this.emitter.gameStart()),!this.emitter.isPause&&this.emitter.isStart)){var t=e.localX;this.emitter.updatePaddFastMove(t)}},s.handleTouchMove=function(e){if(null!=e&&null!=this.emitter&&(this.emitter.isStart&&this.emitter.isPause&&(this.imgArrow.alpha=0,this.emitter.gameStart()),!this.emitter.isPause&&this.emitter.isStart)){var t=e.localX;this.emitter.updatePaddFastMove(t)}},s.initGameNumLayer=function(){this.gameNumLayer=new WinBase,this.gameNumLayer.x=0,this.gameNumLayer.y=0,this.addChild(this.gameNumLayer),this.imgNum1=new eui.Image(RES.getRes(\"one_png\")),this.imgNum1.x=320,this.imgNum1.y=500,this.imgNum1.anchorOffsetX=63,this.imgNum1.anchorOffsetY=95,this.gameNumLayer.addChild(this.imgNum1),this.imgNum2=new eui.Image(RES.getRes(\"two_png\")),this.imgNum2.x=320,this.imgNum2.y=500,this.imgNum2.anchorOffsetX=69,this.imgNum2.anchorOffsetY=99,this.gameNumLayer.addChild(this.imgNum2),this.imgNum3=new eui.Image(RES.getRes(\"three_png\")),this.imgNum3.x=320,this.imgNum3.y=500,this.imgNum3.anchorOffsetX=67,this.imgNum3.anchorOffsetY=92,this.gameNumLayer.addChild(this.imgNum3),this.imgGO=new eui.Image(RES.getRes(\"go_png\")),this.imgGO.x=320,this.imgGO.y=500,this.imgGO.anchorOffsetX=120,this.imgGO.anchorOffsetY=124,this.gameNumLayer.addChild(this.imgGO),this.imgArr.push(this.imgGO),this.imgArr.push(this.imgNum1),this.imgArr.push(this.imgNum2),this.imgArr.push(this.imgNum3),this.showImg(-1)},s.showImg=function(e){var t=0;for(t=0;t<this.imgArr.length;t++)this.imgArr[t].visible=t==e,t==e&&egret.Tween.get(this.imgArr[t]).to({scaleX:2,scaleY:2},500).to({scaleX:1,scaleY:1},500)},s.initCouterTimer=function(e){null==this.emitter&&(this.emitter=new Emitter(this)),this.emitter.initData(),null!=this.gameNumLayer&&this.setChildIndex(this.gameNumLayer,this.numChildren-1),this.curTotalCountDown=e,this.countDowntimer=new egret.Timer(1e3,e),this.countDowntimer.addEventListener(egret.TimerEvent.TIMER,this.onCountDownTimerUpdate,this),this.countDowntimer.addEventListener(egret.TimerEvent.TIMER_COMPLETE,this.onCountDownTimerComplete,this),this.countDowntimer.start()},s.onCountDownTimerUpdate=function(e){if(null!=this.countDowntimer){var t=this.curTotalCountDown-this.countDowntimer.currentCount-1;this.showImg(t)}},s.onCountDownTimerComplete=function(e){null!=this.countDowntimer&&(this.countDowntimer.removeEventListener(egret.TimerEvent.TIMER,this.onCountDownTimerUpdate,this),this.countDowntimer.removeEventListener(egret.TimerEvent.TIMER_COMPLETE,this.onCountDownTimerComplete,this),this.countDowntimer=null),5==this.curTotalCountDown?this.initGameTimer(t.GAME_TOTAL_TIME):(this.emitter.isPause=!1,this.initGameTimer(this.curGameTotalCountDown))},s.initGameTimer=function(e){this.gameTimer=null,this.gameTimer=new egret.Timer(1e3,e+1),this.curGameTotalCountDown=e,this.gameTimer.addEventListener(egret.TimerEvent.TIMER,this.onGameTimerUpdate,this),this.gameTimer.addEventListener(egret.TimerEvent.TIMER_COMPLETE,this.onGameTimerComplete,this),this.gameTimer.start(),this.emitter.isStart=!0},s.onGameTimerUpdate=function(e){if(null!=this.gameTimer){var t=this.curGameTotalCountDown+1-this.gameTimer.currentCount;this.lGameTime.textFlow=[{text:\"剩余时间:\",style:{textColor:200244,size:15}},{text:t.toString(),style:{textColor:200244,size:40}},{text:\"秒\",style:{textColor:200244,size:15}}]}},s.onGameTimerComplete=function(e){this.emitter.isPause=!0,this.emitter.isOver=!0,null!=this.gameTimer&&(this.gameTimer.stop(),this.gameTimer.removeEventListener(egret.TimerEvent.TIMER,this.onGameTimerUpdate,this),this.gameTimer.removeEventListener(egret.TimerEvent.COMPLETE,this.onGameTimerComplete,this),this.gameTimer=null),this.setChildIndex(this.resultScene,this.numChildren-1),this.resultScene.refreshData(),this.resultScene.setVisible(!0),WndManager.root.main.protocol.addHuaweiScore()},s.showArrow=function(){this.imgArrow.alpha=1},s.hideArrow=function(){this.imgArrow.alpha=0},s.showHuaWeiResult=function(){this.resultScene.showAddHuaweiScore()},s.gameStart=function(){this.initArrow(),this.lDesSpeedTime.visible=!1,this.lGameTime.textFlow=[{text:\"剩余时间:\",style:{textColor:200244,size:15}},{text:\"60\",style:{textColor:200244,size:40}},{text:\"秒\",style:{textColor:200244,size:15}}],this.initCouterTimer(5)},s.backToGame=function(){this.emitter.isPause=!1,this.initGameTimer(this.curGameTotalCountDown)},s.endGame=function(){this.onDecSpeedTimerComplete(null),this.onGameTimerComplete(null)},s.enterPauseMode=function(e){if(null!=this.gameTimer){this.gameTimer.stop();var t=this.curGameTotalCountDown-this.gameTimer.currentCount;this.curGameTotalCountDown=t,this.gameTimer.removeEventListener(egret.TimerEvent.TIMER,this.onGameTimerUpdate,this),this.gameTimer.removeEventListener(egret.TimerEvent.COMPLETE,this.onGameTimerComplete,this),this.gameTimer=null,2==e&&(this.curGameTotalCountDown+=10)}this.setChildIndex(this.propScene,this.numChildren-1),this.propScene.setVisible(!0,e)},s.handlePropAddTime=function(e){if(null!=this.gameTimer&&2==e){this.gameTimer.stop();var t=this.curGameTotalCountDown-this.gameTimer.currentCount;this.curGameTotalCountDown=t,this.gameTimer.removeEventListener(egret.TimerEvent.TIMER,this.onGameTimerUpdate,this),this.gameTimer.removeEventListener(egret.TimerEvent.COMPLETE,this.onGameTimerComplete,this),this.gameTimer=null,this.curGameTotalCountDown+=10,this.initGameTimer(this.curGameTotalCountDown)}},s.initnDecSpeedTimer=function(){var e=0;null!=this.decSpeedTimer&&(e+=10*t.DEC_SPEED_DURATION-this.decSpeedTimer.currentCount,this.decSpeedTimer.stop(),this.decSpeedTimer.removeEventListener(egret.TimerEvent.TIMER,this.onDecSpeedTimerUpdate,this),this.decSpeedTimer.removeEventListener(egret.TimerEvent.TIMER_COMPLETE,this.onDecSpeedTimerComplete,this),this.decSpeedTimer=null),this.decSpeedTimer=new egret.Timer(100,e+10*t.DEC_SPEED_DURATION),this.decSpeedTimer.addEventListener(egret.TimerEvent.TIMER,this.onDecSpeedTimerUpdate,this),this.decSpeedTimer.addEventListener(egret.TimerEvent.TIMER_COMPLETE,this.onDecSpeedTimerComplete,this),this.decSpeedTimer.start(),this.lDesSpeedTime.visible=!0},s.onDecSpeedTimerUpdate=function(e){if(null!=this.decSpeedTimer){var t=this.decSpeedTimer.delay*(this.decSpeedTimer.repeatCount-this.decSpeedTimer.currentCount)/1e3;this.lDesSpeedTime.textFlow=[{text:\"减速剩余时间:\",style:{textColor:200244,size:15}},{text:t.toFixed(1),style:{textColor:200244,size:40}},{text:\"秒\",style:{textColor:200244,size:15}}]}},s.onDecSpeedTimerComplete=function(e){null!=this.decSpeedTimer&&(this.decSpeedTimer.removeEventListener(egret.TimerEvent.TIMER,this.onCountDownTimerUpdate,this),this.decSpeedTimer.removeEventListener(egret.TimerEvent.TIMER_COMPLETE,this.onCountDownTimerComplete,this),this.decSpeedTimer=null,this.lDesSpeedTime.visible=!1,this.emitter.initBallSpeed())},t.GAME_TOTAL_TIME=60,t.DEC_SPEED_DURATION=6,t}(WinBase);egret.registerClass(GameScene,\"GameScene\");var NotifyPopScene=function(e){function t(){e.call(this),this.addEventListener(eui.UIEvent.COMPLETE,this.onComplete,this),this.skinName=\"resource/wnd/NotifyPopWnd.exml\"}__extends(t,e);var i=(__define,t),s=i.prototype;return s.onComplete=function(){this.bindElement()},s.bindElement=function(){this.btnBack2=this.btnBack2,this.notifyBg=this.NotifyBg,this.notifyBg.touchEnabled=!1,this.btnBack2.addEventListener(egret.TouchEvent.TOUCH_TAP,this.btnBack2Click,this)},s.btnBack2Click=function(e){WndManager.root.openWnd(FirstPageScene,!1)},t}(WinBase);egret.registerClass(NotifyPopScene,\"NotifyPopScene\");var PropScene=function(e){function t(t){e.call(this),this.type=0,this.gameScene=t,this.addEventListener(eui.UIEvent.COMPLETE,this.onComplete,this),this.skinName=\"resource/wnd/PropWnd.exml\"}__extends(t,e);var i=(__define,t),s=i.prototype;return s.onComplete=function(){this.g1.y=-500,this.btnClose.addEventListener(egret.TouchEvent.TOUCH_TAP,this.onBtnCloseClick,this)},s.setVisible=function(e,t){void 0===t&&(t=0),this.visible=e,this.type=t,this.visible&&(this.makeText(),this.makeEffect())},s.makeText=function(){switch(this.type){case 1:this.lDesc.text=\"华为畅享玩美映像\\r\\n\\r\\n\\r\\n定格精彩瞬间\\r\\n\\r\\n\\r\\n为游戏增加减速效果\";break;case 2:this.lDesc.text=\"华为畅享超长续航\\r\\n\\r\\n\\r\\n为本局游戏增加\\r\\n\\r\\n\\r\\n10秒钟\";break;case 3:this.lDesc.text=\"华为畅享炫彩机身\\r\\n\\r\\n\\r\\n带来神助攻\\r\\n\\r\\n\\r\\n重力球威力大增\"}},s.makeEffect=function(){this.g1.y=-500,egret.Tween.get(this.g1).to({y:223},500,egret.Ease.backOut)},s.onBtnCloseClick=function(e){this.visible=!1,this.gameScene.backToGame()},t}(WinBase);egret.registerClass(PropScene,\"PropScene\");var ResultScene=function(e){function t(t){e.call(this),this.statImgArr=[],this.gameScene=t,this.addEventListener(eui.UIEvent.COMPLETE,this.onComplete,this),this.skinName=\"resource/wnd/ReslutWnd.exml\"}__extends(t,e);var i=(__define,t),s=i.prototype;return s.onComplete=function(){this.initHuaweiScoreLabel(),this.btnAgain.addEventListener(egret.TouchEvent.TOUCH_TAP,this.onBtnAgainClick,this),this.btnDraw.addEventListener(egret.TouchEvent.TOUCH_TAP,this.onBtnDrawClick,this),this.btnBack.addEventListener(egret.TouchEvent.TOUCH_TAP,this.onBtnBackClick,this)},s.initHuaweiScoreLabel=function(){this.huaweiScoreLabel=new eui.Label,this.huaweiScoreLabel.x=320,this.huaweiScoreLabel.y=350,this.huaweiScoreLabel.stroke=2,this.huaweiScoreLabel.size=70,this.huaweiScoreLabel.width=400,this.huaweiScoreLabel.textColor=336760,this.huaweiScoreLabel.strokeColor=16362295,this.huaweiScoreLabel.anchorOffsetX=200,this.huaweiScoreLabel.anchorOffsetY=35,this.huaweiScoreLabel.textAlign=egret.HorizontalAlign.CENTER,this.addChild(this.huaweiScoreLabel)},s.refreshData=function(){this.huaweiScoreLabel.text=WndManager.root.main.protocol.score+\"分\",this.imgGetScore.visible=!1,this.btnAgain.visible=!1},s.setVisible=function(e){this.visible=e,this.visible&&this.makeEffect()},s.makeEffect=function(){var e=this;this.g1.y=-484,egret.Tween.get(this.g1).to({y:261},500,egret.Ease.backOut),this.huaweiScoreLabel.y=-395,egret.Tween.get(this.huaweiScoreLabel).to({y:350},500,egret.Ease.backOut),egret.setTimeout(function(){e.btnAgain.visible=!0},this,1e3)},s.onBtnAgainClick=function(e){if(this.statImgArr.length>0){for(var t=0;t<this.statImgArr.length;t++)this.removeChild(this.statImgArr[t]);this.statImgArr=[]}this.visible=!1,this.gameScene.gameStart()},s.onBtnDrawClick=function(e){window.open(\"../m/lottery.html\",\"_blank\")},s.onBtnBackClick=function(e){window.open(\"http://v.ubox.cn/act/act_jump/huawei?source=test\",\"_blank\")},s.showAddHuaweiScore=function(){this.imgGetScore.visible=WndManager.root.main.protocol.getCanSubmitScore()},t.STAR_WIDTH=60,t.STAR_INTERVAL=10,t.STAR_POS_Y=343,t}(WinBase);egret.registerClass(ResultScene,\"ResultScene\");var RuleScene=function(e){function t(t){e.call(this),this.gameScene=t,this.gameScene.gameStart()}__extends(t,e);var i=(__define,t),s=i.prototype;return s.onComplete=function(){this.makeEffect(),this.btnClose.addEventListener(egret.TouchEvent.TOUCH_TAP,this.onBtnCloseClick,this)},s.makeEffect=function(){var e=this;this.imgRule.y=-874,this.btnClose.y=-144,egret.setTimeout(function(){egret.Tween.get(e.imgRule).to({y:155},500,egret.Ease.backOut),egret.Tween.get(e.btnClose).to({y:700},500,egret.Ease.backOut)},this,500)},s.onBtnCloseClick=function(e){this.visible=!1,this.gameScene.gameStart()},t}(WinBase);egret.registerClass(RuleScene,\"RuleScene\");\n\nE:\\EgretDocument\\brick\\brick\\brick\\bin-release\\web\\161109214826\\resource\\default.thm.json:\n   13      {\n   14        \"path\": \"resource/wnd/FirstPageWnd.exml\",\n   15:       \"content\": \"<?xml version=\\\"1.0\\\" encoding=\\\"utf-8\\\"?>\\n<e:Skin class=\\\"FirstPageWnd\\\" width=\\\"640\\\" height=\\\"1036\\\" xmlns:e=\\\"http://ns.egret.com/eui\\\" xmlns:w=\\\"http://ns.egret.com/wing\\\">\\n\\t<e:Image x=\\\"0\\\" y=\\\"0\\\" source=\\\"loadingBg2_jpg\\\"/>\\n\\t<e:Image x=\\\"57\\\" y=\\\"144\\\" source=\\\"fpBg_png\\\"/>\\n\\t<e:Image id=\\\"btnGame\\\" width=\\\"200\\\" height=\\\"76\\\" x=\\\"220\\\" y=\\\"792\\\" source=\\\"btn1_png\\\" scaleX=\\\"1\\\" scaleY=\\\"1\\\"/>\\n\\t<e:Image source=\\\"logo_png\\\" x=\\\"534\\\" y=\\\"15\\\"/>\\n\\t<e:Image source=\\\"title2_png\\\" x=\\\"45\\\" y=\\\"890\\\"/>\\n\\t<e:Image id=\\\"text1\\\" source=\\\"text1_png\\\" x=\\\"27\\\" y=\\\"207\\\"/>\\n\\t<e:Image id=\\\"text2\\\" x=\\\"27\\\" y=\\\"209\\\" source=\\\"text2_png\\\"/>\\n\\t<e:Image id=\\\"ball\\\" source=\\\"ball_png\\\" x=\\\"304\\\" y=\\\"648\\\"/>\\n</e:Skin>\"\n   16      },\n   17      {\n\nE:\\EgretDocument\\brick\\brick\\brick\\bin-release\\web\\161109214826\\resource\\wnd\\FirstPageWnd.exml:\n    3  	<e:Image x=\"0\" y=\"0\" source=\"loadingBg2_jpg\"/>\n    4  	<e:Image x=\"57\" y=\"144\" source=\"fpBg_png\"/>\n    5: 	<e:Image id=\"btnGame\" width=\"200\" height=\"76\" x=\"220\" y=\"792\" source=\"btn1_png\" scaleX=\"1\" scaleY=\"1\"/>\n    6  	<e:Image source=\"logo_png\" x=\"534\" y=\"15\"/>\n    7  	<e:Image source=\"title2_png\" x=\"45\" y=\"890\"/>\n\nE:\\EgretDocument\\brick\\brick\\brick\\bin-release\\web\\161109215111\\main.min.js:\n    1  var AssetAdapter=function(){function e(){}var t=(__define,e),i=t.prototype;return i.getAsset=function(e,t,i){function s(s){t.call(i,s,e)}if(RES.hasRes(e)){var n=RES.getRes(e);n?s(n):RES.getResAsync(e,s,this)}else RES.getResByUrl(e,s,this,RES.ResourceItem.TYPE_IMAGE)},e}();egret.registerClass(AssetAdapter,\"AssetAdapter\",[\"eui.IAssetAdapter\"]);var Ball=function(e){function t(t,i,s,n,r){e.call(this),this.scoreLastThrough=0,this.startX=t,this.startY=i,this.dx=s,this.dy=n,this.r=r,this.throughTimes=0,this.initImg(),this.initData(),this.addEventListener(egret.Event.ENTER_FRAME,this.onHandleFrame,this)}__extends(t,e);var i=(__define,t),s=i.prototype;return s.onHandleFrame=function(e){},s.initData=function(){this.resetPosition(),this.hideCircle(),this.resetScoreLastThrough(),this.anchorOffsetX=this.r,this.anchorOffsetY=this.r},s.resetScoreLastThrough=function(){this.scoreLastThrough=0},s.isSlowSpeedStatus=function(){return this.blackCircle.visible},s.resetPosition=function(){this.x=this.startX,this.y=this.startY},s.resetSpeed=function(e,t){this.dx=e,this.dy=t},s.hideCircle=function(){this.blackCircle.visible=!1,this.GoldCircle.visible=!1},s.initImg=function(){this.img=new eui.Image(RES.getRes(\"ball_png\")),this.addChild(this.img),this.blackCircle=new egret.Shape,this.blackCircle.graphics.beginFill(13586799),this.blackCircle.graphics.drawCircle(0,0,this.r),this.blackCircle.graphics.endFill(),this.blackCircle.x=this.r,this.blackCircle.y=this.r,this.addChild(this.blackCircle),this.GoldCircle=new egret.Shape,this.GoldCircle.graphics.beginFill(13543936),this.GoldCircle.graphics.drawCircle(0,0,this.r),this.GoldCircle.graphics.endFill(),this.GoldCircle.x=this.r,this.GoldCircle.y=this.r,this.addChild(this.GoldCircle)},s.decreaseSpeed=function(){this.blackCircle.visible=!0},s.normalSpeed=function(){this.blackCircle.visible=!1},s.AddThroughTimes=function(){this.GoldCircle.visible||(this.throughTimes++,this.GoldCircle.visible=!0)},s.MinusThroughTimes=function(){this.scoreLastThrough>0&&(this.throughTimes>0&&this.throughTimes--,this.GoldCircle.visible=this.throughTimes>0,this.resetScoreLastThrough())},s.getThroughTimes=function(){return this.throughTimes},s.addScoreLastThrough=function(){this.scoreLastThrough++},s.getCollidePoints=function(){var e=5,t=this.x,i=this.y-this.r,s=this.x+this.r-e,n=this.y-this.r+e,r=this.x+this.r,a=this.y,o=this.x+this.r-e,h=this.y+this.r-e,l=this.x,u=this.y+this.r,c=this.x-this.r+e,d=this.y+this.r-e,m=this.x-this.r,g=this.y,E=this.x-this.r+e,p=this.y-this.r+e,_=[];return _.push(t),_.push(i),_.push(s),_.push(n),_.push(r),_.push(a),_.push(o),_.push(h),_.push(l),_.push(u),_.push(c),_.push(d),_.push(m),_.push(g),_.push(E),_.push(p),_},t}(egret.Sprite);egret.registerClass(Ball,\"Ball\");var BallFIxedMove=function(){function e(e,t){this.points=[],this.moveTimes=0,this.ball=e,this.points=t,this.moveTimes=0}var t=(__define,e),i=t.prototype;return i.move=function(){if(null!=this.ball&&null!=this.points&&this.points.length>0){var e=this.points.length;e%2==0&&this.startMove()}},i.startMove=function(){if(this.points.length>=2*this.moveTimes+4){this.ball.x=this.points[2*this.moveTimes+0],this.ball.y=this.points[2*this.moveTimes+1];var e=this.points[2*this.moveTimes+2],t=this.points[2*this.moveTimes+3];egret.Tween.get(this.ball).to({x:e,y:t},350-30*this.moveTimes).call(this.startMove,this),this.moveTimes++}},e}();egret.registerClass(BallFIxedMove,\"BallFIxedMove\");var Emitter=function(e){function t(t){e.call(this),this.idManager=new IdManager,this.isPause=!1,this.isOver=!1,this.propsArr={},this.propsWidth=[48,54,48],this.isStart=!1,this.currentLayoutIndex=-1,this.gameScene=t}__extends(t,e);var i=(__define,t),s=i.prototype;return s.makeLayout=function(){this.curGameLayout=null,this.gameLayout1=null,this.gameLayout2=null,this.gameLayout3=null,MakeGameLayout.MakeGameLayout1(this),MakeGameLayout.MakeGameLayout2(this),MakeGameLayout.MakeGameLayout3(this)},s.initData=function(){WndManager.root.main.protocol.score=0,this.gameScene.lScore.text=WndManager.root.main.protocol.score.toString(),this.currentLayoutIndex=-1,this.cleanAllParticles(),this.cleanAllProps(),this.makeLayout(),this.isPause=!0,this.isOver=!0,this.isStart=!1,this.randomLayout(),this.createParticles(),this.createBall(),this.createPadd()},s.randomLayout=function(){var e=Math.floor(3*Math.random());this.currentLayoutIndex=e,0==e?this.curGameLayout=this.gameLayout1:1==e?this.curGameLayout=this.gameLayout2:this.curGameLayout=this.gameLayout3},s.cleanAllParticles=function(){if(null!=this.curGameLayout&&null!=this.curGameLayout.particlesArr)for(var e in this.curGameLayout.particlesArr)this.gameScene==this.curGameLayout.particlesArr[e].parent&&this.gameScene.removeChild(this.curGameLayout.particlesArr[e]),delete this.curGameLayout.particlesArr[e]},s.cleanAllProps=function(){for(var e in this.propsArr)this.gameScene==this.propsArr[e].parent&&this.gameScene.removeChild(this.propsArr[e]),delete this.propsArr[e]},s.createParticles=function(){this.curGameLayout.createParticles(this.gameScene)},s.createBall=function(){null==this.ball&&(this.ball=new Ball(t.Ball_INIT_X,t.Ball_INIT_Y-t.Ball_RADIUS,t.Ball_INIT_DX,t.Ball_INIT_DY,t.Ball_RADIUS),this.gameScene.addChild(this.ball)),this.ball.resetPosition(),this.ball.hideCircle(),this.ball.resetSpeed(t.Ball_INIT_DX,t.Ball_INIT_DY),this.ball.resetScoreLastThrough(),this.ball.throughTimes=0},s.createPadd=function(){null==this.padd&&(this.padd=new Padd(t.Ball_INIT_X,t.Ball_INIT_Y+(t.PADD_HEIGHT>>1),t.PADD_SPEEDX,t.PADD_WIDTH,t.PADD_HEIGHT),this.gameScene.addChild(this.padd)),this.padd.resetPosition()},s.gameStart=function(){this.isPause=!1,this.isOver=!1,this.addEventListener(egret.Event.ENTER_FRAME,this.enterFrameHandler,this)},s.gameOver=function(){this.isOver=!0,this.removeEventListener(egret.Event.ENTER_FRAME,this.enterFrameHandler,this)},s.updatePaddFastMove=function(e){this.padd.updateFastMove(e)},s.updatePropsMove=function(){for(var e in this.propsArr)this.propsArr[e].updateMove()},s.checkPropsCollide=function(){for(var e in this.propsArr)if(this.propsArr[e].y+this.propsArr[e].height>=t.Ball_INIT_Y&&this.propsArr[e].y+this.propsArr[e].height<t.Ball_INIT_Y+t.PADD_HEIGHT&&(this.propsArr[e].x>this.padd.x-(t.PADD_WIDTH>>1)&&this.propsArr[e].x<this.padd.x+(t.PADD_WIDTH>>1)||this.propsArr[e].x+this.propsArr[e].hitTestWidth>this.padd.x-(t.PADD_WIDTH>>1)&&this.propsArr[e].x+this.propsArr[e].hitTestWidth<this.padd.x+(t.PADD_WIDTH>>1))){var i=this.propsArr[e].getPropType();this.updatePropEffect(i),this.gameScene==this.propsArr[e].parent&&this.gameScene.removeChild(this.propsArr[e]),delete this.propsArr[e]}},s.updatePropEffect=function(e){switch(e){case 1:this.ball.isSlowSpeedStatus()||(this.ball.dx=this.ball.dx>>1,this.ball.dy=this.ball.dy>>1),this.ball.decreaseSpeed(),this.gameScene.initnDecSpeedTimer();break;case 2:this.gameScene.handlePropAddTime(e);break;case 3:this.ball.AddThroughTimes()}},s.destoryProps=function(){for(var e in this.propsArr)this.propsArr[e].y>MainScene.screen_height-this.propsArr[e].height&&(this.gameScene==this.propsArr[e].parent&&this.gameScene.removeChild(this.propsArr[e]),delete this.propsArr[e])},s.judgeIsOver=function(){var e=this.curGameLayout.getParticlesNum();0>=e&&((this.ball.y>this.curGameLayout.getBottomBoardY()||this.ball.y<this.curGameLayout.startY)&&(this.curGameLayout=null,0==this.currentLayoutIndex?(this.gameLayout1=null,MakeGameLayout.MakeGameLayout1(this),this.curGameLayout=this.gameLayout1):1==this.currentLayoutIndex?(this.gameLayout2=null,MakeGameLayout.MakeGameLayout2(this),this.curGameLayout=this.gameLayout2):(this.gameLayout3=null,MakeGameLayout.MakeGameLayout3(this),this.curGameLayout=this.gameLayout3)),this.createParticles())},s.checkCollideBricks=function(){var e=this.ball.getCollidePoints(),i=e.length>>1;if(null!=this.curGameLayout&&null!=this.curGameLayout.particlesArr)for(var s in this.curGameLayout.particlesArr)for(var n=0;i>n;n++){var r=e[2*n],a=e[2*n+1];if(this.curGameLayout.particlesArr[s].hitTestPoint(r,a)){var o=this.ball.getThroughTimes();if(o>0?this.ball.addScoreLastThrough():this.ball.dy=-this.ball.dy,WndManager.root.main.protocol.score+=1,this.gameScene.lScore.text=WndManager.root.main.protocol.score.toString(),this.curGameLayout.particlesArr[s].parent==this.gameScene&&this.gameScene.removeChild(this.curGameLayout.particlesArr[s]),delete this.curGameLayout.particlesArr[s],this.curGameLayout.ObjArr[s]>=2){var h=this.idManager.getNewId(),l=this.curGameLayout.ObjArr[s]-1,u=new Prop(l,this.ball.x+(this.ball.width>>1)-(this.propsWidth[l-1]>>1),this.ball.y+this.ball.height,t.PROP_SPEED_Y);this.propsArr[h]=u,this.gameScene.addChild(this.propsArr[h])}return this.curGameLayout.ObjArr[s]=0,void WndManager.root.playSound1()}}},s.checkBrick1=function(){var e=this.curGameLayout.getRowIndex(this.ball.y),i=this.curGameLayout.getColIndex(this.ball.x),s=e*this.curGameLayout.cols+i;if(this.ball.y-this.curGameLayout.startY<this.curGameLayout.rows*t.BRICK_HEIGHT&&e>=0&&i>=0&&this.curGameLayout.ObjArr[s]>=1){var n=this.ball.getThroughTimes();if(n>0?this.ball.addScoreLastThrough():this.ball.dy=-this.ball.dy,WndManager.root.main.protocol.score+=1,this.gameScene.lScore.text=WndManager.root.main.protocol.score.toString(),this.curGameLayout.particlesArr[s].parent==this.gameScene&&this.gameScene.removeChild(this.curGameLayout.particlesArr[s]),delete this.curGameLayout.particlesArr[s],this.curGameLayout.ObjArr[s]>=2){var r=this.idManager.getNewId(),a=this.curGameLayout.ObjArr[s]-1,o=new Prop(a,this.ball.x+(this.ball.width>>1)-(this.propsWidth[a-1]>>1),this.ball.y+this.ball.height,t.PROP_SPEED_Y);this.propsArr[r]=o,this.gameScene.addChild(this.propsArr[r])}this.curGameLayout.ObjArr[s]=0,WndManager.root.playSound1()}},s.checkBrick2=function(){var e=this.curGameLayout.getRowIndex(this.ball.y),i=this.curGameLayout.getColIndex(this.ball.x+t.Ball_RADIUS),s=e*this.curGameLayout.cols+i;if(this.ball.y-this.curGameLayout.startY<this.curGameLayout.rows*t.BRICK_HEIGHT&&e>=0&&i>=0&&this.curGameLayout.ObjArr[s]>=1){var n=this.ball.getThroughTimes();if(n>0?this.ball.addScoreLastThrough():this.ball.dy=-this.ball.dy,WndManager.root.main.protocol.score+=1,this.gameScene.lScore.text=WndManager.root.main.protocol.score.toString(),this.curGameLayout.particlesArr[s].parent==this.gameScene&&this.gameScene.removeChild(this.curGameLayout.particlesArr[s]),delete this.curGameLayout.particlesArr[s],this.curGameLayout.ObjArr[s]>=2){var r=this.idManager.getNewId(),a=this.curGameLayout.ObjArr[s]-1,o=new Prop(a,this.ball.x+(this.ball.width>>1)-(this.propsWidth[a-1]>>1),this.ball.y+this.ball.height,t.PROP_SPEED_Y);this.propsArr[r]=o,this.gameScene.addChild(this.propsArr[r])}this.curGameLayout.ObjArr[s]=0,WndManager.root.playSound1()}},s.checkBrick3=function(){var e=this.curGameLayout.getRowIndex(this.ball.y),i=this.curGameLayout.getColIndex(this.ball.x-t.Ball_RADIUS),s=e*this.curGameLayout.cols+i;if(this.ball.y-this.curGameLayout.startY<this.curGameLayout.rows*t.BRICK_HEIGHT&&e>=0&&i>=0&&this.curGameLayout.ObjArr[s]>=1){var n=this.ball.getThroughTimes();if(n>0?this.ball.addScoreLastThrough():this.ball.dy=-this.ball.dy,WndManager.root.main.protocol.score+=1,this.gameScene.lScore.text=WndManager.root.main.protocol.score.toString(),this.curGameLayout.particlesArr[s].parent==this.gameScene&&this.gameScene.removeChild(this.curGameLayout.particlesArr[s]),delete this.curGameLayout.particlesArr[s],this.curGameLayout.ObjArr[s]>=2){var r=this.idManager.getNewId(),a=this.curGameLayout.ObjArr[s]-1,o=new Prop(a,this.ball.x+(this.ball.width>>1)-(this.propsWidth[a-1]>>1),this.ball.y+this.ball.height,t.PROP_SPEED_Y);this.propsArr[r]=o,this.gameScene.addChild(this.propsArr[r])}this.curGameLayout.ObjArr[s]=0,WndManager.root.playSound1()}},s.enterFrameHandler=function(e){this.isPause||this.isOver||(this.judgeIsOver(),this.destoryProps(),this.checkPropsCollide(),this.updatePropsMove(),this.ball.x+=this.ball.dx,this.ball.y+=this.ball.dy,this.checkBrick1(),this.checkBrick2(),this.checkBrick3(),(this.ball.x+this.ball.dx+this.ball.r>MainScene.screen_width||this.ball.x+this.ball.dx-this.ball.r<0)&&(this.ball.dx=-this.ball.dx),this.ball.y+this.ball.dy-this.ball.r<0?(this.ball.MinusThroughTimes(),this.ball.dy=-this.ball.dy):this.ball.y+this.ball.r>t.Ball_INIT_Y&&this.ball.y<t.Ball_INIT_Y+5&&this.ball.x>this.padd.x-(t.PADD_WIDTH>>1)&&this.ball.x<this.padd.x+(t.PADD_WIDTH>>1)?(this.ball.dx=10*((this.ball.x-this.padd.x)/t.PADD_WIDTH),this.ball.dy=-Math.abs(this.ball.dy),this.ball.MinusThroughTimes(),WndManager.root.playSound3()):this.ball.y+this.ball.r>MainScene.screen_height&&(WndManager.root.playSound2(),this.gameScene.endGame()))},s.initBallSpeed=function(){this.ball.dx=2*this.ball.dx,this.ball.dy=2*this.ball.dy,this.ball.normalSpeed()},t.BRICK_WIDTH=113,t.BRICK_HEIGHT=41,t.Ball_INIT_X=320,t.Ball_INIT_Y=800,t.Ball_INIT_DX=.5,t.Ball_INIT_DY=-16,t.Ball_RADIUS=16,t.Ball_MIN_DX=.5,t.Ball_MIN_DY=5,t.PADD_WIDTH=181,t.PADD_HEIGHT=36,t.PADD_SPEEDX=5,t.PROP_SPEED_Y=5,t}(egret.Sprite);egret.registerClass(Emitter,\"Emitter\");var GameLayout=function(){function e(){this.ObjArr=[],this.particlesArr={}}var t=(__define,e),i=t.prototype;return i.getRowIndex=function(e){var t=Math.floor((e-this.startY)/Emitter.BRICK_HEIGHT);return t>=this.rows||0>t?-1:t},i.getColIndex=function(e){var t=Math.floor((e-this.startX)/Emitter.BRICK_WIDTH);return t>=this.cols||0>t?-1:t},i.createParticles=function(e){if(null!=e)for(var t=0;t<this.rows;t++)for(var i=0;i<this.cols;i++){var s=t*this.cols+i,n=this.ObjArr[s];if(n>0){var r=this.startX+i*Emitter.BRICK_WIDTH,a=this.startY+t*Emitter.BRICK_HEIGHT,o=new Particle(n,s,r,a);e.addChild(o),this.particlesArr[s]=o}}},i.getParticlesNum=function(){for(var e=0,t=0;t<this.ObjArr.length;t++)this.ObjArr[t]>0&&e++;return e},i.getParticlesNumByType=function(e){for(var t=0,i=0;i<this.ObjArr.length;i++)this.ObjArr[i]==e&&t++;return t},i.getBottomBoardY=function(){return this.startY+Emitter.BRICK_HEIGHT*this.rows},e}();egret.registerClass(GameLayout,\"GameLayout\");var IdManager=function(){function e(){this.resetId()}var t=(__define,e),i=t.prototype;return i.resetId=function(){this.id=e.START_ID},i.getNewId=function(){var e=this.id;return this.id++,e},e.START_ID=0,e}();egret.registerClass(IdManager,\"IdManager\");var MakeGameLayout=function(){function e(){}var t=(__define,e);t.prototype;return e.getPropIds=function(e){for(var t=[],i=0;3>i;i++)this.getRam(e,t);return t},e.getRam=function(e,t){if(null!=t)for(var i=1;i>0;){i=0;for(var s=Math.floor(Math.random()*e),n=0;n<t.length;n++)s==t[n]&&i++;0==i&&t.push(s)}},e.MakeGameLayout1=function(t,i){if(void 0===i&&(i=!0),null!=t){var s=[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],n=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24];t.gameLayout1=new GameLayout,t.gameLayout1.rows=5,t.gameLayout1.cols=5,t.gameLayout1.startX=37,t.gameLayout1.startY=150;var r=0,a=t.gameLayout1.rows*t.gameLayout1.cols,o=e.getPropIds(n.length);for(t.gameLayout1.ObjArr=[];a>r;r++)s[r]>0?i?r==n[o[0]]?t.gameLayout1.ObjArr.push(2):r==n[o[1]]?t.gameLayout1.ObjArr.push(3):r==n[o[2]]?t.gameLayout1.ObjArr.push(4):t.gameLayout1.ObjArr.push(1):t.gameLayout1.ObjArr.push(1):t.gameLayout1.ObjArr.push(0)}},e.MakeGameLayout2=function(t,i){if(void 0===i&&(i=!0),null!=t){var s=[0,0,1,0,0,0,1,1,1,0,1,1,1,1,1,1,1,1,1,1,0,1,1,1,0,0,0,1,0,0],n=[2,6,7,8,10,11,12,13,14,15,16,17,18,19,21,22,23,27];t.gameLayout2=new GameLayout,t.gameLayout2.rows=6,t.gameLayout2.cols=5,t.gameLayout2.startX=37,t.gameLayout2.startY=150;var r=0,a=t.gameLayout2.rows*t.gameLayout2.cols,o=e.getPropIds(n.length);for(t.gameLayout2.ObjArr=[];a>r;r++)s[r]>0?i?r==n[o[0]]?t.gameLayout2.ObjArr.push(2):r==n[o[1]]?t.gameLayout2.ObjArr.push(3):r==n[o[2]]?t.gameLayout2.ObjArr.push(4):t.gameLayout2.ObjArr.push(1):t.gameLayout2.ObjArr.push(1):t.gameLayout2.ObjArr.push(0)}},e.MakeGameLayout3=function(t,i){if(void 0===i&&(i=!0),null!=t){var s=[1,1,0,1,1,1,0,1,0,1,0,1,1,1,0,1,1,1,1,1,0,1,1,1,0,1,0,1,0,1,1,1,0,1,1],n=[0,1,3,4,5,7,9,11,12,13,15,16,17,18,19,21,22,23,25,27,29,30,31,33,34];t.gameLayout3=new GameLayout,t.gameLayout3.rows=7,t.gameLayout3.cols=5,t.gameLayout3.startX=37,t.gameLayout3.startY=150;var r=0,a=t.gameLayout3.rows*t.gameLayout3.cols,o=e.getPropIds(n.length);for(t.gameLayout3.ObjArr=[];a>r;r++)s[r]>0?i?r==n[o[0]]?t.gameLayout3.ObjArr.push(2):r==n[o[1]]?t.gameLayout3.ObjArr.push(3):r==n[o[2]]?t.gameLayout3.ObjArr.push(4):t.gameLayout3.ObjArr.push(1):t.gameLayout3.ObjArr.push(1):t.gameLayout3.ObjArr.push(0)}},e}();egret.registerClass(MakeGameLayout,\"MakeGameLayout\");var Padd=function(e){function t(t,i,s,n,r){e.call(this),this.tw=null,this.startX=t,this.startY=i,this.speedX=s,this.w=n,this.h=r,this.initImg(),this.initData()}__extends(t,e);var i=(__define,t),s=i.prototype;return s.initData=function(){this.resetPosition(),this.anchorOffsetX=this.w>>1,this.anchorOffsetY=this.h>>1},s.resetPosition=function(){this.x=this.startX,this.y=this.startY},s.initImg=function(){this.img=new eui.Image(RES.getRes(\"padd_png\")),this.addChild(this.img)},s.updateMove=function(e){null!=this.tw&&(this.tw.pause(),this.tw=null),this.x+=e*this.speedX},s.updateFastMove=function(e){null!=this.tw&&(this.tw.pause(),this.tw=null),this.tw=egret.Tween.get(this).to({x:e},50).call(this.onTweenComplete,this)},s.onTweenComplete=function(){this.tw=null},t.MOVE_LEFT=-1,t.MOVE_RIGHT=1,t}(egret.Sprite);egret.registerClass(Padd,\"Padd\");var Particle=function(e){function t(t,i,s,n){e.call(this),this.imgNo=t,this.id=i,this.startX=s,this.startY=n,this.initImg(),this.initData()}__extends(t,e);var i=(__define,t),s=i.prototype;return s.initData=function(){this.x=this.startX,this.y=this.startY},s.initImg=function(){this.img=new eui.Image(RES.getRes(\"brick\"+this.imgNo+\"_png\")),this.addChild(this.img)},s.getId=function(){return this.id},t}(egret.Sprite);egret.registerClass(Particle,\"Particle\");var Prop=function(e){function t(t,i,s,n){e.call(this),this.imgNo=t,this.startX=i,this.startY=s,this.speedY=n,this.initImg(),this.initData()}__extends(t,e);var i=(__define,t),s=i.prototype;return s.initData=function(){this.x=this.startX,this.y=this.startY},s.initImg=function(){var e=this;this.img=new eui.Image(RES.getRes(\"prop\"+this.imgNo+\"_png\")),this.addChild(this.img),this.img.addEventListener(egret.Event.ADDED_TO_STAGE,function(t){e.hitTestWidth=e.img.width},this),this.textimg=new eui.Image(RES.getRes(\"prop\"+this.imgNo+\"_t_png\")),this.addChild(this.textimg)},s.updateMove=function(){this.y+=this.speedY;var e=.5+this.y%130/130/2;this.textimg.alpha=e},s.getPropType=function(){return this.imgNo},t}(egret.Sprite);egret.registerClass(Prop,\"Prop\");var JSSDK=function(e){function t(){e.call(this),this.CLASS_NAME=\"JSSDK\",this.addEventListener(egret.Event.ADDED_TO_STAGE,this.onAddToStage,this)}__extends(t,e);var i=__define,s=t,n=s.prototype;return n.onAddToStage=function(e){this.removeEventListener(egret.Event.ADDED_TO_STAGE,this.onAddToStage,this),this.init()},i(n,\"Title\",function(){return this.title},function(e){this.title=e,this.getSignPackage()}),i(n,\"Desc\",function(){return this.desc},function(e){this.desc=e,this.getSignPackage()}),n.Desc2=function(e){this.title=e,this.getSignPackage()},n.selectImageWX=function(){var e=this;wx.chooseImage({count:1,sizeType:[\"compressed\"],sourceType:[\"album\",\"camera\"],success:function(t){var i=t.localIds;e.uploadImage(i[0])}})},n.uploadImage=function(e){wx.uploadImage({localId:e,isShowProgressTips:1,success:function(e){e.serverId}})},n.init=function(){console.log(\"jssdkinit\");var e=\"http://m.yx.renren.com/2497/\";this.title=\"华为友乐季 不玩不“型”\",this.desc=\"华为畅享友乐季 每日攒积分 赢奖品欢乐不停 不玩不“型”\",this.link=e+\"m/index.html\",this.imgUrl=e+\"m/share.jpg\",this.url=\"http://www.amo9.com/jssdk/sign.do?url=\"+encodeURIComponent(location.href.split(\"#\")[0]),this.getSignPackage()},n.getSignPackage=function(){var e=this,t=new egret.URLLoader,i=new egret.URLRequest(this.url);t.load(i),i.method=egret.URLRequestMethod.GET,t.addEventListener(egret.Event.COMPLETE,function(t){e.signPackage=JSON.parse(t.target.data),e.getWeiXinConfig();var i=e,s=function(){i.getWeiXinShareTimeline(),i.getWeiXinShareAppMessage(),i.getWeiXinShareQQ(),i.getWeiXinShareWeiBo()},n=function(e){};wx.ready(s),wx.error(n)},this)},n.getWeiXinConfig=function(){var e={};e.debug=!1,e.appId=this.signPackage.appId,e.timestamp=this.signPackage.timestamp,e.nonceStr=this.signPackage.nonceStr,e.signature=this.signPackage.signature,e.jsApiList=[\"checkJsApi\",\"onMenuShareTimeline\",\"onMenuShareAppMessage\",\"onMenuShareQQ\",\"onMenuShareWeibo\",\"hideMenuItems\",\"showMenuItems\",\"hideAllNonBaseMenuItem\",\"showAllNonBaseMenuItem\",\"translateVoice\",\"startRecord\",\"stopRecord\",\"playVoice\",\"pauseVoice\",\"stopVoice\",\"uploadVoice\",\"downloadVoice\",\"chooseImage\",\"previewImage\",\"uploadImage\",\"downloadImage\",\"getNetworkType\",\"openLocation\",\"getLocation\",\"hideOptionMenu\",\"showOptionMenu\",\"closeWindow\",\"scanQRCode\",\"chooseWXPay\",\"openProductSpecificView\",\"addCard\",\"chooseCard\",\"openCard\"],wx.config(e)},n.getWeiXinShareTimeline=function(){var e=new BodyMenuShareTimeline;e.title=this.desc,e.link=this.link,e.imgUrl=this.imgUrl,e.trigger=function(){},e.success=function(){},e.cancel=function(){},e.fail=function(e){},wx.onMenuShareTimeline(e)},n.getWeiXinShareAppMessage=function(){var e=new BodyMenuShareAppMessage;e.title=this.title,e.desc=this.desc,e.link=this.link,e.imgUrl=this.imgUrl,e.trigger=function(){},e.success=function(){},e.cancel=function(){},e.fail=function(e){},wx.onMenuShareAppMessage(e)},n.getWeiXinShareQQ=function(){var e=new BodyMenuShareQQ;e.title=this.title,e.desc=this.desc,e.link=this.link,e.imgUrl=this.imgUrl,e.trigger=function(){},e.complete=function(e){},e.success=function(){},e.cancel=function(){},e.fail=function(e){},wx.onMenuShareQQ(e)},n.getWeiXinShareWeiBo=function(){var e=new BodyMenuShareWeibo;e.title=this.title,e.desc=this.desc,e.link=this.link,e.imgUrl=this.imgUrl,e.trigger=function(){},e.complete=function(e){},e.success=function(){},e.cancel=function(){},e.fail=function(e){},wx.onMenuShareWeibo(e)},n.getWeixinShowMenuItems=function(e){void 0===e&&(e=null);var t=[\"menuItem:share:appMessage\",\"menuItem:share:timeline\",\"menuItem:share:qq\",\"menuItem:share:weiboApp\",\"menuItem:favorite\",\"menuItem:share:facebook\",\"menuItem:share:QZone\",\"menuItem:editTag\",\"menuItem:delete\",\"menuItem:copyUrl\",\"menuItem:originPage\",\"menuItem:readMode\",\"menuItem:openWithQQBrowser\",\"menuItem:openWithSafari\",\"menuItem:share:email\",\"menuItem:share:brand\"];null!=e&&(t=e),wx.showMenuItems({menuList:t,success:function(e){},fail:function(e){}})},n.getWeixinHideMenuItems=function(e){void 0===e&&(e=null);var t=[\"menuItem:share:appMessage\",\"menuItem:share:timeline\",\"menuItem:share:qq\",\"menuItem:share:weiboApp\",\"menuItem:favorite\",\"menuItem:share:facebook\",\"menuItem:share:QZone\",\"menuItem:editTag\",\"menuItem:delete\",\"menuItem:copyUrl\",\"menuItem:originPage\",\"menuItem:readMode\",\"menuItem:openWithQQBrowser\",\"menuItem:openWithSafari\",\"menuItem:share:email\",\"menuItem:share:brand\"];null!=e&&(t=e),wx.hideMenuItems({menuList:t,success:function(e){},fail:function(e){}})},t}(egret.DisplayObjectContainer);egret.registerClass(JSSDK,\"JSSDK\");var LoadingUI=function(e){function t(t){e.call(this),this.points=[210,314,230,614,250,464,270,614,290,539,310,614,330,577,350,614,370,596,390,614],this.main=t;var i=new egret.Shape;i.graphics.beginFill(55294),i.graphics.drawRect(0,0,MainScene.screen_width,MainScene.screen_height),i.graphics.endFill(),this.addChild(i)}__extends(t,e);var i=(__define,t),s=i.prototype;return s.setImg=function(e,t,i,s,n){this.bg2=e,this.bg2.x=0,this.bg2.y=0,this.addChild(this.bg2),this.title1=t,this.title1.x=45,this.title1.y=890,this.addChild(this.title1),this.logo=i,this.logo.x=534,this.logo.y=15,this.addChild(this.logo),this.ball=s,this.ball.x=534,this.ball.y=15,this.addChild(this.ball),this.padd=n,this.padd.x=230,this.padd.y=646,this.addChild(this.padd),this.lProgress=new eui.Label,this.lProgress.x=this.lProgress.x=245,this.lProgress.y=690,this.lProgress.width=150,this.lProgress.height=30,this.lProgress.textAlign=egret.HorizontalAlign.CENTER,this.lProgress.verticalAlign=egret.VerticalAlign.MIDDLE,this.lProgress.textColor=3060774,this.addChild(this.lProgress),this.onComplete()},s.onComplete=function(){var e=this;this.ballFIxedMove=new BallFIxedMove(this.ball,this.points),this.ballFIxedMove.move(),egret.setTimeout(function(){e.main.setLoadingUIAniFinished()},this,3e3)},s.setProgress=function(e,t){var i=e/t;i=100*i;var s=i.toString(),n=s.indexOf(\".\");-1==n&&(n=0),s=s.substring(0,n+3),this.lProgress.text=s+\"%\"},t}(eui.Component);egret.registerClass(LoadingUI,\"LoadingUI\");var Main=function(e){function t(){e.apply(this,arguments),this.protocol=new Protocol,this.loadingUIAniFinished=!1,this.isThemeLoadEnd=!1,this.isResourceLoadEnd=!1}__extends(t,e);var i=(__define,t),s=i.prototype;return s.createChildren=function(){e.prototype.createChildren.call(this);var t=new AssetAdapter;this.stage.registerImplementation(\"eui.IAssetAdapter\",t),this.stage.registerImplementation(\"eui.IThemeAdapter\",new ThemeAdapter),this.loadingView=new LoadingUI(this),this.stage.addChild(this.loadingView),RES.addEventListener(RES.ResourceEvent.CONFIG_COMPLETE,this.onConfigComplete,this),RES.loadConfig(\"resource/default.res.json\",\"resource/\")},s.onConfigComplete=function(e){RES.removeEventListener(RES.ResourceEvent.CONFIG_COMPLETE,this.onConfigComplete,this);var t=new eui.Theme(\"resource/default.thm.json\",this.stage);t.addEventListener(eui.UIEvent.COMPLETE,this.onThemeLoadComplete,this)},s.onThemeLoadComplete=function(){this.isThemeLoadEnd=!0,RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE,this.onResourceLoadComplete,this),RES.addEventListener(RES.ResourceEvent.GROUP_LOAD_ERROR,this.onResourceLoadError,this),RES.addEventListener(RES.ResourceEvent.GROUP_PROGRESS,this.onResourceProgress,this),RES.addEventListener(RES.ResourceEvent.ITEM_LOAD_ERROR,this.onItemLoadError,this),RES.loadGroup(\"beforePreload\")},s.onResourceLoadComplete=function(e){\"beforePreload\"==e.groupName&&(this.loadingView.setImg(t.createBitmapByName(\"loadingBg2_jpg\"),t.createBitmapByName(\"title2_png\"),t.createBitmapByName(\"logo_png\"),t.createBitmapByName(\"ball_png\"),t.createBitmapByName(\"padd_png\")),RES.loadGroup(\"preload\")),\"preload\"==e.groupName&&(this.isResourceLoadEnd=!0,this.enterGame())},s.setLoadingUIAniFinished=function(){this.loadingUIAniFinished=!0,this.enterGame()},s.enterGame=function(){this.isResourceLoadEnd&&this.isThemeLoadEnd&&this.loadingUIAniFinished&&(this.stage.removeChild(this.loadingView),RES.removeEventListener(RES.ResourceEvent.GROUP_COMPLETE,this.onResourceLoadComplete,this),RES.removeEventListener(RES.ResourceEvent.GROUP_LOAD_ERROR,this.onResourceLoadError,this),RES.removeEventListener(RES.ResourceEvent.GROUP_PROGRESS,this.onResourceProgress,this),RES.removeEventListener(RES.ResourceEvent.ITEM_LOAD_ERROR,this.onItemLoadError,this),this.createScene())},s.createScene=function(){this.isThemeLoadEnd&&this.isResourceLoadEnd&&this.startCreateScene()},s.onItemLoadError=function(e){console.warn(\"Url:\"+e.resItem.url+\" has failed to load\")},s.onResourceLoadError=function(e){console.warn(\"Group:\"+e.groupName+\" has failed to load\"),this.onResourceLoadComplete(e)},s.onResourceProgress=function(e){\"preload\"==e.groupName&&this.loadingView.setProgress(e.itemsLoaded,e.itemsTotal)},s.startCreateScene=function(){this.mainScene=new MainScene(this),this.addChild(this.mainScene)},t.createBitmapByName=function(e){var t=new egret.Bitmap,i=RES.getRes(e);return t.texture=i,t},s.startAnimation=function(e){for(var t=this,i=new egret.HtmlTextParser,s=[],n=0;n<e.length;n++)s.push(i.parser(e[n]));var r=t.textfield,a=-1,o=function(){a++,a>=s.length&&(a=0);var e=s[a];t.changeDescription(r,e);var i=egret.Tween.get(r);i.to({alpha:1},200),i.wait(2e3),i.to({alpha:0},200),i.call(o,t)};o()},s.changeDescription=function(e,t){e.textFlow=t},s.onButtonClick=function(e){console.log(\"点击按钮\");var t=new eui.Panel;t.title=\"Title\",t.horizontalCenter=0,t.verticalCenter=0,this.addChild(t)},t}(eui.UILayer);egret.registerClass(Main,\"Main\");var MainScene=function(e){function t(i){e.call(this),this.soundPlay=!1,this._jssdk=new JSSDK,this.currentleftTime=t.TOTAL_SECONDS_FOR_ANSWER,this.main=i,this.addEventListener(egret.Event.ADDED_TO_STAGE,this._int,this)}__extends(t,e);var i=(__define,t),s=i.prototype;return s._int=function(e){this.removeEventListener(egret.Event.ADDED_TO_STAGE,this._int,this),this.bg=new eui.Image(RES.getRes(\"bg_png\")),this.bg.x=0,this.bg.y=0,this.addChild(this.bg),WndManager.root=this,this.wndmanager=new WndManager,this.addChild(this.wndmanager),WndManager.root.openWnd(FirstPageScene,!1),this.stage.addChild(this._jssdk),this.notifyWnd=new NotityWnd(this),this.addChild(this.notifyWnd),this.addListener(),this.initSound()},s.onSoundLoadOK=function(e){this.soundImg=new eui.Image(RES.getRes(\"bt3_png\")),this.soundImg.anchorOffsetX=31,this.soundImg.anchorOffsetY=32,this.soundImg.x=40,this.soundImg.y=42,this.soundImg.touchEnabled=!0,this.soundImg.addEventListener(egret.TouchEvent.TOUCH_TAP,this.soundEvent,this),this.soundTw=egret.Tween.get(this.soundImg,{loop:!0}).to({rotation:360},1e3),this.addChild(this.soundImg),this.soundPlay||(this.musicChannel&&this.musicChannel.stop(),this.soundTw.pause()),this.initMusic(e)},s.addListener=function(){this.main.protocol.addEventListener(\"onShowResult\",this.onShowResult,this)},s.onShowResult=function(e){var t=WndManager.getWnd(GameScene);null!=t&&t.showHuaWeiResult()},s.onStartGame=function(e){WndManager.root.openWnd(GameScene)},s.onEndGame=function(e){},s.openWnd=function(e,t){void 0===t&&(t=null),WndManager.switchWnd(e,WIN_OPERATOR.WIN_OPEN_NEW,0,t)},s.closeWnd=function(e){WndManager.switchWnd(e,WIN_OPERATOR.WIN_CLOSE_DELETE)},s.initMusic=function(e){this.musicBg=e,this.playMusic()},s.soundEvent=function(e){this.soundPlay=!this.soundPlay,this.soundPlay?(this.soundTw=egret.Tween.get(this.soundImg,{loop:!0}).to({rotation:360},1e3),this.musicChannel=this.musicBg.play(0,0)):(this.musicChannel.stop(),this.soundTw.pause())},s.playMusic=function(){this.soundPlay&&(this.musicChannel=this.musicBg.play(0,0))},s.initSound=function(){this.sound1=RES.getRes(\"snd1_wav\"),this.sound2=RES.getRes(\"snd2_wav\"),this.sound3=RES.getRes(\"snd3_wav\")},s.playSound1=function(){this.soundPlay&&null!=this.sound1&&(this.soundChannel=this.sound1.play(0,1))},s.playSound2=function(){this.soundPlay&&null!=this.sound2&&(this.soundChannel=this.sound2.play(0,1))},s.playSound3=function(){this.soundPlay&&null!=this.sound3&&(this.soundChannel=this.sound3.play(0,1))},s.stopSound=function(){null!=this.soundChannel&&this.soundChannel.stop()},t.screen_width=640,t.screen_height=1036,t.TOTAL_SECONDS_FOR_ANSWER=120,t}(eui.UILayer);egret.registerClass(MainScene,\"MainScene\");var MyUtils=function(){function e(){}var t=(__define,e);t.prototype;return e.GetBtn=function(e,t,i){var s=new egret.Bitmap;return s.x=e,s.y=t,s.touchEnabled=!0,s.texture=RES.getRes(i),s},e.GetBtn1=function(e,t,i,s){var n=new egret.Sprite;return n.graphics.beginFill(65280,0),n.graphics.drawRect(0,0,e,t),n.graphics.endFill(),n.width=e,n.height=t,n.x=i,n.y=s,n.touchEnabled=!0,n},e.createBitmapByName=function(e){var t=new egret.Bitmap,i=RES.getRes(e);return t.texture=i,t},e.getMovieClip=function(e){var t=RES.getRes(e+\"_json\"),i=RES.getRes(e+\"_png\"),s=new egret.MovieClipDataFactory(t,i),n=s.generateMovieClipData(e),r=new egret.MovieClip(n);return r},e.GetRequest=function(){var e=document.location.search,t=new Object;if(-1!=e.indexOf(\"?\"))for(var i=e.substr(1),s=i.split(\"&\"),n=0;n<s.length;n++)t[s[n].split(\"=\")[0]]=s[n].split(\"=\")[1];return t},e.getMyParamer=function(t){var i=new Object;return i=e.GetRequest(),i[t]},e.calcStringByte=function(t){e.by.writeUTFBytes(t);var i=e.by.length;return e.by.clear(),i},e.hitTest=function(e,t){var i=e.getBounds();i.x=e.x,i.y=e.y;var s=t.getBounds();return s.x=t.x,s.y=t.y,i.intersects(s)?!0:!1},e.hitTest1=function(e,t){var i=e.getBounds();i.x=e.x,i.y=e.y;var s=t.getBounds();return s.x=t.x,s.y=t.y,s.width=30,s.height=30,i.intersects(s)?!0:!1},e.isPhoneNumber=function(e){var t=/^(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/;\n    2: return t.test(e)?!0:!1},e.setAorn=function(e){e.anchorOffsetX=e.width/2,e.anchorOffsetY=e.height/2},e.getTextInput=function(e,t,i,s,n){var r=new egret.TextField;return r.type=\"input\",r.x=e,r.y=t,r.width=i,r.height=s,r.textColor=n,r.verticalAlign=egret.VerticalAlign.MIDDLE,r},e.getTextAlignCenter=function(e,t,i,s,n){var r=new egret.TextField;return r.x=e,r.y=t,r.width=i,r.height=s,r.textColor=n,r.textAlign=\"center\",r.verticalAlign=egret.VerticalAlign.MIDDLE,r},e.getTextAlignCenter1=function(e,t,i,s,n){var r=new eui.Label;return r.x=e,r.y=t,r.width=i,r.height=s,r.textColor=n,r.textAlign=\"center\",r.size=20,r.verticalAlign=egret.VerticalAlign.MIDDLE,r},e.by=new egret.ByteArray,e}();egret.registerClass(MyUtils,\"MyUtils\");var NotityWnd=function(e){function t(t){e.call(this),this.msgLabel=new eui.Label,this.msgLabel.x=0,this.msgLabel.y=0,this.addChild(this.msgLabel),this.root=t}__extends(t,e);var i=(__define,t),s=i.prototype;return s.show=function(e,i,s,n,r,a,o,h,l,u){\"\"!=e&&null!=e&&(this.visible=!0,this.root.setChildIndex(this,this.root.numChildren-1),this.msgLabel.text=e,this.msgLabel.textColor=i,this.msgLabel.stroke=s,this.msgLabel.strokeColor=n,r==t.MOVE_HORIZONTAL&&(this.x=a,this.y=o,this.twMove=egret.Tween.get(this),this.twMove.to({x:h,y:l},u).call(this.onTweenComplete,this)))},s.onTweenComplete=function(){this.visible=!1},t.MOVE_HORIZONTAL=\"MOVE_HORIZONTAL\",t}(eui.Component);egret.registerClass(NotityWnd,\"NotityWnd\");var Protocol=function(e){function t(){e.call(this),this.openId=\"ot2HIwaG3ATMtx8nJhZFaVn122p7\",this.urlPrefix=\"http://xxxx/\",this.score=0,this.huaweiScore=0,this.addScoreTimes=0,this.submitTimes=0,this.openId=MyUtils.getMyParamer(\"openid\")}__extends(t,e);var i=(__define,t),s=i.prototype;return s.getCanSubmitScore=function(){return this.submitTimes<5},s.addHuaweiScore=function(){var e=\"../score?scoreType=3\";console.log(e);var t=new egret.URLLoader,i=new egret.URLRequest(e);i.method=egret.URLRequestMethod.POST;var s=this;t.addEventListener(egret.Event.COMPLETE,function(e){var t=e.target.data,i=JSON.parse(t);if(i){s.submitTimes=Number(i.status);var n=new egret.Event(\"onShowResult\");s.dispatchEvent(n)}},this),t.load(i)},t}(egret.Sprite);egret.registerClass(Protocol,\"Protocol\");var ThemeAdapter=function(){function e(){}var t=(__define,e),i=t.prototype;return i.getTheme=function(e,t,i,s){function n(e){t.call(s,e)}function r(t){t.resItem.url==e&&(RES.removeEventListener(RES.ResourceEvent.ITEM_LOAD_ERROR,r,null),i.call(s))}RES.addEventListener(RES.ResourceEvent.ITEM_LOAD_ERROR,r,null),RES.getResByUrl(e,n,this,RES.ResourceItem.TYPE_TEXT)},e}();egret.registerClass(ThemeAdapter,\"ThemeAdapter\",[\"eui.IThemeAdapter\"]);var TimerCount=function(e){function t(t,i,s){e.call(this),this.showCount=s,this.showCount,this.leftTimes=i,this.timer=new egret.Timer(t,i),this.timer.addEventListener(egret.TimerEvent.TIMER,this.timerFunc,this),this.timer.addEventListener(egret.TimerEvent.TIMER_COMPLETE,this.timerComFunc,this),this.timer.start()}__extends(t,e);var i=(__define,t),s=i.prototype;return s.timerFunc=function(){this.showCount,this.leftTimes--,this.dispatchEvent(new egret.Event(\"count_update\",!0,!1,this.leftTimes))},s.timerComFunc=function(){this.dispatchEvent(new egret.Event(\"count_finish\",!0))},t}(egret.DisplayObjectContainer);egret.registerClass(TimerCount,\"TimerCount\");var control_type=function(){function e(){}var t=(__define,e);t.prototype;return e.control_image=\"ImageViewObjectData\",e.control_textfield=\"TextObjectData\",e}();egret.registerClass(control_type,\"control_type\");var WinBase=function(e){function t(){e.call(this),this.data=null,this.touchEnabled=!0}__extends(t,e);var i=(__define,t),s=i.prototype;return s.create=function(e){this.groupName=e,RES.isGroupLoaded(this.groupName)?this.creating():(RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE,this.onResourceLoadComplete,this),RES.addEventListener(RES.ResourceEvent.GROUP_LOAD_ERROR,this.onResourceLoadError,this),RES.addEventListener(RES.ResourceEvent.GROUP_PROGRESS,this.onResourceProgress,this),RES.loadGroup(this.groupName))},s.creating=function(){this.createOk()},s.createOk=function(){},s.Destroy=function(){this.parent&&this.parent.removeChild(this)},s.createChildren=function(){e.prototype.createChildren.call(this)},s.onResourceLoadComplete=function(e){e.groupName==this.groupName&&(RES.removeEventListener(RES.ResourceEvent.GROUP_COMPLETE,this.onResourceLoadComplete,this),RES.removeEventListener(RES.ResourceEvent.GROUP_LOAD_ERROR,this.onResourceLoadError,this),RES.removeEventListener(RES.ResourceEvent.GROUP_PROGRESS,this.onResourceProgress,this),this.creating())},s.onResourceLoadError=function(e){e.groupName==this.groupName&&(console.warn(\"Group:\"+e.groupName+\" has failed to load\"),this.onResourceLoadComplete(e))},s.onResourceProgress=function(e){e.groupName==this.groupName},s.setData=function(e){this.data=e},s.getData=function(){return this.data},t}(eui.Panel);egret.registerClass(WinBase,\"WinBase\");var Notify=function(e){function t(){e.call(this)}__extends(t,e);var i=(__define,t),s=i.prototype;return t.NotifyMsg=function(e){},s.NotifyMsg=function(e){var i=new egret.Sprite;this.addChild(i);var s=new egret.TextField;s.text=e,s.size=25,this.addChild(s),s.textColor=16711680,s.x=t.root.stage.stageWidth,s.stroke=1,s.strokeColor=16566272,s.y=200;var n=(t.root.stage.stageWidth-s.width)/2;s.bold=!0;var r=this;i.graphics.beginFill(16777215,1),i.graphics.drawRoundRect(0,0,s.width+40,s.height+10,10,10),i.graphics.endFill(),i.x=s.x-20,i.y=s.y-5,egret.Tween.get(s).to({x:n},400).wait(1e3).to({x:-t.root.stage.stageWidth},400).call(function(){r.removeChild(s)},this),egret.Tween.get(i).to({x:n-20},400).wait(1e3).to({x:-t.root.stage.stageWidth-20},400).call(function(){r.removeChild(i)},this)},t}(WinBase);egret.registerClass(Notify,\"Notify\");var WIN_OPERATOR;!function(e){e[e.WIN_OPEN_NEW=0]=\"WIN_OPEN_NEW\",e[e.WIN_CLOSE_DELETE=1]=\"WIN_CLOSE_DELETE\",e[e.WIN_CLOSE_HIDE=2]=\"WIN_CLOSE_HIDE\",e[e.WIN_OPEN_SHOW=3]=\"WIN_OPEN_SHOW\",e[e.WIN_OPEN_SHOW_OR_HIDE=4]=\"WIN_OPEN_SHOW_OR_HIDE\",e[e.WIN_OPEN_SHOW_AND_HIDE_OTHER=5]=\"WIN_OPEN_SHOW_AND_HIDE_OTHER\"}(WIN_OPERATOR||(WIN_OPERATOR={}));var WIN_EFFECT;!function(e){e[e.EFFECT_WIN_CLOSE_BEGIN=0]=\"EFFECT_WIN_CLOSE_BEGIN\",e[e.EFFECT_WIN_CLOSE_MOVE_LEFT=1]=\"EFFECT_WIN_CLOSE_MOVE_LEFT\",e[e.EFFECT_WIN_CLOSE_MOVE_RIGHT=2]=\"EFFECT_WIN_CLOSE_MOVE_RIGHT\",e[e.EFFECT_WIN_CLOSE_MOVE_UP=3]=\"EFFECT_WIN_CLOSE_MOVE_UP\",e[e.EFFECT_WIN_CLOSE_MOVE_DOWN=4]=\"EFFECT_WIN_CLOSE_MOVE_DOWN\",e[e.EFFECT_WIN_CLOSE_SCALE=5]=\"EFFECT_WIN_CLOSE_SCALE\",e[e.EFFECT_WIN_CLOSE_ALPHA=6]=\"EFFECT_WIN_CLOSE_ALPHA\",e[e.EFFECT_WIN_CLOSE_END=7]=\"EFFECT_WIN_CLOSE_END\",e[e.EFFECT_WIN_OPEN_MOVE_LEFT=8]=\"EFFECT_WIN_OPEN_MOVE_LEFT\",e[e.EFFECT_WIN_OPEN_MOVE_RIGHT=9]=\"EFFECT_WIN_OPEN_MOVE_RIGHT\",e[e.EFFECT_WIN_OPEN_MOVE_UP=10]=\"EFFECT_WIN_OPEN_MOVE_UP\",e[e.EFFECT_WIN_OPEN_MOVE_DOWN=11]=\"EFFECT_WIN_OPEN_MOVE_DOWN\",e[e.EFFECT_WIN_OPEN_SCALE=12]=\"EFFECT_WIN_OPEN_SCALE\",e[e.EFFECT_WIN_OPEN_ALPHA=13]=\"EFFECT_WIN_OPEN_ALPHA\",e[e.EFFECT_WIN_OPEN_END=14]=\"EFFECT_WIN_OPEN_END\"}(WIN_EFFECT||(WIN_EFFECT={}));var WndManager=function(e){function t(){e.call(this),this.wins=[]}__extends(t,e);var i=(__define,t),s=i.prototype;return s.switchWnd=function(e,i,s,n){void 0===n&&(n=null);var r=null;switch(i){case WIN_OPERATOR.WIN_OPEN_SHOW_AND_HIDE_OTHER:for(var a=0;a<this.wins.length;a++)this.wins[a]instanceof e?r=this.wins[a]:this.wins[a].visible=!1;null==r&&(r=new e,this.wins.push(r)),this.addChild(r),r.visible=!0;break;case WIN_OPERATOR.WIN_OPEN_NEW:r=new e,this.addChild(r),this.wins.push(r);break;case WIN_OPERATOR.WIN_OPEN_SHOW:for(var a=0;a<this.wins.length;a++)if(this.wins[a]instanceof e){r=this.wins[a];break}null==r&&(r=new e,this.wins.push(r)),this.addChild(r),r.visible=!0;break;case WIN_OPERATOR.WIN_CLOSE_DELETE:for(var a=0;a<this.wins.length;a++)if(this.wins[a]instanceof e){r=this.wins[a],this.wins.splice(a,1);break}break;case WIN_OPERATOR.WIN_CLOSE_HIDE:for(var a=0;a<this.wins.length;a++)if(this.wins[a]instanceof e){r=this.wins[a];break}null==r&&(r=new e,this.wins.push(r)),this.addChild(r);break;case WIN_OPERATOR.WIN_OPEN_SHOW_OR_HIDE:for(var a=0;a<this.wins.length;a++)if(this.wins[a]instanceof e){r=this.wins[a];break}null==r&&(r=new e,this.wins.push(r)),this.addChild(r),r.visible=!1}if(null!=r&&null!=n&&r.setData(n),null==r)return console.error(\"wnd can't null !!!!!!!!'\"),r;var o=null;if(null==s||0==s)i==WIN_OPERATOR.WIN_CLOSE_HIDE?r.visible=!1:i==WIN_OPERATOR.WIN_CLOSE_DELETE?r.Destroy():i==WIN_OPERATOR.WIN_OPEN_SHOW_OR_HIDE&&(r.visible=!r.visible);else if(s>WIN_EFFECT.EFFECT_WIN_CLOSE_END&&s<WIN_EFFECT.EFFECT_WIN_OPEN_END){switch(s){case WIN_EFFECT.EFFECT_WIN_OPEN_MOVE_LEFT:r.x=-t.root.stage.stageWidth,r.y=0,r.scaleX=1,r.scaleY=1,o=egret.Ease.bounceOut;break;case WIN_EFFECT.EFFECT_WIN_OPEN_MOVE_RIGHT:r.x=t.root.stage.stageWidth,r.y=0,r.scaleX=1,r.scaleY=1,o=egret.Ease.bounceOut;break;case WIN_EFFECT.EFFECT_WIN_OPEN_MOVE_UP:r.x=0,r.y=-t.root.stage.stageHeight,r.scaleX=1,r.scaleY=1,o=egret.Ease.bounceOut;break;case WIN_EFFECT.EFFECT_WIN_OPEN_MOVE_DOWN:r.x=0,r.y=t.root.stage.stageHeight,r.scaleX=1,r.scaleY=1,o=egret.Ease.bounceOut;break;case WIN_EFFECT.EFFECT_WIN_OPEN_SCALE:r.x=t.root.stage.stageWidth>>1,r.y=t.root.stage.stageHeight>>1,r.scaleX=0,r.scaleY=0,o=egret.Ease.backOut;break;case WIN_EFFECT.EFFECT_WIN_OPEN_ALPHA:r.alpha=.5}egret.Tween.get(r).to({x:0,y:0,scaleX:1,scaleY:1,alpha:1},500,o)}else if(s>WIN_EFFECT.EFFECT_WIN_CLOSE_BEGIN&&s<WIN_EFFECT.EFFECT_WIN_CLOSE_END){var h,l,u,c,d;switch(s){case WIN_EFFECT.EFFECT_WIN_CLOSE_MOVE_LEFT:h=-t.root.stage.stageWidth,l=0,u=1,c=1,d=1,o=egret.Ease.bounceIn;break;case WIN_EFFECT.EFFECT_WIN_CLOSE_MOVE_RIGHT:h=t.root.stage.stageWidth,l=0,u=1,c=1,d=1,o=egret.Ease.bounceIn;break;case WIN_EFFECT.EFFECT_WIN_CLOSE_MOVE_UP:h=0,l=-t.root.stage.stageHeight,u=1,c=1,d=1,o=egret.Ease.bounceIn;break;case WIN_EFFECT.EFFECT_WIN_CLOSE_MOVE_DOWN:h=0,l=t.root.stage.stageHeight,u=1,c=1,d=1,o=egret.Ease.bounceIn;break;case WIN_EFFECT.EFFECT_WIN_CLOSE_SCALE:u=0,c=0,d=1;break;case WIN_EFFECT.EFFECT_WIN_CLOSE_ALPHA:u=1,c=1,d=0}i==WIN_OPERATOR.WIN_CLOSE_DELETE&&this.addChild(r),egret.Tween.get(r).to({x:h,y:l,scaleX:u,scaleY:c,alpha:d},500).call(function(){i==WIN_OPERATOR.WIN_CLOSE_HIDE?r.visible=!1:i==WIN_OPERATOR.WIN_CLOSE_DELETE&&r.Destroy()},this)}return r},t.switchWnd=function(e,i,s,n){return void 0===n&&(n=null),t.root.wndmanager.switchWnd(e,i,s,n)},s.getWnd=function(e){for(var t=0;t<this.wins.length;t++)if(this.wins[t]instanceof e)return this.wins[t];return null},t.getWnd=function(e){return t.root.wndmanager.getWnd(e)},t.setinfo=function(e,t){},s.clear=function(){this.wins=[],this.removeChildren()},t.clear=function(){t.root.wndmanager.clear()},t}(egret.Sprite);egret.registerClass(WndManager,\"WndManager\");var FirstPageScene=function(e){function t(){e.call(this),this.addEventListener(eui.UIEvent.COMPLETE,this.onComplete,this),this.skinName=\"resource/wnd/FirstPageWnd.exml\"}__extends(t,e);var i=(__define,t),s=i.prototype;return s.onComplete=function(){this.init()},s.init=function(){this.btnGame.addEventListener(egret.TouchEvent.TOUCH_TAP,this.btnGameClick,this),this.textEffect()},s.textEffect=function(){var e=this,t=new egret.Shape;t.graphics.beginFill(16711935,.7),t.graphics.drawRect(-150,209,20,400),t.graphics.endFill(),t.rotation=-20,t.x=0,t.y-=50,this.addChild(t),this.text2.mask=t,this.btnGame.alpha=0,egret.setTimeout(function(){egret.Tween.get(t).to({x:640},1e3),egret.Tween.get(e.btnGame).to({alpha:1},1e3)},this,500),this.ballFall()},s.ballFall=function(){this.ball.x=304,this.ball.y=500,egret.Tween.get(this.ball).to({y:776},300).call(this.ballPop,this)},s.ballPop=function(){egret.Tween.get(this.ball).to({y:500},300).call(this.ballFall,this)},s.btnGameClick=function(e){WndManager.root.closeWnd(t),WndManager.root.openWnd(GameScene)},t}(WinBase);egret.registerClass(FirstPageScene,\"FirstPageScene\");var GameScene=function(e){function t(){e.call(this),this.tw=null,this.imgArr=[],this.curTotalCountDown=0,this.curGameTotalCountDown=0,this.addEventListener(eui.UIEvent.COMPLETE,this.onComplete,this),this.skinName=\"resource/wnd/GameWnd.exml\"}__extends(t,e);var i=(__define,t),s=i.prototype;return s.onComplete=function(){this.bindElement(),this.initGameNumLayer(),this.initTouchRect(),this.emitter=null,this.initRuleScene(),this.initPropScene(),this.initResultScene(),this.initArrow()},s.bindElement=function(){this.lGameTime=this.lGameTime,this.lDesSpeedTime=this.lDesSpeedTime},s.initArrow=function(){this.imgArrow?this.imgArrow.alpha=1:(this.imgArrow=new eui.Image(RES.getRes(\"arrow_png\")),this.addChild(this.imgArrow),this.imgArrow.bottom=175,this.imgArrow.horizontalCenter=0,this.imgArrow.alpha=1)},s.initRuleScene=function(){this.ruleScene=new RuleScene(this),this.addChild(this.ruleScene)},s.initPropScene=function(){this.propScene=new PropScene(this),this.addChild(this.propScene),this.propScene.setVisible(!1)},s.initResultScene=function(){this.resultScene=new ResultScene(this),this.addChild(this.resultScene),this.resultScene.visible=!1},s.initTouchRect=function(){this.touchRect=new egret.Shape,this.touchRect.graphics.beginFill(0,0),this.touchRect.graphics.drawRect(0,0,MainScene.screen_width,MainScene.screen_height),this.touchRect.graphics.endFill(),this.addChild(this.touchRect),this.touchRect.addEventListener(egret.TouchEvent.TOUCH_TAP,this.handleClick,this),this.touchRect.addEventListener(egret.TouchEvent.TOUCH_MOVE,this.handleTouchMove,this),this.touchRect.touchEnabled=!0},s.handleClick=function(e){if(null!=e&&null!=this.emitter&&(this.emitter.isStart&&this.emitter.isPause&&(this.imgArrow.alpha=0,this.emitter.gameStart()),!this.emitter.isPause&&this.emitter.isStart)){var t=e.localX;this.emitter.updatePaddFastMove(t)}},s.handleTouchMove=function(e){if(null!=e&&null!=this.emitter&&(this.emitter.isStart&&this.emitter.isPause&&(this.imgArrow.alpha=0,this.emitter.gameStart()),!this.emitter.isPause&&this.emitter.isStart)){var t=e.localX;this.emitter.updatePaddFastMove(t)}},s.initGameNumLayer=function(){this.gameNumLayer=new WinBase,this.gameNumLayer.x=0,this.gameNumLayer.y=0,this.addChild(this.gameNumLayer),this.imgNum1=new eui.Image(RES.getRes(\"one_png\")),this.imgNum1.x=320,this.imgNum1.y=500,this.imgNum1.anchorOffsetX=63,this.imgNum1.anchorOffsetY=95,this.gameNumLayer.addChild(this.imgNum1),this.imgNum2=new eui.Image(RES.getRes(\"two_png\")),this.imgNum2.x=320,this.imgNum2.y=500,this.imgNum2.anchorOffsetX=69,this.imgNum2.anchorOffsetY=99,this.gameNumLayer.addChild(this.imgNum2),this.imgNum3=new eui.Image(RES.getRes(\"three_png\")),this.imgNum3.x=320,this.imgNum3.y=500,this.imgNum3.anchorOffsetX=67,this.imgNum3.anchorOffsetY=92,this.gameNumLayer.addChild(this.imgNum3),this.imgGO=new eui.Image(RES.getRes(\"go_png\")),this.imgGO.x=320,this.imgGO.y=500,this.imgGO.anchorOffsetX=120,this.imgGO.anchorOffsetY=124,this.gameNumLayer.addChild(this.imgGO),this.imgArr.push(this.imgGO),this.imgArr.push(this.imgNum1),this.imgArr.push(this.imgNum2),this.imgArr.push(this.imgNum3),this.showImg(-1)},s.showImg=function(e){var t=0;for(t=0;t<this.imgArr.length;t++)this.imgArr[t].visible=t==e,t==e&&egret.Tween.get(this.imgArr[t]).to({scaleX:2,scaleY:2},500).to({scaleX:1,scaleY:1},500)},s.initCouterTimer=function(e){null==this.emitter&&(this.emitter=new Emitter(this)),this.emitter.initData(),null!=this.gameNumLayer&&this.setChildIndex(this.gameNumLayer,this.numChildren-1),this.curTotalCountDown=e,this.countDowntimer=new egret.Timer(1e3,e),this.countDowntimer.addEventListener(egret.TimerEvent.TIMER,this.onCountDownTimerUpdate,this),this.countDowntimer.addEventListener(egret.TimerEvent.TIMER_COMPLETE,this.onCountDownTimerComplete,this),this.countDowntimer.start()},s.onCountDownTimerUpdate=function(e){if(null!=this.countDowntimer){var t=this.curTotalCountDown-this.countDowntimer.currentCount-1;this.showImg(t)}},s.onCountDownTimerComplete=function(e){null!=this.countDowntimer&&(this.countDowntimer.removeEventListener(egret.TimerEvent.TIMER,this.onCountDownTimerUpdate,this),this.countDowntimer.removeEventListener(egret.TimerEvent.TIMER_COMPLETE,this.onCountDownTimerComplete,this),this.countDowntimer=null),5==this.curTotalCountDown?this.initGameTimer(t.GAME_TOTAL_TIME):(this.emitter.isPause=!1,this.initGameTimer(this.curGameTotalCountDown))},s.initGameTimer=function(e){this.gameTimer=null,this.gameTimer=new egret.Timer(1e3,e+1),this.curGameTotalCountDown=e,this.gameTimer.addEventListener(egret.TimerEvent.TIMER,this.onGameTimerUpdate,this),this.gameTimer.addEventListener(egret.TimerEvent.TIMER_COMPLETE,this.onGameTimerComplete,this),this.gameTimer.start(),this.emitter.isStart=!0},s.onGameTimerUpdate=function(e){if(null!=this.gameTimer){var t=this.curGameTotalCountDown+1-this.gameTimer.currentCount;this.lGameTime.textFlow=[{text:\"剩余时间:\",style:{textColor:200244,size:15}},{text:t.toString(),style:{textColor:200244,size:40}},{text:\"秒\",style:{textColor:200244,size:15}}]}},s.onGameTimerComplete=function(e){this.emitter.isPause=!0,this.emitter.isOver=!0,null!=this.gameTimer&&(this.gameTimer.stop(),this.gameTimer.removeEventListener(egret.TimerEvent.TIMER,this.onGameTimerUpdate,this),this.gameTimer.removeEventListener(egret.TimerEvent.COMPLETE,this.onGameTimerComplete,this),this.gameTimer=null),this.setChildIndex(this.resultScene,this.numChildren-1),this.resultScene.refreshData(),this.resultScene.setVisible(!0),WndManager.root.main.protocol.addHuaweiScore()},s.showArrow=function(){this.imgArrow.alpha=1},s.hideArrow=function(){this.imgArrow.alpha=0},s.showHuaWeiResult=function(){this.resultScene.showAddHuaweiScore()},s.gameStart=function(){this.initArrow(),this.lDesSpeedTime.visible=!1,this.lGameTime.textFlow=[{text:\"剩余时间:\",style:{textColor:200244,size:15}},{text:\"60\",style:{textColor:200244,size:40}},{text:\"秒\",style:{textColor:200244,size:15}}],this.initCouterTimer(5)},s.backToGame=function(){this.emitter.isPause=!1,this.initGameTimer(this.curGameTotalCountDown)},s.endGame=function(){this.onDecSpeedTimerComplete(null),this.onGameTimerComplete(null)},s.enterPauseMode=function(e){if(null!=this.gameTimer){this.gameTimer.stop();var t=this.curGameTotalCountDown-this.gameTimer.currentCount;this.curGameTotalCountDown=t,this.gameTimer.removeEventListener(egret.TimerEvent.TIMER,this.onGameTimerUpdate,this),this.gameTimer.removeEventListener(egret.TimerEvent.COMPLETE,this.onGameTimerComplete,this),this.gameTimer=null,2==e&&(this.curGameTotalCountDown+=10)}this.setChildIndex(this.propScene,this.numChildren-1),this.propScene.setVisible(!0,e)},s.handlePropAddTime=function(e){if(null!=this.gameTimer&&2==e){this.gameTimer.stop();var t=this.curGameTotalCountDown-this.gameTimer.currentCount;this.curGameTotalCountDown=t,this.gameTimer.removeEventListener(egret.TimerEvent.TIMER,this.onGameTimerUpdate,this),this.gameTimer.removeEventListener(egret.TimerEvent.COMPLETE,this.onGameTimerComplete,this),this.gameTimer=null,this.curGameTotalCountDown+=10,this.initGameTimer(this.curGameTotalCountDown)}},s.initnDecSpeedTimer=function(){var e=0;null!=this.decSpeedTimer&&(e+=10*t.DEC_SPEED_DURATION-this.decSpeedTimer.currentCount,this.decSpeedTimer.stop(),this.decSpeedTimer.removeEventListener(egret.TimerEvent.TIMER,this.onDecSpeedTimerUpdate,this),this.decSpeedTimer.removeEventListener(egret.TimerEvent.TIMER_COMPLETE,this.onDecSpeedTimerComplete,this),this.decSpeedTimer=null),this.decSpeedTimer=new egret.Timer(100,e+10*t.DEC_SPEED_DURATION),this.decSpeedTimer.addEventListener(egret.TimerEvent.TIMER,this.onDecSpeedTimerUpdate,this),this.decSpeedTimer.addEventListener(egret.TimerEvent.TIMER_COMPLETE,this.onDecSpeedTimerComplete,this),this.decSpeedTimer.start(),this.lDesSpeedTime.visible=!0},s.onDecSpeedTimerUpdate=function(e){if(null!=this.decSpeedTimer){var t=this.decSpeedTimer.delay*(this.decSpeedTimer.repeatCount-this.decSpeedTimer.currentCount)/1e3;this.lDesSpeedTime.textFlow=[{text:\"减速剩余时间:\",style:{textColor:200244,size:15}},{text:t.toFixed(1),style:{textColor:200244,size:40}},{text:\"秒\",style:{textColor:200244,size:15}}]}},s.onDecSpeedTimerComplete=function(e){null!=this.decSpeedTimer&&(this.decSpeedTimer.removeEventListener(egret.TimerEvent.TIMER,this.onCountDownTimerUpdate,this),this.decSpeedTimer.removeEventListener(egret.TimerEvent.TIMER_COMPLETE,this.onCountDownTimerComplete,this),this.decSpeedTimer=null,this.lDesSpeedTime.visible=!1,this.emitter.initBallSpeed())},t.GAME_TOTAL_TIME=60,t.DEC_SPEED_DURATION=6,t}(WinBase);egret.registerClass(GameScene,\"GameScene\");var NotifyPopScene=function(e){function t(){e.call(this),this.addEventListener(eui.UIEvent.COMPLETE,this.onComplete,this),this.skinName=\"resource/wnd/NotifyPopWnd.exml\"}__extends(t,e);var i=(__define,t),s=i.prototype;return s.onComplete=function(){this.bindElement()},s.bindElement=function(){this.btnBack2=this.btnBack2,this.notifyBg=this.NotifyBg,this.notifyBg.touchEnabled=!1,this.btnBack2.addEventListener(egret.TouchEvent.TOUCH_TAP,this.btnBack2Click,this)},s.btnBack2Click=function(e){WndManager.root.openWnd(FirstPageScene,!1)},t}(WinBase);egret.registerClass(NotifyPopScene,\"NotifyPopScene\");var PropScene=function(e){function t(t){e.call(this),this.type=0,this.gameScene=t,this.addEventListener(eui.UIEvent.COMPLETE,this.onComplete,this),this.skinName=\"resource/wnd/PropWnd.exml\"}__extends(t,e);var i=(__define,t),s=i.prototype;return s.onComplete=function(){this.g1.y=-500,this.btnClose.addEventListener(egret.TouchEvent.TOUCH_TAP,this.onBtnCloseClick,this)},s.setVisible=function(e,t){void 0===t&&(t=0),this.visible=e,this.type=t,this.visible&&(this.makeText(),this.makeEffect())},s.makeText=function(){switch(this.type){case 1:this.lDesc.text=\"华为畅享玩美映像\\r\\n\\r\\n\\r\\n定格精彩瞬间\\r\\n\\r\\n\\r\\n为游戏增加减速效果\";break;case 2:this.lDesc.text=\"华为畅享超长续航\\r\\n\\r\\n\\r\\n为本局游戏增加\\r\\n\\r\\n\\r\\n10秒钟\";break;case 3:this.lDesc.text=\"华为畅享炫彩机身\\r\\n\\r\\n\\r\\n带来神助攻\\r\\n\\r\\n\\r\\n重力球威力大增\"}},s.makeEffect=function(){this.g1.y=-500,egret.Tween.get(this.g1).to({y:223},500,egret.Ease.backOut)},s.onBtnCloseClick=function(e){this.visible=!1,this.gameScene.backToGame()},t}(WinBase);egret.registerClass(PropScene,\"PropScene\");var ResultScene=function(e){function t(t){e.call(this),this.statImgArr=[],this.gameScene=t,this.addEventListener(eui.UIEvent.COMPLETE,this.onComplete,this),this.skinName=\"resource/wnd/ReslutWnd.exml\"}__extends(t,e);var i=(__define,t),s=i.prototype;return s.onComplete=function(){this.initHuaweiScoreLabel(),this.btnAgain.addEventListener(egret.TouchEvent.TOUCH_TAP,this.onBtnAgainClick,this),this.btnDraw.addEventListener(egret.TouchEvent.TOUCH_TAP,this.onBtnDrawClick,this),this.btnBack.addEventListener(egret.TouchEvent.TOUCH_TAP,this.onBtnBackClick,this)},s.initHuaweiScoreLabel=function(){this.huaweiScoreLabel=new eui.Label,this.huaweiScoreLabel.x=320,this.huaweiScoreLabel.y=350,this.huaweiScoreLabel.stroke=2,this.huaweiScoreLabel.size=70,this.huaweiScoreLabel.width=400,this.huaweiScoreLabel.textColor=336760,this.huaweiScoreLabel.strokeColor=16362295,this.huaweiScoreLabel.anchorOffsetX=200,this.huaweiScoreLabel.anchorOffsetY=35,this.huaweiScoreLabel.textAlign=egret.HorizontalAlign.CENTER,this.addChild(this.huaweiScoreLabel)},s.refreshData=function(){this.huaweiScoreLabel.text=WndManager.root.main.protocol.score+\"分\",this.imgGetScore.visible=!1,this.btnAgain.visible=!1},s.setVisible=function(e){this.visible=e,this.visible&&this.makeEffect()},s.makeEffect=function(){var e=this;this.g1.y=-484,egret.Tween.get(this.g1).to({y:261},500,egret.Ease.backOut),this.huaweiScoreLabel.y=-395,egret.Tween.get(this.huaweiScoreLabel).to({y:350},500,egret.Ease.backOut),egret.setTimeout(function(){e.btnAgain.visible=!0},this,1e3)},s.onBtnAgainClick=function(e){if(this.statImgArr.length>0){for(var t=0;t<this.statImgArr.length;t++)this.removeChild(this.statImgArr[t]);this.statImgArr=[]}this.visible=!1,this.gameScene.gameStart()},s.onBtnDrawClick=function(e){window.open(\"../m/lottery.html\",\"_blank\")},s.onBtnBackClick=function(e){window.open(\"http://v.ubox.cn/act/act_jump/huawei?source=test\",\"_blank\")},s.showAddHuaweiScore=function(){this.imgGetScore.visible=WndManager.root.main.protocol.getCanSubmitScore()},t.STAR_WIDTH=60,t.STAR_INTERVAL=10,t.STAR_POS_Y=343,t}(WinBase);egret.registerClass(ResultScene,\"ResultScene\");var RuleScene=function(e){function t(t){e.call(this),this.gameScene=t,this.gameScene.gameStart()}__extends(t,e);var i=(__define,t),s=i.prototype;return s.onComplete=function(){this.makeEffect(),this.btnClose.addEventListener(egret.TouchEvent.TOUCH_TAP,this.onBtnCloseClick,this)},s.makeEffect=function(){var e=this;this.imgRule.y=-874,this.btnClose.y=-144,egret.setTimeout(function(){egret.Tween.get(e.imgRule).to({y:155},500,egret.Ease.backOut),egret.Tween.get(e.btnClose).to({y:700},500,egret.Ease.backOut)},this,500)},s.onBtnCloseClick=function(e){this.visible=!1,this.gameScene.gameStart()},t}(WinBase);egret.registerClass(RuleScene,\"RuleScene\");\n\nE:\\EgretDocument\\brick\\brick\\brick\\bin-release\\web\\161109215111\\resource\\default.thm.json:\n   13      {\n   14        \"path\": \"resource/wnd/FirstPageWnd.exml\",\n   15:       \"content\": \"<?xml version=\\\"1.0\\\" encoding=\\\"utf-8\\\"?>\\n<e:Skin class=\\\"FirstPageWnd\\\" width=\\\"640\\\" height=\\\"1036\\\" xmlns:e=\\\"http://ns.egret.com/eui\\\" xmlns:w=\\\"http://ns.egret.com/wing\\\">\\n\\t<e:Image x=\\\"0\\\" y=\\\"0\\\" source=\\\"loadingBg2_jpg\\\"/>\\n\\t<e:Image x=\\\"57\\\" y=\\\"144\\\" source=\\\"fpBg_png\\\"/>\\n\\t<e:Image id=\\\"btnGame\\\" width=\\\"200\\\" height=\\\"76\\\" x=\\\"220\\\" y=\\\"792\\\" source=\\\"btn1_png\\\" scaleX=\\\"1\\\" scaleY=\\\"1\\\"/>\\n\\t<e:Image source=\\\"logo_png\\\" x=\\\"534\\\" y=\\\"15\\\"/>\\n\\t<e:Image source=\\\"title2_png\\\" x=\\\"45\\\" y=\\\"890\\\"/>\\n\\t<e:Image id=\\\"text1\\\" source=\\\"text1_png\\\" x=\\\"27\\\" y=\\\"207\\\"/>\\n\\t<e:Image id=\\\"text2\\\" x=\\\"27\\\" y=\\\"209\\\" source=\\\"text2_png\\\"/>\\n\\t<e:Image id=\\\"ball\\\" source=\\\"ball_png\\\" x=\\\"304\\\" y=\\\"648\\\"/>\\n</e:Skin>\"\n   16      },\n   17      {\n\nE:\\EgretDocument\\brick\\brick\\brick\\bin-release\\web\\161109215111\\resource\\wnd\\FirstPageWnd.exml:\n    3  	<e:Image x=\"0\" y=\"0\" source=\"loadingBg2_jpg\"/>\n    4  	<e:Image x=\"57\" y=\"144\" source=\"fpBg_png\"/>\n    5: 	<e:Image id=\"btnGame\" width=\"200\" height=\"76\" x=\"220\" y=\"792\" source=\"btn1_png\" scaleX=\"1\" scaleY=\"1\"/>\n    6  	<e:Image source=\"logo_png\" x=\"534\" y=\"15\"/>\n    7  	<e:Image source=\"title2_png\" x=\"45\" y=\"890\"/>\n\nE:\\EgretDocument\\brick\\brick\\brick\\resource\\wnd\\FirstPageWnd.exml:\n    3  	<e:Image x=\"0\" y=\"0\" source=\"loadingBg2_jpg\"/>\n    4  	<e:Image x=\"57\" y=\"144\" source=\"fpBg_png\"/>\n    5: 	<e:Image id=\"btnGame\" width=\"200\" height=\"76\" x=\"220\" y=\"792\" source=\"btn1_png\" scaleX=\"1\" scaleY=\"1\"/>\n    6  	<e:Image source=\"logo_png\" x=\"534\" y=\"15\"/>\n    7  	<e:Image source=\"title2_png\" x=\"45\" y=\"890\"/>\n\nE:\\EgretDocument\\brick\\brick\\brick\\src\\Wnd\\FirstPageScene.ts:\n    1  class FirstPageScene extends WinBase{\n    2  \n    3: 	private btnGame: eui.Image;\n    4  	private text1: eui.Image;\n    5  	private text2: eui.Image;\n    .\n   18  	private init():void\n   19  	{\n   20: 		this.btnGame.addEventListener(egret.TouchEvent.TOUCH_TAP,this.btnGameClick,this);\n   21  		this.textEffect();\n   22  	}\n   ..\n   34  \n   35  		this.text2.mask = maskRect;\n   36: 		this.btnGame.alpha = 0;\n   37  		\n   38  		egret.setTimeout(()=>{\n   39  			egret.Tween.get(maskRect).to({x:640},1000);\n   40: 			egret.Tween.get(this.btnGame).to({alpha:1},1000);\n   41  		},this,500);	\n   42  \n   ..\n   56  	}\n   57  \n   58: 	private btnGameClick(e: egret.TouchEvent): void { \n   59  		WndManager.root.closeWnd(FirstPageScene);\n   60  		WndManager.root.openWnd(GameScene);\n\n26 matches across 9 files\n\n\nSearching 355 files for \"egret2dWorkspace\" (regex)\n\nE:\\EgretDocument\\brick\\brick\\brick\\.wing\\packConfig.json:\n    2      \"maxImageWidth\": 2014,\n    3      \"maxImageHeight\": 2014,\n    4:     \"defaultResPath\": \"f:\\\\miniGames\\\\egret2dWorkspace\\\\horseRace\\\\horseRaceDemo\\\\resource\\\\default.res.json\",\n    5      \"packGroups\": {\n    6          \"preload\": true,\n\n1 match in 1 file\n",
+			"settings":
+			{
+				"buffer_size": 119823,
+				"line_ending": "Windows",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "/E/EgretDocument/brick/brick/brick/.wing/packConfig.json",
+			"settings":
+			{
+				"buffer_size": 231,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/E/web/jeep-Compass/wwwroot/index.html",
+			"settings":
+			{
+				"buffer_size": 347,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "<!DOCTYPE HTML>\n<html>\n<head>\n    <meta charset=\"utf-8\">\n    <title>华为友乐季 砖砖乐不停</title>\n    <meta name=\"viewport\" content=\"width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no\"/>\n    <meta name=\"apple-mobile-web-app-capable\" content=\"yes\"/>\n    <meta name=\"full-screen\" content=\"true\"/>\n    <meta name=\"screen-orientation\" content=\"portrait\"/>\n    <meta name=\"x5-fullscreen\" content=\"true\"/>\n    <meta name=\"360-fullscreen\" content=\"true\"/>\n    <style>\n        html, body {\n            -ms-touch-action: none;\n            background: #888888;\n            padding: 0;\n            border: 0;\n            margin: 0;\n            height: 100%;\n        }\n        #txt{\n            -ms-touch-action: none;\n			position:fixed;\n			width:100%;\n			margin:auto;\n			top:30%;\n			left:0;\n			right:0;\n            text-align:center;\n			z-index:6001;\n            font-size:20px;\n            color:#e11a45;\n        }\n    </style>\n\n    <!--这个标签为通过egret提供的第三方库的方式生成的 javascript 文件。删除 modules_files 标签后，库文件加载列表将不会变化，请谨慎操作！-->\n    <!--modules_files_start-->\n	<script egret=\"lib\" src=\"libs/modules/egret/egret.min.js\"></script>\n	<script egret=\"lib\" src=\"libs/modules/egret/egret.web.min.js\"></script>\n	<script egret=\"lib\" src=\"libs/modules/res/res.min.js\"></script>\n	<script egret=\"lib\" src=\"libs/modules/game/game.min.js\"></script>\n	<script egret=\"lib\" src=\"libs/modules/game/game.web.min.js\"></script>\n	<script egret=\"lib\" src=\"libs/modules/eui/eui.min.js\"></script>\n	<script egret=\"lib\" src=\"libs/modules/tween/tween.min.js\"></script>\n	<script egret=\"lib\" src=\"libs/modules/weixinapi/weixinapi.min.js\"></script>\n	<!--modules_files_end-->\n\n    <!--这个标签为不通过egret提供的第三方库的方式使用的 javascript 文件，请将这些文件放在libs下，但不要放在modules下面。-->\n    <!--other_libs_files_start-->\n    <!--other_libs_files_end-->\n\n    <!--这个标签会被替换为项目中所有的 javascript 文件。删除 game_files 标签后，项目文件加载列表将不会变化，请谨慎操作！-->\n    <!--game_files_start-->\n	<script src=\"main.min.js\"></script>\n	<!--game_files_end-->\n</head>\n<script type=\"text/javascript\" src=\"../m/js/jquery-1.8.3.min.js\"></script>\n<script type=\"text/javascript\">\nfunction score(scoreType){\n	jQuery.post(\"../score\",{scoreType:scoreType},function(json){\n		if(json.status == 1){\n			if(refreshScoreAndTop3){\n				refreshScoreAndTop3();\n			}\n		}else if(json.status == 5){\n			//积分操作受限不作提示\n		}else{\n			//alert(json.desc);\n		}\n	},\"json\");\n}\n</script>\n<script type=\"text/javascript\" src=\"http://res.wx.qq.com/open/js/jweixin-1.0.0.js\"></script>\n<script src=\"../m/js/weixinshare.js?v=16\"></script>\n<body>\n\n    <div style=\"margin: auto;width: 100%;height: 100%;\" class=\"egret-player\"\n         data-entry-class=\"Main\"\n         data-orientation=\"portrait\"\n         data-scale-mode=\"exactFit\"\n         data-frame-rate=\"30\"\n         data-content-width=\"640\"\n         data-content-height=\"1036\"\n         data-show-paint-rect=\"false\"\n         data-multi-fingered=\"2\"\n         data-show-fps=\"false\" data-show-log=\"false\"\n         data-show-fps-style=\"x:0,y:0,size:12,textColor:0xffffff,bgAlpha:0.9\">\n    </div>\n    <div id=\"txt\" style=\"display:none\"><font color=\"#FFFFFF\">3元优惠券，使用￥无门槛3元优惠券￥抢先预览<br>长按复制整段文案，打开手机淘宝即可进入活动内容）</font></div>\n    <script>\n        /**\n         * {\n         * \"renderMode\":, //引擎渲染模式，\"canvas\" 或者 \"webgl\"\n         * \"audioType\": \"\" //使用的音频类型，0:默认，1:qq audio，2:web audio，3:audio\n         * \"antialias\": //WebGL模式下是否开启抗锯齿，true:开启，false:关闭，默认为false\n         * }\n         **/\n    	egret.runEgret({renderMode:\"webgl\", audioType:0});\n    </script> \n</body>\n</html>\n",
+			"file": "/E/EgretDocument/brick/brick/brick/bin-release/web/161109225112/index.html",
+			"file_size": 3964,
+			"file_write_time": 131231769751391728,
+			"settings":
+			{
+				"buffer_size": 3484,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/Users/唐云/Desktop/huawei/index.html",
+			"settings":
+			{
+				"buffer_size": 7559,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/唐云/Desktop/huawei/css/lln.css",
+			"settings":
+			{
+				"buffer_size": 9731,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/E/EgretDocument/brick/brick/brick/resource/default.res.json",
+			"settings":
+			{
+				"buffer_size": 3671,
+				"line_ending": "Unix"
 			}
 		},
 		{
@@ -356,6 +393,14 @@
 	],
 	"file_history":
 	[
+		"/C/Users/唐云/Documents/GitHub/website/works/css/main.css",
+		"/C/Users/唐云/Documents/GitHub/colorbox/example2/index.html",
+		"/C/Users/唐云/Documents/GitHub/website/works/index.html",
+		"/E/EgretDocument/brick/brick/brick/resource/wnd/RuleWnd.exml",
+		"/E/EgretDocument/brick/brick/brick/resource/wnd/PropWnd.exml",
+		"/E/EgretDocument/brick/brick/brick/tsconfig.json",
+		"/E/EgretDocument/brick/libs/modules/weixinapi/weixinapi.min.js",
+		"/C/Users/唐云/Desktop/icomoon/style.css",
 		"/C/Users/唐云/Documents/GitHub/website/works/html/timesart/a/zhongwen/index.html",
 		"/K/web/gyr-mn/wwwroot/branding2/indexv2.html",
 		"/K/web/gyr-mn/wwwroot/branding2/index.php",
@@ -475,15 +520,7 @@
 		"/E/web/bupa/wwwroot-mobile/css/health_management.css",
 		"/E/web/bupa/wwwroot-mobile/css/join_us.css",
 		"/E/web/bupa/wwwroot-mobile/js/join_us.js",
-		"/E/web/bupa/weChat/MyBooking.shtml",
-		"/C/phpStudy/Apache/conf/openssl.cnf",
-		"/E/web/bupa/wwwroot-mobile/js/post_details.js",
-		"/E/web/bupa/wwwroot-mobile/js/health_article.js",
-		"/E/web/bupa/wwwroot-mobile/js/post_list.js",
-		"/E/web/bupa/wwwroot-mobile/baidu.html",
-		"/E/web/bupa/wwwroot-mobile/css/clinic.css",
-		"/E/web/bupa/wwwroot-mobile/css/book_online.css",
-		"/E/web/hyundai/wwwroot/zsdcg/game.js"
+		"/E/web/bupa/weChat/MyBooking.shtml"
 	],
 	"find":
 	{
@@ -494,6 +531,7 @@
 		"height": 90.0,
 		"where_history":
 		[
+			"E:\\EgretDocument\\brick\\brick\\brick\\",
 			"E:\\web\\bupa\\wwwroot-mobile\\",
 			"E:\\web\\bupa\\wwwroot-mobile\\*.js",
 			"E:\\web\\bupa\\wwwroot-mobile",
@@ -506,6 +544,17 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"egret2dWorkspace",
+			"btnGame",
+			"prop1_png",
+			"btnAgain",
+			"btnClose",
+			"openWnd(RuleScene)",
+			"RuleScene(",
+			"ruleScene",
+			"'fonts",
+			"icon-forward",
+			"fonts/",
 			"brand",
 			"src='/uploads/",
 			"/uploads/111128/1-11112QA201301.jpg",
@@ -622,18 +671,7 @@
 			"toDataURL",
 			">\n",
 			"outerImg",
-			"(1+cImg.c) *",
-			"r",
-			"cImg.r",
-			") /10",
-			"currentRotation",
-			"HEIGHT",
-			"y",
-			"touche",
-			"2*",
-			"0,0,0,0,0],",
-			"1,1",
-			"1"
+			"(1+cImg.c) *"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -660,116 +698,24 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "works/index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 629,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								471,
-								471
-							]
-						],
-						"settings":
-						{
-							"is_init_dirty_state": false,
-							"is_xml": false,
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/C/Users/唐云/Documents/GitHub/colorbox/example2/index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5552,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1084,
-								1072
-							]
-						],
-						"settings":
-						{
-							"is_xml": false,
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 336.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "works/css/main.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3143,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1661,
-								1661
-							]
-						],
-						"settings":
-						{
-							"is_init_dirty_state": false,
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/CSS/CSS.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 1428.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
 					"file": "works/js/main.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8227,
+						"buffer_size": 9899,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5145,
-								5145
+								5795,
+								5795
 							]
 						],
 						"settings":
@@ -780,14 +726,360 @@
 							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 7504.0,
+						"translation.y": 8283.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 119823,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										277,
+										286
+									],
+									[
+										604,
+										613
+									],
+									[
+										840,
+										847
+									],
+									[
+										898,
+										905
+									],
+									[
+										1076,
+										1083
+									],
+									[
+										1249,
+										1256
+									],
+									[
+										1466,
+										1473
+									],
+									[
+										44792,
+										44799
+									],
+									[
+										44849,
+										44856
+									],
+									[
+										45101,
+										45108
+									],
+									[
+										45198,
+										45205
+									],
+									[
+										45467,
+										45474
+									],
+									[
+										59026,
+										59033
+									],
+									[
+										59704,
+										59711
+									],
+									[
+										103074,
+										103081
+									],
+									[
+										103131,
+										103138
+									],
+									[
+										103383,
+										103390
+									],
+									[
+										103480,
+										103487
+									],
+									[
+										103749,
+										103756
+									],
+									[
+										117308,
+										117315
+									],
+									[
+										117986,
+										117993
+									],
+									[
+										118379,
+										118386
+									],
+									[
+										118708,
+										118715
+									],
+									[
+										118854,
+										118861
+									],
+									[
+										118911,
+										118918
+									],
+									[
+										119034,
+										119041
+									],
+									[
+										119180,
+										119187
+									],
+									[
+										119280,
+										119287
+									],
+									[
+										119672,
+										119688
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								119695,
+								119695
+							]
+						],
+						"settings":
+						{
+							"default_dir": "C:\\Users\\唐云\\Documents\\GitHub\\website\\works\\huazhonghua",
+							"detect_indentation": false,
+							"is_init_dirty_state": false,
+							"line_numbers": false,
+							"output_tag": 3,
+							"result_base_dir": "",
+							"result_file_regex": "^([^ 	].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 44901.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/E/EgretDocument/brick/brick/brick/.wing/packConfig.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 231,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								80,
+								95
+							]
+						],
+						"settings":
+						{
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
+					"buffer": 3,
+					"file": "/E/web/jeep-Compass/wwwroot/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 347,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								121,
+								116
+							]
+						],
+						"settings":
+						{
+							"is_init_dirty_state": false,
+							"is_xml": false,
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
 					"buffer": 4,
+					"file": "/E/EgretDocument/brick/brick/brick/bin-release/web/161109225112/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3484,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2349,
+								2349
+							]
+						],
+						"settings":
+						{
+							"is_init_dirty_state": true,
+							"is_xml": false,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1778.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/C/Users/唐云/Desktop/huawei/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7559,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"is_init_dirty_state": false,
+							"is_xml": false,
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3136.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/C/Users/唐云/Desktop/huawei/css/lln.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9731,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								904,
+								904
+							]
+						],
+						"settings":
+						{
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 734.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/E/EgretDocument/brick/brick/brick/resource/default.res.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3671,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1812,
+								1812
+							]
+						],
+						"settings":
+						{
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2158.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
 					"file": "works/html/yueji/index.html",
 					"semi_transient": false,
 					"settings":
@@ -818,19 +1110,21 @@
 						],
 						"settings":
 						{
+							"is_init_dirty_state": false,
 							"is_xml": false,
+							"origin_encoding": "UTF-8",
 							"syntax": "Packages/HTML/HTML.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 69621.0,
+						"translation.y": 3289.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 9,
 					"file": "/H/wwwroot/web/htdocs_wintop/plus/list.php",
 					"semi_transient": false,
 					"settings":
@@ -848,20 +1142,21 @@
 						],
 						"settings":
 						{
+							"is_init_dirty_state": true,
 							"is_xml": false,
 							"syntax": "Packages/PHP/PHP.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 252.0,
+						"translation.y": 84.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 10,
 					"file": "works/html/infiniti-f1/index.html",
 					"semi_transient": false,
 					"settings":
@@ -889,11 +1184,11 @@
 						"translation.y": 10799.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 11,
 					"file": "works/html/infiniti-f1/index.htm",
 					"semi_transient": false,
 					"settings":
@@ -923,11 +1218,11 @@
 						"translation.y": 11035.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 12,
 					"file": "/C/Users/唐云/Desktop/m/m/js/photo.js",
 					"semi_transient": false,
 					"settings":
@@ -953,7 +1248,7 @@
 						"translation.y": 3370.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 12,
 					"type": "text"
 				}
 			]

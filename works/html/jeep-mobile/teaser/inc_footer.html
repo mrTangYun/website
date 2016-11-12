@@ -1,0 +1,61 @@
+<footer>
+	<div class="index_menu">
+
+		<ul>
+			<a href="/mobile/productmanuals.html" onclick='_gsTracker.track("/targetpage/2_WAP_Footer_chanpinshouce_btn", true);'><li class="bian"><img src="/mobile/img/index_menu_0.jpg"/></li></a>
+			<a href="/mobile/testdrive.html" onclick='_gsTracker.track("/targetpage/2_WAP_Footer_testdrive_btn", true);'><li class="bian"><img src="/mobile/img/index_menu_1.jpg"/></li></a>
+			<a href="/mobile/compare.html" onclick='_gsTracker.track("/targetpage/2_WAP_Footer_chexingvs_btn", true);'><li><img src="/mobile/img/index_menu_2.jpg"/></li></a>
+			<a href="http://store.jeep.com.cn/mobile/index.aspx?type=k4&channel=A4A" onclick='_gsTracker.track("/targetpage/2_WAP_Footer_Jeepshangcheng_btn", true);'><li class="bian"><img src="/mobile/img/index_menu_3.jpg"/></li></a>
+			<a href="http://serve.chrysler-online.com.cn/" onclick='_gsTracker.track("/targetpage/2_WAP_Footer_zixunol_btn", true);'><li class="bian"><img src="/mobile/img/index_menu_4.jpg"/></li></a>
+			<a href="tel:4006500118"><li><img src="/mobile/img/index_menu_5.jpg" onclick='_gsTracker.track("/targetpage/2_WAP_Footer_400dianhua_btn", true);'/></li></a>
+		</ul>
+	</div>
+	<div class="index_menu_bottom">
+		<img class="bottom" src="/mobile/img/index_copyright_bg1.jpg"/>
+		<a id="btnUp"><img src="/mobile/img/index_up_btn.jpg"/></a>
+		<a id="btnWeibo" href="http://weibo.com/u/1669823982?topnav=1&wvr=6&topsug=1"></a>
+		<a id="btnWeixin"></a>
+	</div>
+</footer>
+
+<div id="more" class="swiper-container2 more2" style=" position:fixed;">
+<!--<div class="swiper-slide"><a href="/mobile/k4dingjinbao/"><img src="/mobile/images/banner.jpg" width="100%"></a></div>-->
+        </div>
+<!--
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><a href="http://store.jeep.com.cn/mobile/cherokee.aspx?type=k4&channel=A4A" onclick="_gsTracker.track('/targetpage/click/MOBILE/2_WAP_teaser_K4jkjr_btn');" target="_blank"><img src="/mobile/cherokee/teaser/images/banner.jpg" width="100%"></a></div>
+            <div class="swiper-slide"><a href="/mobile/k4dingjinbao/"><img src="/mobile/images/banner.jpg" width="100%"></a></div>
+        </div>
+-->
+    </div>
+
+
+<link rel="stylesheet" href="/mobile/css/swiper.min.css">
+<script src="/mobile/js/swiper.js"></script>
+<script type="text/javascript">
+var thisURL = document.URL;
+$(function(){
+	//$('#btn-online').attr('href','http://serve.chrysler-online.com.cn/OnelineService.php?pc=2&url='+thisURL);
+	//$('#kefu').attr('href','http://serve.chrysler-online.com.cn/OnelineService.php?pc=2&url='+thisURL);
+	
+	$('#btn-online').attr('href','http://serve.chrysler-online.com.cn/?url='+thisURL);
+	$('#kefu').attr('href','http://serve.chrysler-online.com.cn/?url='+thisURL);
+	
+	var swiper2 = new Swiper('.swiper-container2', {
+		pagination: '.swiper-pagination',
+		autoplay: 2500,
+		paginationClickable: true
+	});
+	$('#btnUp').click(function(){
+		$('body').animate({scrollTop:0});
+	})
+	$('#btnCloseQr').click(function(){
+		$('.qr_code').hide();
+	})
+	$('#btnWeixin').click(function(){
+		$('.qr_code').show();
+	})
+})
+</script>
+
+<script type="text/javascript">_satellite.pageBottom();</script>

@@ -30,7 +30,22 @@ var works = [
 	// 	desc : "",
 	//	support : ["pc"],
 	//	exp : ""
-	// },
+	// },,
+	{
+		flag : 1,
+		name : "保柏中国",
+		brand : "bupa",
+		year : 2016,
+		folder : "bupa",
+		job : "前端", //职责
+		url : "http://isobarbupa02.chinacloudapp.cn/cn",
+		isOnline : false,		//是否在线
+		point : ["css","js"],		//技术
+		images: 5,
+		desc : "负责所有的页面制作工作",
+		support : ["pc"],
+		exp : ""
+	},
 	{
 		flag : 1,
 		name : "国道黄金",
@@ -222,6 +237,48 @@ var works = [
 		exp : ""
 	},
 	{
+		name : "奔驰利星行店庆",
+		brand : "奔驰利星行",
+		year : 2014,
+		folder : "benz-lxh",
+		job : "前端", //职责
+		url : "",
+		isOnline : true,		//是否在线
+		point : ["css","js"],		//技术
+		images: 1,
+		desc : "负责所有的页面制作工作",
+		support : ["pc"],
+		exp : ""
+	},
+	{
+		name : "奔驰星徽保养菜单",
+		brand : "奔驰",
+		year : 2014,
+		folder : "benz-menuprice",
+		job : "前端", //职责
+		url : "http://www.mbmenuprice.com/",
+		isOnline : true,		//是否在线
+		point : ["css","js"],		//技术
+		images: 5,
+		desc : "负责所有的页面制作工作",
+		support : ["pc"],
+		exp : ""
+	},
+	{
+		name : "奔驰金融方案助手",
+		brand : "奔驰",
+		year : 2015,
+		folder : "benz-special",
+		job : "前端", //职责
+		url : "http://special.mercedes-benz.com.cn/finder/",
+		isOnline : true,		//是否在线
+		point : ["css","js"],		//技术
+		images: 4,
+		desc : "负责所有的页面制作工作",
+		support : ["pc"],
+		exp : ""
+	},
+	{
 		flag : 1,
 		name : "悦己",
 		brand : "悦己",
@@ -233,6 +290,21 @@ var works = [
 		point : ["css3","js"],		//技术
 		images: 4,
 		desc : "页面使用了手机的陀螺仪；负责所有的页面制作工作",
+		support : ["mobile"],
+		exp : ""
+	},
+	{
+		flag : 1,
+		name : "关注克罗恩病",
+		brand : "西安杨森",
+		year : 2015,
+		folder : "kle",
+		job : "前端", //职责
+		url : "http://kle.koo7.com/",
+		isOnline : false,		//是否在线
+		point : ["css","js"],		//技术
+		images: 5,
+		desc : "负责所有的页面制作工作",
 		support : ["mobile"],
 		exp : ""
 	},
@@ -253,7 +325,37 @@ var works = [
 	},
 	{
 		flag : 1,
-		name : "蒙牛优酸乳",
+		name : "微软office推广",
+		brand : "微软",
+		year : 2015,
+		folder : "office",
+		job : "前端", //职责
+		url : "http://www.starzsports.cn/myweb/office/game1.htm",
+		isOnline : false,		//是否在线
+		point : ["css","js"],		//技术
+		images: 2,
+		desc : "负责所有的页面制作工作",
+		support : ["pc"],
+		exp : ""
+	},
+	{
+		flag : 1,
+		name : "找乐音乐节",
+		brand : "乐堡啤酒",
+		year : 2015,
+		folder : "lebao",
+		job : "前端", //职责
+		url : "http://www.tuborg.cn/music/index.htm",
+		isOnline : false,		//是否在线
+		point : ["css","js"],		//技术
+		images: 5,
+		desc : "负责所有的页面制作工作",
+		support : ["mobile"],
+		exp : ""
+	},
+	{
+		flag : 1,
+		name : "蒙牛冠益乳",
 		brand : "蒙牛",
 		year : 2016,
 		folder : "mengniu-gyr",
@@ -266,6 +368,37 @@ var works = [
 		support : ["mobile"],
 		exp : ""
 	},
+	{
+		flag : 1,
+		name : "jeep自由侠",
+		brand : "jeep",
+		year : 2016,
+		folder : "jeep-pc",
+		job : "前端", //职责
+		url : "./html/jeep-pc/index.html",
+		isOnline : false,		//是否在线
+		point : ["css","js"],		//技术
+		images: 5,
+		desc : "负责所有的页面制作工作",
+		support : ["pc"],
+		exp : ""
+	},
+	{
+		flag : 1,
+		name : "jeep自由侠手机版",
+		brand : "jeep",
+		year : 2016,
+		folder : "jeep-mobile",
+		job : "前端", //职责
+		url : "./html/jeep-mobile/index.html",
+		isOnline : false,		//是否在线
+		point : ["css","js"],		//技术
+		images: 5,
+		desc : "负责所有的页面制作工作",
+		support : ["mobile"],
+		exp : ""
+	}
+
 ];
 
 jQuery(document).ready(function($) {
@@ -311,7 +444,7 @@ jQuery(document).ready(function($) {
 						_html.push("</a>");
 					}
 					if ($.inArray( "mobile", works[i].support) >= 0){
-						_html.push("<a class=\"link icon-IE link-mobile\" href=\""+works[i].url+"\" target=\"_blank\" title=\"在线浏览\">");
+						_html.push("<a class=\"link icon-mobile link-mobile\" href=\""+works[i].url+"\" target=\"_blank\" title=\"在线浏览\">");
 						_html.push("手机端浏览");
 						_html.push("</a>");
 					}
@@ -351,6 +484,7 @@ jQuery(document).ready(function($) {
 		//return false;
 	});
 
+	$(".inline").colorbox({inline:true});
 	$(".link-mobile").click(function(event) {
 		/* Act on the event */
 		//event.stopPropagation();
@@ -359,19 +493,18 @@ jQuery(document).ready(function($) {
 				var href = $(this).attr("href");
 
 				href = (/^http/.test(href) ? "" : window.location.href) + href;
-				$(this).prepend("<div class=\"code\"></div>");
-				new QRCode($(this).find(".code").eq(0)[0], {
+				//$(this).prepend("<div class=\"code\"></div>");
+				$("#code").html("");
+				new QRCode($("#code")[0], {
 															  text: href,
-															  width: 150,
-															  height: 150,
+															  width: 300,
+															  height: 300,
 															  colorDark: '#000000',
 															  colorLight: '#ffffff',
 															  correctLevel: QRCode.CorrectLevel.H
 															});
 			}
-			else{
-				$(this).find(".code").remove();
-			}
+			$(".inline").click();
 			return false;
 		}
 		
