@@ -41,7 +41,7 @@ var works = [
 		url : "http://isobarbupa02.chinacloudapp.cn/cn",
 		isOnline : false,		//是否在线
 		point : ["css","js"],		//技术
-		images: 5,
+		images: 1,
 		desc : "负责所有的页面制作工作",
 		support : ["pc"],
 		exp : ""
@@ -502,7 +502,7 @@ jQuery(document).ready(function($) {
 	$(".link-mobile").click(function(event) {
 		/* Act on the event */
 		//event.stopPropagation();
-		if ($(window).innerWidth() > 1000){
+		if ($(window).innerWidth() > 600){
 			if ($(this).find(".code").length == 0){
 				var href = $(this).attr("href");
 
