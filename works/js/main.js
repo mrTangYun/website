@@ -195,6 +195,20 @@ var works = [
 		exp : ""
 	},
 	{
+		name : "宠优活动网站",
+		brand : "宠优",
+		year : 2014,
+		folder : "chongyou",
+		job : "前端", //职责
+		url : "./html/chongyou/index.html",
+		isOnline : true,		//是否在线
+		point : ["css","js"],		//技术
+		images: 1,
+		desc : "负责所有前端",
+		support : ["pc"],
+		exp : ""
+	},
+	{
 		name : "世纪互联中英文官网",
 		brand : "世纪互联",
 		year : 2014,
