@@ -1,4 +1,3 @@
-
 const API_URL = 'https://render.niuma666bet.buzz';
 
 //getMusicUrl 函数用于获取音乐 URL。必须接受以下四个参数：songname: 歌曲名称，artist: 艺术家名称，songid: 企鹅平台的歌曲songmid，quality: 音质 '128k'|'320k'|'flac'。
